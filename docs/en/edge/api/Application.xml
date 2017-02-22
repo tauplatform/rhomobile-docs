@@ -184,7 +184,11 @@ The ebapi.js file is necessary for all single API inclusions.
                 </RETURN>
             </METHOD>
             <METHOD name="expandDatabaseBlobFilePath">
-                <DESC>Generates the absolute path to the database blob file. Please note that this method does not create specified database file. The method only returns the path based on the application path and the partition name. Pay attention: 1. The method returns just the argument if the argument starts with prefix "file://"; 2. The method returns just the argument if the argument is the absolute path nad it does not match with the application root. e.g. Rho::Application.expandDatabaseBlobFilePath("file://db/db-files/image.png") returns  "file://db/db-files/image.png"; Rho::Application.expandDatabaseBlobFilePath("/there-is-not-the-applicaton-root-path-here/image.png") returns  ""/there-is-not-the-applicaton-root-path-here/image.png"; </DESC>
+                <DESC>Generates the absolute path to the database blob file. Please note that this method does not create specified database file. The method only returns the path based on the application path and the partition name.
+                  Pay attention to:
+                  1. The method returns just the argument if the argument starts with prefix "file://";  e.g. Rho::Application.expandDatabaseBlobFilePath("file://db/db-files/image.png") returns  "file://db/db-files/image.png";
+                  2. The method returns just the argument if the argument starts with the application root. Rho::Application.expandDatabaseBlobFilePath("/app-root-path/somepath/image.png") returns  "/app-root-path/somepath/image.png";
+                  3.In other cases the method returns the app root joined with the argument e.g. Rho::Application.expandDatabaseBlobFilePath("/somepath/image.png") returns  "/app-root-path/somepath/image.png";</DESC>
               <PARAMS>
                     <PARAM name="relativePath" type="STRING">
                         <DESC>Relative path to the blob file, as it is stored in the database e.g. db/db-files/image.png</DESC>
