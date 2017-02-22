@@ -26,7 +26,7 @@ _**About Windows XP target support**: Qt 5.1.1.0 is the only Qt version supporte
 2. **Download the appropriate version of Qt**: 
     * **To target Windows XP/XPE with Visual Studio 2008**, [download Zebra's Qt 5.1.1.0 VS2008 binaries](http://rhomobile-suite.s3.amazonaws.com/Qt/Qt5-vs2008.7z).
     * **To target Windows XP/XPE with Visual Studio 2012**, [download Zebra's Qt 5.1.1.0 VS2012 binaries](http://rhomobile-suite.s3.amazonaws.com/Qt/Qt5-rhoxp.7z).
-    * **To target modern Windows versions with Visual Studio 2012**, [download Qt's 5.5.0.0 binaries](https://drive.google.com/file/d/0B6pEcAmNNrLAX0NUVHFHX0ppSVU/view).<br> _Note: In this scenario, a separate set of Zebra OpenSSL libraries implement the HTTPS protocol, and are included automatically when performing a production build (see [Build sections](#build), below)_.
+    * **To target modern Windows versions with Visual Studio 2012**, [download Qt's 5.5.0.0 binaries](http://files.tau-technologies.com/RMS/QT/qt-opensource-windows-x86-msvc2012-5.5.0.exe).<br> _Note: In this scenario, a separate set of Zebra OpenSSL libraries implement the HTTPS protocol, and are included automatically when performing a production build (see [Build sections](#build), below)_.
 3. **Extract (or install Qt's binaries) into the directory** created in Step 1.1.
 
 ###Step 2- Add the QTDIR System Variable
