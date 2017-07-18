@@ -69,6 +69,7 @@ Follow the steps for the target platform and return here to contuinue
 * [Build for Android](build_android)
 * [Build for Windows Mobile](build_wm)
 * [Build for Windows Phone 8](build_wp8)
+* [Build for Windows Phone 10](build_uwp)
 * [Build for Windows](build_win)
 
 ## 8) Enabling JavaScript on your Web App
