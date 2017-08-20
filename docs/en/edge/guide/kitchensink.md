@@ -1,6 +1,6 @@
 # RhoMobile Suite KitchenSink 
 
-KitchenSink is a sample application and developer tool full of code snippets that show you how to use the APIs of RhoMobile 5.0 If you are new to RhoMobile, it is an excellent starting point to see how to start interacting with the different features of the platform and if you are an experienced user, it will quickly show you how to start getting the maximum value out of the new Ruby and JavaScript APIs.
+KitchenSink is a sample application and developer tool full of code snippets that show you how to use the APIs of RhoMobile 6.0 If you are new to RhoMobile, it is an excellent starting point to see how to start interacting with the different features of the platform and if you are an experienced user, it will quickly show you how to start getting the maximum value out of the new Ruby and JavaScript APIs.
 
 This document will be your step-by-step guide to how some specific features of KitchenSink were built. Along the way you will learn a few tricks on:
 
@@ -12,9 +12,9 @@ This document will be your step-by-step guide to how some specific features of K
 ## Download the Project
 The KitchenSink source code can be found at [https://github.com/rhomobile/rho-samples/tree/master/kitchensink](https://github.com/rhomobile/rho-samples/tree/master/kitchensink)
 
-## Download the App
+<!--## Download the App
 * [Android](https://s3.amazonaws.com/rhomobile-suite/4.0/Kitchen+Sink-Android.apk)
-* [Windows Mobile](https://s3.amazonaws.com/rhomobile-suite/4.0/Kitchen+Sink_WM.cab)
+* [Windows Mobile](https://s3.amazonaws.com/rhomobile-suite/4.0/Kitchen+Sink_WM.cab)-->
 
 ## Filesystem Layout
 

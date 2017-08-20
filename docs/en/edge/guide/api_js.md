@@ -35,7 +35,7 @@ To load application files to the RhoMobile application from an external Web serv
 	:::ruby
 	start_path='http://heroku.com/myapp/index.html'
 
-To use Common APIs you have to copy `rhoapi-modules.js` to your web server application, so it can be loaded from your html pages. [Read More](webapps#using-rhomobile-js-apis) about using RhoMobile 4 JavaScript APIs from a web server application.
+To use Common APIs you have to copy `rhoapi-modules.js` to your web server application, so it can be loaded from your html pages. [Read More](webapps#using-rhomobile-js-apis) about using RhoMobile 6 JavaScript APIs from a web server application.
 
 ## Using your own objects
 Some API classes support instance objects. This allows you to maintain your own objects and assign different properties to them.

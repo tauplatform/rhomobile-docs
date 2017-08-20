@@ -6,11 +6,11 @@ At minimum, the RhoMobile installer places the Rhodes open-source development fr
 RhoMobile depends on Java, Ruby, Git and other tools. Depending on the development host platform, these components are either installed automatically with the main suite or must be installed manually using the platform-specific processes below. **Please read and follow all instructions carefully to ensure a trouble-free installation.**
 
 ## Upgrading From a Prior Installation
-Upgrading a system that already has a prior version of RhoMobile Suite usually requires fewer steps than a full installation, but still requires you to [download the latest software image](http://rhomobile.com/download/). If upgrading, follow those steps first. If that fails, try a full installation. 
+Upgrading a system that already has a prior version of RhoMobile Suite usually requires fewer steps than a full installation, but still requires you to [download the latest software image](http://tau-technologies.com/developers/downloads/). If upgrading, follow those steps first. If that fails, try a full installation. 
 
 NOTE: IMPORTANT: The update function in the "About RhoStudio..." dialog is currently disabled.
 
-If your machine already has RMS installed, **[get the latest RhoMobile suite for Mac or Windows](http://rhomobile.com/download/), then follow the instructions below.**
+If your machine already has RMS installed, **[get the latest RhoMobile suite for Mac or Windows](http://tau-technologies.com/developers/downloads/), then follow the instructions below.**
 
 ###For Mac OS X (.dmg file):
 1- **Drag-copy the RhoStudio folder** from the .dmg to your Applications folder. You'll see a message like the one below. **Be sure your 'workspace' folder is not in the same folder as the RhoStudio application** (by default, it's in the user's home directory, **not** in the RhoStudio folder). 
@@ -43,7 +43,7 @@ If the upgrade steps have failed, or if you're installing RhoMobile Suite for th
 
 ## Windows First-time Install (32- and 64-bit)
 ### STEP 1: Run the RhoMobile Suite Installer
-[Download the RhoMobile Suite Installer for Windows](http://rhomobile.com/download/) and launch it. This will install Rhodes, RhoStudio, RhoConnect and RhoElements, as well as [Ruby](http://www.ruby-lang.org/en/) and [Redis](http://redis.io/) open source tools. 
+[Download the RhoMobile Suite Installer for Windows](http://tau-technologies.com/developers/downloads/) and launch it. This will install Rhodes, RhoStudio, RhoConnect and RhoElements, as well as [Ruby](http://www.ruby-lang.org/en/) and [Redis](http://redis.io/) open source tools. 
 
 Additional installers will automatically launch for [Git](https://github.com/) and [Node.js](https://nodejs.org/). Follow prompts and read and accept their respective open-source license agreements as appropriate. 
 
@@ -90,8 +90,6 @@ The RhoMobile installer for Windows places the following items in the Windows St
 
 **NOTE:To run RhoStudio, you MUST USE THE RHOSTUDIO LAUNCHERS.
 
-NOTE:Before building your first project, you'll be prompted to create a free account at http://rms.rhomobile.com. Just enter a valid email address and password. 
-
 ### *Ruby Notes*
 >The RhoMobile Suite installer for Windows contains Ruby 1.9.3-p194. This version of Ruby is used for executing rake commands on the development host computer and for running RhoConnect applications.
 
@@ -109,7 +107,7 @@ NOTE:Before building your first project, you'll be prompted to create a free acc
 #####`-->> This process requires administrator access and write permissions in all areas. <<-- `
 `-->> Steps MUST be performed in the following order <<-- `<br>
 #####0. Download and install XCode and corresponding Command Line Tools<br>
-#####1a. Download RhoMobile Suite (.dmg) from [RhoMobile.com](http://rhomobile.com/download)<br>
+#####1a. Download RhoMobile Suite (.dmg) from [Tau-Technologies.com](http://tau-technologies.com/developers/downloads/)<br>
 #####1b. Copy RhoStudio to the development system's Applications folder `DO NOT LAUNCH!`<br>
 #####2. Download and install the Java 6 SDK from Java.com (see link, below)<br>
 #####3. Use Terminal to install Ruby Version Manager (RVM)<br>
@@ -124,7 +122,7 @@ NOTE:Before building your first project, you'll be prompted to create a free acc
 ###STEP 1: Download and Copy RhoMobile Suite 
 `-->> Steps MUST be performed in the following order <<-- `<br>
 
-a. [**Download RhoMobile Suite**](http://rhomobile.com/download) disc image (a .dmg file) and double-click it. A window similar to the following will open: <br>
+a. [**Download RhoMobile Suite**](http://tau-technologies.com/developers/downloads/) disc image (a .dmg file) and double-click it. A window similar to the following will open: <br>
 
 ![img](http://rhodocs-images.s3.amazonaws.com/guide/RhoMobile_Installer_disc_image.png)
 
@@ -197,14 +195,12 @@ A Terminal window will open and execute an installation script.<br>
 >![img](http://rhodocs-images.s3.amazonaws.com/guide/RhoMobile_launchers.png)<br><br>
 > FYI: The 32- and 64-bit versions of RhoMobile are functionally equivalent. 
 
->Before building your first project, you'll be prompted to create a free account at [rms.rhomobile.com](http://rms./rhomobile.com). Just enter a valid email address and password). 
-
->The installer image also contains files labeled "Launchpad" and "RhoMobile Docs" (scroll down in the .dmg window if you can't see them). You can copy these or bookmark their links to the [RhoMobile developer community](https://developer.motorolasolutions.com/welcome) and [RhoMobile documentation](http://docs.rhomobile.com/) sites.<br>
+>The installer image also contains files labeled "Launchpad" and "RhoMobile Docs" (scroll down in the .dmg window if you can't see them). You can copy these or bookmark their links to the [RhoMobile developer community](https://developer.motorolasolutions.com/welcome) and [RhoMobile documentation](http://docs.tau-technologies.com/) sites.<br>
 <br>
 
 
 ## Installing Native SDKs (Optional)
-RhoStudio permits development of native apps for Android, iOS and Windows Mobile and Windows Phone 8 on the local development host or in the cloud using [Rhohub.com](https://rms.rhomobile.com/). If you plan to build native apps locally, you'll need to install the corresponding SDKs for each. For detailed instructions, please visit RhoMobile's [native SDK setup documentation page](/guide/nativesdksetup).<br>
+RhoStudio permits development of native apps for Android, iOS and Windows Mobile and Windows 10 Mobile on the local development host. If you plan to build native apps locally, you'll need to install the corresponding SDKs for each. For detailed instructions, please visit RhoMobile's [native SDK setup documentation page](/guide/nativesdksetup).<br>
 <br>
 
 ## Troubleshooting Windows Installs

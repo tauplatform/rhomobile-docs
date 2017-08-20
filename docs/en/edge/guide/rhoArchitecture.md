@@ -1,10 +1,10 @@
-# RMS 5.4 Supported Platforms
+# RMS 6.0 Supported Platforms
 
 The RhoMobile Suite (RMS) is an integrated development environment for Mac OS X and Windows development hosts that can target multiple mobile-device platforms from a single code base. RhoMobile apps employ an HTML front-end that presents the UI component and passes device calls through to the underlying hardware. RhoStudio also supports native app development. 
 
-**New in RMS 5.4 is support for the MC92 with Android KitKat and the [TC8000](https://www.zebra.com/us/en/products/mobile-computers/handheld/tc8000.html), Zebra's revolutionary new touch mobile computer** running Android KitKat. The latest version also supports Apple iOS 9.0 and can remap the Android keyboard to produce keycodes for Windows Mobile or for custom needs as required. 
+<!--**New in RMS 6.0 is support for the MC92 with Android KitKat and the [TC8000](https://www.zebra.com/us/en/products/mobile-computers/handheld/tc8000.html), Zebra's revolutionary new touch mobile computer** running Android KitKat. The latest version also supports Apple iOS 9.0 and can remap the Android keyboard to produce keycodes for Windows Mobile or for custom needs as required. 
 
-For more information about this and prior releases, including bug fixes and issue resolutions, please [download the RMS 5.4 release notes](http://rhomobile-suite.s3.amazonaws.com/5.4/5.4.0/Release_Notes_RMS_5_4.html). 
+For more information about this and prior releases, including bug fixes and issue resolutions, please [download the RMS 6.0 release notes](http://rhomobile-suite.s3.amazonaws.com/6.0/6.0.0/Release_Notes_RMS_5_4.html). -->
 
 ##Supported Mobile-Device Platforms 
 <table class="table table-stripe table-bordered">
@@ -18,19 +18,19 @@ For more information about this and prior releases, including bug fixes and issu
   <td class="clsSyntaxCells clsOddRow"><img id="Android_ET1_pic" src="https://github.com/rhomobile/rhomobile-docs/blob/master/public/images/supported_devices/Zebra_ET1.png?raw=true" height="75"></img></td>
   <td class="clsSyntaxCells clsOddRow"><b>Android</b></td>
   <td class="clsSyntaxCells clsOddRow">Zebra devices (see below), third-party devices (ARM and x86)</td>
-  <td class="clsSyntaxCells clsOddRow">Android  2.3 to 4.4: Gingerbread, Ice Cream Sandwich, Jelly Bean, KitKat</td>
+  <td class="clsSyntaxCells clsOddRow">Android  2.3 to 4.4: Gingerbread, Ice Cream Sandwich, Jelly Bean, KitKat, Lollipop, Marshmallow</td>
  </tr>
   <tr>
   <td class="clsSyntaxCells clsOddRow"><img id="Android_LollyPic" src="https://github.com/rhomobile/rhomobile-docs/blob/master/public/images/supported_devices/samsung-galaxy-s-6-edge.png?raw=true" height="75"></img></td>
   <td class="clsSyntaxCells clsOddRow"><b>Android</b></td>
   <td class="clsSyntaxCells clsOddRow">Third-party consumer tablets and smartphones (ARM and x86)</td>
-  <td class="clsSyntaxCells clsOddRow">Android  5.1 Lollipop</td>
+  <td class="clsSyntaxCells clsOddRow">Android  2.3 to 4.4: Gingerbread, Ice Cream Sandwich, Jelly Bean, KitKat, Lollipop, Marshmallow, Nougat</td>
  </tr>
  <tr>
   <td class="clsSyntaxCells clsOddRow"><img id="iOS_pic" src="https://github.com/rhomobile/rhomobile-docs/blob/master/public/images/supported_devices/Apple-iPhone-5S.jpg?raw=true" height="75"></img></td>
   <td class="clsSyntaxCells clsOddRow"><b>Apple iOS</b></td>
   <td class="clsSyntaxCells clsOddRow">iPad, iPhone, iPod Touch</td>
-  <td class="clsSyntaxCells clsOddRow">iOS 6, iOS 7, iOS 8, iOS 9</td>
+  <td class="clsSyntaxCells clsOddRow">iOS 6, iOS 7, iOS 8, iOS 9, iOS10</td>
  </tr>
  <tr>
   <td class="clsSyntaxCells clsOddRow"><img id="WM_pic" src="https://github.com/rhomobile/rhomobile-docs/blob/master/public/images/supported_devices/Zebra_MC3100.jpeg?raw=true" height="75"></img></td>
@@ -42,13 +42,13 @@ For more information about this and prior releases, including bug fixes and issu
   <td class="clsSyntaxCells clsOddRow"><img id="win_tablet_pic" src="https://github.com/rhomobile/rhomobile-docs/blob/master/public/images/supported_devices/Windows_tablet.png?raw=true" height="75"></img></td>
   <td class="clsSyntaxCells clsOddRow"><b>Windows</b></td>
   <td class="clsSyntaxCells clsOddRow">Third-party laptops, tablets and desktops</td>
-  <td class="clsSyntaxCells clsOddRow">Windows 7, Windows 8, Windows 8.1</td>
+  <td class="clsSyntaxCells clsOddRow">Windows XP, Windows 7, Windows 8, Windows 8.1, Windows 10</td>
  </tr></table>
 
-**NOTE: For more information about supported devices and operating systems, please refer to its accompanying documentation and [download the latest RMS release notes](http://rhomobile-suite.s3.amazonaws.com/5.4/5.4.0/Release_Notes_RMS_5_4.html).**
+**NOTE: For more information about supported devices and operating systems, please refer to its accompanying documentation and [download the latest RMS release notes](http://rhomobile-suite.s3.amazonaws.com/6.0/6.0.0/Release_Notes_RMS_5_4.html).**
 
 ##Supported Zebra Devices
-RMS 5.3 has been approved for building apps that target the following Zebra Enterprise Mobility devices:
+RMS 6.0 has been approved for building apps that target the following Zebra Enterprise Mobility devices:
 
 <H4>Mobile Computers</H4>
 <table class="table table-striped table-bordered">
@@ -68,7 +68,7 @@ RMS 5.3 has been approved for building apps that target the following Zebra Ente
   <td class="clsSyntaxCells clsOddRow"><img id="ET1_pic" src="https://github.com/rhomobile/rhomobile-docs/blob/master/public/images/supported_devices/Zebra_ET1.png?raw=true" height="75"></img></td>
   <td class="clsSyntaxCells clsOddRow"><b>ET1</b></td>
   <td class="clsSyntaxCells clsOddRow">ET1 (Enterprise Tablet), ET1 WAN</td>
-  <td class="clsSyntaxCells clsOddRow">Android 4.1 (JellyBean)</td>
+  <td class="clsSyntaxCells clsOddRow">Android 2.3 (Gingerbread),<br>Android 4.1 (JellyBean)</td>
  </tr>
  <tr>
   <td class="clsSyntaxCells clsOddRow"><img id="mc2100Pic" src="https://github.com/rhomobile/rhomobile-docs/blob/master/public/images/supported_devices/Zebra_MC2100.jpg?raw=true" height="75"></img></td>
@@ -94,35 +94,53 @@ RMS 5.3 has been approved for building apps that target the following Zebra Ente
   <td class="clsSyntaxCells clsOddRow"><nobr>MC40</td>
   <td class="clsSyntaxCells clsOddRow">Android 4.4 (KitKat)</td>
  </td>
+ <tr>
+  <td class="clsSyntaxCells clsOddRow"><img id="tc51-56Pic" src="https://github.com/tauplatform/rhomobile-docs/blob/master/public/images/supported_devices/Zebra_TC51-56.jpg?raw=true" height="75"></img></td>
+  <td class="clsSyntaxCells clsOddRow"><b>TC51</b></td>
+  <td class="clsSyntaxCells clsOddRow"><nobr>TC51</nobr></td>
+  <td class="clsSyntaxCells clsOddRow">Android 6.0 (Marshmallow)</td>
+ </tr>
   <tr>
   <td class="clsSyntaxCells clsOddRow"><img id="tc55Pic" src="https://github.com/rhomobile/rhomobile-docs/blob/master/public/images/supported_devices/Zebra_TC55.jpg?raw=true" height="75"></img></td>
   <td class="clsSyntaxCells clsOddRow"><b>TC55</b></td>
   <td class="clsSyntaxCells clsOddRow"><nobr>TC55</nobr></td>
-  <td class="clsSyntaxCells clsOddRow">Android 4.4 (KitKat)</td>
+  <td class="clsSyntaxCells clsOddRow">Android 4.1 (JellyBean),<br>Android 4.4 (KitKat)</td>
+ </tr>
+ <tr>
+  <td class="clsSyntaxCells clsOddRow"><img id="tc51-56Pic" src="https://github.com/tauplatform/rhomobile-docs/blob/master/public/images/supported_devices/Zebra_TC51-56.jpg?raw=true" height="75"></img></td>
+  <td class="clsSyntaxCells clsOddRow"><b>TC56</b></td>
+  <td class="clsSyntaxCells clsOddRow"><nobr>TC56</nobr></td>
+  <td class="clsSyntaxCells clsOddRow">Android 6.0 (Marshmallow)</td>
  </tr>
  <tr>
   <td class="clsSyntaxCells clsOddRow"><img id="tc70Pic" src="https://github.com/rhomobile/rhomobile-docs/blob/master/public/images/supported_devices/Zebra_TC70.png?raw=true" height="75"></img></td>
   <td class="clsSyntaxCells clsOddRow"><b>TC70</b></td>
   <td class="clsSyntaxCells clsOddRow">TC70 GA2 (rebranded device)</td>
-  <td class="clsSyntaxCells clsOddRow">Android 4.4 (KitKat)</td>
+  <td class="clsSyntaxCells clsOddRow">Android 4.4 (KitKat),<br>Android 5.1 (Lollipop),<br>Android 6.0 (Marshmallow)</td>
  </tr>
  <tr>
   <td class="clsSyntaxCells clsOddRow"><img id="tc75Pic" src="https://github.com/rhomobile/rhomobile-docs/blob/master/public/images/supported_devices/Zebra_TC75.png?raw=true" height="75"></img></td>
   <td class="clsSyntaxCells clsOddRow"><b>TC75</b></td>
   <td class="clsSyntaxCells clsOddRow">TC75</td>
-  <td class="clsSyntaxCells clsOddRow">Android 4.4 (KitKat)</td>
+  <td class="clsSyntaxCells clsOddRow">Android 4.4 (KitKat),<br>Android 5.1 (Lollipop)</td>
  </tr>
  <tr>
   <td class="clsSyntaxCells clsOddRow"><img id="tc8000pic" src="https://github.com/rhomobile/rhomobile-docs/blob/master/public/images/supported_devices/Zebra_TC8000.png?raw=true" height="75"></img></td>
   <td class="clsSyntaxCells clsOddRow"><b>TC8000</b></td>
   <td class="clsSyntaxCells clsOddRow"><nobr>TC8000</nobr></td>
-  <td class="clsSyntaxCells clsOddRow">Android 4.4 (KitKat)</td>
+  <td class="clsSyntaxCells clsOddRow">Android 4.4 (KitKat),<br>Android 5.1 (Lollipop)</td>
+ </tr>
+  <tr>
+  <td class="clsSyntaxCells clsOddRow"><img id="mc17Pic" src="https://github.com/tauplatform/rhomobile-docs/blob/master/public/images/supported_devices/Zebra_MC17.png" height="75"></img></td>
+  <td class="clsSyntaxCells clsOddRow"><b>MC17</b></td>
+  <td class="clsSyntaxCells clsOddRow">MC17</td>
+  <td class="clsSyntaxCells clsOddRow">Windows CE 7.0,<br>Android 4.4 (KitKat),<br>Android 5.1 (Lollipop)</td>
  </tr>
  <tr>
   <td class="clsSyntaxCells clsOddRow"><img id="mc18Pic" src="https://github.com/rhomobile/rhomobile-docs/blob/master/public/images/supported_devices/Zebra_MC18.png?raw=true" height="75"></img></td>
   <td class="clsSyntaxCells clsOddRow"><b>MC18</b></td>
   <td class="clsSyntaxCells clsOddRow">MC18</td>
-  <td class="clsSyntaxCells clsOddRow">Windows CE 7.0,<br>Android 4.4 (KitKat)</td>
+  <td class="clsSyntaxCells clsOddRow">Windows CE 7.0,<br>Android 4.4 (KitKat),<br>Android 5.1 (Lollipop)</td>
  </tr>
  <tr>
   <td class="clsSyntaxCells clsOddRow"><img id="wap4Pic" src="https://github.com/rhomobile/rhomobile-docs/blob/master/public/images/supported_devices/Zebra_WAP4.png?raw=true" height="75"></img></td>
@@ -194,7 +212,7 @@ RMS 5.3 has been approved for building apps that target the following Zebra Ente
   <td class="clsSyntaxCells clsOddRow"><img id="mc92Pic" src="https://github.com/rhomobile/rhomobile-docs/blob/master/public/images/supported_devices/Zebra_MC92.jpg?raw=true" height="75"></img></td>
   <td class="clsSyntaxCells clsOddRow"><b>MC9200</b></td>
   <td class="clsSyntaxCells clsOddRow">MC92N0</td>
-  <td class="clsSyntaxCells clsOddRow">Android KitKat, <br>Windows CE 7.0,<br>Windows Embedded Handheld 6.5</td>
+  <td class="clsSyntaxCells clsOddRow">Android 4.4 (KitKat), <br>Windows CE 7.0,<br>Windows Embedded Handheld 6.5</td>
  </tr>
  <tr>
   <td class="clsSyntaxCells clsOddRow"><img id="mc95Pic" src="https://github.com/rhomobile/rhomobile-docs/blob/master/public/images/supported_devices/Zebra_MC95.png?raw=true" height="75"></img></td>
@@ -204,7 +222,7 @@ RMS 5.3 has been approved for building apps that target the following Zebra Ente
  </tr>
 </table>
 
-<b>* </b>The MC2100 family of devices is supported only by RhoElements 2.1.<br>
+<!--<b>* </b>The MC2100 family of devices is supported only by RhoElements 2.1.<br>-->
 </p>
 
 <H4>Vehicle Computers</H4>
@@ -282,9 +300,9 @@ Memory constraints are important to consider, particularly when targeting the ol
 
 ##Compatibility Alerts
 
-* **RMS 5.3 supports printing via USB from Android apps** to a subset of [Zebra printers that support USB printing](printing#zebra-printers-with-usb-printing). 
+* **RMS 6.0 supports printing via USB from Android apps** to a subset of [Zebra printers that support USB printing](printing#zebra-printers-with-usb-printing). 
 
-* **The TC55 supports [4.0 APIs](apiusage#api-migration-table) and only a subset of [2.2 APIs](apiusage#using-22-apirsquos)**. Applications developed using certain 2.2 APIs might need to be rebuilt using a newer version of the API. For example, apps built with the [2.2 Scanner API](../../2.2.0/rhoelements/scanner) must now use the [5.x Barcode API](../api/barcode). Please consult the [migration table](apiusage#api-migration-table) for more information.
+* **The TC55 supports [4.0 APIs](apiusage#api-migration-table) and only a subset of [2.2 APIs](apiusage#using-22-apirsquos)**. Applications developed using certain 2.2 APIs might need to be rebuilt using a newer version of the API. For example, apps built with the [2.2 Scanner API](../../2.2.0/rhoelements/scanner) must now use the [6.x Barcode API](../api/barcode). Please consult the [migration table](apiusage#api-migration-table) for more information.
 
 * **The MC3190-Z and MC9190-Z devices require an [RFID plugin](../../2.2.0/rhoelements/rfid) to be installed separately**. This plug-in was originally developed for RhoElements version 2.2 but is still supported.
 
@@ -293,7 +311,7 @@ Memory constraints are important to consider, particularly when targeting the ol
 <br>
 
 ##Deprecated Zebra Devices
-**The following Zebra Devices are not supported in RMS 5.3 and later** (but can still be targeted by RMS versions earlier than 5.1): 
+**The following Zebra Devices are not supported in RMS 6.0 and later** (but can still be targeted by RMS versions earlier than 5.1): 
 
 <H4>Mobile Computers</H4>
 <table class="table table-striped table-bordered">

@@ -2,7 +2,7 @@
 This page describes how to setup the underlying native SDKs when building a RhoMobile application locally for our supported platforms: iPhone, RIM Blackberry, Windows Mobile and Android.
 
 ## Setup for iOS
-In order to build an iOS application locally, it must be performed on a Macintosh computers or by using [RhoHub](http://rhohub.com) using any type of type of laptop/desktop. The instructions below describe how to do this from either the Macintosh Xcode development environment or from the command line on your local Macintosh.
+In order to build an iOS application locally, it must be performed on a Macintosh computers using any type of type of laptop/desktop. The instructions below describe how to do this from either the Macintosh Xcode development environment or from the command line on your local Macintosh.
 
 ### Prerequisites
 To build for iPhone/iPad using you will need the following software installed:
@@ -71,7 +71,7 @@ Note that Windows Mobile versions of your Rhodes application must be built in a 
 Make sure you have installed the following software. Since Rhdoes builds a unified .cab file for both WM and WinCE, only the WinCE SDK is necessary for building either platform.
 
 * .NET Compact Framework
-* For Windows Mobile and Windows CE 5.0: MC3000c50b PSDK from [Zebra Support Central](https://atgsupportcentral.motorolasolutions.com/ewa/pub/getFile.do?fileName=/ssi/emb/downloads/30XXC50BxxPS010403.exe)
+* For Windows Mobile and Windows CE: MC3000c50b PSDK from [Zebra Support Central](https://atgsupportcentral.motorolasolutions.com/ewa/pub/getFile.do?fileName=/ssi/emb/downloads/30XXC50BxxPS010403.exe)
 * Microsoft Active Sync 4.5 for Windows XP; Windows Mobile Device Center for Windows Vista or higher
 * Microsoft Device Emulator 3.0 for Windows Vista or higher
 * Visual Studio 2008.

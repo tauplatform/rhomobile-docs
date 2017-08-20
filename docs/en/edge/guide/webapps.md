@@ -16,7 +16,7 @@ To load application files to the RhoMobile application from an external Web serv
 	start_path='http://heroku.com/myapp/index.html'
 
 ## Using RhoMobile JS APIs
-The RhoMobile JavaScript API library `rhoapi-modules.js` is needed in order to access RhoMobile 4 JavaScript APIs.  This file is provided as part of the installation of RhoMobile Suite:
+The RhoMobile JavaScript API library `rhoapi-modules.js` is needed in order to access RhoMobile 6 JavaScript APIs.  This file is provided as part of the installation of RhoMobile Suite:
 
 * Windows: located in the `[RhoMobile Suite install path]/rhoapi-modules`
 * Mac: In the `rhoapi-modules` folder of the RhoMobile Suite DMG package.

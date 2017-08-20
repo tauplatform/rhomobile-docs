@@ -88,7 +88,6 @@ section 'rhomob-setup',                     'Dev Environment Setup','Mobile Guid
   topic 'en/edge/guide/rhomobile-install',  'RhoMobile Suite Install'
   topic 'en/edge/guide/nativesdksetup',     'Native SDK Setup'
   topic 'en/edge/guide/nonrhostudio',       'Developing Without RhoStudio'
-  topic 'en/edge/guide/visualstudio',       'Developing with Visual Studio'
 end
 
 section 'rhomob-apps',                        'Developing Apps','Mobile Guides' do
