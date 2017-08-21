@@ -3,9 +3,9 @@
 ## Introduction
 This guide documents the use of Microsoft Visual Studio 2012 or 2008 to build RhoMobile apps for Windows desktop editions, including Windows XP and XP Embedded (XPE). Visual Studio is required to build apps that target 'big' Windows, and along with the RhoMobile Suite should be installed prior to starting this guide. If RhoMobile is already installed, it must be configured according to the [native SDK setup instructions](nativesdksetup#setup-for-windows-desktop) for building Windows apps.
 
-Building apps for Windows also relies on the Qt cross-platform application framework. As of RMS 5.3, the following Qt versions are supported: 
+Building apps for Windows also relies on the Qt cross-platform application framework. As of RMS 6.0, the following Qt versions are supported: 
 
-* **Qt 5.5.0.0** (new in RMS 5.3)
+* **Qt 5.8.0** (new in RMS 6.0)
 * Qt 5.1.1.0 (required for XP and XPE)
 
 NOTE: Qt 5.1.1.0 exhibits inconsistent behavior when a finger or stylus is used for input.
@@ -14,7 +14,7 @@ NOTE: Qt 5.1.1.0 exhibits inconsistent behavior when a finger or stylus is used 
 ###Prerequisites
 
 * [Microsoft Visual Studio](https://www.visualstudio.com/en-us/visual-studio-homepage-vs.aspx) 2012 or 2008
-* [RhoMobile Suite 5.3](http://rhomobile.com/download/) (RMS 5.2 if targeting only Windows XP or XPE)
+* [RhoMobile Suite 6.0](http://rhomobile.com/download/) (RMS 5.2 if targeting only Windows XP or XPE)
 * RhoMobile [configured for native development](nativesdksetup#setup-for-windows-desktop)
 
 ## Set up development host
@@ -53,11 +53,11 @@ _**About Windows XP target support**: Qt 5.1.1.0 is the only Qt version supporte
 If the development host has just a single version of Visual Studio installed, skip to the [Build section](#build); the system is now ready to build. 
 
 ###Step 3- Select a Visual Studio version
-If more than one version of Visual Studio is installed, the system by default will build the application using the newest supported version (2012 or 2008). To explicitly specify the version of Visual Studio to use, add an `msvc` parameter to the `win32` section of your `build.yml` and specify `2012` or `2008`:
+If more than one version of Visual Studio is installed, the system by default will build the application using the newest supported version (2015 or 2012 or 2008). To explicitly specify the version of Visual Studio to use, add an `msvc` parameter to the `win32` section of your `build.yml` and specify `2015` or `2012` or `2008`:
 
     :::yaml
     win32:
-      msvc: 2012
+      msvc: 2015
 
 
 The system is now ready to build with the selected Visual Studio edition. 
@@ -179,9 +179,9 @@ For more information, please refer to the [NSIS User Guide](http://nsis.sourcefo
 The application log 'Rholog.txt' is placed in `<Application folder>\rho`
 
 ##Switching Qt versions
-RhoMobile applications can be built only with Visual Studio 2008 or Visual Studio 2012, and only with Qt 5.1.1.0 or Qt 5.5.0.0. If after following the steps above a different version of Qt is desired, follow these steps to make the switch:
+RhoMobile applications can be built only with Visual Studio 2008 or Visual Studio 2012 or Visual Studio 2015, and only with Qt 5.1.1.0 or Qt 5.5.0.0 or  Qt 5.8.0 If after following the steps above a different version of Qt is desired, follow these steps to make the switch:
 
-1. Go to the Qt website and download and install the desired Qt version for Visual Studio 2008 or Visual Studio 2012.
+1. Go to the Qt website and download and install the desired Qt version for Visual Studio 2008 or Visual Studio 2012 or Visual Studio 2015.
 2. Verify the Qt installation path. It should be something like: C:\Qt\<QtVersion>\<VSVersion>
 3. Close RhoStudio and all command-prompt windows. 
 4. Update or create a system variable called 'QTDIR' with the directory verified in Step 2. 

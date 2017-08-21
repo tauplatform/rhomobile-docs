@@ -1,7 +1,7 @@
-# Build for Windows Phone 8
+# Build for Windows 10(UWP)
 
 ## Setup
-Follow the instructions for [setting up the development environment](nativesdksetup#setup-for-windows-phone-10) for building Windows Phone 10 applications.
+Follow the instructions for [setting up the development environment](nativesdksetup#setup-for-windows-10uwp) for building Windows Phone 10 applications.
 
 ### Building Remotely
 Alternatively, you can create the device builds remotely with RhoMobile hosted builds. Refer to our [remote build guide](../../hosted/guide/remote-build-guide) for more info.

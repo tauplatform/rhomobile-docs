@@ -81,24 +81,23 @@ Make sure you have installed the following software. Since Rhdoes builds a unifi
 
 ## Setup for Windows Desktop
 ### Prerequisites
-* Visual Studio 2012 SP1 (or 2008 SP1)
-  * Make sure that `VS110COMNTOOLS` (or `VS90COMNTOOLS`) environment variable is defined and points to the correct location, e.g. to `C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\Tools`
+* Visual Studio 2015 Community Edition UP3 or higher installed
+  * Make sure that `VS140COMNTOOLS` environment variable is defined and points to the correct location, e.g. to `C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools`
 
-* Install [Qt libraries 5.1.1 for Visual Studio 2012](http://download.qt-project.org/official_releases/qt/5.1/5.1.1/qt-windows-opensource-5.1.1-msvc2012-x86-offline.exe) - 511 MB (or [build Qt libraries 5.1.1 for Visual Studio 2008](build_win#build-qt5-for-vs2008))
+* Install [Qt libraries 5.8 for Visual Studio 2015](https://download.qt.io/official_releases/qt/5.8/5.8.0/qt-opensource-windows-x86-msvc2015-5.8.0.exe) - 1 GB (or [build Qt libraries 5.1.1 for Visual Studio 2008](build_win#build-qt5-for-vs2008))
   * The Qt binaries for Visual Studio 2012 are not compatible with Windows XP. For targeting Windows XP, please refer to the [Build for Windows](build_win) instructions.
 
-* Create new (or update existing) system environment variable `QTDIR` and make sure it points to root folder of the installed Qt libraries, e.g. `C:\Qt\Qt5\5.1.1\msvc2012`
+* Create new (or update existing) system environment variable `QTDIR` and make sure it points to root folder of the installed Qt libraries, e.g. `C:\Qt\Qt5\5.8\msvc2015`
 
 >Note: If the application uses HTTPS, the Qt binaries must be built against OpenSSL. Please refer to [Build for Windows](build_win) for instructions and links to Zebra's pre-built Qt binaries.
 
-## Setup for Windows Phone 8
+## Setup for Windows 10(UWP)
 ### Prerequisites
-* Windows 8.x OS
-* Visual Studio 2013 installed or VS Express 2013 for Windows Phone
-    * [Windows Phone SDK 8.0](http://dev.windowsphone.com/en-us/downloadsdk)
+* Windows 10 OS
+* Visual Studio 2015 Community Edition UP3 or higher installed
 
 * Add path to `msbuild` to `rhobuild.yml` in rhodes folder. Use 32-bit version compiler to build for device.
 
         env:
           paths:
-            msbuild: C:/Program Files (x86)/MSBuild/12.0/Bin/MSBuild.exe
+            msbuild: C:/Program Files (x86)/MSBuild/14.0/Bin/MSBuild.exe

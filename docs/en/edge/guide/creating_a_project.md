@@ -154,7 +154,7 @@ where `<platform to be simulated>` can be:
 * iphone
 * win32 (for Windows desktop)
 * wm (for Windows Mobile 6)
-* wp8 (for Windows Phone 8)
+* uwp (for Windows 10 (UWP))
 
 NOTE: Due to memory limitations, RhoSimulator does not support Windows Mobile/CE apps.
 

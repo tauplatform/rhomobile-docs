@@ -123,15 +123,13 @@ If your IDE or Text-Editor provides a means to launch an external executable, yo
 	rake build:android:eclipsebundle         # Build RhoBundle for Eclipse project
 	rake build:android:extensions            # Building native extensions
 	rake build:android:rhobundle             # Build RhoBundle for android
-	rake build:wp8:rhobundle_noext           # Build WP8 rhobundle
-	rake build:wp:rhobundle                  # Build WP7 rhobundle
+	rake build:uwp:rhobundle_noext           # Build UWP rhobundle
 	rake clean:android                       # Clean Android
 	rake clean:iphone                        # Clean iphone
 	rake clean:win32                         # Clean win32
 	rake clean:wince                         # Clean windows ce
 	rake clean:wm                            # Clean wm
-	rake clean:wp                            # Clean wp
-	rake clean:wp8                           # Clean wp
+	rake clean:uwp                           # Clean win10 UWP
 	rake device:android:debug                # Build debug self signed for device
 	rake device:android:production           # Build production signed for device
 	rake device:iphone:production            # Builds and signs iphone for production
@@ -140,9 +138,8 @@ If your IDE or Text-Editor provides a means to launch an external executable, yo
 	rake device:wince:production             # Build production for device or emulator
 	rake device:winxpe:production            # Build installer for Windows XP Embedded
 	rake device:wm:production[exclude_dirs]  # Build production for device or emulator
-	rake device:wp8:production               # Build production for device
-	rake device:wp:production                # Build production for device or emulator
-	rake emulator:wp8:production             # Build production for device
+	rake device:uwp:production               # Build production for device
+	rake emulator:uwp:production             # Build production for emulator
 	rake run:android                         # build and launch emulator
 	rake run:android:device                  # build and install on device
 	rake run:android:rhosimulator            # Run application on RhoSimulator
@@ -159,12 +156,9 @@ If your IDE or Text-Editor provides a means to launch an external executable, yo
 	rake run:wm:device                       # Build and run on the Windows Mobile device
 	rake run:wm:device:cab                   # Build, install .cab and run on the Windows Mobile device
 	rake run:wm:rhosimulator                 # Run application on RhoSimulator
-	rake run:wp                              # Build, install .xap and run on WP7 emulator
-	rake run:wp8                             # Build, install .xap and run on WP8 emulator
-	rake run:wp8:device                      # Build, install .xap and run on WP8 device
-	rake run:wp8:rhosimulator                # Run application on RhoSimulator
-	rake run:wp:device                       # Build, install .xap and run on WP7 device
-	rake run:wp:rhosimulator                 # Run application on RhoSimulator
+	rake run:uwp                             # Build, install .appx and run on UWP emulator
+	rake run:uwp:device                      # Build, install .appx and run on UWP device
+	rake run:uwp:rhosimulator                # Run application on RhoSimulator
 	rake uninstall:android                   # uninstall from emulator
 	rake uninstall:android:device            # uninstall from device
 
