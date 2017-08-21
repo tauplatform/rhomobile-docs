@@ -1,7 +1,7 @@
 # Build for Windows
 
 ## Introduction
-This guide documents the use of Microsoft Visual Studio 2012 or 2008 to build RhoMobile apps for Windows desktop editions, including Windows XP and XP Embedded (XPE). Visual Studio is required to build apps that target 'big' Windows, and along with the RhoMobile Suite should be installed prior to starting this guide. If RhoMobile is already installed, it must be configured according to the [native SDK setup instructions](nativesdksetup#setup-for-windows-desktop) for building Windows apps.
+This guide documents the use of Microsoft Visual Studio 2015 or 2012 or 2008 to build RhoMobile apps for Windows desktop editions, including Windows XP and XP Embedded (XPE). Visual Studio is required to build apps that target 'big' Windows, and along with the RhoMobile Suite should be installed prior to starting this guide. If RhoMobile is already installed, it must be configured according to the [native SDK setup instructions](nativesdksetup#setup-for-windows-desktop) for building Windows apps.
 
 Building apps for Windows also relies on the Qt cross-platform application framework. As of RMS 6.0, the following Qt versions are supported: 
 
@@ -10,10 +10,12 @@ Building apps for Windows also relies on the Qt cross-platform application frame
 
 NOTE: Qt 5.1.1.0 exhibits inconsistent behavior when a finger or stylus is used for input.
 
+NOTE: Microsoft Visual Studio 2012 and 2008 should be used only for XP builds
+
 <a name="setup"></a>
 ###Prerequisites
 
-* [Microsoft Visual Studio](https://www.visualstudio.com/en-us/visual-studio-homepage-vs.aspx) 2012 or 2008
+* [Microsoft Visual Studio](https://www.visualstudio.com/en-us/visual-studio-homepage-vs.aspx) 2015 or 2012 or 2008
 * [RhoMobile Suite 6.0](http://rhomobile.com/download/) (RMS 5.2 if targeting only Windows XP or XPE)
 * RhoMobile [configured for native development](nativesdksetup#setup-for-windows-desktop)
 
