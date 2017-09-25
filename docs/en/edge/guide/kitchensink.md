@@ -3,9 +3,11 @@
 KitchenSink Ruby and KitchenSink JS are sample applications full of code snippets that show you how to use the APIs of RhoMobile 6.0 If you are new to RhoMobile, it is an excellent starting point to see how to start interacting with the different features of the platform and if you are an experienced user, it will quickly show you how to start getting the maximum value out of the new Ruby and JavaScript APIs.
 
 ## Download the Project
+
 The KitchenSink source code can be found at:
 * Ruby:  [https://github.com/tauplatform/kitchensinkRuby](https://github.com/tauplatform/kitchensinkRuby)
 * JavaScript:  [https://github.com/tauplatform/kitchensinkJS](https://github.com/tauplatform/kitchensinkJS)
+
 
 ## Filesystem Layout
 
