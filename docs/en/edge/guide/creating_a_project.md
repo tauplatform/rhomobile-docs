@@ -45,7 +45,7 @@ If you prefer to use the command line or a development environment other than Rh
 		--no-color                       Don't colorize the output
 		-h, --help                       Show this message
 		--debug                          Do not catch errors
-		--norhoconnect                   Don't include rhoconnect-client in application
+		--rhoconnect                     Include rhoconnect-client in the application
 
 
 For example, to create an application called 'storemanager,' do the following:
