@@ -14,7 +14,7 @@ Apart from the settings recognized by the platform, you can add arbitrary values
 All values will be accessible at runtime via `Rho::RhoConfig`
 
     :::ruby
-    foo = Rho::RhoConfig.bar
+    foo = Rho::RhoConfig.foo
     start_path = Rho::RhoConfig.start_path
 
 You can also check if a configuration property actually exists before accessing it
