@@ -38,7 +38,7 @@ All values will be accessible at runtime via `Rho::RhoConfig`:
 
 Sample Ruby code:
     :::ruby
-    foo = Rho::RhoConfig.bar
+    foo = Rho::RhoConfig.foo
     start_path = Rho::RhoConfig.start_path
 
 You also can check if a configuration property actually exists before accessing it:
