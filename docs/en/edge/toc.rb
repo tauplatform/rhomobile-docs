@@ -110,6 +110,7 @@ section 'rhomob-apps',                        'Developing Apps','Mobile Guides' 
   topic 'en/edge/guide/app_upgrade',          'Upgrading Your App'
   topic 'en/edge/guide/live-update',          'Live Update'
   topic 'en/edge/guide/proguard',             'Using ProGuard'
+  topic 'en/edge/guide/bundle_encryption',    'Encrypting application bundle'
 end
 
 section 'rhomob-data',                    'Data Handling','Mobile Guides' do
