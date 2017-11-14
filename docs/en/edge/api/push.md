@@ -5,10 +5,26 @@
 
 <p>To use this API, you must include the following extension in your <code>build.yml</code>:</p>
 
-<p>For APNS or GCM:</p>
+<p>For APNS:</p>
 
 <pre><code>:::ruby
 capabilities: ["push"]
+</code></pre>
+
+<p>For FCM:</p>
+
+<pre><code>:::ruby
+capabilities: ["push"]
+extensions: ["fcm-push"]
+fcmSenderID: 'your_fcm_sender_id'
+fcmAppID: 'your_fcm_app_id'
+</code></pre>
+
+<p>For GCM ( NB: GCM is deprecated, we recommend using FCM push ):</p>
+
+<pre><code>:::ruby
+capabilities: ["push"]
+extensions: ["gcm-push"]
 </code></pre>
 
 <p>For RhoConnect Push Service:</p>
