@@ -109,6 +109,7 @@ section 'rhomob-apps',                        'Developing Apps','Mobile Guides' 
   topic 'en/6.0/guide/webcontainer',         'Custom Web App Container'
   topic 'en/6.0/guide/app_upgrade',          'Upgrading Your App'
   topic 'en/6.0/guide/live-update',          'Live Update'
+  topic 'en/edge/guide/proguard',            'Using ProGuard'  
 end
 
 section 'rhomob-data',                    'Data Handling','Mobile Guides' do
