@@ -26,6 +26,7 @@ The stand alone Android SDK is deprecated, but the SDK Manager is included with 
 
 3) On the "SDK Platforms" tab, select the API levels required.
 > Note: A minimum Android API level 10 must be installed for RhoStudio
+
 > Note: To use Google Map View you need to install latest Google API from Android SDK Manager
 
 4) On the "SDK Tools" tab, select the "Android Support Repository" child option underneath "Android Support Repository".
@@ -41,12 +42,10 @@ Download and unzip the [latest Android NDK](http://developer.android.com/sdk/ndk
 > Note: Android NDK version r8e is required as a minimum.
 
 > Note: RMS 5.1 does not support Android NDK r10; Android NDK r9 is current recommendation. 
-
-Download Android NDK r9 from Google's servers:
-
-* [for Linux](http://dl.google.com/android/ndk/android-ndk-r9-linux-x86.tar.bz2)
-* [for Mac OS X](https://dl.google.com/android/ndk/android-ndk-r9d-darwin-x86_64.tar.bz2)
-* [for Windows](http://dl.google.com/android/ndk/android-ndk-r9d-windows-x86_64.zip)
+> To download Android NDK r9 from Google's servers:
+> * [for Linux](http://dl.google.com/android/ndk/android-ndk-r9-linux-x86.tar.bz2)
+> * [for Mac OS X](https://dl.google.com/android/ndk/android-ndk-r9d-darwin-x86_64.tar.bz2)
+> * [for Windows](http://dl.google.com/android/ndk/android-ndk-r9d-windows-x86_64.zip)
 
 
 ### Pointing RhoStudio to the SDKs
