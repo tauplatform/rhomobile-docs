@@ -37,7 +37,9 @@ The stand alone Android SDK is deprecated, but is included with Android Studio. 
 Download and unzip the [latest Android NDK](http://developer.android.com/sdk/ndk/index.html) to the location of your choice.
 
 > Note: You should update the Android SDK and NDK as you update to new versions of Rhodes.
+
 > Note: Android NDK version r8e is required as a minimum.
+
 > Note: RMS 5.1 does not support Android NDK r10; Android NDK r9 is current recommendation. 
 
 Download Android NDK r9 from Google's servers:
