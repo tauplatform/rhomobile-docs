@@ -16,7 +16,7 @@ To build for iPhone/iPad using you will need the following software installed:
 
 ## Setup for Android
 ### Setting Up the Android SDK
-The stand alone Android SDK is deprecated, but is included with Android Studio.  Check that your [OS is compatible with Android Studio](https://developer.android.com/studio/index.html).
+The stand alone Android SDK is deprecated, but the SDK Manager is included with Android Studio.  Check that your [OS is compatible with Android Studio](https://developer.android.com/studio/index.html).
 
 1) Download and install [Android Studio](https://developer.android.com/studio/index.html).  Once installed, run Android Studio and continue through the introduction screens.
 
