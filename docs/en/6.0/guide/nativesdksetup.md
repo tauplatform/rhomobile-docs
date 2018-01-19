@@ -35,18 +35,14 @@ The stand alone Android SDK is deprecated, but the SDK Manager is included with 
 
 ### Setting Up the Android NDK
 
-Download and unzip the [latest Android NDK](http://developer.android.com/sdk/ndk/index.html) to the location of your choice.
+Recommended NDK version is 15c. NDK v16+ is not yet supported.
+Download and unzip the [Android NDK 15c](https://developer.android.com/ndk/downloads/older_releases.html) to the location of your choice.
 
 > Note: You should update the Android SDK and NDK as you update to new versions of Rhodes.
-
-> Note: Android NDK version r8e is required as a minimum.
-
-> Note: RMS 5.1 does not support Android NDK r10; Android NDK r9 is current recommendation. 
-> To download Android NDK r9 from Google's servers:
-> * [for Linux](http://dl.google.com/android/ndk/android-ndk-r9-linux-x86.tar.bz2)
-> * [for Mac OS X](https://dl.google.com/android/ndk/android-ndk-r9d-darwin-x86_64.tar.bz2)
-> * [for Windows](http://dl.google.com/android/ndk/android-ndk-r9d-windows-x86_64.zip)
-
+> Direct links for NDK 15c downloads:
+> * [for Linux](https://dl.google.com/android/repository/android-ndk-r15c-linux-x86_64.zip)
+> * [for Mac OS X](https://dl.google.com/android/repository/android-ndk-r15c-darwin-x86_64.zip)
+> * [for Windows](https://dl.google.com/android/repository/android-ndk-r15c-windows-x86_64.zip)
 
 ### Pointing RhoStudio to the SDKs
 1) Start RhoStudio
