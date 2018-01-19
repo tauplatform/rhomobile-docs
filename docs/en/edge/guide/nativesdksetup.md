@@ -15,42 +15,47 @@ To build for iPhone/iPad using you will need the following software installed:
 > Note: In XCode 4.3, command line tools are not included in the installation. You should install the command line tools from XCode by using the Components tab of the Downloads preferences panel. See [New Features in Xcode 4.3](https://developer.apple.com/library/ios/#documentation/DeveloperTools/Conceptual/WhatsNewXcode/Articles/xcode_4_3.html)
 
 ## Setup for Android
-### Setting Up the Android SDK and NDK
-Check that your [OS is compatible with the Android SDK](http://developer.android.com/sdk/requirements.html).
+### Setting Up the Android SDK
+The stand alone Android SDK is deprecated, but the SDK Manager is included with Android Studio.  Check that your [OS is compatible with Android Studio](https://developer.android.com/studio/index.html).
 
-1) Download the [Android SDK](http://developer.android.com/sdk/index.html), and unzip it to the location of your choice.
+1) Download and install [Android Studio](https://developer.android.com/studio/index.html).  Once installed, run Android Studio and continue through the introduction screens.
 
-> Note: A minimum Android API level 10 must be installed.
+2) On the "Welcome to Android Studio" screen, click "Configure" in the bottom right hand corner, then select "Android SDK".
 
-On Macintosh and Linux, navigate to and run `<Android SDK>/tools/android sdk`. On Windows, navigate to and run <Android SDK>/SDK Manager.exe. The Android SDK Manager window appears. Then perform the following steps:
+3) Make a note of the SDK location, or (optionally) select a different location for the Android SDK repository.  This may be located on a shared network location to avoid multiple large downloads of each API level in multi-developer environments.
 
- * Select Settings, then check "check `Force https://... sources to be fetched using http://".
- * Run Android SDK Manager, check latest Android SDK Platform(s) and Google APIs, then click "Install packages" button to download and install them.
+3) On the "SDK Platforms" tab, select the API levels required.
+> Note: A minimum Android API level 10 must be installed for RhoStudio
 
 > Note: To use Google Map View you need to install latest Google API from Android SDK Manager
 
-2) Download and unzip the [latest Android NDK](http://developer.android.com/sdk/ndk/index.html) to the location of your choice.
+4) On the "SDK Tools" tab, select the "Android Support Repository" child option underneath "Android Support Repository".
 
-> Note: You should update the Android SDK and NDK as you update to new versions of Rhodes. Android NDK version r8e is required as a minimum.
+5) Once everything is selected, click "OK".  The SDK manager will then download all required files.  Click the "Background" to perform this in the background and continue with this setup
 
-NOTE: RMS 5.1 does not support Android NDK r10; Android NDK r9 is current recommendation. 
+### Setting Up the Android NDK
 
-Download Android NDK r9 from Google's servers:
+Recommended NDK version is 15c. NDK v16+ is not yet supported.
+Download and unzip the [Android NDK 15c](https://developer.android.com/ndk/downloads/older_releases.html) to the location of your choice.
 
-* [for Linux](http://dl.google.com/android/ndk/android-ndk-r9-linux-x86.tar.bz2)
+> Note: You should update the Android SDK and NDK as you update to new versions of Rhodes.
+> Direct links for NDK 15c downloads:
+> * [for Linux](https://dl.google.com/android/repository/android-ndk-r15c-linux-x86_64.zip)
+> * [for Mac OS X](https://dl.google.com/android/repository/android-ndk-r15c-darwin-x86_64.zip)
+> * [for Windows](https://dl.google.com/android/repository/android-ndk-r15c-windows-x86_64.zip)
 
-* [for Mac OS X](https://dl.google.com/android/ndk/android-ndk-r9d-darwin-x86_64.tar.bz2)
+### Pointing RhoStudio to the SDKs
+1) Start RhoStudio
 
-* [for Windows](http://dl.google.com/android/ndk/android-ndk-r9d-windows-x86_64.zip)
+2) Open the Preferences window
+* on Macintosh -> click the "Preferences" menu
+* on Windows -> click the "Window" menu, then "Preferences"
 
-
-3) The Android Support Library must be installed using the latest version. (Minimum Rev 14). This can be installed using the Android SDK Manager under the `Extras` folder.
-
-In RhoStudio -> Preferences on the Macintosh or Windows -> Preferences on Windows, open Rhomobile->Android and set the paths to your Android SDK and NDK installations.
+3) Expand "RhoMobile" and click on "Android".  Set the locations for the SDK and NDK as above.  To find the SDK location, run the "SDK Manager" from within Android Studio.
 
 ![img](http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/preferences-android-sdk-4.0.png)
 
-If you are not using RhoStudio, run rhodes-setup from the command line and set the paths to the Android SDK and NDK installations.
+If you are not using RhoStudio, run "rhodes-setup" from the command line and set the paths to the Android SDK and NDK installations.
 
 ### Setting up the Android Maps API
 In case you are planning to work with native geo mapping (the MapView interface), you must do two things:
