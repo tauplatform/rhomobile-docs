@@ -93,7 +93,7 @@ The ebapi.js file is necessary for all single API inclusions.
             </ALIASES>
 
             <METHOD name="cancel" hasCallback="optional" runInThread="none">
-                <DESC>Cancel the request identified by callback. If callback is not specified then all requests will be canceled.</DESC>
+                <DESC>Cancel the request identified by callback. If callback is not specified then all requests will be canceled. Note: The method cancels all Rho.Network requests in JS API.</DESC>
             </METHOD>
 
             <METHOD name="downloadFile" hasCallback="optional">
