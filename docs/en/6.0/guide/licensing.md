@@ -1,3 +1,5 @@
+# Licensing
+
 (The MIT License)
 
 Copyright (c) 2008-2010 Rhomobile, Inc.
