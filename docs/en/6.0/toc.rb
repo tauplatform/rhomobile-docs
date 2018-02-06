@@ -10,7 +10,7 @@ section 'getting-started',                'Introduction','Mobile Guides' do
   topic 'en/6.0/guide/apiusage',         '2.2 Migration Guide'
   topic 'en/6.0/guide/api_js',           'RhoMobile JavaScript Usage'
   topic 'en/6.0/guide/api_ruby',         'RhoMobile Ruby Usage'
-  #topic 'en/6.0/guide/licensing',        'Licensing'
+  topic 'en/6.0/guide/licensing',        'Licensing'
 end
 
 section 'rhodescommonapi-reference',                                'API Reference','Mobile API Docs' do
