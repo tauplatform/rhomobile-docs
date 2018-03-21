@@ -257,10 +257,6 @@ The ebapi.js file is necessary for all single API inclusions.
                                     <DESC>This is available under Ruby Only.</DESC>
                                     <APPLIES rubyOnly="true"/>
                                 </VALUE>
-                                <VALUE constName="APP_EVENT_DBMIGRATESOURCE" value ="DBMigrateSource" productException="eb">
-                                    <DESC>This is available under Ruby Only.</DESC>
-                                    <APPLIES rubyOnly="true"/>
-                                </VALUE>
                             </VALUES>
                         </PARAM>
                         <PARAM name="eventData" type="HASH">
