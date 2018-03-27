@@ -71,5 +71,4 @@ end
 </ul>
 
   </div></div></div></div><a name='r1'></a><div class=' remarks' id='r1'><div class="accordion-group"><div class="accordion-heading"><span class="accordion-toggle"  href="#cRemark1"><strong>Rotating the Screen</strong></div><div id="cRemark1" class="accordion-body">  <div class="accordion-inner"><p>The keystate indicator positions are absolute and so when rotating the screen you should also reposition the keystate accordingly to accommodate the new screen layout.</p>
-  </div></div></div></div>
-</div>
+  </div></div></div></div></div>

@@ -21,36 +21,6 @@ Be sure to review the [JavaScript API Usage](/guide/api_js) guide for important 
 ## Ruby Usage
 Be sure to review the [Ruby API Usage](/guide/api_ruby) guide for important information about using this API in Ruby.
         </MORE_HELP>
-
-        <MORE_HELP_EB>
-## Enabling the API
-There are two methods of enabling the CardReader API: 
-
-* Include all ebapi modules or 
-* Include only the API modules you need 
-
-For either of these methods, you'll need to include files from the `/Enterprise Browser/JavaScript Files/Enterprise Browser` directory on the computer that you installed the Enterprise Browser.
-
-### Include all JS API modules
-To include all JS APIs, you must copy the ebapi-modules.js file to a location accessible by your app's files and include the JavaScript file in your app. For instance, to include the modules file in your index.html, with the file in the same directory as your index.html, you would add the following line to the &lt;head&gt; section of your index.html:
-
-    :::html
-    &lt;script type="text/javascript" charset="utf-8" src="ebapi-modules.js"&gt;&lt;/script&gt;
-
-> Note: that the pathing for this file is relative to the current page.
-
-This will define the EB class within the page. Any page you need to use the modules will need to have the .js file included in this fashion.
-
-### Include only the modules you need
-To include single APIs, you must first include the `ebapi.js` in your HTML as well as the API file you want to use. For instance, to use the CardReader API, I would add the following code to my HTML file(s), assuming the API files have been copied to the same directory as the HTML.
-
-    :::html
-    &lt;script type="text/javascript" charset="utf-8" src="ebapi.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8" src="eb.cardreader.js"&gt;&lt;/script&gt;
-
-The ebapi.js file is necessary for all single API inclusions.
-        </MORE_HELP_EB>
-
         <TEMPLATES>
             <DEFAULT_INSTANCE/> <!-- object has default static property, all methods can be call by static way (called from default instance), produce default(), set_default() methods -->
             <PROPERTY_BAG/> <!-- object has properties, produce getProps(), setProps() methods -->
@@ -88,7 +58,6 @@ The ebapi.js file is necessary for all single API inclusions.
             </PROPERTY>
             <PROPERTY name="moduleName" type="STRING" generateAccessors="true" deprecated="true">
                 <DESC>This method is present to provide backwards compatibility with PocketBrowser code, devices supported by RhoElements will have a single card reader driver installed as part of the platform. If the device has multiple card reader drivers installed this parameter is used to select which driver to use. The drivers present are output in the log file when the card reader is initialized. This parameter is also used to distinguish between an MSR and a DCR, e.g. if you attach a DCR7000 to your device you can specify that only the MSR functionality is used by specifying this parameter as 'MSR7000'.</DESC>
-                <DESC_EB>This method is present to provide backwards compatibility with PocketBrowser code, devices supported by the Enterprise Browser will have a single card reader driver installed as part of the platform. If the device has multiple card reader drivers installed this parameter is used to select which driver to use. The drivers present are output in the log file when the card reader is initialized. This parameter is also used to distinguish between an MSR and a DCR, e.g. if you attach a DCR7000 to your device you can specify that only the MSR functionality is used by specifying this parameter as 'MSR7000'.</DESC_EB>
                 <PLATFORM>WM</PLATFORM>
                 <APPLIES msiOnly="true"></APPLIES>
                 <VALUES>
@@ -216,7 +185,6 @@ The ebapi.js file is necessary for all single API inclusions.
 
             <REMARK title="Closing the reader while PIN entry pending">
                 <DESC>There is no way to abort a pending PIN entry (other than the customer pressing the Cancel button), for security reasons. Therefore if the reader is closed or RhoElements is quit during that time it will become unresponsive until a PIN is entered or the PIN timeout occurs.</DESC>
-                <DESC_EB>There is no way to abort a pending PIN entry (other than the customer pressing the Cancel button), for security reasons. Therefore if the reader is closed or the Enterprise Browser is quit during that time it will become unresponsive until a PIN is entered or the PIN timeout occurs.</DESC_EB>
             </REMARK>
 
             <REMARK title="Blank card data">
@@ -225,7 +193,6 @@ The ebapi.js file is necessary for all single API inclusions.
 
             <REMARK title="Detaching / Reattaching the Card Reader">
                 <DESC>Applications running in RhoElements should be resilient against the card reader being detached and subsequently reattached. Card data parsing code should be robust against unexpected characters in the first read after reattachment.</DESC>
-                <DESC_EB>Applications running in the Enterprise Browser should be resilient against the card reader being detached and subsequently reattached. Card data parsing code should be robust against unexpected characters in the first read after reattachment.</DESC_EB>
             </REMARK>
 
             <REMARK title="Encrypted Card data">
@@ -321,64 +288,5 @@ Rho.CardReader.open();
                </SECTIONS>
            </EXAMPLE>
         </EXAMPLES>
-        <EXAMPLES_EB>
-            <EXAMPLE title='Accepting Card Swipes'>
-                <SECTIONS>
-                    <SECTION>
-                        <DESC>This example shows how to enable the card reader and accept a card swipe. It then, displays the data in a human readable way. This example assumes that the ebapi-modules.js file is in the same directory as the html file invoking it.</DESC>
-                        <CODE>
-                            <JAVASCRIPT>
-                                <![CDATA[
-<head>
-    <script type="text/javascript" charset="utf-8" src="ebapi-modules.js"></script>
-
-    <title>CardReader API Example</title>
-
-    <script>
-        var firstName  = '';
-        var middleInit = '';
-        var lastName   = '';
-        var cardNumber = '';
-
-        function openCardReader(){
-            EB.CardReader.open(cardReaderCallback);
-        }
-
-        function cardReaderCallback(params){
-            var scannedData = params['data'].split("^");
-
-            // The card number is preceded by a two characters: "%B" that need to be removed to display the number properly.
-            cardNumber = scannedData[0].substr(2);
-
-            var name  = scannedData[1];
-            lastName  = name.split("/")[0];
-            firstName = name.split("/")[1];
-            // Check for middle initial
-            if(firstName.split(" ")[1]){
-                middleInit = firstName.split(" ")[1];
-            }
-
-            cardData.innerHTML = 'Card Data: <br/>' + 
-                                 'Name on Card: ' + firstName + ' ' + lastName + '<br/>' +
-                                 'Card Number:  ' + cardNumber;
-        }
-    </script>
-</head>
-<body>
-    <h1>CardReader API</h1>
-    <br/>
-    <br/>
-    <div id='cardData'>Card Data: </div>
-    <br/>
-    <br/>
-    <button onClick='openCardReader()'>Activate Card Reader</button>
-</body>
-                                ]]>
-                            </JAVASCRIPT>
-                        </CODE>
-                    </SECTION>
-                </SECTIONS>
-            </EXAMPLE>
-        </EXAMPLES_EB>
     </MODULE>
 </API>

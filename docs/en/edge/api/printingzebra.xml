@@ -21,37 +21,6 @@ Be sure to review the [JavaScript API Usage](/guide/api_js) guide for important 
 ## Ruby Usage
 Be sure to review the [Ruby API Usage](/guide/api_ruby) guide for important information about using this API in Ruby.
         </MORE_HELP>
-        <MORE_HELP_EB>
-## Enabling the API
-There are two methods of enabling the Printer API:
-
-* Include all 'ebapi' modules
-* Include only the API modules you need
-
-Both methods are explained below. 
-
-Either way, the included files will be from: 
-`/Enterprise Browser/JavaScript Files/Enterprise Browser`,
-a directory on the computer that contains the Enterprise Browser installation.
-
-### Include all JS API modules
-To include all JavaScript APIs, copy the `ebapi-modules.js` file to a location accessible by your app's files and include the JavaScript modules file in your app. For instance, to include the modules file in your `index.html`, copy the file to the same directory as your index.html and add the following line to the HEAD section of your index.html file:
-
-    :::html
-    &lt;script type="text/javascript" charset="utf-8" src="ebapi-modules.js"&gt;&lt;/script&gt;
-
-&gt; This will define the EB class within the page. **Note that the path for this file is relative to the current page** (index.html). Any page on which the modules are required will need to have the required .js file(s) included in this fashion.
-
-### Include only the modules you need
-To include individual APIs, you must first include the `ebapi.js` in your HTML, and then the additional required API file(s). For instance, to use the Printer API, add the following code to the HTML file(s). Again, this assumes that relevant API files have been copied to the same directory as the HTML.
-
-    :::html
-    &lt;script type="text/javascript" charset="utf-8" src="ebapi.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8" src="eb.printer.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8" src="eb.printerzebra.js"&gt;&lt;/script&gt;
-
-&gt; In the code lines above, notice that `ebapi.js` is included first, followed by `eb.printer.js` and `eb.printer.js`, which are the Printer APIs required for Enterprise Browser to output to Zebra printers. **This coding is required on each HTML page whenever an individual API will be called from that page**.
-        </MORE_HELP_EB>
         <TEMPLATES>
             <DEFAULT_INSTANCE/>
             <PROPERTY_BAG/>
@@ -199,7 +168,6 @@ To include individual APIs, you must first include the `ebapi.js` in your HTML, 
             <METHOD name="retrieveFileNames" hasCallback="mandatory">
                 <VER_INTRODUCED>4.1.0</VER_INTRODUCED>
                 <PLATFORM>WM, CE, Android, iOS</PLATFORM>
-                <PLATFORM_EB>Android, WM, CE</PLATFORM_EB>
                 <DESC>Retrieves the names of the files which are stored on the printer. Works asynchronously; use callback to check the result.</DESC>
                 <CALLBACK type="HASH">
                     <PARAMS>
@@ -217,7 +185,6 @@ To include individual APIs, you must first include the `ebapi.js` in your HTML, 
             <METHOD name="retrieveFileNamesWithExtensions" hasCallback="mandatory">
                 <VER_INTRODUCED>4.1.0</VER_INTRODUCED>
                 <PLATFORM>WM, CE, Android, iOS</PLATFORM>
-                <PLATFORM_EB>Android, WM, CE</PLATFORM_EB>
                 <DESC>This method only returns files which have the extensions in "extensions". Works asynchronously; use callback to check the result.</DESC>
                 <PARAMS>
                     <PARAM name="extensions" type="ARRAY">
@@ -241,7 +208,6 @@ To include individual APIs, you must first include the `ebapi.js` in your HTML, 
             <METHOD name="sendFileContents" hasCallback="optional">
                 <VER_INTRODUCED>4.1.0</VER_INTRODUCED>
                 <PLATFORM>WM, CE, Android, iOS</PLATFORM>
-                <PLATFORM_EB>Android, WM, CE</PLATFORM_EB>
                 <DESC>Sends the contents of a file on the device to the printer. Equals to printing raw string with content of specified file. Should be used to print ZPL and CPCL commands stored inside predefined filed. Works asynchronously; use callback to check the result.</DESC>
                 <PARAMS>
                     <PARAM name="path" type="STRING">
@@ -256,7 +222,6 @@ To include individual APIs, you must first include the `ebapi.js` in your HTML, 
             <METHOD name="printStoredFormatWithHash" hasCallback="optional">
                 <VER_INTRODUCED>4.1.0</VER_INTRODUCED>
                 <PLATFORM>WM, CE, Android, iOS</PLATFORM>
-                <PLATFORM_EB>Android, WM, CE</PLATFORM_EB>
                 <DESC>Prints a stored format on the printer, filling in the fields specified by the Hash. Works asynchronously; use callback to check the result.</DESC>
                 <PARAMS>
                     <PARAM name="formatPathOnPrinter" type="STRING">
@@ -268,14 +233,12 @@ To include individual APIs, you must first include the `ebapi.js` in your HTML, 
                 </PARAMS>
                 <CALLBACK type="STRING">
                     <DESC>Returns result of a printing attempt. PRINTER_STATUS_SUCCESS, PRINTER_STATUS_ERROR. If you try to print formats containing invalid data, then only iOS return ERROR, on Android and WM  Zebra SDK not provided that info due to Zebra SDK API limitations on Android and WM. So on Android and WM you can receive ERROR only if some connection problem occurred.</DESC>
-                    <DESC_EB>Returns result of a printing attempt. PRINTER_STATUS_SUCCESS, PRINTER_STATUS_ERROR. If you try to print formats containing invalid data, on Android and WM Zebra SDK does not provide that info due to Zebra SDK API limitations on Android and WM. So on Android and WM you can receive ERROR only if some connection problem occurred.</DESC_EB>
                 </CALLBACK>
             </METHOD>
 
             <METHOD name="printStoredFormatWithArray" hasCallback="optional">
                 <VER_INTRODUCED>4.1.0</VER_INTRODUCED>
                 <PLATFORM>WM, CE, Android, iOS</PLATFORM>
-                <PLATFORM_EB>Android, WM, CE</PLATFORM_EB>
                 <DESC>Prints a stored format on the printer, filling in the fields specified by the array. Works asynchronously; use callback to check the result.</DESC>
                 <PARAMS>
                     <PARAM name="formatPathOnPrinter" type="STRING">
@@ -287,16 +250,13 @@ To include individual APIs, you must first include the `ebapi.js` in your HTML, 
                 </PARAMS>
                 <CALLBACK type="STRING">
                     <DESC>Returns result of a printing attempt. PRINTER_STATUS_SUCCESS, PRINTER_STATUS_ERROR. If you try to print format contains invalid data, then only iOS return ERROR, on Android and WM  Zebra SDK not provided that info due to Zebra SDK API limitations on Android and WM. So on Android and WM you can receive ERROR only if some connection problem occurred.</DESC>
-                    <DESC_EB>Returns result of a printing attempt. PRINTER_STATUS_SUCCESS, PRINTER_STATUS_ERROR. If you try to print formats containing invalid data, on Android and WM Zebra SDK does not provide that info due to Zebra SDK API limitations on Android and WM. So on Android and WM you can receive ERROR only if some connection problem occurred.</DESC_EB>
                 </CALLBACK>
             </METHOD>
 
             <METHOD name="storeImage" hasCallback="optional">
                 <VER_INTRODUCED>4.1.0</VER_INTRODUCED>
                 <PLATFORM>WM, CE, Android, iOS</PLATFORM>
-                <PLATFORM_EB>Android, WM, CE</PLATFORM_EB>
                 <DESC>Stores the specified image to the connected printer as a monochrome image. Works asynchronously; use callback to check the result. The image will be stored on the printer at printerDriveAndFileName with the extension GRF. If a drive letter is not supplied, E will be used as the default (e.g. FILE becomes E:FILE.GRF). If an extension is supplied, it is ignored (E:FILE.BMP becomes E:FILE.GRF). Note that if the image resolution is large (e.g. 1024x768) this method may take a long time to execute. There are device OS limitations on supported file formats and image sizes. iOS, Android and WM are supporting only JPG and PNG files. WM can fail to handle large (>1024x1024 pixel) images.</DESC>
-                <DESC_EB>Stores the specified image to the connected printer as a monochrome image. Works asynchronously; use callback to check the result. The image will be stored on the printer at printerDriveAndFileName with the extension GRF. If a drive letter is not supplied, E will be used as the default (e.g. FILE becomes E:FILE.GRF). If an extension is supplied, it is ignored (E:FILE.BMP becomes E:FILE.GRF). Note that if the image resolution is large (e.g. 1024x768) this method may take a long time to execute. There are device OS limitations on supported file formats and image sizes. Android and WM support only JPG and PNG files. WM can fail to handle large (>1024x1024 pixel) images.</DESC_EB>
                 <PARAMS>
                     <PARAM name="printerDriveAndFileName" type="STRING">
                         <DESC>Path on the printer where the image will be stored.</DESC>
@@ -322,7 +282,6 @@ To include individual APIs, you must first include the `ebapi.js` in your HTML, 
 
         <VER_INTRODUCED>4.1.0</VER_INTRODUCED>
         <PLATFORM>WM, CE, Android, iOS</PLATFORM>
-        <PLATFORM_EB>Android, WM, CE</PLATFORM_EB>
         <REMARKS>
             <REMARK title="iOS Notes" productException="eb">
                 <DESC>
@@ -364,18 +323,6 @@ To use a Bluetooth connection on iOS devices you should take into account the fo
         }
 
 * When you call searchPrinters() with Bluetooth search (with CONNECTION_TYPE_ANY or CONNECTION_TYPE_BLUETOOTH) then _all_ Bluetooth devices around you will be discovered. You may see a lot of pairing requests to non-printer devices and should just cancel or ignore them. This happens because we can not detect that the device is a printer until the device is paired. It is recommended that the BT Address or WiFi MAC Address is also used when searching for printers.</DESC>
-                <DESC_EB>
-
-* Requires a Printing Service application to be running.
-
-* You should avoid navigating from the current page using the printer without disconnecting from the printer first. You can use the window.onunload event:
-
-        :::javascript
-        window.onunload = function(){
-            printer.disconnect();
-        }
-
-* When you call searchPrinters() with Bluetooth search (with CONNECTION_TYPE_ANY or CONNECTION_TYPE_BLUETOOTH) then _all_ Bluetooth devices around you will be discovered. You may see a lot of pairing requests to non-printer devices and should just cancel or ignore them. This happens because we can not detect that the device is a printer until the device is paired. It is recommended that the BT Address or WiFi MAC Address is also used when searching for printers.</DESC_EB>
             </REMARK>
             <REMARK title="Supported Zebra Printers">
                 <DESC>Only printers listed in supported models in Zebra [SDK description](https://www.zebra.com/us/en/products-services/software/zebralink/zebralink-multiplatform-sdk.html) (click "Compatible Printers" link) are supported for use with this API. For example, the QL 320 (old model) is __not__ supported but, QLn320 and QL320 plus __are__ supported.</DESC>

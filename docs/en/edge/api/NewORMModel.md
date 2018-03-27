@@ -225,25 +225,25 @@ accounts = Account.paginate({ :page=&gt;5,
 <ul class='nav nav-tabs' id='exI5-S0Tab'><li class='active'><a href='#exI5-S0JS' data-toggle='tab'>JavaScript</a></li><li ><a href='#exI5-S0RUBY' data-toggle='tab'>Ruby</a></li></ul><div class='tab-content'><div class='tab-pane active' id='exI5-S0JS'><pre class='CodeRay'><code>:::javascript
 
                            
-var account = Account.make({"name": "Motorola", "industry": "electronics"});
+var account = Account.make({"name": "Symbol", "industry": "electronics"});
                 account.save(); 
                                     </code></pre></div><div class='tab-pane' id='exI5-S0RUBY'><pre class='CodeRay'><code>:::ruby
 
                            
-account = Account.make({"name"=&gt;"Motorola", "industry"=&gt;"electronics"});
+account = Account.make({"name"=&gt;"Symbol", "industry"=&gt;"electronics"});
                 account.save() 
                                     </code></pre></div></div>  </div></div></div></div><a name='e6'></a><div class=' example' id='e6'><div class="accordion-group"><div class="accordion-heading"><span class="accordion-toggle"   href="#cExample6"><strong>update_attributes</strong></div><div id="cExample6" class="accordion-body">  <div class="accordion-inner">
 <p>Updates the current model object&rsquo;s attributes and saves it to the database.</p>
 <ul class='nav nav-tabs' id='exI6-S0Tab'><li class='active'><a href='#exI6-S0JS' data-toggle='tab'>JavaScript</a></li><li ><a href='#exI6-S0RUBY' data-toggle='tab'>Ruby</a></li></ul><div class='tab-content'><div class='tab-pane active' id='exI6-S0JS'><pre class='CodeRay'><code>:::javascript
 
                            
-var account = Account.create({'name': 'Motorola', 'industry': 'electronics'});
+var account = Account.create({'name': 'Symbol', 'industry': 'electronics'});
             account.update_attributes({'name':'ABB','industry':'robotics'});
             account.get("industry"); //"robotics"   
                                     </code></pre></div><div class='tab-pane' id='exI6-S0RUBY'><pre class='CodeRay'><code>:::ruby
 
                            
-account = Account.create({'name'=&gt; 'Motorola', 'industry'=&gt; 'electronics'})
+account = Account.create({'name'=&gt; 'Symbol', 'industry'=&gt; 'electronics'})
             account.update_attributes({'name'=&gt;'ABB','industry'=&gt;'robotics'})
             account.get("industry") //"robotics"    
                                     </code></pre></div></div>  </div></div></div></div><a name='e7'></a><div class=' example' id='e7'><div class="accordion-group"><div class="accordion-heading"><span class="accordion-toggle"   href="#cExample7"><strong>destroy</strong></div><div id="cExample7" class="accordion-body">  <div class="accordion-inner">
