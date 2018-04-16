@@ -1,6 +1,9 @@
 # Data Handling with Rhom and ORM
 
-The RhoMobile Suite provides several APIs for handling device data. Released with RhoMobile Suite 5.3 is the [ORM common API](../api/NewORM), which supports JavaScript and Ruby. RMS 5.2 and earlier versions support the original [Rhom API](../api/rhom-api) for Ruby apps and the [ORM API](../api/Orm), which adds JavaScript support to Rhom via the [OPAL library](http://opalrb.org). 
+The RhoMobile Suite provides several APIs for handling device data. Released with RhoMobile Suite 5.3 is the [ORM common API](../api/NewORM), which supports JavaScript and Ruby. Pay attention to ORM Common API has not been officially released. It should not be used in a production environment.
+ 
+
+RMS 5.2 and earlier versions support the original [Rhom API](../api/rhom-api) for Ruby apps and the [ORM API](../api/Orm), which adds JavaScript support to Rhom via the [OPAL library](http://opalrb.org). 
 
 **RMS 5.3 and higher**:
 
