@@ -70,6 +70,11 @@ In case you are planning to work with native geo mapping (the MapView interface)
     android:
       mapping: yes
 
+## Setup for Sailfish
+### Prerequisites
+
+
+
 ## Setup for Windows Mobile
 Note that Windows Mobile versions of your Rhodes application must be built in a Windows environment.
 ### Prerequisites
