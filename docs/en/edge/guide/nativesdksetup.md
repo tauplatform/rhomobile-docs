@@ -1,5 +1,5 @@
 # Native SDK Setup
-This page describes how to setup the underlying native SDKs when building a RhoMobile application locally for our supported platforms: iPhone, RIM Blackberry, Windows Mobile and Android.
+This page describes how to setup the underlying native SDKs when building a RhoMobile application locally for our supported platforms: iPhone, Android, Sailfish, RIM Blackberry and Windows Mobile.
 
 ## Setup for iOS
 In order to build an iOS application locally, it must be performed on a Macintosh computers using any type of type of laptop/desktop. The instructions below describe how to do this from either the Macintosh Xcode development environment or from the command line on your local Macintosh.

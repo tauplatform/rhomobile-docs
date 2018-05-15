@@ -1,6 +1,6 @@
 # Build for Sailfish
 ## Setup
-Follow the instructions for [setting up the development environment](nativesdksetup#setup-for-sailfih) for building Android applications.
+Follow the instructions for [setting up the development environment](nativesdksetup#setup-for-sailfish) for building Android applications.
 
 ### Building Remotely
 Alternatively, you can create the device builds remotely with RhoMobile hosted builds. Refer to our [remote build guide](../../hosted/guide/remote-build-guide) for more info.
