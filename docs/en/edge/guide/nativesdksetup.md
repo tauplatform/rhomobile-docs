@@ -82,6 +82,12 @@ Make sure you installed the following software.
 	env:
 		paths:
 			sailfish: C:/SailfishOS
+### Updating libs on target device and build machine
+There is a few libraris, thats need to be installed on the build machine:
+	:::term
+	qt5-qtconnectivity-qtbluetooth
+	qt5-qtconnectivity-qtsdpscanner
+Install it, using the sailfish IDE. On the left panel - press the button "Sailfish OS", press the settings button near your target platform and find and install that libraries and it's devel versions.
 
 ## Setup for Windows Mobile
 Note that Windows Mobile versions of your Rhodes application must be built in a Windows environment.

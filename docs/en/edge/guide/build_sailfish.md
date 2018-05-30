@@ -52,17 +52,17 @@ To build your application you should run the command:
 	:::term
 	$ rake device:sailfish:production
 
-This command generates rpm file, that could be installed on the phone manualy as a production version. But if you want to run applicaion from command line, you should connect the device to your computer with a USB cable. You can verify that your device is connected by executing:
+This command generates rpm file in the `<rhodes-app-dir>/bin/target`, that could be installed on the phone manually as a production version. But if you want to run an application from a command line, you should connect the device to your computer with a USB cable. You can verify that your device is connected by executing:
 
 	:::term
 	$ ping <device_ip>
 
-After that you should deploy application on the device, using:
+After that you should deploy an application on the device, using:
 
 	:::term
 	$ rake build:sailfish:deploy
 
-After you can run the application by tapping the desktop icon on the device, or you can run command:
+After you can run the application by tapping the desktop icon on the device, or you can run a command:
 
 	:::term
 	$ rake run:sailfish
@@ -85,11 +85,3 @@ The below values can be used as a guide for `build.yml`, skip any setting which 
 
 	:::yml
 	profiler: 0
-
-### Creating your application package
-Once your configuration is set up, you can run:
-
-	:::term
-	$ rake device:sailfish:production
-
-The RPM file will be located in `<rhodes-app-dir>/bin/target`.
