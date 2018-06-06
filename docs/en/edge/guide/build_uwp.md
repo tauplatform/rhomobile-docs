@@ -89,7 +89,6 @@ To deploy application .APPX file to UWP device:
 Application key is placed here: '<sailfishos_folder>\platform\uwp\rhodes\rhodes_TemporaryKey.pfx'. If you got microsoft certification key - you can simply replace one to another (or change it in rhodes_dev.sln, if you want). 
 In other cases you should use developer mode on your device. 
 On Windows 10 for PC you should also add certificate from the preferences of *.appx. Here is few steps that could help:
-
 1. Click Properties
 2. Click Digital Signatures
 3. Select Signature from the list
@@ -98,7 +97,7 @@ On Windows 10 for PC you should also add certificate from the preferences of *.a
 7. Click Install Certificate
 8. Install the Certificate
 
-[Quote from Installing developer packages on Windows RT](https://msdn.microsoft.com/en-us/library/windows/apps/bg126232.aspx):
+[Quote from Installing developer packages on Windows RT](https://msdn.microsoft.com/en-us/library/windows/apps/bg126232.aspx)
 
     Click Next. Tap OK to confirm the UAC dialog.
     In the next screen of the Certificate Import Wizard, change the selected option to Place all certificates in the following store.
