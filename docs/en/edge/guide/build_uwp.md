@@ -1,4 +1,4 @@
-# Build for Windows 10(UWP)
+# Build for Windows 10 (UWP)
 
 ## Setup
 Follow the instructions for [setting up the development environment](nativesdksetup#setup-for-windows-10uwp) for building Windows Phone 10 applications.
@@ -83,6 +83,27 @@ To deploy application .APPX file to UWP device:
 2. Connect WP10 device to your development Windows 10.x PC via USB
 3. On the PC go to Start screen and search for `Application Deployment`
 4. Run Application Deployment tool, specify Target=Device, select your APPX file and click Deploy.
+
+### Information about using certificate
+
+Application key is placed here: '<sailfishos_folder>\platform\uwp\rhodes\rhodes_TemporaryKey.pfx'. If you got microsoft certification key - you can simply replace one to another (or change it in rhodes_dev.sln, if you want). 
+In other cases you should use developer mode on your device. 
+On Windows 10 for PC you should also add certificate from the preferences of *.appx. Here is few steps that could help:
+1. Click Properties
+2. Click Digital Signatures
+3. Select Signature from the list
+4. Click Details
+5. Click View Certificate
+7. Click Install Certificate
+8. Install the Certificate
+
+[Quote from Installing developer packages on Windows RT](https://msdn.microsoft.com/en-us/library/windows/apps/bg126232.aspx):
+
+    Click Next. Tap OK to confirm the UAC dialog.
+    In the next screen of the Certificate Import Wizard, change the selected option to Place all certificates in the following store.
+    Tap the Browse button. In the Select Certificate Store pop-up window, scroll down and select Trusted People, and then tap OK.
+    Tap the Next button; a new screen appears. Tap the Finish button.
+    A confirmation dialog should appear; if so, click OK. 
 
 ## Publishing on Windows Phone Store
 

@@ -119,7 +119,7 @@ Make sure you have installed the following software. Since Rhdoes builds a unifi
 ### Prerequisites
 * Windows 10 OS
 * Visual Studio 2015 Community Edition UP3 or higher installed
-
+* Download and install [Universal Windows App Development Tools](msdn.microsoft.com/en-IN/library/dn975273.aspx) 
 * Add path to `msbuild` to `rhobuild.yml` in rhodes folder. Use 32-bit version compiler to build for device.
 
         env:
