@@ -82,6 +82,7 @@ Make sure you installed the following software.
 	env:
 		paths:
 			sailfish: C:/SailfishOS
+
 ### Updating libs on target device and build machine
 There is a few libraris, thats need to be installed on the build machine:
 	:::term
