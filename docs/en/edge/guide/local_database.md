@@ -112,7 +112,7 @@ If your application requires local (on-device) database encryption, enable it by
 **NOTE: Database encryption is not currently supported for applications that use bulk sync.**
 
 ### Platform Notes
-* iOS uses an AES 128 encryption algorithm from the iOS SDK.
+* iOS uses an AES 256 encryption algorithm from the iOS SDK.
 * Android uses an AES 128 ecryption algorithm from the Android SDK.
 * Windows Mobile uses an RC4 algorithm from Windows Mobile SDK.
 
