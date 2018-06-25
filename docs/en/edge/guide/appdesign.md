@@ -9,7 +9,7 @@ The Model View Controller pattern separates data definitions (models) from busin
 By convention, files for each Model include a controller, a model class and view templates described below.
 
 ## Model
-To store data locally RhoMobile uses Sqlite on iPhone, Android, and Windows Mobile.On Blackberry version up to 5.0 Rhodes uses Hsql. On version 5.0 and higher it is possible to use Sqlite or Hsql. To access and manipulate stored data you may use RhoMobile's [ORM](../api/Orm) or [OrmModel](../api/OrmModel) APIs. ORM stands for object relational mapper and it provides a high level way to make the local database easier to program to.  
+To store data locally RhoMobile uses Sqlite on iPhone, Android, and Windows Mobile. To access and manipulate stored data you may use RhoMobile's [ORM](../api/Orm) or [OrmModel](../api/OrmModel) APIs. ORM stands for object relational mapper and it provides a high level way to make the local database easier to program to.  
 
 By convention, your model class is located in the model's folder. For the model "UserBase" the file would be called "user_base.rb"
 
