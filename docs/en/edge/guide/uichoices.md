@@ -1,17 +1,17 @@
 # User Interface Architecture
+
 ## What is included in the box
-When using RhoMobile Application Generator, a [default application structure](creating_a_project#project-structure) is created that includes jQuery Mobile and associated CSS stylesheets to control the user interface of the application.
+When using RhoMobile Application Generator, a [default application structure](creating_a_project#project-structure) is created that includes Twitter Bootstrap CSS framework regardless it is ruby app or JS app.
+RhoMobile JS app is several plain HTML pages with links from one page to another. You may use any modern JS framework for UI like Vue, Angular, Ember, S7, etc in order to build MPA (Multi-Page-App) or SPA (Single-Page-App) application.
+The RhoMobile Ruby app uses ROR (Ruby On Rails) approach based on MVC (Model-View-Controller) pattern. You can find detailed description below.
 
-The RhoMobile framework also includes stylesheets customized for each device to give your applications a native look and feel. These stylesheets are included by default in all generated Rhodes applications (public/css/), and are included in the application layout file (app/layout.erb).
+## Using frameworks with RhoMobile JS/Ruby App
+You are free to implement your own JS/CSS as well as 3rd party frameworks. Some frameworks that are traditionally geared towards mobilizing web sites like Twitter BootStrap, Materialize CSS or Zurb Foundation can be useful for those looking to take advantage of Responsive Design that these frameworks offer. Other frameworks like S7 or Vuetify are geared towards providing many mobile enhance controls or elements. When choosing a UI framework, it is important to consider not only the features that it provides, but how they will perform on the intended targeted operating systems. Most of these frameworks use modern CSS3 techniques for UI effects and transitions that perform well on devices that provide a dedicated GPU typically found on Android and iOS devices. These frameworks may not be suitable for other platforms like Windows Mobile/CE.
 
-The default styles will automatically be applied to all supported content found in the "header", "footer", and "content" divs.  If you prefer using different names for any of these divs, you will need to update your stylesheets to reflect the new names in order to retain native styling.  Conversely, if you prefer not to use any of the customized styles in your applications, you can either delete the links to the default stylesheets from your application, or simply place any content you wish to create custom styles for in a div that does not descend from "header", "footer", or "content".
+## RhoMobile Ruby Application UI architecture
+### View Layouts
 
-## Using Other Frameworks
-You are free to remove the contents of layout.erb and implement your own CSS as well as 3rd party frameworks. There are many popular UI frameworks besides jQuery Mobile to choose from. Some frameworks that are traditionally geared towards mobilizing web sites like Twitter BootStrap or Zurb Foundation can be useful for those looking to take advantage of Responsive Design that these frameworks offer. Other frameworks like jQuery Mobile are geared towards providing many mobile enhance controls or elements. When choosing a UI framework, it is important to consider not only the features that it provides, but how they will perform on the intended targeted operating systems. Most of these frameworks use modern CSS3 techniques for UI effects and transitions that perform well on devices that provide a dedicated GPU typically found on Android and iOS devices. These frameworks may not be suitable for other platforms like Windows Mobile/CE.
-
-## View Layouts
-
-RhoMobile supports a layout mechanism based on ERB templates. The default layout template is called "layout.erb" and is located in the application root folder.  Unless overridden, this layout is rendered on all non-Ajax requests.
+RhoMobile Ruby application supports a layout mechanism based on ERB templates. The default layout template is called "layout.erb" and is located in the application root folder.  Unless overridden, this layout is rendered on all non-Ajax requests.
 
 You may use layout.erb to define what CSS and JavaScript libraries are used by your views.
 
@@ -40,7 +40,7 @@ You may use layout.erb to define what CSS and JavaScript libraries are used by y
     
     </html>
 
-### Customizing Layouts
+#### Customizing Layouts
 
 If you would like to override or customize layout behavior for individual application pages, you can call the render function with the following parameters:
 
@@ -57,11 +57,11 @@ You can call the layout method on the controller to overwrite the default layout
 
 This will force the render call to use mycustomlayout.erb in place of the default layout file for all actions of this controller.
 
-## UI handling for multiple platforms
+### UI handling for multiple platforms
 
 While there are enough similarities between most browsers to facilitate the use of a single view file across platforms, you may encounter some differences which may necessitate the use of custom view files for specific devices.  RhoMobile supports such differences in several ways:
 
-### Conditional display in view files
+#### Conditional display in view files
 
 To render content in some browsers but not others, you can include conditional statements within your views.  For example, this code can be used to conditionally display the name of the phone's operating system in your model views.
 
@@ -90,7 +90,7 @@ b) and if it is, include a custom webkit stylesheet in the html header in the ap
 	:::ruby
 	<%= '<link href="/public/css/my_custom_webkit.css" type="text/css" rel="stylesheet"/>'  if is_webkit? %>
 
-### Dynamic loading of custom view files based on the current platform
+#### Dynamic loading of custom view files based on the current platform
 For more significant differences between browsers, RhoMobile supports platform-specific loading of view files.  At runtime, the application detects the current platform, and checks first for a platform-specific file before loading the default view file.
 
 To create a platform-specific view file, simply name the file using the following convention
@@ -99,12 +99,13 @@ To create a platform-specific view file, simply name the file using the followin
 <table>
 <tr><td width="125">Android:</td><td width="125" > android</td><td width="125" >index.android.erb</td></tr>
 <tr><td width="125">iPhone:</td><td width="125" >iphone</td><td width="125" >index.iphone.erb</td></tr>
+<tr><td width="125">Sailfish:</td><td width="125" >iphone</td><td width="125" >index.sailfish.erb</td></tr>
 <tr><td width="125">Windows Mobile:</td><td width="125" > wm</td><td width="125" >index.wm.erb</td></tr>
 </table>
 
 Keep in mind that any changes made to the standard view files are not incorporated into the custom views, so if you're developing custom views for a specific platform, ensure that any necessary changes are applied to all relevant view files.
 
-### Escaping HTML
+#### Escaping HTML
 If you need to output values that might contain HTML-unsafe characters, you can use ERB's `escape_html` to ensure that your code is escaped properly. This will help against accidental breakage as well as intentional XSS attempts. In your controller, include the `ERB::Util` module and in your templates, print values with `<%=html_escape @value %>` or the shorthand version `<%=h @value %>`
 
 Example:
@@ -123,7 +124,7 @@ HTML view:
     :::ruby
     <div>Message received: <%=h @message %></div>
 
-## Advanced Usage of Render
+### Advanced Usage of Render
 Render does not need to be called at the end of each controller action method. If render was not called, then it will default to rendering the action of the method you are in.
 
 Rendering of views works with no method in controller. If the method does not exist for an action, but a view exists for that action, then the view will be rendered.
@@ -147,7 +148,7 @@ Load from 'partials' folder:
     :::ruby
     render :partial =>"partials/ad", :locals => { :ad => "foo_ad" }
 
-### Partial Efficiency
+#### Partial Efficiency
 Some developers may shy-away from partials because they have the mistaken impression that they are inefficient. You might easily imagine a file being read and parsed every time you use a partial however, that is not the reality.
 
 What really happens:
