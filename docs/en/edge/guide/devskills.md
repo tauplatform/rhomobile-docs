@@ -13,4 +13,4 @@ JavaScript can be used in the traditional sense for either application logic and
 Ruby may optionally be used in your application in a vareity of ways. When using RhoStudio' Generator for your application or data models, Ruby is used by default in the model views (.erb files) as well as the controller files (.rb).
 
 ##CSS
-CSS is used to define how to display HTML elements in your page and thus will control how your application looks and is formatted. Since RhoMobile applications are running on top of Webkit, it supports modern CSS3 attributes. Some developers choose to write there own CSS styles, while others choose to leverage some 3rd party UI frameworks like JQuery Mobile or Twitter Bootstrap.
+CSS is used to define how to display HTML elements in your page and thus will control how your application looks and is formatted. Since RhoMobile applications are running on top of Webkit, it supports modern CSS3 attributes. Some developers choose to write there own CSS styles, while others choose to leverage some 3rd party UI frameworks like Twitter Bootstrap, Vuetify, Framework7, etc.
