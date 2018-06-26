@@ -1,7 +1,7 @@
 # Install RhoMobile Suite
 The RhoMobile Suite allows the development of apps that can run on multiple mobile platforms from a single code base. In essence, these apps employ a web-like front end that renders on a platform-specific webkit, which passes device calls through to the underlying hardware. RhoStudio also can build native apps for Android, iOS and Windows Mobile and Windows Phone 8 using the corresponding SDK(s). 
 
-At minimum, the RhoMobile installer places the Rhodes open-source development framework and the RhoStudio (Eclipse) IDE on the development host system. Also included are Zebra's RhoConnect and RhoElements components, optional modules for creating apps that connect and sync with one or more back-end systems and/or that support Zebra's enterprise-grade devices. Native SDKs, if desired, are installed separately. 
+At minimum, the RhoMobile installer places the Rhodes open-source development framework and the RhoStudio (Eclipse) IDE on the development host system. Also included RhoConnect, optional module for creating apps that connect and sync with one or more back-end systems. Rhodes supports Zebra's enterprise-grade devices. Native SDKs, if desired, are installed separately. 
 
 RhoMobile depends on Java, Ruby, Git and other tools. Depending on the development host platform, these components are either installed automatically with the main suite or must be installed manually using the platform-specific processes below. **Please read and follow all instructions carefully to ensure a trouble-free installation.**
 
@@ -15,7 +15,7 @@ If your machine already has RMS installed, **[get the latest RhoMobile suite for
 ###For Mac OS X (.dmg file):
 1- **Drag-copy the RhoStudio folder** from the .dmg to your Applications folder. You'll see a message like the one below. **Be sure your 'workspace' folder is not in the same folder as the RhoStudio application** (by default, it's in the user's home directory, **not** in the RhoStudio folder). 
 
-![img](http://rhomobile-suite.s3.amazonaws.com/install/New_RhoStudio_replace_old.png)
+![img](/images/install/New_RhoStudio_replace_old.png)
 
 2- **When you've confirmed that your projects are elsewhere, click 'Replace'**<br> 
 3- When copying from Step 2 is compete, **run the "Install Gems" script** from the .dmg<br>
@@ -30,7 +30,7 @@ NOTE: RMS 5.1 is NOT compatible with Android NDK 10; Android NDK 9d is recommend
 
 7- **Create or update any application aliases** for the new RhoSuite Launchers.<br>
 
-![img](http://rhomobile-suite.s3.amazonaws.com/install/Java_bin_path.png)
+![img](/images/install/Java_bin_path.png)
 
 ###For Windows (.exe file):
 1- **Launch the RhoMobile Suite Installer** (.exe)<br>
@@ -43,7 +43,7 @@ If the upgrade steps have failed, or if you're installing RhoMobile Suite for th
 
 ## Windows First-time Install (32- and 64-bit)
 ### STEP 1: Run the RhoMobile Suite Installer
-[Download the RhoMobile Suite Installer for Windows](http://tau-technologies.com/developers/downloads/) and launch it. This will install Rhodes, RhoStudio, RhoConnect and RhoElements, as well as [Ruby](http://www.ruby-lang.org/en/) and [Redis](http://redis.io/) open source tools. 
+[Download the RhoMobile Suite Installer for Windows](http://tau-technologies.com/developers/downloads/) and launch it. This will install Rhodes, RhoStudio, RhoConnect, as well as [Ruby](http://www.ruby-lang.org/en/) and [Redis](http://redis.io/) open source tools. 
 
 Additional installers will automatically launch for [Git](https://github.com/) and [Node.js](https://nodejs.org/). Follow prompts and read and accept their respective open-source license agreements as appropriate. 
 
@@ -84,7 +84,7 @@ The RhoMobile installer for Windows places the following items in the Windows St
 
 * Launchers for RhoStudio 32- and 64-bit editions
 * A link to the Readme file
-* Links to the [RhoMobile Developer Community](http://developer.motorolasolutions.com) and [RhoMobile Documentation](/home) sites
+* Links to the [RhoMobile Developer Community](http://forums.tau-technologies.com/) and [RhoMobile Documentation](/home) sites
 * A link to the RhoConnect Push Service files
 * An uninstaller for RhoMobile Suite
 
@@ -114,7 +114,7 @@ The RhoMobile installer for Windows places the following items in the Windows St
 #####4. Use RVM to install Ruby 1.9.3 (even if you have a newer version)<br>
 #####5. Run the "install gems" Terminal script from the RhoMobile Suite .dmg
 **OPTIONAL STEPS:** 
-#####Set up native SDKs for specific target devices (Android, iOS)<br>
+#####Set up native SDKs for specific target devices (Android, iOS, Sailfish)<br>
 #####Run the "Install RhoConnect-push" Terminal script<br><br>
 
 #### Detailed instructions for Mac OS X Installations:
@@ -124,7 +124,7 @@ The RhoMobile installer for Windows places the following items in the Windows St
 
 a. [**Download RhoMobile Suite**](http://tau-technologies.com/developers/downloads/) disc image (a .dmg file) and double-click it. A window similar to the following will open: <br>
 
-![img](http://rhodocs-images.s3.amazonaws.com/guide/RhoMobile_Installer_disc_image.png)
+![img](/images/install/RhoMobile_Installer_disc_image.png)
 
 <br>
 b. **Drag the RhoStudio icon to the Applications folder alias** (in the direction of the arrow). This will copy the suite's main executables and some other useful files to the Applications folder of the development Mac. DO NOT ATTEMPT TO LAUNCH RHOSTUDIO AT THIS TIME.
@@ -176,7 +176,7 @@ The result should be something similar to this:
 **Double-click "Install gems" from the RhoMobile Suite Installer .dmg (below) introduced earlier.<br>**
 A Terminal window will open and execute an installation script.<br>
 
-![img](http://rhodocs-images.s3.amazonaws.com/guide/RhoMobile_Installer_Install_gems.png)
+![img](/images/install/RhoMobile_Installer_Install_gems.png)
 
 **When prompted, select N to avoid using `sudo` to install gems.** This process might take a while; it copies several groups of gems.  
 
@@ -184,7 +184,7 @@ A Terminal window will open and execute an installation script.<br>
 
 **If you're given a choice similar to the one below, select option 1.** 
 
-![img](http://rhodocs-images.s3.amazonaws.com/guide/which_ruby.png)
+![img](/images/install/which_ruby.png)
 
 **NOTE: CAUTION: In the unlikely event that you've mounted more than one disc image containing gems, it's important to unmount all except the current RhoMobile Suite version. Failure to do so might result in an improper installation.**<br>
 
@@ -192,7 +192,7 @@ A Terminal window will open and execute an installation script.<br>
 
 **IMPORTANT: To launch RhoMobile, you MUST use one of the RhoMobile Launchers indicated in the image below.** 
 
->![img](http://rhodocs-images.s3.amazonaws.com/guide/RhoMobile_launchers.png)<br><br>
+>![img](/images/install/RhoMobile_launchers.png)<br><br>
 > FYI: The 32- and 64-bit versions of RhoMobile are functionally equivalent. 
 
 >The installer image also contains files labeled "Launchpad" and "RhoMobile Docs" (scroll down in the .dmg window if you can't see them). You can copy these or bookmark their links to the [RhoMobile developer community](https://developer.motorolasolutions.com/welcome) and [RhoMobile documentation](http://docs.tau-technologies.com/) sites.<br>
@@ -200,7 +200,7 @@ A Terminal window will open and execute an installation script.<br>
 
 
 ## Installing Native SDKs (Optional)
-RhoStudio permits development of native apps for Android, iOS and Windows Mobile and Windows 10 Mobile on the local development host. If you plan to build native apps locally, you'll need to install the corresponding SDKs for each. For detailed instructions, please visit RhoMobile's [native SDK setup documentation page](/guide/nativesdksetup).<br>
+RhoStudio permits development of native apps for Android, iOS, Sailfish, Windows Mobile and Windows 10 Mobile on the local development host. If you plan to build native apps locally, you'll need to install the corresponding SDKs for each. For detailed instructions, please visit RhoMobile's [native SDK setup documentation page](/guide/nativesdksetup).<br>
 <br>
 
 ## Troubleshooting Windows Installs
@@ -253,7 +253,7 @@ Install 64-bit Java (see above)<br>
 ## Troubleshooting Mac OS X Installs
 
 ###PROBLEM
->![img](http://rhomobile-suite.s3.amazonaws.com/install/Cannot_find_Rhodes.png)
+>![img](/images/install/Cannot_find_Rhodes.png)
 
 >**POSSIBLE CAUSE**<br>
 >Failed to use one of the RhoStudio launcher scripts  
@@ -262,10 +262,10 @@ Install 64-bit Java (see above)<br>
 >Launch RhoStudio using either "RhoStudio 32-bits" or "RhoStudio 64-bits" scripts in the RhoStudio folder. **DO NOT** launch apps in the "cocoa" folders. <br>
 
 >**FACT:** The 32- and 64-bit versions of RhoMobile are functionally equivalent. 
->![img](http://rhodocs-images.s3.amazonaws.com/guide/RhoMobile_launchers.png)<br><br>
+>![img](/images/install/RhoMobile_launchers.png)<br><br>
 
 ###PROBLEM
->![img](http://rhomobile-suite.s3.amazonaws.com/install/You_need_Java_SE.png)
+>![img](/images/install/You_need_Java_SE.png)
 
 >**POSSIBLE CAUSES**<br>
 >Java not installed, installed incorrectly or wrong version
@@ -274,7 +274,7 @@ Install 64-bit Java (see above)<br>
 >Install Java using instructions found in the Mac OS X section of this page
 
 ###PROBLEM
->![img](http://rhomobile-suite.s3.amazonaws.com/install/Rho_cannot_be_opened.png)
+>![img](/images/install/Rho_cannot_be_opened.png)
 
 >**POSSIBLE CAUSE**<br>
 >Mac OS X security policy is preventing an unsigned/downloaded app from launching   
@@ -285,7 +285,7 @@ Install 64-bit Java (see above)<br>
 >3) The last blocked app will be shown. Click the "Open Anyway" button<br>
 >4) if necessary, re-launch RhoStudio using the launcher script<br>
 
->![img](http://rhomobile-suite.s3.amazonaws.com/install/Mac_Security_Prefs.png)
+>![img](/images/install/Mac_Security_Prefs.png)
 
 ###PROBLEM
 >Random Java-related issues 
@@ -296,5 +296,5 @@ Incorrect Java bin path
 >**SOLUTION**<br>
 >Go to **RhoStudio>>Preferences>>RhoMobile** and set the Java bin path. The correct path should be similar to the image below:<br> 
 
->![img](http://rhomobile-suite.s3.amazonaws.com/install/Java_bin_path.png)
+>![img](/images/install/Java_bin_path.png)
 
