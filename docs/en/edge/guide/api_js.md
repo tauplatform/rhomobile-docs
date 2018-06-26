@@ -1,5 +1,19 @@
 # Using RhoMobile JavaScript APIs
-You may also include only the modules you intend to use, to improve page loading times. To do this, you must include the file `rhoapi.js` prior to including the specific JS modules. The `rhoapi.js` file creates the Rho name-space needed for the JavaScript APIs to function properly.
+By default RhoMobile generates one JS file with common APIs for all core modules and modules from extensions section in build.yml. This file includes on your page with the code:
+
+	:::html
+	<script charset="utf-8" src="/public/api/rhoapi-modules.js"></script>
+
+You may also include only the modules you intend to use, to improve page loading times. 
+To do this, add option separate_js_modules to root of build.yml
+
+	:::yaml
+	separate_js_modules: true 
+
+The Rhomobile will generate JS API for each module in separate file with name Rho.<Module Name>.js like Rho.Barcode.js
+
+You must include the file `rhoapi.js` prior to including the specific JS modules. The `rhoapi.js` file creates the Rho name-space needed for the JavaScript APIs to function properly.
+
 
 	:::html
 	<script charset="utf-8" src="/public/api/rhoapi.js"></script>
@@ -20,6 +34,11 @@ The following application structure is what is minimally required to build a Jav
 	- rakefile
 	- icon (folder for application icon)
 	- public (root folder for 'web application')
+	
+	
+ You may generate js app from CLI with command	
+		:::term
+    	rhodes jsapp <Application Name>
 
 ## Build.yml settings
 Be sure to include the extensions and capabilities that are required for the APIs that are being used. In addition, you should specify the following setting in the `build.yml` file:
