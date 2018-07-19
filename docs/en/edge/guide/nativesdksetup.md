@@ -77,7 +77,7 @@ Make sure you installed the following software.
 * Lastest version of [Virtual Box](https://www.virtualbox.org/)
 * Lastest version of sdk from [SailfishOS site](https://sailfishos.org/wiki/Application_SDK)
 
-> Note: for now to use sailfish - you must copy rhodes folder from your ruby gems to home folder, write its path in build.yml (for example "sdk: C:\Users\UserName\rhodes") and write in `<rhodes-root>/rhobuild.yml` path to installed sailfish sdk that kind a way:
+> Note: for now to use sailfish - you must copy rhodes folder from your ruby gems to home folder, write its path in build.yml (for example `sdk: C:\Users\UserName\rhodes`) and write in `<rhodes-root>/rhobuild.yml` path to installed sailfish sdk that kind a way:
 	:::yml
 	env:
 		paths:
