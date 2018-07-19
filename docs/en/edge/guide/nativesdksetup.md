@@ -118,10 +118,10 @@ Make sure you have installed the following software. Since Rhdoes builds a unifi
 * Visual Studio 2015 Community Edition UP3 or higher installed
   * Make sure that `VS140COMNTOOLS` environment variable is defined and points to the correct location, e.g. to `C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools`
 
-* Install [Qt libraries 5.8 for Visual Studio 2015](https://download.qt.io/official_releases/qt/5.8/5.8.0/qt-opensource-windows-x86-msvc2015-5.8.0.exe) - 1 GB (or [build Qt libraries 5.1.1 for Visual Studio 2008](build_win#build-qt5-for-vs2008))
+* Install [Qt libraries 5.9 with QtWebEngine for Visual Studio 2015](https://download.qt.io/official_releases/qt/5.9/5.9.6/qt-opensource-windows-x86-5.9.6.exe) - 2,3 GB (or [build Qt libraries 5.1.1 for Visual Studio 2008](build_win#build-qt5-for-vs2008))
   * The Qt binaries for Visual Studio 2012 are not compatible with Windows XP. For targeting Windows XP, please refer to the [Build for Windows](build_win) instructions.
 
-* Create new (or update existing) system environment variable `QTDIR` and make sure it points to root folder of the installed Qt libraries, e.g. `C:\Qt\Qt5\5.8\msvc2015`
+* Create new (or update existing) system environment variable `QTDIR` and make sure it points to root folder of the installed Qt libraries, e.g. `C:\Qt\Qt5.9.6\5.9.6\msvc2015`
 
 >Note: If the application uses HTTPS, the Qt binaries must be built against OpenSSL. Please refer to [Build for Windows](build_win) for instructions and links to Zebra's pre-built Qt binaries.
 

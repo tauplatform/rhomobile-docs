@@ -3,10 +3,11 @@
 ## Introduction
 This guide documents the use of Microsoft Visual Studio 2015 or 2012 or 2008 to build RhoMobile apps for Windows desktop editions, including Windows XP and XP Embedded (XPE). Visual Studio is required to build apps that target 'big' Windows, and along with the RhoMobile Suite should be installed prior to starting this guide. If RhoMobile is already installed, it must be configured according to the [native SDK setup instructions](nativesdksetup#setup-for-windows-desktop) for building Windows apps.
 
-Building apps for Windows also relies on the Qt cross-platform application framework. As of RMS 6.0, the following Qt versions are supported: 
+Building apps for Windows also relies on the Qt cross-platform application framework. As of RMS 7.0, the following Qt versions are supported: 
 
-* **Qt 5.8.0** (new in RMS 6.0)
-* Qt 5.1.1.0 (required for XP and XPE)
+* **Qt 5.9.6**
+* Qt 5.5.0 (not required for XP and XPE)
+* Qt 5.1.1 (required for XP and XPE)
 
 NOTE: Qt 5.1.1.0 exhibits inconsistent behavior when a finger or stylus is used for input.
 
@@ -28,7 +29,7 @@ _**About Windows XP target support**: Qt 5.1.1.0 is the only Qt version supporte
 2. **Download the appropriate version of Qt**: 
     * **To target Windows XP/XPE with Visual Studio 2008**, [download Zebra's Qt 5.1.1.0 VS2008 binaries](http://rhomobile-suite.s3.amazonaws.com/Qt/Qt5-vs2008.7z).
     * **To target Windows XP/XPE with Visual Studio 2012**, [download Zebra's Qt 5.1.1.0 VS2012 binaries](http://rhomobile-suite.s3.amazonaws.com/Qt/Qt5-rhoxp.7z).
-    * **To target modern Windows versions with Visual Studio 2012**, [download Qt's 5.5.0.0 binaries](http://files.tau-technologies.com/RMS/QT/qt-opensource-windows-x86-msvc2012-5.5.0.exe).<br> _Note: In this scenario, a separate set of Zebra OpenSSL libraries implement the HTTPS protocol, and are included automatically when performing a production build (see [Build sections](#build), below)_.
+    * **To target modern Windows versions with Visual Studio 2015**, [download Qt's 5.9.6.0 binaries](http://qt.mirrors.tds.net/qt/archive/qt/5.9/5.9.6/qt-opensource-windows-x86-5.9.6.exe).<br> _Note: In this scenario, a separate set of Zebra OpenSSL libraries implement the HTTPS protocol, and are included automatically when performing a production build (see [Build sections](#build), below)_.
 3. **Extract (or install Qt's binaries) into the directory** created in Step 1.1.
 
 ###Step 2- Add the QTDIR System Variable
@@ -55,7 +56,7 @@ _**About Windows XP target support**: Qt 5.1.1.0 is the only Qt version supporte
 If the development host has just a single version of Visual Studio installed, skip to the [Build section](#build); the system is now ready to build. 
 
 ###Step 3- Select a Visual Studio version
-If more than one version of Visual Studio is installed, the system by default will build the application using the newest supported version (2015 or 2012 or 2008). To explicitly specify the version of Visual Studio to use, add an `msvc` parameter to the `win32` section of your `build.yml` and specify `2015` or `2012` or `2008`:
+If more than one version of Visual Studio is installed, the system by default will build the application using the newest supported version (2015 or 2012 or 2008). To explicitly specify the version of Visual Studio to use, add an `msvc` parameter to the `win32` section of your `build.yml` and specify `2015`, `2012` or `2008`:
 
     :::yaml
     win32:
@@ -140,6 +141,7 @@ RhoRuntime Qt installers optimize memory footprint by installing a single instan
 * **[RhoRuntime for QT 5.1.1.0 for Visual Studio 2008](http://rhomobile-suite.s3.amazonaws.com/Qt/RhoRuntimeQt5-VS2008Setup.exe)**
 * **[RhoRuntime for QT 5.1.1.0 for Visual Studio 2012](http://rhomobile-suite.s3.amazonaws.com/Qt/RhoRuntimeQt5-setup.exe)**
 * **[RhoRuntime for QT 5.5.0.0 for Visual Studio 2012](http://rhomobile-suite.s3.amazonaws.com/Qt/RhoRuntimeQt5.5.0.0_VS2012-Setup.exe)** (not compatible with Windows XP/XPE)
+* **[RhoRuntime for QT 5.9.6.0 for Visual Studio 2015](http://qt.mirrors.tds.net/qt/archive/qt/5.9/5.9.6/qt-opensource-windows-x86-5.9.6.exe)** (not compatible with Windows XP/XPE)
 
 &#50;. **Restart the target** to activate new path settings. 
 
@@ -181,22 +183,22 @@ For more information, please refer to the [NSIS User Guide](http://nsis.sourcefo
 The application log 'Rholog.txt' is placed in `<Application folder>\rho`
 
 ##Switching Qt versions
-RhoMobile applications can be built only with Visual Studio 2008 or Visual Studio 2012 or Visual Studio 2015, and only with Qt 5.1.1.0 or Qt 5.5.0.0 or  Qt 5.8.0 If after following the steps above a different version of Qt is desired, follow these steps to make the switch:
+RhoMobile applications can be built only with Visual Studio 2008, Visual Studio 2012 or Visual Studio 2015, and only with Qt 5.1.1, Qt 5.5.0 or Qt 5.9.6 If after following the steps above a different version of Qt is desired, follow these steps to make the switch:
 
 1. Go to the Qt website and download and install the desired Qt version for Visual Studio 2008 or Visual Studio 2012 or Visual Studio 2015.
-2. Verify the Qt installation path. It should be something like: C:\Qt\<QtVersion>\<VSVersion>
+2. Verify the Qt installation path. It should be something like: `C:\Qt\Qt<QtVersion>\<QtVersion>\<VSVersion>`
 3. Close RhoStudio and all command-prompt windows. 
 4. Update or create a system variable called 'QTDIR' with the directory verified in Step 2. 
 5. Update the `msvc` parameter in the `Build.yml` to reflect the desired Visual Studio version, if necessary.
 6. Be sure the `deployqt` and `deploymsvc` parameters in the `build.yml` both contain a value of 0. 
 7. Start building the application.
 8. Prepare a target system for testing the newly built application (**which must not be the development host**):
-    9. On the test target, install the Microsoft Visual C++ Runtime for 2008 or 2012 to coincide with the version being used for the build.
+    9. On the test target, install the Microsoft Visual C++ Runtime for 2008 or 2012 or 2015 to coincide with the version being used for the build.
     10. Install the same Qt version on the target system as installed in Step 1, above.
     11. Add the installed Qt directory from Step 2 to the 'PATH' environment variable (use a semicolon to append to the end of the path).
     12. When the build finishes, copy the contents of `<application-root>/bin/target/win32/tmp` from the development host to the `C:\<application-root>` of the target. This is the newly built application. 
     13. Close any command-prompt windows that might be open on the target.
-    14. Double click application on the target: C:\<application-root>\<Application>.exe.
+    14. Double click application on the target: `C:\<application-root>\<Application>.exe`.
 15. Observe, test and explore the application with the new version of Qt.
 
 
