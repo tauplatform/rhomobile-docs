@@ -38,11 +38,12 @@ The stand alone Android SDK is deprecated, but the SDK Manager is included with 
 Recommended NDK version is 15c. NDK v16+ is not yet supported.
 Download and unzip the [Android NDK 15c](https://developer.android.com/ndk/downloads/older_releases.html) to the location of your choice.
 
+Direct links for NDK 15c downloads:
+* [for Linux](https://dl.google.com/android/repository/android-ndk-r15c-linux-x86_64.zip)
+* [for Mac OS X](https://dl.google.com/android/repository/android-ndk-r15c-darwin-x86_64.zip)
+* [for Windows](https://dl.google.com/android/repository/android-ndk-r15c-windows-x86_64.zip)
+
 > Note: You should update the Android SDK and NDK as you update to new versions of Rhodes.
-> Direct links for NDK 15c downloads:
-> * [for Linux](https://dl.google.com/android/repository/android-ndk-r15c-linux-x86_64.zip)
-> * [for Mac OS X](https://dl.google.com/android/repository/android-ndk-r15c-darwin-x86_64.zip)
-> * [for Windows](https://dl.google.com/android/repository/android-ndk-r15c-windows-x86_64.zip)
 
 ### Pointing RhoStudio to the SDKs
 1) Start RhoStudio
@@ -60,7 +61,7 @@ If you are not using RhoStudio, run "rhodes-setup" from the command line and set
 ### Setting up the Android Maps API
 In case you are planning to work with native geo mapping (the MapView interface), you must do two things:
 
-* Retrieve the Android Maps API key from Google. Follow these [instructions](http://code.google.com/intl/en/android/add-ons/google-apis/mapkey.html) to get it. When key received, put it in your application's `build.yml` or share it across all your applications by adding it to `rhobuild.yml`. Note that the `apikey` value must match a certificate used to sign an application (the key is different for debug and production signed build and debug key cannot be shared between different build computers).
+* Retrieve the Android Maps API key from Google. Follow these [instructions](https://developers.google.com/maps/documentation/embed/get-api-key) to get it. When key received, put it in your application's `build.yml` or share it across all your applications by adding it to `rhobuild.yml`. Note that the `apikey` value must match a certificate used to sign an application (the key is different for debug and production signed build and debug key cannot be shared between different build computers).
 
     android:
       apikey: "GOOGLE-API-KEY-FOR-ANDROID"
