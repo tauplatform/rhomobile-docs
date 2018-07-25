@@ -98,7 +98,7 @@ A complete image source adapter that stores files in S3 might look like:
 	      :access_key_id      => ENV['AMAZON_ACCESS_KEY_ID'],
 	      :secret_access_key  => ENV['AMAZON_SECRET_ACCESS_KEY']
 	    )
-	    @baseurl = 'http://s3.amazonaws.com/'
+	    @baseurl = 'https://s3.amazonaws.com/docs.tau-technologies.com/images/'
 	    @bucket = 'rhodes-samples-images'
 	    super(source,credential)
 	  end

@@ -99,7 +99,7 @@ Once your device is licensed, a splash screen will be displayed briefly each tim
 
 Devices running Windows Mobile and Windows CE as well as Zebra Technologies Android devices present the user with a licensing Wizard to guide the user through licensing.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhoelements/rhoe-license.png">
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhoelements/rhoe-license.png">
 
 The first page of the licensing wizard has a "Cancel" button. Clicking it allows you to evaluate the software. While you are evaluating the software, the functionality is not restricted.
 

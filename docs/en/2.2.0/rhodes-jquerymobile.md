@@ -32,7 +32,7 @@ You will need JavaScript, CSS, and image files from the JQuery Mobile website. T
 
 Unzip the file. You will see the JavaScript and CSS files, and an images folder. In your jqmobilestore project (assuming you are creating one from scratch, the source code sample project already has this done), rename or delete the images folder in app/public. Then copy the files and the images folder from the JQuery Mobile download into the app/public folder.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhodes-jquerymobile-tutorial/jquerymobile-public-files.png" alt="jquerymobile public files" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodes-jquerymobile-tutorial/jquerymobile-public-files.png" alt="jquerymobile public files" />
 
 You also need the JavaScript JQuery code. The URL for this code is on the jquerymobile.com/download page, listed under Copy-and-Paste Snippet. The Copy-and-Paste Snippet looks similar to this:
 
@@ -243,7 +243,7 @@ The project can take a little time to build; when the build completes, you will 
 
 Note: There are some issues running this on Android, so the tutorial uses an iPhone example.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhodes-jquerymobile-tutorial/jquerymobile-index-iphone.png" alt="jquerymobile iPhone index page" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodes-jquerymobile-tutorial/jquerymobile-index-iphone.png" alt="jquerymobile iPhone index page" />
 
 Compare what you see in the simulator to the app/index.erb code for jqmobilestore. You see the title for Jqmobilestore, and you see the link for the Login button with the gear icon (from data-icon). Because we are logged out in the simulator, there is one button for Login. And we have a link for the Product.
 
@@ -318,7 +318,7 @@ The Product index page for jqmobilestore, app/Product/index.erb, has similar cha
 
 In the simulator running the jqmobilestore example, click on the Products link to see this. You will see the new button and home button.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhodes-jquerymobile-tutorial/jquerymobile-iphone-product.png" alt="jquerymobile iPhone product" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodes-jquerymobile-tutorial/jquerymobile-iphone-product.png" alt="jquerymobile iPhone product" />
 
 ### Removing the Bottom Toolbar
 
@@ -406,13 +406,13 @@ In the app/Product/new.erb file for the jqmobilestore project, again, the entire
 
 At the bottom of the page, jqmobilestore uses a button to replace a standard input form for input submit in the generated code. The data-theme makes the button darker. The break sets the button off from the list items.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhodes-jquerymobile-tutorial/jquerymobile-iphone-product-new.png" alt="jquerymobile iPhone product new" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodes-jquerymobile-tutorial/jquerymobile-iphone-product-new.png" alt="jquerymobile iPhone product new" />
 
 Notice how the list items appear on the page. Each has a label and a placeholder inside the input field. You can change or remove the label or placeholder in the code as you see fit.
 
 Fill in the fields for a product and click the Submit button.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhodes-jquerymobile-tutorial/jquerymobile-iphone-product-new2.png" alt="jquerymobile iPhone product new filled in" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodes-jquerymobile-tutorial/jquerymobile-iphone-product-new2.png" alt="jquerymobile iPhone product new filled in" />
 
 ## Modifying the Show Product Page
 
@@ -448,7 +448,7 @@ Like app/Product/new.erb, the app/Product/show.erb file also has a listview for 
 
 In the simulator for the jqmobilestore project, on the Product page, click on the product you just created to bring it up on the Show page for that product.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhodes-jquerymobile-tutorial/jquerymobile-iphone-product-show.png" alt="jquerymobile iPhone product show" /> 
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodes-jquerymobile-tutorial/jquerymobile-iphone-product-show.png" alt="jquerymobile iPhone product show" /> 
 
 For JQuery Mobile, the jqmobilestore project app/Product/show.erb has the usual changes: wrap the entire page in a data-role div named page, and wrap the header in a data-role div named header.
 
@@ -489,7 +489,7 @@ The list is wrapped in the usual data-role div named content, and the list has t
 
 In the jqmobilestore simulator, click the Edit button to go to the Edit page.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhodes-jquerymobile-tutorial/jquerymobile-iphone-product-edit.png" alt="jquerymobile iPhone product edit" /> 
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodes-jquerymobile-tutorial/jquerymobile-iphone-product-edit.png" alt="jquerymobile iPhone product edit" /> 
 
 ### app/Product/edit.erb: JQuery Mobile
 
@@ -540,7 +540,7 @@ When you sync data, there are other pages the you need to modify from the Rhodes
 
 You login to the sync server using the Login page, app/Settings/login.erb. 
 
-<img src="http://rhodocs.s3.amazonaws.com/rhodes-jquerymobile-tutorial/jquerymobile-iphone-login.png" alt="jquerymobile iPhone login" /> 
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodes-jquerymobile-tutorial/jquerymobile-iphone-login.png" alt="jquerymobile iPhone login" /> 
 
 ### app/Settings/login.erb: JQuery Mobile
 
@@ -580,7 +580,7 @@ There are the usual changes to that page: wrap the page in a data-role div, wrap
 
 When a field is submitted on the Login page, in the controller, app/Settings/controller.rb, it is submitted to the action do_login. If the login is successful, it redirects to a wait page, app/Settings/wait.erb. So that wait page must be converted for JQuery Mobile.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhodes-jquerymobile-tutorial/jquerymobile-iphone-wait.png" alt="jquerymobile iPhone wait" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodes-jquerymobile-tutorial/jquerymobile-iphone-wait.png" alt="jquerymobile iPhone wait" />
 
 ### app/Settings/wait.rb: generated Rhodes
 
@@ -649,7 +649,7 @@ Here is the code from the Rhodes-generated app/Settings/index.erb file.
 
 ### app/Settings/index.erb: JQuery Mobile
 
-<img src="http://rhodocs.s3.amazonaws.com/rhodes-jquerymobile-tutorial/jquerymobile-iphone-settings.png" alt="jquerymobile iPhone settings" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodes-jquerymobile-tutorial/jquerymobile-iphone-settings.png" alt="jquerymobile iPhone settings" />
 
 The JQuery Mobile changes for the jqmobilestore app/Settings/index.erb file are the usual for wrapping the entire page in a data-role div, and wrapping the header in a data-role div.
 
@@ -702,8 +702,8 @@ After you have synced, you can click Home, then click Products. You will see wha
 
 Here is a sample page after syncing with a sample sync server, showing several products on that server.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhodes-jquerymobile-tutorial/jquerymobile-iphone-product-sync.png" alt="jquerymobile iPhone products synced" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodes-jquerymobile-tutorial/jquerymobile-iphone-product-sync.png" alt="jquerymobile iPhone products synced" />
 
 You can click on one of the products.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhodes-jquerymobile-tutorial/jquerymobile-iphone-product-sync2.png" alt="jquerymobile iPhone products a synced product" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodes-jquerymobile-tutorial/jquerymobile-iphone-product-sync2.png" alt="jquerymobile iPhone products a synced product" />

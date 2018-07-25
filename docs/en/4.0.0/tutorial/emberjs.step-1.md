@@ -86,7 +86,7 @@ You will notice that we removed the `input` and the `<p>` section and added the 
 
 Well you only see the `Products` text being displayed because there is no data. Let's add some test data so we can see how this view will look.
 
-![](https://s3.amazonaws.com/rhodocs-images/rhotut-emberjs/Screen+Shot+2013-11-18+at+2.41.10+PM.jpg)
+![](https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs-images/rhotut-emberjs/Screen+Shot+2013-11-18+at+2.41.10+PM.jpg)
 
 ## Adding Data Fixtures
 
@@ -134,10 +134,10 @@ If we refresh the page at this point nothing will have changed since we haven't 
 
 Ember's naming conventions come into play again here. Recall that we defined our view as `data-template-name="products/index"`. To ember this is really `product.index` and it will automatically look for a corresponding `ProductsIndexRoute` and `ProductIndexController` definitions and use them if they are there. Notice that camel casing and appending of `Route` and `Controller`. This is a double edge sword in that if you mistype you application won't work, but can be very useful once you get the hang of it since it saves you from writing a lot of code.
 
-![](https://s3.amazonaws.com/rhodocs-images/rhotut-emberjs/Screen+Shot+2013-11-18+at+2.44.10+PM.jpg)
+![](https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs-images/rhotut-emberjs/Screen+Shot+2013-11-18+at+2.44.10+PM.jpg)
 
 Refreshing the browser should now show the fixture data in the list and we can see the template repeat for each instance of the model.
 
-![](https://s3.amazonaws.com/rhodocs-images/rhotut-emberjs/Screen+Shot+2013-11-18+at+2.49.26+PM.jpg)
+![](https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs-images/rhotut-emberjs/Screen+Shot+2013-11-18+at+2.49.26+PM.jpg)
 
 In the next step, we will add the ability to create new records.

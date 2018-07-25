@@ -11,7 +11,7 @@ Overview
 --------
 Combining Rhodes, RhoConnect, and `rhoconnect-rb` will allow you to create a mobile app that can connect to and manage your backend rails app seamlessly.
 
-<p><img src='https://s3.amazonaws.com/rhodocs/rhoconnect-service/arc_rhoconnect.png' height='400' width='650'/></p>
+<p><img src='https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/rhoconnect-service/arc_rhoconnect.png' height='400' width='650'/></p>
 
 Gem
 -----
@@ -111,10 +111,10 @@ To use RhoConnect from Heroku, install the RhoConnect add-on:
 From inside your Heroku account, setup the url to your backend service that RhoConnect will connect to.
 
 First, click the addons drop down and select RhoConnect.
-<p><img src='https://s3.amazonaws.com/rhodocs/rhoconnect-service/addon_rhoconnect.png' width="479" height="319"/></p>
+<p><img src='https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/rhoconnect-service/addon_rhoconnect.png' width="479" height="319"/></p>
 
 You will be redirected to the admin console of your RhoConnect instance where you can set the Backend App url to your backend service.  Select Backend App Url from the right menu.
-<p><img src='https://s3.amazonaws.com/rhodocs/rhoconnect-service/console.png' /></p>
+<p><img src='https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/rhoconnect-service/console.png' /></p>
 
 
 From here you can enter a url to your backend service.  Enter a url (for example http://myrailsapp.com), and click the add link to save the url.
@@ -138,7 +138,7 @@ Next using the rhodes gem you can create a rhodes app.
 
 To get the value for the url_of_rhoconnect_instance argument, go to the RhoConnect console and click on the right Backend App URL link.  From there you can copy the syncserver url.
 
-<p><img src='https://s3.amazonaws.com/rhodocs/rhoconnect-service/console_rhodesurl.png' width="750" height="280"/></p>
+<p><img src='https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/rhoconnect-service/console_rhodesurl.png' width="750" height="280"/></p>
 
 Other resources
 ----

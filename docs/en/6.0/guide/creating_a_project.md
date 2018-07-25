@@ -12,14 +12,14 @@ To create your first Rhodes project using RhoStudio:<br>
 - **Select 'RhoMobile application'** from wizard list. <br>
 - **Click Next**.<br>
 
-![img](http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/new-project-4.0.png)
+![img](https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/new-project-4.0.png)
 
 - On the next screen, **enter a name for your new project**. In the example below, we use "storemanager." 
 - **Notice that 'Create application in default workspace' is checked**.
 - To save the app in different location, uncheck and Browse to the new location.
 - **Click "Finish" when done**.
 
-![img](http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/rhodes-application-wizard-4.0.png)
+![img](https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/rhodes-application-wizard-4.0.png)
 
 ### ...from the command line
 If you prefer to use the command line or a development environment other than RhoStudio, the `Rhodes` framework can be invoked manually using the commands and parameters below:
@@ -62,7 +62,7 @@ For example, to create an application called 'storemanager,' do the following:
 ## Project structure
 The generated application has the following structure:
 
-![img](http://s3.amazonaws.com/rhodocs/rhostudio-tutorial/project-structure-4.0.png)
+![img](https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/rhostudio-tutorial/project-structure-4.0.png)
 
 Here is an overview of the contents of each file and folder.
 
@@ -129,7 +129,7 @@ While you can create additional folders and organize your files any way you like
 
 To start your application for the first time:
 
-![img](http://s3.amazonaws.com/rhodocs/rhostudio-tutorial/running-application-context-menu-4.0.png)
+![img](https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/rhostudio-tutorial/running-application-context-menu-4.0.png)
 
 1. **Open the RhoStudio Project Explorer** window
 2. **Right-click on your project** name
@@ -137,7 +137,7 @@ To start your application for the first time:
 4. **Select "RhoMobile Application"** and click the "New" button
 5. **Click "Run"**
 
-![img](http://s3.amazonaws.com/rhodocs/rhostudio-tutorial/run-configurations-4.0.png)
+![img](https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/rhostudio-tutorial/run-configurations-4.0.png)
 
 RhoStudio will compile and launch your app in RhoSimulator.
 
@@ -160,9 +160,9 @@ NOTE: Due to memory limitations, RhoSimulator does not support Windows Mobile/CE
 
 The application will start inside RhoSimulator with a different look depending on the selected platform. 
 
-![img](http://s3.amazonaws.com/rhodocs/rhostudio-tutorial/run-rhosimulator-iphone-4.0.png)
+![img](https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/rhostudio-tutorial/run-rhosimulator-iphone-4.0.png)
 
-![img](http://s3.amazonaws.com/rhodocs/rhostudio-tutorial/rhosimulator-web-inspector-4.0.png)
+![img](https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/rhostudio-tutorial/rhosimulator-web-inspector-4.0.png)
 
 ## Related reading
 Now that your first application is ready to run, there are some other topics you should become familiar with:

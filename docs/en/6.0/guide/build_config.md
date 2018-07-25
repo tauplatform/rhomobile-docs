@@ -472,19 +472,19 @@ where "KEYCODE_X" = the desired keycode name. [Standard Android key names](http:
 ### RhoStudio Modification
 You can also edit the capabilities that your app will have access to through RhoStudio. To do this, double click your build.yml in your app's project in the project explorer pane in RhoStudio.
 
-![img](https://s3.amazonaws.com/rhodocs/guide/build_config/open-build-yml-4.1.png)
+![img](https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/guide/build_config/open-build-yml-4.1.png)
 
 Once you have done this, you should see the following screen wherein you can modify your build.yml settings, mainly, the capabilities.
 
-![img](https://s3.amazonaws.com/rhodocs/guide/build_config/build-yml-edit-window-4.1.png)
+![img](https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/guide/build_config/build-yml-edit-window-4.1.png)
 
 Click the add button next to the capabilities field to bring up this window and add capabilities by clicking the corresponding check-box.
 
-![img](https://s3.amazonaws.com/rhodocs/guide/build_config/select-capabilities-rhostudio-none-selected-4.1.png)![img](https://s3.amazonaws.com/rhodocs/guide/build_config/select-capabilities-rhostudio-camera-and-bt-4.1.png)
+![img](https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/guide/build_config/select-capabilities-rhostudio-none-selected-4.1.png)![img](https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/guide/build_config/select-capabilities-rhostudio-camera-and-bt-4.1.png)
 
 You'll notice that as you add capabilities to your app, the build.yml text file will change to reflect these added capabilities.
 
-![img](https://s3.amazonaws.com/rhodocs/guide/build_config/added-capabilities-in-build-yml-4.1.png)
+![img](https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/guide/build_config/added-capabilities-in-build-yml-4.1.png)
 
 ## RhoGallery Security Token
 

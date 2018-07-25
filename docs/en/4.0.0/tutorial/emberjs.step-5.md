@@ -55,7 +55,7 @@ The `up` action will contain a reference to the model via the passed in paramete
 
 If you click on the item to bring up the edit view, you should see the new value represented. Also if you have installed Ember Chrome Inspector you can also look at the data tab.
 
-![](https://s3.amazonaws.com/rhodocs-images/rhotut-emberjs/Screen+Shot+2013-11-18+at+6.21.51+PM.jpg)
+![](https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs-images/rhotut-emberjs/Screen+Shot+2013-11-18+at+6.21.51+PM.jpg)
 
 
 So far we have created a model, defined routes, views and controllers to deliver a basic application that performs CRUD operations on data. This data however is non-persistent and any changes made in this application will be reset when reloading the page.

@@ -28,7 +28,7 @@ This tutorial assumes that you know how to edit a Rhodes application, and that y
 
 If you have any Android SDK installed, you can check to see if it has Android 2.3.3 and Google APIs:10. Go to your tools folder in your Android SDK and run android. In the Android SDK and AVD Manager, click Installed packages. If you do not see SDK Platform Android SDK 2.3.3 and Google APIs by Google Inc., Android API 10 in the list of installed packages, click on Available Packages, find them, and install them. Also click Virtual Devices and check that you have an AVD (Android Virtual Device) set up for Google API level 10; create one if you do not.
 
-<img src="http://rhodocs.s3.amazonaws.com/nfc-rhodes-in-depth-tutorial/android-sdk-avd-manager.jpg" alt="Android SDK and AVD Manager" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/nfc-rhodes-in-depth-tutorial/android-sdk-avd-manager.jpg" alt="Android SDK and AVD Manager" />
 
 The webinar and this tutorial show Android running from the command line, rather than an IDE such as Eclipse. You can also run from Eclipse.
 
@@ -96,7 +96,7 @@ Run the Android SDK and AVD Manager: this is the app labeled "android" in your t
 
 The Android SDK and AVD Manager should be set up to run an AVD for Android with Google APIs level 10 or above, which is the minimum required for near field communication. Highlight that AVD and click Start to start the Android emulator.
 
-<img src="http://rhodocs.s3.amazonaws.com/nfc-rhodes-in-depth-tutorial/android-sdk-avd-manager.jpg" alt="Android SDK and AVD Manager" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/nfc-rhodes-in-depth-tutorial/android-sdk-avd-manager.jpg" alt="Android SDK and AVD Manager" />
 
 ### Installing NFCDemo into the Android Emulator
 
@@ -105,7 +105,7 @@ Now install your NFCDemo app into the Android emulator that you are running. Fro
 	:::term
 	$ adb install bin/NFC\ Demo-debug.apk
 
-<img src="http://rhodocs.s3.amazonaws.com/nfc-rhodes-in-depth-tutorial/NFCDemo-installed.jpg" alt="NFCDemo installed" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/nfc-rhodes-in-depth-tutorial/NFCDemo-installed.jpg" alt="NFCDemo installed" />
 
 In the Android emulator, the NFCDemo app should be running. The NFCDemo app lets you generate NFC tags that you can receive in a Rhodes Android application.
 
@@ -225,7 +225,7 @@ Once nfc-rhodes is built and running, its icon will show in the Android emulator
 	ant debug
 	adb install bin/NFC\ Demo-debug.apk
 
-<img src="http://rhodocs.s3.amazonaws.com/nfc-rhodes-in-depth-tutorial/nfc-rhodes-NFCDemo.png" alt="nfc-rhodes and NFCDemo in emulator" height="75%" width="75%" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/nfc-rhodes-in-depth-tutorial/nfc-rhodes-NFCDemo.png" alt="nfc-rhodes and NFCDemo in emulator" height="75%" width="75%" />
 
 The adb logcat command is useful for looking at the log for the emulator activity.
 
@@ -234,13 +234,13 @@ The adb logcat command is useful for looking at the log for the emulator activit
 
 In the Android emulator, click on the NFCDemo icon. You get a list of ways to send an nfc tag.
 
-<img src="http://rhodocs.s3.amazonaws.com/nfc-rhodes-in-depth-tutorial/NFCDemo-tag-types-to-send.jpg" alt="NFCDemo ways to send nfc tag" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/nfc-rhodes-in-depth-tutorial/NFCDemo-tag-types-to-send.jpg" alt="NFCDemo ways to send nfc tag" />
 
 After clicking to send the nfc tag from NFCDemo, there is a choice of running NFCDemo or nfc-rhodes. Click nfc-rhodes. 
 
 Then switch to the nfc-rhodes application. You see that the tag is received.
 
-<img src="http://rhodocs.s3.amazonaws.com/nfc-rhodes-in-depth-tutorial/nfc-rhodes-tag-received.png" alt="nfc-rhodes tag received" height="75%" width="75%" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/nfc-rhodes-in-depth-tutorial/nfc-rhodes-tag-received.png" alt="nfc-rhodes tag received" height="75%" width="75%" />
 
 In the logs on the command line, an action appears: Action = android.nfc.action.TAG\_DISCOVERED. When you are running on a device instead of an emulator, you will not see this action, because the NFCDemo application does not properly simulate the NFC tag.
 
@@ -257,11 +257,11 @@ To install and run nfc-rhodes on the Android device, enter the following command
 	
 The nfc-rhodes application should show on the Android device.
 
-<img src="http://rhodocs.s3.amazonaws.com/nfc-rhodes-in-depth-tutorial/nfc-rhodes-index.png" alt="nfc-rhodes tag index" height="75%" width="75%" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/nfc-rhodes-in-depth-tutorial/nfc-rhodes-index.png" alt="nfc-rhodes tag index" height="75%" width="75%" />
 
 Now you can take the physical nfc tag, bring it near your Android device (probably near the back of the device), and the nfc-rhodes application on the Android device will show that it received the nfc tag.
 
-<img src="http://rhodocs.s3.amazonaws.com/nfc-rhodes-in-depth-tutorial/nfc-rhodes-tag-received.png" alt="nfc-rhodes tag received" height="75%" width="75%" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/nfc-rhodes-in-depth-tutorial/nfc-rhodes-tag-received.png" alt="nfc-rhodes tag received" height="75%" width="75%" />
 
 ### Showing the Text Associated with the Nfc Tag
 

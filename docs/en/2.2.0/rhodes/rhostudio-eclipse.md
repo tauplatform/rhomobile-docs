@@ -31,7 +31,7 @@ The RhoStudio installation will install the Dynamic Languages Toolkit (DLTK) as 
 
 Your available software sites are visible by clicking on the drop-down next to "Work with:"
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial-image24.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial-image24.png"/>
 
 If you need to add the Software site, enter the url on the line next to "Work with:" and click on the "Add" button to the right.
 
@@ -42,8 +42,8 @@ In the Install popup, also add the RhoStudio update site:
 * Enter name: RhoStudio
 * Enter location: http://rhostudio.rhomobile.com
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial-image17.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial-image17.png"/>
 
 Check Rhomobile (or RhoStudio) and press Next. Follow the instructions.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial-image14.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial-image14.png"/>

@@ -110,7 +110,7 @@ Each of the above lines is terminated by Carriage Return (hex 0d), Line Feed (he
 
 The resulting shelf edge label is shown below:
 
-<img src="http://rhodocs.s3.amazonaws.com/moto-adaptive-printer-driver/APD-shelf-edge-label.jpg" alt="APD-shelf-edge-label.jpg" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/moto-adaptive-printer-driver/APD-shelf-edge-label.jpg" alt="APD-shelf-edge-label.jpg" />
 
 #### Example 2.
 
@@ -1021,7 +1021,7 @@ Examples of the use of ‘formats’ and ‘templates’ are given in the follow
 
 The following examples are based on the need to produce a simple ‘price reduction’ label for a retail application:
 
-<img src="http://rhodocs.s3.amazonaws.com/moto-adaptive-printer-driver/APD-reduced.jpg" alt="APD-reduced.jpg" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/moto-adaptive-printer-driver/APD-reduced.jpg" alt="APD-reduced.jpg" />
 
 Not all printers have the same capabilities – yet the driver needs to make them all appear the same as far as the application is concerned. This section illustrates how this can be achieved for four printers with different capabilities.
 
@@ -1897,7 +1897,7 @@ This defines a Zebra QL320 printer, with Port Number 6101 and IP Address
 
 Because the total number of characters in the PID would produce a very long barcode, the information is split into two barcodes, using ‘Code 128’ symbology:
 
-<img src="http://rhodocs.s3.amazonaws.com/moto-adaptive-printer-driver/APD-Printer-ID-code-128.jpg" alt="APD-Printer-ID-code-128.jpg" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/moto-adaptive-printer-driver/APD-Printer-ID-code-128.jpg" alt="APD-Printer-ID-code-128.jpg" />
 
 The first barcode contains “WC53:6101” and the second contains “157235010002”. The latter has been ‘standardised’ to its 12-digit form with the ‘dots’ removed and leading zeros added as required. This produces a more compact barcode, with a uniform length. However, the ‘human readable’ characters under the second barcode retain the original form as this is more recognisable as an IP address to most users.
 
@@ -1931,7 +1931,7 @@ Address ”00:01:CC:40:2A:51”.
 
 Because the total number of characters in the PID would produce a very long barcode, the information is split into two barcodes, using ‘Code 128’ symbology:
 
-<img src="http://rhodocs.s3.amazonaws.com/moto-adaptive-printer-driver/APD-Printer-ID-code-128-2.jpg" alt="APD-Printer-ID-code-128-2.jpg" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/moto-adaptive-printer-driver/APD-Printer-ID-code-128-2.jpg" alt="APD-Printer-ID-code-128-2.jpg" />
 
 The first barcode contains “BT12:1” and the second contains “0001CC402A51”. The latter has the ‘colons’ removed to produce a more compact barcode. However, the
 ‘human readable’ characters under the second barcode retain the original form, as this is more recognisable as a Bluetooth address to most users.

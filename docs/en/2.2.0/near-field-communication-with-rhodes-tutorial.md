@@ -27,7 +27,7 @@ This tutorial assumes that you know how to edit a Rhodes application, and that y
 
 If you have the Android SDK installed, you can check to see if it has Google APIs:10. Go to your tools folder in your Android SDK and run android. In the Android SDK and AVD Manager, click Installed packages. If you do not see Google APIs:10 in the list of installed packages, click on Available Packages, find Google APIs by Google Inc, Android API 10, and install it. Also click Virtual Devices and check that you have an AVD (Android Virtual Device) set up for this version of Android; create one if you do not.
 
-<img src="http://rhodocs.s3.amazonaws.com/near-field-communication-rhodes-tutorial/android-sdk-avd-manager.jpg" alt="Android SDK and AVD Manager" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/near-field-communication-rhodes-tutorial/android-sdk-avd-manager.jpg" alt="Android SDK and AVD Manager" />
 
 The webinar and this tutorial show Android running from the command line, outside of Eclipse.
 
@@ -131,7 +131,7 @@ Run your Android emulator: android in your tools folder within your Android SDK 
 
 In the webinar video, the emulator is running at 8:10, where the Android SDK and AVD Manager is set up to run an AVD for Android with Google APIs level 10 or above, which is the minimum required for near field communication. Run that AVD.
 
-<img src="http://rhodocs.s3.amazonaws.com/near-field-communication-rhodes-tutorial/android-sdk-avd-manager.jpg" alt="Android SDK and AVD Manager" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/near-field-communication-rhodes-tutorial/android-sdk-avd-manager.jpg" alt="Android SDK and AVD Manager" />
 
 ### Installing NFCDemo into the Android Emulator
 
@@ -140,7 +140,7 @@ Now install your NFCDemo app into the Android emulator that you are running. Fro
 	:::term
 	$ adb install bin/NFC\ Demo-debug.apk
 
-<img src="http://rhodocs.s3.amazonaws.com/near-field-communication-rhodes-tutorial/NFCDemo-installed.jpg" alt="NFCDemo installed" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/near-field-communication-rhodes-tutorial/NFCDemo-installed.jpg" alt="NFCDemo installed" />
 
 In the Android emulator, the NFCDemo app should be running (9:09 in the webinar video). The NFCDemo app lets you generate NFC tags that you can receive in a Rhodes Android application.
 
@@ -177,15 +177,15 @@ The first time you build the rhodes-system-api-samples project, it will take sev
 
 The Android emulator appears, and it will be running the rhodes-system-api-samples application. Click Menu and close the application. You do this because when you launch the rhodes-system-api-samples application from the command line, and then you press the Home button in the emulator, the application exits. But you want to have the application running in the background, ready to have a message pushed to it (this application is registered for push messages). 
 
-<img src="http://rhodocs.s3.amazonaws.com/near-field-communication-rhodes-tutorial/rhodesNFC-closing.jpg" alt="rhodesNFC-closing" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/near-field-communication-rhodes-tutorial/rhodesNFC-closing.jpg" alt="rhodesNFC-closing" />
 
 Run rhodes-system-api-samples again by clicking on it within the emulator. 
 
-<img src="http://rhodocs.s3.amazonaws.com/near-field-communication-rhodes-tutorial/rhodesNFC-running.jpg" alt="rhodesNFC-running" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/near-field-communication-rhodes-tutorial/rhodesNFC-running.jpg" alt="rhodesNFC-running" />
 
 In the rhodes-system-api-samples application tasklist, select NFC (Near Field Communication). 
 
-<img src="http://rhodocs.s3.amazonaws.com/near-field-communication-rhodes-tutorial/rhodesNFC-running.jpg" alt="rhodesNFC running" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/near-field-communication-rhodes-tutorial/rhodesNFC-running.jpg" alt="rhodesNFC running" />
 
 Now when you click the Home button, the application goes into the background. But do not click Home yet; you will set up some logging information first.
 
@@ -200,7 +200,7 @@ From the command line, enter the following command to see all the log informatio
 
 The rhodes-system-api-samples application has a simple control page, showing the button to enable and disable NFC, and the status and the log.
 
-<img src="http://rhodocs.s3.amazonaws.com/near-field-communication-rhodes-tutorial/rhodesNFC-control-page.jpg" alt="Rhodes NFC control page" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/near-field-communication-rhodes-tutorial/rhodesNFC-control-page.jpg" alt="Rhodes NFC control page" />
 
 Click the enable NFC button on the control page to start listening. Since logcat is running, you will see on the command line that the enable is executed. Select the Home button to put the rhodes-system-api-samples application into the background.
 
@@ -208,13 +208,13 @@ Click the enable NFC button on the control page to start listening. Since logcat
 
 Click on the NFCDemo application in the emulator to run it. You will see choices for the types of NFC tags that you can broadcast. Select NFC SmartPoster URL & text.
 
-<img src="http://rhodocs.s3.amazonaws.com/near-field-communication-rhodes-tutorial/NFCDemo-tag-types-to-send.jpg" alt="NFC Demo tag types to send" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/near-field-communication-rhodes-tutorial/NFCDemo-tag-types-to-send.jpg" alt="NFC Demo tag types to send" />
 
 ### Receiving the NFC Tag with the Rhodes Application
 
 Now you have 15 seconds to click Home, go back to the rhodes-system-api-samples application and click on it, and then click on its enable NFC button. In the Log window on the rhodes-system-api-samples application, you see "TAG received!". 
 
-<img src="http://rhodocs.s3.amazonaws.com/near-field-communication-rhodes-tutorial/rhodesNFC-tag-received.jpg" alt="Rhodes NFC tag received" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/near-field-communication-rhodes-tutorial/rhodesNFC-tag-received.jpg" alt="Rhodes NFC tag received" />
 
 ### Examining the NFC Tag
 
@@ -250,7 +250,7 @@ Let's take a look at the rhodes-system-api-samples project and see how this is d
 
 Open the Nfc model: app/Nfc/controller.rb. The code below from the controller checks if the NFC is enabled, and if it is supported. And when the application receives a tag, the set\_nfc\_callback is called, and the callback is set to the nfc\_callback action. Since this is the index, it renders the index page for this application. Note that in the status page for this application, it has the enable NFC and disable NFC buttons, and it shows the Current status and Support status.
 
-<img src="http://rhodocs.s3.amazonaws.com/near-field-communication-rhodes-tutorial/rhodesNFC-tag-received.jpg" alt="Rhodes NFC tag received" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/near-field-communication-rhodes-tutorial/rhodesNFC-tag-received.jpg" alt="Rhodes NFC tag received" />
 
 	:::ruby
 	def index

@@ -7,7 +7,7 @@ Before you can send your applications to consumers, you need to have a RhoHub ga
 		<p>In your <a href="https://gallery.rhohub.com/galleries">RhoGallery account</a>, click "New Gallery" to add a new gallery.</p>
 	</div>
 	<div class="span6">
-		<img src="https://s3.amazonaws.com/rhodocs/cloud/tutorial/rhogallery-tutorial/rhogallery-new-gallery.png"/>
+		<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/cloud/tutorial/rhogallery-tutorial/rhogallery-new-gallery.png"/>
 	</div>
 </div>
 
@@ -15,7 +15,7 @@ Before you can send your applications to consumers, you need to have a RhoHub ga
 
 <div class="row-fluid">
 	<div class="span6">
-		<img src="https://s3.amazonaws.com/rhodocs/cloud/tutorial/rhogallery-tutorial/rhogallery-new-gallery-details.png"/>
+		<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/cloud/tutorial/rhogallery-tutorial/rhogallery-new-gallery-details.png"/>
 	</div>
 	<div class="span6">
 		<p>Fill out the details of your Gallery and click "Save" to continue. The description and icon for your gallery are optional.</p>

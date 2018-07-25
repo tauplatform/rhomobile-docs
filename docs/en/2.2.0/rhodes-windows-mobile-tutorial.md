@@ -48,7 +48,7 @@ On Windows XP, open ActiveSync and open the File menu; on Windows Vista and abov
 
 Select Connection Settings, select the checkbox "Allow connections to one of the following," and select "DMA" from the list box.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhodes-windows-mobile-tutorial/connection-settings.png" alt="Connection Settings" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodes-windows-mobile-tutorial/connection-settings.png" alt="Connection Settings" />
 
 ## Generating a Rhodes Application
 
@@ -80,13 +80,13 @@ Or you can build the .cab file and run:
 
 Your application will appear in the emulator (give it a little time to start). This example shows the rhodes-system-api-samples application.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhodes-windows-mobile-tutorial/device-emulator.png" alt="Device Emulator" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodes-windows-mobile-tutorial/device-emulator.png" alt="Device Emulator" />
 
 ## Building and Running on the Device
 
 Connect your Windows Mobile device to your Windows computer with a USB cable. Then check that your device is connected with Active Sync on Windows XP or with Windows Mobile Device Center on Windows Vista or above.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhodes-windows-mobile-tutorial/device-connected.png" alt="Device Connected" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodes-windows-mobile-tutorial/device-connected.png" alt="Device Connected" />
 
 Now you can run the command to build and run your Rhodes app on your device.
 
@@ -100,7 +100,7 @@ Or you can build the .cab file and run:
 
 After the build process completes, the device might ask you to install the app. Disconnect the USB cable from the device before you click install, then after the install, select Start -> Programs and select your application to run it.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhodes-windows-mobile-tutorial/device-start-programs.png" alt="Start: Programs" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodes-windows-mobile-tutorial/device-start-programs.png" alt="Start: Programs" />
 
 ## Building and Manually Installing an Application file on the Device
 

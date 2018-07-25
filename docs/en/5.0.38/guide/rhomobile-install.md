@@ -127,7 +127,7 @@ Go to the [Node.js website](http://nodejs.org/#), and download and install Node.
 Download the latest [Zebra RhoMobile Suite Installer](http://rhomobile.com/download/) for Macintosh.
 
 Click on the Zebra RhoMobile Suite Installer for Mac download file to open it. You will get a window similar to this:<br>
-  <img src="http://rhodocs.s3.amazonaws.com/rhodes-devel/rhomobile-suite-mac-install-4.0.png" alt="RhoStudioInstaller Mac" />
+  <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodes-devel/rhomobile-suite-mac-install-4.0.png" alt="RhoStudioInstaller Mac" />
 
 > Note: Do not use `sudo` when you install the gems: that can cause problems with file permissions when you run bundle commands within RhoStudio.
 

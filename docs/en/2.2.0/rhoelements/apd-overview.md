@@ -12,7 +12,7 @@ APD can use virtually any portable printer, and many desktop and industrial prin
 ## Step 1: Define the Printer Type and Connection
 Scan the label on the printer: this tells the APD all it needs to know about the printer.
 
-![img](http://rhodocs.s3.amazonaws.com/moto-adaptive-printer-driver/APD-Printer-Type-Codes.jpg)
+![img](https://s3.amazonaws.com/docs.tau-technologies.com/images/moto-adaptive-printer-driver/APD-Printer-Type-Codes.jpg)
 
 In this example, the printer type and language, connection type, and TCP port number is taken from the PRINTER ID bar code, and the IP address is taken from the IP Address bar code.
 
@@ -31,7 +31,7 @@ Also, if the data from the application is already formatted, APD needs nothing e
 ### Coding using Zebra CPCL
 The header and footer of our receipt can be designed using Zebra's "Label Vista" design software for Windows PCs, as shown below.
 
-![img](http://rhodocs.s3.amazonaws.com/moto-adaptive-printer-driver/APD-Zebra-CPCL.jpg)
+![img](https://s3.amazonaws.com/docs.tau-technologies.com/images/moto-adaptive-printer-driver/APD-Zebra-CPCL.jpg)
 
 This software allows the user to place text, barcode, and graphic fields onto a working area (the dotted area) and to select such parameters as font style, font size, line width, etc., as well as the position of each field.
 
@@ -115,7 +115,7 @@ The line printer section is shown below.
 ### CPCL – Combine all sections
 The complete data file to print our receipt on the Zebra Cameo 2 printer is shown below.
 
-![img](http://rhodocs.s3.amazonaws.com/moto-adaptive-printer-driver/APD-Zebra-CPCP-combine-all.jpg)
+![img](https://s3.amazonaws.com/docs.tau-technologies.com/images/moto-adaptive-printer-driver/APD-Zebra-CPCP-combine-all.jpg)
 
 However, there is one major problem: This will always print exactly the same receipt! So we need to define which parts of the receipt need to change for each new receipt printed, and which can stay the same. In the text above, all the variable data has been highlighted in red.
 
@@ -128,20 +128,20 @@ Using the Zebra Adaptive Printer Driver, the template is external to the applica
 * The application can also work with printers that do not use CPCL.
 
 ### Example Template 1
-![img](http://rhodocs.s3.amazonaws.com/moto-adaptive-printer-driver/APD-Zebra-CPCP-example-template-label.jpg)
+![img](https://s3.amazonaws.com/docs.tau-technologies.com/images/moto-adaptive-printer-driver/APD-Zebra-CPCP-example-template-label.jpg)
 
 The box below shows the contents of the template file used to generate the above label using a Zebra QL220 portable printer.
 
-![img](http://rhodocs.s3.amazonaws.com/moto-adaptive-printer-driver/APD-Zebra-CPCP-example-template-1.jpg)
+![img](https://s3.amazonaws.com/docs.tau-technologies.com/images/moto-adaptive-printer-driver/APD-Zebra-CPCP-example-template-1.jpg)
 
 The markers (e.g. $$[1]$$) shown in red tell the APD where to insert the data from the user application (shown below). The rest of the information, in black, comprises commands that the printer requires to set out the label.
 
-![img](http://rhodocs.s3.amazonaws.com/moto-adaptive-printer-driver/APD-Zebra-CPCP-example-template-1a.jpg)
+![img](https://s3.amazonaws.com/docs.tau-technologies.com/images/moto-adaptive-printer-driver/APD-Zebra-CPCP-example-template-1a.jpg)
 
 ### Example Template
 The template used by the Zebra Adaptive Printer Driver to print our receipt on the Zebra printer is shown below.
 
-![img](http://rhodocs.s3.amazonaws.com/moto-adaptive-printer-driver/APD-Zebra-CPCP-example-template-2.jpg)
+![img](https://s3.amazonaws.com/docs.tau-technologies.com/images/moto-adaptive-printer-driver/APD-Zebra-CPCP-example-template-2.jpg)
 
 The “date” variable is inserted at the position indicated by marker $$[1]$$. “Table number” is inserted at $$[2]$$.
 
@@ -184,7 +184,7 @@ As with the Zebra Cameo, The O'Neil 2T has a line printer mode. However, not all
 ### Coding for the O'Neil Printer
 Following a similar process to that used for the Zebra printer, with “EZ Print” used for the header and footer sections and line printer mode for the central section, we can generate the complete print file shown below.
 
-![img](http://rhodocs.s3.amazonaws.com/moto-adaptive-printer-driver/APD-ONeil-printer-coding.jpg)
+![img](https://s3.amazonaws.com/docs.tau-technologies.com/images/moto-adaptive-printer-driver/APD-ONeil-printer-coding.jpg)
 
 * Again, all the variable data has been highlighted in red and this can be replaced by markers to produce the template file shown on the next page.
 * This code contains non-printing characters: <esc> represents the escape character, 1B hexadecimal; <05h> represents binary number “5”.
@@ -196,7 +196,7 @@ Following a similar process to that used for the Zebra printer, with “EZ Print
 ### Template for O'Neil Printer (1)
 Following the same process as used for the Zebra Cameo printer, all the red sections on the previous page have been replaced by the appropriate markers to give the template shown below.
 
-![img](http://rhodocs.s3.amazonaws.com/moto-adaptive-printer-driver/APD-ONeil-template-1.jpg)
+![img](https://s3.amazonaws.com/docs.tau-technologies.com/images/moto-adaptive-printer-driver/APD-ONeil-template-1.jpg)
 
 Exactly the same application data can be used with this template as was used with the template for the Zebra Cameo printer. In this case, the template will be called “TR2.N21”. The first part (TR2) is the same as before, as it relates to the same data; but the second part has been changed from “C22” to “N21” to show that it relates to an O'Neil 2T printer, rather than a Zebra Cameo 2.
 
@@ -205,7 +205,7 @@ The Adaptive Printer Driver will automatically select the appropriate version of
 ### Template for O'Neil Printer (2)
 Although the template shown on the previous section will produce a perfectly good receipt, there is a slight issue with the central section. Because the standard O'Neil font used is narrower than that of the Zebra printer, there is a gap to the right of the price column.
 
-![img](http://rhodocs.s3.amazonaws.com/moto-adaptive-printer-driver/APD-ONeil-template-1.jpg)
+![img](https://s3.amazonaws.com/docs.tau-technologies.com/images/moto-adaptive-printer-driver/APD-ONeil-template-1.jpg)
 
 To improve the appearance of the receipt, the text can be centralized on the receipt. A simple way to do this is to insert spaces to the left of the text by changing:
 

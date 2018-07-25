@@ -35,7 +35,7 @@ If you wish to create your own Rhodes/RhoSync for Google API purposes, you can g
 
 The Issue Tracker project was created on RhoHub. Detailed instructions for setting up a RhoHub account and creating a RhoHub project are [here](rhohub/tutorial).
 
-<img src="http://rhodocs.s3.amazonaws.com/google-api-rhodes-rhosync-tutorial/issue-tracker-rhohub.png" alt="Issue Tracker on RhoHub" /> 
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/google-api-rhodes-rhosync-tutorial/issue-tracker-rhohub.png" alt="Issue Tracker on RhoHub" /> 
 
 ## Creating the Source Adapter in RhoSync
 
@@ -82,7 +82,7 @@ The comments above are added to the example of the authentication method in the 
 
 The Google document that the Issue Tracker project connects to is a simple spreadsheet. It contains a ticket, issue, status, and priority. We want to write the code that connects to this Google Docs spreadsheet, use RhoSync to store its data on the local device, and use a Rhodes app to display it.
 
-<img src="http://rhodocs.s3.amazonaws.com/google-api-rhodes-rhosync-tutorial/issue-tracker-google-docs.png" alt="Issue Tracker on Google Docs" /> 
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/google-api-rhodes-rhosync-tutorial/issue-tracker-google-docs.png" alt="Issue Tracker on Google Docs" /> 
 
 In the RhoSync project, in sources/issue.rb, you write a query method. In the Issue Tracker example, the query method first gets the authentication key that the authenticate method in application.rb stored in Redis.
 
@@ -336,17 +336,17 @@ Running the Rhodes Issue Tracker app in the iPhone simulator can show syncing wi
 
 Once the iPhone simulator is running, the main Issue List page appears (app/index.erb).
 
-<img src="http://rhodocs.s3.amazonaws.com/google-api-rhodes-rhosync-tutorial/issue-tracker-iphone.png" alt="Issue Tracker on iPhone" /> 
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/google-api-rhodes-rhosync-tutorial/issue-tracker-iphone.png" alt="Issue Tracker on iPhone" /> 
 
 Click the Settings icon to get the Setting page, and then perform a Login.
 
-<img src="http://rhodocs.s3.amazonaws.com/google-api-rhodes-rhosync-tutorial/issue-tracker-iphone-settings.png" alt="Issue Tracker on iPhone Settings" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/google-api-rhodes-rhosync-tutorial/issue-tracker-iphone-settings.png" alt="Issue Tracker on iPhone Settings" />
 
 Click the Home button to return to the main Issue List page, and click to see a list of the issues in the Google Docs spreadsheet.
 
-<img src="http://rhodocs.s3.amazonaws.com/google-api-rhodes-rhosync-tutorial/issue-tracker-iphone-settings.png" alt="Issue Tracker on iPhone Settings" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/google-api-rhodes-rhosync-tutorial/issue-tracker-iphone-settings.png" alt="Issue Tracker on iPhone Settings" />
 
 Click on one of the issues to show that issue (app/Issue/show.erb) synced directly with the Google Docs spreadsheet. The Google Docs spreadsheet data is now stored on the local device (in this case, the iPhone simulator).
 
-<img src="http://rhodocs.s3.amazonaws.com/google-api-rhodes-rhosync-tutorial/issue-tracker-iphone-issue.png" alt="Issue Tracker on iPhone a synced issue" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/google-api-rhodes-rhosync-tutorial/issue-tracker-iphone-issue.png" alt="Issue Tracker on iPhone a synced issue" />
 

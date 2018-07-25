@@ -44,17 +44,17 @@ After you've created at least one RhoMobile project, open RhoStudio and the proj
 * With the desired Launch Configuration selected, **choose the Platform and Simulator type**
 * **Click Run** to deploy and run your app in RhoSimulator
 
-![Run Configurations](http://rhodocs-images.s3.amazonaws.com/guide/debugging_with_rhosimulator/run-configuration.png)
+![Run Configurations](https://s3.amazonaws.com/docs.tau-technologies.com/images/guide/debugging_with_rhosimulator/run-configuration.png)
 
 In the example, a Run Configuration is shown for the iPhone platform and RhoSimulator. The resulting RhoSimulator screen should look similar to this: 
 
-![Device Window](http://rhodocs-images.s3.amazonaws.com/guide/debugging_with_rhosimulator/device-window.png)
+![Device Window](https://s3.amazonaws.com/docs.tau-technologies.com/images/guide/debugging_with_rhosimulator/device-window.png)
 
 ## 2- Examine Code With Web Inspector
 
 **RhoSimulator presents two windows**: One displays your application's UI, and the other exposes its code in a multi-tabbed window. The first is referred to as **the Device Window** (similar to the one above), and the second is **Web Inspector window** (below), a powerful debugging aid that allows you to inspect and edit the HTML and CSS of your web interface and immediately see the effects of your changes.
 
-![Web Inspector](http://rhodocs-images.s3.amazonaws.com/guide/debugging_with_rhosimulator/web-inspector-window.png)
+![Web Inspector](https://s3.amazonaws.com/docs.tau-technologies.com/images/guide/debugging_with_rhosimulator/web-inspector-window.png)
 
 ### Examining the DOM
 
@@ -66,27 +66,27 @@ You can **examine the DOM in the Elements tab** of Web Inspector. This tab shows
 
 Click on the 'Magnifying glass' icon in the bottom toolbar:
 
-![Magnifying glass icon](http://rhodocs-images.s3.amazonaws.com/guide/debugging_with_rhosimulator/html-element-picker.png)
+![Magnifying glass icon](https://s3.amazonaws.com/docs.tau-technologies.com/images/guide/debugging_with_rhosimulator/html-element-picker.png)
 
 Then, move to the Device Window and click on the HTML element you want to inspect:
 
-![Selecting an element](http://rhodocs-images.s3.amazonaws.com/guide/debugging_with_rhosimulator/selecting-html-element.png)
+![Selecting an element](https://s3.amazonaws.com/docs.tau-technologies.com/images/guide/debugging_with_rhosimulator/selecting-html-element.png)
 
 The selected element will then be highlighted in the Inspector Window, with its applied CSS styles shown in the right-hand pane and its heirarchy shown along the bottom: 
 
-![Selected element](http://rhodocs-images.s3.amazonaws.com/guide/debugging_with_rhosimulator/selected-html-element.png)
+![Selected element](https://s3.amazonaws.com/docs.tau-technologies.com/images/guide/debugging_with_rhosimulator/selected-html-element.png)
 
 ### Using the Search Elements box
 
 You also can find particular attributes in the DOM using Search Elements. **Click inside the Search Elements box in the upper-right corner and enter text**, content or the tag name of an element or attribute you'd like to find. All items matching the search will be highlighted: 
 
-![Search elements](http://rhodocs-images.s3.amazonaws.com/guide/debugging_with_rhosimulator/search-elements.png)
+![Search elements](https://s3.amazonaws.com/docs.tau-technologies.com/images/guide/debugging_with_rhosimulator/search-elements.png)
 
 ### Expanding/collapsing the DOM tree
 
 You also can **navigate directly to the required HTML element by expanding/collapsing the DOM tree** using the disclosure arrows to the left of all tags with children:
 
-![DOM tree arrows](http://rhodocs-images.s3.amazonaws.com/guide/debugging_with_rhosimulator/dom-tree-arrows.png)
+![DOM tree arrows](https://s3.amazonaws.com/docs.tau-technologies.com/images/guide/debugging_with_rhosimulator/dom-tree-arrows.png)
 
 ## 3- Live-Editing HTML and CSS
 
@@ -104,7 +104,7 @@ The following changes can be made live:
 
 In the example below, a CSS class attribute is edited:
 
-![Edit attribute](http://rhodocs-images.s3.amazonaws.com/guide/debugging_with_rhosimulator/live-edit-attribute.png)
+![Edit attribute](https://s3.amazonaws.com/docs.tau-technologies.com/images/guide/debugging_with_rhosimulator/live-edit-attribute.png)
 
 ### Editing element inner text
 
@@ -114,7 +114,7 @@ In the example below, a CSS class attribute is edited:
 
 In the example below, the *Login* button's text was changed to *Sign in*:
 
-![Edit innertext](http://rhodocs-images.s3.amazonaws.com/guide/debugging_with_rhosimulator/live-edit-innertext.png)
+![Edit innertext](https://s3.amazonaws.com/docs.tau-technologies.com/images/guide/debugging_with_rhosimulator/live-edit-innertext.png)
 
 ### Editing an element tag
 
@@ -122,7 +122,7 @@ In the example below, the *Login* button's text was changed to *Sign in*:
 2. **Edit** the tag
 3. Press **ENTER to apply** the change or **ESC to cancel**
 
-![Edit tag](http://rhodocs-images.s3.amazonaws.com/guide/debugging_with_rhosimulator/live-edit-tag.png)
+![Edit tag](https://s3.amazonaws.com/docs.tau-technologies.com/images/guide/debugging_with_rhosimulator/live-edit-tag.png)
 
 ### Deleting an element
 
@@ -137,7 +137,7 @@ In the example below, the *Login* button's text was changed to *Sign in*:
 
 In the example below, the *text-align* style was changed to *right*:
 
-![Edit declaration](http://rhodocs-images.s3.amazonaws.com/guide/debugging_with_rhosimulator/live-edit-declaration.png)
+![Edit declaration](https://s3.amazonaws.com/docs.tau-technologies.com/images/guide/debugging_with_rhosimulator/live-edit-declaration.png)
 
 ### Disabling a style declaration
 
@@ -146,7 +146,7 @@ In the example below, the *text-align* style was changed to *right*:
 
 In the example, the *text-align* style *left* is temporarily disabled: 
 
-![Disable declaration](http://rhodocs-images.s3.amazonaws.com/guide/debugging_with_rhosimulator/live-disable-declaration.png)
+![Disable declaration](https://s3.amazonaws.com/docs.tau-technologies.com/images/guide/debugging_with_rhosimulator/live-disable-declaration.png)
 
 ### Adding a style declaration
 
@@ -156,7 +156,7 @@ In the example, the *text-align* style *left* is temporarily disabled:
 
 In the example, a new *border-style* is added: 
 
-![New declaration](http://rhodocs-images.s3.amazonaws.com/guide/debugging_with_rhosimulator/live-new-declaration.png)
+![New declaration](https://s3.amazonaws.com/docs.tau-technologies.com/images/guide/debugging_with_rhosimulator/live-new-declaration.png)
 
 ### Creating a new style rule
 
@@ -166,7 +166,7 @@ In the example, a new *border-style* is added:
 4. **Type in the property name** followed by a colon and the value
 5. Press **ENTER to apply** the change or **ESC to cancel**
 
-![New rule](http://rhodocs-images.s3.amazonaws.com/guide/debugging_with_rhosimulator/live-new-rule.png)
+![New rule](https://s3.amazonaws.com/docs.tau-technologies.com/images/guide/debugging_with_rhosimulator/live-new-rule.png)
 
 ### Editing a style selector
 
@@ -174,25 +174,25 @@ In the example, a new *border-style* is added:
 2. **Edit** the text
 3. Press **ENTER to apply** the change or **ESC to cancel**
 
-![Edit selector](http://rhodocs-images.s3.amazonaws.com/guide/debugging_with_rhosimulator/live-edit-selector.png)
+![Edit selector](https://s3.amazonaws.com/docs.tau-technologies.com/images/guide/debugging_with_rhosimulator/live-edit-selector.png)
 
 ### Other Web Inspector Tabs
 
-<img src="http://rhodocs.s3.amazonaws.com/weinre/weinre-tabs.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/weinre/weinre-tabs.png"/>
 
 There are a few other Web Inspector tabs that might be useful for debugging your app. 
 
 #### Resources Tab
 The **Resources tab** allows you to see the resources being used by the current Webview page. Reources can include outside assets being called into your app such as **images, JavaScript, stylesheets and cookies**. Inspecting the resources can be useful if you want to make sure a particular resource has been loaded. This tab also can provide insight into other HTML5 features such as WebSQL and localStorage, if present. 
 
-![Resources Tab](http://rhodocs-images.s3.amazonaws.com/guide/debugging_with_rhosimulator/resources.png)
+![Resources Tab](https://s3.amazonaws.com/docs.tau-technologies.com/images/guide/debugging_with_rhosimulator/resources.png)
 
 NOTE: WebSQL and localStorage are HTML5-specific features that are used by certain WebKit-based browsers. They are not related to the Rhom database provided by RhoMobile. 
 
 #### Network Tab
 The Network tab **measures and displays the time required for HTTP requests** made by an application. Clicking on any of the resources in the left-hand pane will visually represent the delay as its headers and content are loaded and AJAX and other calls are made to remote servers. Data displayed when hovering over 'Latency' and 'Timeline' columns can be used to help optimize load-time performance.
 
-![Network Tab](http://rhodocs-images.s3.amazonaws.com/guide/debugging_with_rhosimulator/network.png)
+![Network Tab](https://s3.amazonaws.com/docs.tau-technologies.com/images/guide/debugging_with_rhosimulator/network.png)
 
 #### Timeline Tab
 The Timeline tool **measures and displays the rendering time of each element of the user interface**, presenting a visual display similar to that of the Network tab. The Timeline tab is useful for finding bottlenecks in front-end UI or DOM performance. 
@@ -211,7 +211,7 @@ The Web Inspector's **Scripts tab** allows you to set breakpoints and inspect va
 3. Next time you run, the app will pause at breakpoints (or after pressing the Pause button).   
 4. When paused, **inspect the values of JavaScript variables** under the 'Scope Variables' header, at right.
 
-![Breakpoints](http://rhodocs-images.s3.amazonaws.com/guide/debugging_with_rhosimulator/javascript-breakpoints.png)
+![Breakpoints](https://s3.amazonaws.com/docs.tau-technologies.com/images/guide/debugging_with_rhosimulator/javascript-breakpoints.png)
 
 **NOTES:**<br> 
 
@@ -230,17 +230,17 @@ The **Console tab allows JavaScript execution and debugging** and displays log m
 
 Viewing the Console tab provides the greatest exposure for displaying large numbers of log messages:
 
-![Console](http://rhodocs-images.s3.amazonaws.com/guide/debugging_with_rhosimulator/console.png)
+![Console](https://s3.amazonaws.com/docs.tau-technologies.com/images/guide/debugging_with_rhosimulator/console.png)
 
 You also can **toggle a Console pane** while in other tabs **by using the Show Console button** at the bottom-left corner of other tabs:
 
-![Embedded Console](http://rhodocs-images.s3.amazonaws.com/guide/debugging_with_rhosimulator/console-embedded.png)
+![Embedded Console](https://s3.amazonaws.com/docs.tau-technologies.com/images/guide/debugging_with_rhosimulator/console-embedded.png)
 
 #### Logging
 
 The Console logs errors and warnings from the system and logs messages generated by your application code. Messages can be filtered by type whether using the Console tab or viewing the Console through a pane: 
 
-![Filtering messages](http://rhodocs-images.s3.amazonaws.com/guide/debugging_with_rhosimulator/filtering-console-messages.png)
+![Filtering messages](https://s3.amazonaws.com/docs.tau-technologies.com/images/guide/debugging_with_rhosimulator/filtering-console-messages.png)
 
 ###Generating log messages
 
@@ -256,7 +256,7 @@ Sample JavaScript code:
 
 In adddition to displaying log messages, the Console provides a fully interactive JavaScript execution environment that lets you **evaluate valid JavaScript expressions, examine variables or object properties and invoke methods on objects**. 
 
-![Interactive JavaScript](http://rhodocs-images.s3.amazonaws.com/guide/debugging_with_rhosimulator/interactive-javascript.png)
+![Interactive JavaScript](https://s3.amazonaws.com/docs.tau-technologies.com/images/guide/debugging_with_rhosimulator/interactive-javascript.png)
 
 ### Using Chrome's Web Inspector
 
@@ -270,7 +270,7 @@ Optionally, **you can debug the visual elements of your app with Chrome's Web In
 
 Alternatively, you can navigate to [http://localhost:9090](http://localhost:9090) and click the link that references your start page (for example http://127.0.0.1:49964/**app/index.erb** if your app starts at /app/index.erb). You should see a screen similar to this:
 
->![Remote Inspector Landing Page](https://s3.amazonaws.com/rhodocs/guide/debugging_js/remote_inspector_landing_page.png)
+>![Remote Inspector Landing Page](https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/guide/debugging_js/remote_inspector_landing_page.png)
 <br>
 
 ## On-Device Debugging With Weinre
@@ -312,7 +312,7 @@ NOTE: Launching Weinre without this option will cause it to bind with the `local
 
 **Point a browser to that address and port to verify that Weinre is running correctly**. You should see a page similar to the following:
 
-<img src="http://rhodocs.s3.amazonaws.com/weinre/weinre-web-console.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/weinre/weinre-web-console.png"/>
 
 ###3- Enable Weinre In Your App
 
@@ -327,16 +327,16 @@ Lower in the Target Script section is an example of how to embed the Target Scri
 
 >TIP: In RhoStudio, the default double-click action for an HTML file is to open its browser representation in the editor. To edit the HTML itself, right-click the file, select 'Open With' and choose 'Text Editor' as shown below.
 
-<img src="http://rhodocs.s3.amazonaws.com/weinre/weinre-edit-barcode-enumerate.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/weinre/weinre-edit-barcode-enumerate.png"/>
 
 Here's what the line should look like in the HTML:
 
-<img src="http://rhodocs.s3.amazonaws.com/weinre/weinre-target-script-example.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/weinre/weinre-target-script-example.png"/>
 
 ###4- Start the debug client UI
 **Start Weinre's debug interface by clicking the link under `Access Points` in the Weinre Console**:
 
-<img src="http://rhodocs.s3.amazonaws.com/weinre/weinre-link-to-debug-ui.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/weinre/weinre-link-to-debug-ui.png"/>
 
 #### Debug Client UI
 
@@ -344,11 +344,11 @@ The image below shows the 'Remote' tab of Weinre's Debug Client UI. The 'Targets
 
 The inset image is a screenshot from the target Android device that's being displayed by an app called [Droid@Screen](http://droid-at-screen.ribomation.com/). This useful screencasting tool uses USB and [ADB](http://developer.android.com/tools/help/adb.html) to stream screen shots to the development host.
 
-<img src="http://rhodocs.s3.amazonaws.com/weinre/weinre-debug-and-device.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/weinre/weinre-debug-and-device.png"/>
 
 At this point, can inspect your app just as you would with the Web Inspectors of RhoSimulator or Chrome. The Elements tab shown below demonstrates two-way communication between the device and the development host. Clicking on an element in the HTML will cause that element to be highlighted on the device's UI. 
 
-<img src="http://rhodocs.s3.amazonaws.com/weinre/weinre-two-way-communication-inspection.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/weinre/weinre-two-way-communication-inspection.png"/>
 
 The Elements tab can be used for on-the-fly changes to CSS styling, API and method calls and any and all app UI settings. In the example below, the button text was changed from 'Enumerate' to 'Changed!' simply by editing the test in the Elements tab. 
 
@@ -356,11 +356,11 @@ The Elements tab can be used for on-the-fly changes to CSS styling, API and meth
   <div>
     <div class="span6" style="text-align:center">
         <p><b>Button text 'Enumerate'</b></p>
-        <img src="http://rhodocs.s3.amazonaws.com/weinre/weinre-button-element-before-change.png"/>
+        <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/weinre/weinre-button-element-before-change.png"/>
     </div>
     <div class="span6" style="text-align:center">
         <p><b>Button text 'Changed!'</b></p>
-        <img src="http://rhodocs.s3.amazonaws.com/weinre/weinre-button-element-after-change.png"/>
+        <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/weinre/weinre-button-element-after-change.png"/>
     </div>
   </div>
 </div>
@@ -371,7 +371,7 @@ One of the most versatile components of Weinre is its Console. Not only does it 
 
 The example below shows results from an attempt to use the JavaScript API to check the target platform, use the camera to scan a barcode, and issue a command to the [ScreenOrientation API](http://127.0.0.1:9393/en/edge/guide/screen_orientation) (which returned an error).
 
-<img src="http://rhodocs.s3.amazonaws.com/weinre/weinre-barcode-take-and-failed-extension.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/weinre/weinre-barcode-take-and-failed-extension.png"/>
 
 In the example, I used the Console to verify that my JavaScript APIs are functioning properly. A return of the correct system platform of 'Android' proves that the System API is working. A return of the correct scanned barcode value likewise proves that the Barcode module is working properly.
 
@@ -384,7 +384,7 @@ Now we turn to the error thrown by the [ScreenOrientation](../api/screenorientat
 
 This indicates that it cannot find the module, and reminds us that the ScreenOrientation API is not included in RhoMobile apps by default. To include it in our build, it must be listed in the extensions section of the app's build.yml before the app is rebuilt: 
 
-<img src="http://rhodocs.s3.amazonaws.com/weinre/weinre-adding-extension.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/weinre/weinre-adding-extension.png"/>
 
 <div class="row-fluid">
     <div class="span6">
@@ -397,9 +397,9 @@ This indicates that it cannot find the module, and reminds us that the ScreenOri
     </div>
     <div class="span6" style="text-align:center">
         <p><b>Auto-Completing Code</b></p>
-        <img src="http://rhodocs.s3.amazonaws.com/weinre/weinre-auto-complete.png"/>
+        <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/weinre/weinre-auto-complete.png"/>
         <p><b>Extension Working properly</b></p>
-        <img src="http://rhodocs.s3.amazonaws.com/weinre/weinre-extension-included-return-value.png"/>
+        <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/weinre/weinre-extension-included-return-value.png"/>
     </div>
 </div>
 
@@ -425,7 +425,7 @@ Google Remote Debugging works with native Android apps that use WebView--such as
 ###1. Enable Device Debugging
 The target device must have USB debugging enabled. This feature is found in **Settings >> Developer Options** panel, which is hidden by default. 
 
-![Developer Options](http://rhodocs.s3.amazonaws.com/guide/debugging_js/Android_developerOptions.png)
+![Developer Options](https://s3.amazonaws.com/docs.tau-technologies.com/images/guide/debugging_js/Android_developerOptions.png)
 
 Here's how to **unhide Developer options** (if neccessary) **and enable USB debugging**: 
 
@@ -438,7 +438,7 @@ Here's how to **unhide Developer options** (if neccessary) **and enable USB debu
 ###2. Discover Device (in Desktop Chrome)
 If you haven't already done so, **connect your device to an available USB port on the development host** and **enable device detection in Chrome**: 
 
->![Developer Options](http://rhodocs.s3.amazonaws.com/guide/debugging_js/Chrome_detect_USB.png)
+>![Developer Options](https://s3.amazonaws.com/docs.tau-technologies.com/images/guide/debugging_js/Chrome_detect_USB.png)
 
 1. Open a browser window and **enter 'chrome://inspect'** in the address bar. You should see a screen similar the one above.
 

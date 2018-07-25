@@ -27,27 +27,27 @@ We are going to set up an EC2 instance that will be running RhoSync inside Phusi
 
 Log into your Amazon Web Service account, and click on the EC2 tab to enter the Amazon EC2 console.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhosync-ec2-tutorial/EC2-console.png" alt="EC2 console" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhosync-ec2-tutorial/EC2-console.png" alt="EC2 console" />
 
 ### Selecting Your Region
 
 Amazon lets you select different regions in which to operate the instance. Under Navigation: Region, select a region. (The webinar has the US West region, since the webinar originated in California.)
 
-<img src="http://rhodocs.s3.amazonaws.com/rhosync-ec2-tutorial/select-region.png" alt="Select region" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhosync-ec2-tutorial/select-region.png" alt="Select region" />
 
 ### Selecting the Amazon Machine Image
 
 You need to select an AMI (Amazon Machine Image). Go to the website where you select the AMI that you want to use. The webinar uses cloud.ubuntu.com/ami/, the Ubuntu cloud portal for their AMIs. Select an AMI that is in the same region that you selected in the EC2 dashboard. The webinar shows an AMI selected from the zone us-west-1 with an i386 architecture. Copy the AMI-ID for the AMI that you selected.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhosync-ec2-tutorial/cloud-ubuntu-ami.png" alt="Cloud Ubuntu AMIs" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhosync-ec2-tutorial/cloud-ubuntu-ami.png" alt="Cloud Ubuntu AMIs" />
 
 Go back to the Amazon EC2 Console Dashboard. Under Getting Started, click the Launch Instance button. The Request Instances Wizard appears, showing the CHOOSE AN AMI window. The webinar uses an image from Community AMIs, so you would click that tab if you are using a similar AMI. Paste in the AMI-ID that you copied. That AMI shows up in the list.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhosync-ec2-tutorial/request-instances-wizard-choose-ami.png" alt="Request Images Wizard Choose AMI" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhosync-ec2-tutorial/request-instances-wizard-choose-ami.png" alt="Request Images Wizard Choose AMI" />
 
 Click Select to choose that AMI. The Request Instances Wizard: INSTANCE DETAILS window appears, showing the Number of Instances, Availability Zone, and Instance Type for this AMI. The webinar chose the defaults: 1 instance, no preference for availability zone, and small for instance type. 
 
-<img src="http://rhodocs.s3.amazonaws.com/rhosync-ec2-tutorial/request-images-wizard-instance-details1.png" alt="Request Images Wizard Instance Details 1" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhosync-ec2-tutorial/request-images-wizard-instance-details1.png" alt="Request Images Wizard Instance Details 1" />
 
 Click Continue.
 
@@ -55,13 +55,13 @@ Click Continue.
 
 Click Continue. The Request Instances Wizard shows Advanced Instance Options. You can turn on Monitoring, which enables CloudWatch detailed monitoring for the AMI. Termination Protection lets you set a state on the instance so you do not accidentally turn it off; you have to turn off Termination Protection before you can turn off the instance. (The webinar did not set termination protection.)
 
-<img src="http://rhodocs.s3.amazonaws.com/rhosync-ec2-tutorial/request-images-wizard-instance-details2.png" alt="Request Images Wizard Instance Details 2" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhosync-ec2-tutorial/request-images-wizard-instance-details2.png" alt="Request Images Wizard Instance Details 2" />
 
 Click Continue.
 
 You can enter a label for your instance, which is useful if you have lots of instances. The webinar shows a label of simple rhosync instance.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhosync-ec2-tutorial/request-images-wizard-instance-details3.png" alt="Request Images Wizard Instance Details 3" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhosync-ec2-tutorial/request-images-wizard-instance-details3.png" alt="Request Images Wizard Instance Details 3" />
 
 Click Continue.
 
@@ -71,7 +71,7 @@ Click Continue. Under CREATE KEY PAIR, you are asked to create a key pair, which
 
 The key pair file downloads. You will use that file later when you connect to your AMI. The file name is the name you entered with a .pem extension.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhosync-ec2-tutorial/keypair.png" alt="Key Pair" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhosync-ec2-tutorial/keypair.png" alt="Key Pair" />
 
 Click Continue.
 
@@ -79,13 +79,13 @@ Click Continue.
 
 Click Create a new Security Group. Under CONFIGURE FIREWALL, you need to expose ports for SSH and HTTP. From Create a new rule, select SSH, then click the Add Rule button. And again, from Create a new rule, select HTTP, then click the Add Rule button. The webinar shows that this exposes ports 22 and 80 in the instance that you are going to boot. Enter a Group Name and Group Description for this security group.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhosync-ec2-tutorial/request-instances-wizard-configure-firewall.png" alt="Configure Firewall" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhosync-ec2-tutorial/request-instances-wizard-configure-firewall.png" alt="Configure Firewall" />
 
 Click Continue.
 
 Under REVIEW, you see a summary of the operations you did to set up the AMI instance. The example in the webinar shows that it will create a small instance, that monitoring is enabled, that it has a security group, and that it has a key pair.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhosync-ec2-tutorial/request-instances-wizard-review.png" alt="Review" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhosync-ec2-tutorial/request-instances-wizard-review.png" alt="Review" />
 
 ### Launching the EC2 Instance
 
@@ -95,17 +95,17 @@ You will see a Launch Instance Wizard window, showing that your instances are la
 
 In the Amazon EC2 Console Dashboard, click on Running Instances. (It takes a few seconds for the EC2 instance to boot up.)
 
-<img src="http://rhodocs.s3.amazonaws.com/rhosync-ec2-tutorial/running-instances-click.png" alt="Running Instance click" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhosync-ec2-tutorial/running-instances-click.png" alt="Running Instance click" />
 
 When the instance starts running, you can pull up its EC2 Instance window to get a better look at it. You will see its AMI ID, Key Pair Name, and other information you entered. 
 
-<img src="http://rhodocs.s3.amazonaws.com/rhosync-ec2-tutorial/ec2-instance-window.png" alt="EC2 Instance Window" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhosync-ec2-tutorial/ec2-instance-window.png" alt="EC2 Instance Window" />
 
 ### Copying the Public DNS URL for the EC2 Instance
 
 If you scroll down a little, you see that it also shows the URL for the Public DNS location that Amazon gives you by default for you can connect to the instance over the public Internet. Copy the Public DNS URL for the EC2 instance, and save it so you can use it later when you install RhoSync.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhosync-ec2-tutorial/my-instances-public-dns.png" alt="Public DNS" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhosync-ec2-tutorial/my-instances-public-dns.png" alt="Public DNS" />
 
 ## Entering the EC2 Instance
 
@@ -199,7 +199,7 @@ The third step in the shell script creates the virtual host.
 
 As was mentioned previously in this tutorial, there is a server name variable in this part of the shell script: ServerName $1. A server name must be entered for this part of the shell script to run. Get the server name from the My Instance page in the Amazon EC2 Console Dashboard (this is the web page you were asked to save earlier, but you can just go back to the Dashboard and get it again).
 
-<img src="http://rhodocs.s3.amazonaws.com/rhosync-ec2-tutorial/my-instances-public-dns.png" alt="Public DNS" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhosync-ec2-tutorial/my-instances-public-dns.png" alt="Public DNS" />
 
 In this example, you would edit the ServerName $1 line to:
 
@@ -273,7 +273,7 @@ At this point, if you have entered all the steps so far in the shell script, you
 
 In your browser, go back to the web application and refresh. You will now have a running RhoSync server. 
 
-<img src="http://rhodocs.s3.amazonaws.com/rhosync-ec2-tutorial/rhosync-server-running.png" alt="RhoSync Server Running" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhosync-ec2-tutorial/rhosync-server-running.png" alt="RhoSync Server Running" />
 
 Click on Submit.
 
@@ -281,7 +281,7 @@ Click on Submit.
 
 In the RhoSync web console, you can click on Reset to reset the server. You can see license information; by default, it comes with a 10 device license. You can see the version of RhoSync that is running. 
 
-<img src="http://rhodocs.s3.amazonaws.com/rhosync-ec2-tutorial/rhosync-console.png" alt="RhoSync Console" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhosync-ec2-tutorial/rhosync-console.png" alt="RhoSync Console" />
 
 ### Setting Up a Background Job in Resque
 
@@ -301,11 +301,11 @@ The last part of the shell script sets up a Resque init script and starts up a w
 
 If you click on Resque in the RhoSync Console, you will now see one worker running.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhosync-ec2-tutorial/resque-worker-running.png" alt="Resque Worker Running" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhosync-ec2-tutorial/resque-worker-running.png" alt="Resque Worker Running" />
 
 If you click on the Workers tab, you can see information about the worker: its process ID, and its current state. This worker is waiting for a job.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhosync-ec2-tutorial/resque-worker-running.png" alt="Resque Worker Running" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhosync-ec2-tutorial/resque-worker-running.png" alt="Resque Worker Running" />
 
 ## Using the Public Amazon EC2 Image
 
