@@ -19,12 +19,12 @@ Open up RhoStudio and create a new RhoMobile Application
 3. Enter a name for the project and click `Finish`
 4. After the project is built - replace the contents of the `Public` folder with the contents of the `Public` folder we have been using so far.
 
-![](https://s3.amazonaws.com/rhodocs-images/rhotut-emberjs/Screen+Shot+2013-11-19+at+10.12.36+AM.jpg)
+![](https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs-images/rhotut-emberjs/Screen+Shot+2013-11-19+at+10.12.36+AM.jpg)
 
 ## Running the Ember App in RhoMobile
 Now, change the `start_path` setting in the `rhoconfig.txt` file so that it will use `/public/index.html' Ember application we have been creating.
 
-![](https://s3.amazonaws.com/rhodocs-images/rhotut-emberjs/Screen+Shot+2013-11-19+at+10.19.33+AM.jpg)
+![](https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs-images/rhotut-emberjs/Screen+Shot+2013-11-19+at+10.19.33+AM.jpg)
 
 Create a `Run Configuration` for this project.
 
@@ -34,11 +34,11 @@ Create a `Run Configuration` for this project.
 4. Select `RhoSimulator` for the `Simulator Type` field
 5. Click `Run`
 
-![](https://s3.amazonaws.com/rhodocs-images/rhotut-emberjs/Screen+Shot+2013-11-19+at+10.22.45+AM.jpg)
+![](https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs-images/rhotut-emberjs/Screen+Shot+2013-11-19+at+10.22.45+AM.jpg)
 
 You will now see the Ember application running inside of the RhoSimulator
 
-![](https://s3.amazonaws.com/rhodocs-images/rhotut-emberjs/Screen+Shot+2013-11-19+at+10.25.32+AM.jpg)
+![](https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs-images/rhotut-emberjs/Screen+Shot+2013-11-19+at+10.25.32+AM.jpg)
 
 ## Defining the Rhom Model
 In order to use the Rhom Adapter that we will build, we first must define the model using the RhoMobile ORM JavaScript APIs:
@@ -298,11 +298,11 @@ Now we should have all of the pieces we need to keep our data persistent using R
 
 Well, this is normal. Recall that we are now using Rhom as the storage, so the initial loading of the app will not have any record in the database. Create some new records and then relaunch the app and you will see that updates to data will be maintained.
 
-![](https://s3.amazonaws.com/rhodocs-images/rhotut-emberjs/Screen+Shot+2013-11-19+at+10.43.08+AM.jpg)
+![](https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs-images/rhotut-emberjs/Screen+Shot+2013-11-19+at+10.43.08+AM.jpg)
 
 And if we look at the RhoSimulatr Web Inspector and inspect an element in the product list page. We can see that the URL scheme is still working and is using the Rhom Object id numbers in the URL, ex:
 
     :::js
     <a id='ember459' class='ember-view' href='#/154089773960001.03/delete'>....
 
-![](https://s3.amazonaws.com/rhodocs-images/rhotut-emberjs/Screen+Shot+2013-11-19+at+10.47.24+AM.jpg)
+![](https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs-images/rhotut-emberjs/Screen+Shot+2013-11-19+at+10.47.24+AM.jpg)

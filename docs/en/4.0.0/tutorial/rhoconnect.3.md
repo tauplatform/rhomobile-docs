@@ -11,7 +11,7 @@ To test to make sure the sync is working, we need to create a basic RhoMobile ap
     <p>3. After choosing an application name click Finish</p>
   </div>
   <div class="span4 offset2" style="text-align:center">
-    <img src="https://s3.amazonaws.com/rhodocs/rhoconnect-tutorial/rhoconnect-client-new-project.png">
+    <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/rhoconnect-tutorial/rhoconnect-client-new-project.png">
   </div>
 </div>
 
@@ -25,7 +25,7 @@ To test to make sure the sync is working, we need to create a basic RhoMobile ap
     <p>4. Enter <code>name,brand,quantity,price</code> in the <code>Model attributes</code> field</p>
   </div>
   <div class="span4 offset2" style="text-align:center">
-    <img src="https://s3.amazonaws.com/rhodocs/rhoconnect-tutorial/rhoconnect-client-new-model.png">
+    <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/rhoconnect-tutorial/rhoconnect-client-new-model.png">
   </div>
 </div>
 
@@ -89,13 +89,13 @@ To sync with the RhoConnect server, the Rhodes client must log in. The Rhodes ge
     <p>
       <b>App Home Page</b>
     </p>
-    <img src="https://s3.amazonaws.com/rhodocs/rhoconnect-tutorial/rhoconnect-client-logged-out.png">
+    <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/rhoconnect-tutorial/rhoconnect-client-logged-out.png">
   </div>
   <div class="span4" style="text-align:center">
     <p>
       <b>App Login Page</b>
     </p>
-    <img src="https://s3.amazonaws.com/rhodocs/rhoconnect-tutorial/rhoconnect-client-login.png">
+    <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/rhoconnect-tutorial/rhoconnect-client-login.png">
   </div>
 </div>
 
@@ -113,13 +113,13 @@ To sync with the RhoConnect server, the Rhodes client must log in. The Rhodes ge
     <p>
       <b>App Settings Page With Client ID</b>
     </p>
-    <img src="https://s3.amazonaws.com/rhodocs/rhoconnect-tutorial/rhoconnect-client-settings.png">
+    <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/rhoconnect-tutorial/rhoconnect-client-settings.png">
   </div>
   <div class="span4" style="text-align:center">
     <p>
       <b>List of Products on Local Storage</b>
     </p>
-    <img src="https://s3.amazonaws.com/rhodocs/rhoconnect-tutorial/rhoconnect-client-products.png">
+    <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/rhoconnect-tutorial/rhoconnect-client-products.png">
   </div>
 </div>
 
@@ -131,19 +131,19 @@ To sync with the RhoConnect server, the Rhodes client must log in. The Rhodes ge
     <p>
       <b>Create New Product Page</b>
     </p>
-    <img src="https://s3.amazonaws.com/rhodocs/rhoconnect-tutorial/rhoconnect-client-create-new-product.png">
+    <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/rhoconnect-tutorial/rhoconnect-client-create-new-product.png">
   </div>
   <div class="span4" style="text-align:center">
     <p>
       <b>Rhostore Before Sync</b>
     </p>
-    <img src="https://s3.amazonaws.com/rhodocs/rhoconnect-tutorial/rhoconnect-rhostore-before-sync.png">
+    <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/rhoconnect-tutorial/rhoconnect-rhostore-before-sync.png">
   </div>
   <div class="span4" style="text-align:center">
     <p>
       <b>Rhostore After Sync</b>
     </p>
-    <img src="https://s3.amazonaws.com/rhodocs/rhoconnect-tutorial/rhoconnect-rhostore-after-sync.png">
+    <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/rhoconnect-tutorial/rhoconnect-rhostore-after-sync.png">
   </div>
 </div>
 

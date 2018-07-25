@@ -19,7 +19,7 @@ The `SyncEngine` interacts with RhoConnect over http(s) using [JSON](http://www.
 
 Below is a simplified diagram of the `SyncEngine` workflow:
 
-<img src="https://s3.amazonaws.com/rhodocs/rhoconnect/using-rhoconnect/sync_workflow.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/rhoconnect/using-rhoconnect/sync_workflow.png"/>
 
 This workflow consists of the following steps:
 

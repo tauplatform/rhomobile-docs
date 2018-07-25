@@ -84,7 +84,7 @@ We can now go back to our Products  list template and add a button that will loa
 
 Notice that we are using the `{{link-to}}` helper function that is provided by Ember and Handlebars. This will automatically be replaced by the correct url path that is defined by the `App.router` resource/route that has the same name of `productnew`
 
-![](https://s3.amazonaws.com/rhodocs-images/rhotut-emberjs/Screen+Shot+2013-11-18+at+3.22.52+PM.jpg)
+![](https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs-images/rhotut-emberjs/Screen+Shot+2013-11-18+at+3.22.52+PM.jpg)
 
 We used this same helper function to wire the `Cancel` button on this view to navigate back to the `products.index` view
     :::js
@@ -174,7 +174,7 @@ Then in the `public/js/routes/product.js` file instead of returning App.Product.
 
 Now when we create new records they will be added to our Fixture array and be displayed in the list. 
 
-![](https://s3.amazonaws.com/rhodocs-images/rhotut-emberjs/Screen+Shot+2013-11-18+at+3.55.23+PM.jpg)
+![](https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs-images/rhotut-emberjs/Screen+Shot+2013-11-18+at+3.55.23+PM.jpg)
 
 NOTE: Here is where the Ember inspector comes in handy. From the screen-shot above you can see that I can actually see the data that the view is using to display the records.
 

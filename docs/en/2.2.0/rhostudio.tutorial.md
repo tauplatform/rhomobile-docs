@@ -24,7 +24,7 @@ Although Mac OS has [Ruby](http://www.ruby-lang.org/en/) installed, this version
 Download the latest [RhoStudio for Mac](http://rhomobile.com/rhostudio-mac).
 
 When the download finishes, click on the RMS_&lt;version&gt;.dmg file to open it. You will get a window similar to this:<br>
-<img src="http://rhodocs.s3.amazonaws.com/rhodes-devel/rhostudio-mac-install.png" alt="RhoStudioInstaller Mac" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodes-devel/rhostudio-mac-install.png" alt="RhoStudioInstaller Mac" />
 
 Run the "Install gems" to install gems into selected version of Ruby. Run "Install rhoconnect-push" to install RhoConnect Push Service.
 
@@ -65,7 +65,7 @@ Use Zebra RhoStudio 32-bit to run RhoStudio with x86 JDK.**
 
 In RhoStudio Preferences, open RhoMobile and check that the path is set to your JDK installation.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/preferences-rhomobile.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/preferences-rhomobile.png"/>
 
 ## Generating a Rhodes Application
 
@@ -77,31 +77,31 @@ In RhoStudio, select File->New->Project...
 
 The New Project window opens. Select the RhoMobile application wizard and click the Next button.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/new-project.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/new-project.png"/>
 
 Enter the name for your Rhodes application in Project name; in this case, "storemanager". You may specify a specific folder for your destination where your project is stored, by default, the destination is your RhoStudio workspace folder. Uncheck the RhoElements checkbox if this is to be a strictly Rhodes application. Then press the Finish button.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/rhodes-application-wizard.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/rhodes-application-wizard.png"/>
 
 After pressing the Finish button, you'll see the Rhodes app generator script output in the output console (Rhomobile build console).
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/rhodes-app-generator-output.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/rhodes-app-generator-output.png"/>
 
 ## Generating a Rhodes Model
 
 Rhodes applications support a Model-View-Controller (MVC) pattern.  To start our application, we will generate a Model. To generate a Rhodes model and create the associated Controller and View templates, right-click on the application project in the Project Explorer and select New->Rhodes model.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/menu-new-rhodes-model.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/menu-new-rhodes-model.png"/>
 
 In the Model Information window, enter the name for your model: in this case, Product. Also enter the Model attributes as a string with no spaces and each attribute separated by a comma: in this case, name,brand,price,quantity,sku. (Whitespaces at the field name beginning and end will be trimmed and whitespaces in the middle of the field name will be replaced with an underscore character.)
 
 Click the Finish button to create the model.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/model-information.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/model-information.png"/>
 
 After pressing the Finish button, you'll see the Rhodes model generator script output in the output console (Rhodes build log console).
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/rhodes-model-generator-output.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/rhodes-model-generator-output.png"/>
 
 You should now see a 'Product' folder below the 'app' folder in your storemanager application. These files constitute the Model, Views and Controller file for the Product Model we just created. The files are organized as follows:
 
@@ -157,17 +157,17 @@ The build.yml file for your application manages your Rhodes build time configura
 
 Rhobuild setting WYSIWIG editor:
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/buildyml-rhobuildsetting.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/buildyml-rhobuildsetting.png"/>
 
 build.yml text editor:
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/buildyml-textedit.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/buildyml-textedit.png"/>
 
 You will have default values for your application name, log file (the log file will be located in your application folder after you run your application), and the path to the Rhodes gem. You can use the WYSIWIG editor to change this. For example, you might want to point to a different RHodes gem if you have more than one Rhodes gem installed.
 
 You can add capabilities to your application, such as camera and vibrate, by pressing the Capabilities: Add button, selecting the capabilities from the popup window, and clicking the Ok button.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/select-capabilities.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/select-capabilities.png"/>
 
 The selected application capabilities will appear in the Capabilities: text field in the WISIWIG editor.
 
@@ -175,11 +175,11 @@ The selected application capabilities will appear in the Capabilities: text fiel
 
 To start the build process, create a Run Configuration: select your project in the Project Explorer, and select Run->Run Configurations... from the menu. The Run Configurations window appears.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/run-configurations.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/run-configurations.png"/>
 
 To create a new build configuration for your application, select Rhodes Application. Then either right-click on Rhodes Application or click the New button. A new configuration appears under Rhodes Application.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/run-config-rhodes-new-rhodes.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/run-config-rhodes-new-rhodes.png"/>
 
 **NOTE: In the RhoStudio Run Configurations window, when you choose the Windows Mobile platform and any of the platform types (such as 6.0, 6.5.3, CE5.0), this platform setting overrides the SDK settings for Windows Mobile in the application build.yml file. This override does NOT affect RhoMobile Production Build, or using rake (without RhoStudio) to build and run a Windows Mobile app; these options use the Windows Mobile SDK settings in the build.yml file.**
 
@@ -191,27 +191,27 @@ You can run your project in RhoSimulator, a simulator type available only in Rho
 
 To run RhoSimulator for the iPhone platform, select your project from the Project Explorer (in this case, we use the storemanager project created earlier). Then select Run -> Run Configurations from the main menu.  The Run Configurations window appears.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/run-config-rhosim-iphone.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/run-config-rhosim-iphone.png"/>
 
 In the Run Configurations window, select RhoSimulator for the Simulator type, and select your desired platform type. For example, if you select iPhone, RhoSimulator will mimic an iPhone. The calls to the system will return as though the application was running on an actual iPhone.
 
 Click Run to start the simulator.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/rhosimulator.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/rhosimulator.png"/>
 
 In the storemanager example, we can add a couple of products. Click the Products link, then click New, enter the product attributes, and click Create.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/rhosim-new-product.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/rhosim-new-product.png"/>
 
 ### Using the Web Inspector
 
 The RhoSimulator also brings up a Webkit Inspector window, allowing you to inspect the web interface for your application.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/web-inspector.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/web-inspector.png"/>
 
 For example, you can see the web code for the listview. Here is the listview of the products for the storemanager example. You can see the link for the iPhone URL, and you could change the border color and thickness for the iPhone product (changing from 1px to 3px and solid #CCC to #111 would give the iPhone link a thicker, darker border).
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/rhosim-product-list-dark.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/rhosim-product-list-dark.png"/>
 
 ## Using the Debugger
 
@@ -227,7 +227,7 @@ You will again get a RhoSimulator showing your device, and the Web Inspector win
 
 To debug your Ruby code in your Rhodes application, click the RhoStudio tab in your workspace, then open the Ruby file in your Rhodes application that you wish to debug.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/debug-rhostudio-ruby.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/debug-rhostudio-ruby.png"/>
 
 Now click the Debug tab. You will see the Ruby file opened in the debugger. 
 
@@ -239,7 +239,7 @@ Click Debug to start the debugger.
 
 You will see your RhoConnect project in the debugger; there will be a console window with redis server information messages. (You will not get a RhoSimulator or a Web Inspector, as you do with the Rhodes debugger.)
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/debugger-rhoconnect.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/debugger-rhoconnect.png"/>
 
 To debug your Ruby code in your RhoConnect application, you do the same as for a Rhodes application: click the RhoStudio tab in your workspace, then open the Ruby file in your RhoConnect project that you wish to debug.
 
@@ -258,7 +258,7 @@ For example, in the storemanager code, there is a rendering section in product_c
 
 You can set a breakpoint on the line `render :back => '/app'`, then you can go to the RhoSimulator and click on Product. The simulator will stop at the point of rendering.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/debugger-breakpoint.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/debugger-breakpoint.png"/>
 
 NOTE: If you set a breakpoint on a function definition string (the first line of a function definition), as in the following line of Ruby code, that breakpoint will always be disabled. You should not set breakpoints there.
 
@@ -268,7 +268,7 @@ NOTE: If you set a breakpoint on a function definition string (the first line of
 
 You can also inspect the variables. When you click "Products" In the debugger simulator, and you have a breakpoint as set earlier in the product_controller.rb on the rendering line, the application will pause just before the rendering of the product listing page. You can then inspect the variables in the variable window. The storemanager example shows that at this point int he app, the local database has been read, showing that a couple of products have been created (an iPhone and an iPhone4S).
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/debugger-variables.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/debugger-variables.png"/>
 
 ### Debugger Support for Extensions
 
@@ -290,13 +290,13 @@ Select File -> New -> Project...
 
 From the New Project window, select Rhomobile -> Rhoconnect application or Rhomobile -> Rhodes application. THen click the Next button.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/new-project.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/new-project.png"/>
 
 From the Rhodes (or Rhoconnect) application generator wizard window, click the "Create application from existing sources" checkbox.
 
 Click the Browse button, then navigate to and select the folder containing your project. The Project name will change to the name of your project folder.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/rhodes-application-wizard-exist.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/rhodes-application-wizard-exist.png"/>
 
 Click the Finish button. Your project will appear in the Project Explorer.
 
@@ -329,7 +329,7 @@ Once you have the SDK for your platform installed, set RhoStudio Preferences for
 
  2. Click the Browse button and navigate to the locations where you installed your Android SDK and NDK.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/preferences-android-sdk.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/preferences-android-sdk.png"/>
 
 ### Set Run Configurations to the Device Build and Run
 
@@ -339,9 +339,9 @@ To start the device build process, create a Run Configuration: select your proje
  * Set the Simulator type to either device to run on the device, or simulator to run on the simulator provided with the Android SDK.
  * If you set the Simulator type to simulator, set the Platform version number and set the AVD name for Android.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/run-config-android-device.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/run-config-android-device.png"/>
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/run-config-android-simulator.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/run-config-android-simulator.png"/>
 
 Press the Run button to build and run your application. The build output will appear in the Rhodes build output console. The application log will be available in the Rhodes application output console, and will be written into your application folder.
 
@@ -366,7 +366,7 @@ For example, to complete a Ruby keyword beginning with "re", perform these steps
 
 You can check the progress of an operation in RhoStudio, and cancel it if you wish. Open the Progress view to see the progress bar on the left, and click the red square on the right to cancel the operation.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/rhostudio-progress-cancel.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/rhostudio-progress-cancel.png"/>
 
 The following RhoStudio operations can have their progress checked and be canceled from the Progress view.
 
@@ -413,7 +413,7 @@ The [Rhodes testing](rhodes/test-log-debug#testing) chapter contains this [link 
 
 Once you have written your test, you need to generate a testing framework to run the test. To generate the testing framework, right-click on your application in the Project Explorer and select RhoMobile spec.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/rhomobile-spec.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/rhomobile-spec.png"/>
 
 This will create the following files in your app folder.
 
@@ -432,4 +432,4 @@ To create a run configuration and run the test for your application, perform the
 4. Create the run configuration you want for this test. Choose the platform, and if needed, the simulator type. Click the Apply button when done.
 5. Click the Debug button to run the test.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/debug-config-test.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/debug-config-test.png"/>

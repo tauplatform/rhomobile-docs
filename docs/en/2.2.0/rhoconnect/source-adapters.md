@@ -9,17 +9,17 @@ You can generate a RhoConnect source adapter with RhoStudio or with the `rhoconn
 
 To generate a RhoConnect source adapter and create the associated Controller templates, open your Rhoconnect project in RhoStudio. Then right-click on the project in the Project Explorer and select New->Rhoconnect Source Adapter.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhoconnect-tutorial/menu-new-rhoconnect_source-adapter.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhoconnect-tutorial/menu-new-rhoconnect_source-adapter.png"/>
 
 In the Source Adapter Information window, enter the name for your source adapter.
 
 Click the Finish button to create the source adapter.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhoconnect-tutorial/source-adapter-information.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhoconnect-tutorial/source-adapter-information.png"/>
 
 After pressing the Finish button, you'll see the RhoConnect source adapter generator script output in the output console (Rhomobile build console).
 
-<img src="http://rhodocs.s3.amazonaws.com/rhoconnect-tutorial/rhoconnect-source-generator-output.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhoconnect-tutorial/rhoconnect-source-generator-output.png"/>
 
 ## Generating the Source Adapter from the Command Line
 

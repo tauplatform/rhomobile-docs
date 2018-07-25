@@ -33,27 +33,27 @@ Before you can send your applications to consumers, you need to have a RhoHub ga
 
 In your RhoHub account, click on Galleries.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/galleries-tab.jpg"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/galleries-tab.jpg"/>
 
 If needed, click on Galleries to show the Galleries section. In the Galleries section, click the Create Galleries button.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/gallery-button.jpg"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/gallery-button.jpg"/>
 
 In the Add new Gallery pop-up window, enter a name for the gallery. Optionally, you can enter a description for your gallery, and choose an icon for that gallery. Click Create Gallery.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/add-new-gallery.jpg"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/add-new-gallery.jpg"/>
 
 ## Adding Applications to (and Managing) Your RhoHub Gallery
 
 Now you need to add apps to your gallery. Click the Add a new App button.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/add-new-app-button.jpg"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/add-new-app-button.jpg"/>
 
 ### Step 1: Manage Your App
 
 In the Add new app pop-up window, enter the name you want for your app. You can add an optional description and an optional icon to your app (the icon defaults to a Rhodes logo). Click Next.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/add-new-app-step1.jpg"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/add-new-app-step1.jpg"/>
 
 ### Step 2: Device Target
 
@@ -64,7 +64,7 @@ Select the Device type (Android, iOS, Blackberry, Windows Mobile), enter the fol
  * A security token. You enter this if you are adding a Rhodes app and you used a security_token setting in your build.yml; the app will only launch if that security token is entered.
  * OS version: the OS version. Only enter this for Blackberry.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/add-new-app-step2.jpg"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/add-new-app-step2.jpg"/>
 
 ### Step 3: Select the Build Type
 
@@ -74,7 +74,7 @@ In Step 3: Select Builds, select the type of build. (The pop-up window title cha
 
 For RhoHub Build, select a RhoHub build for a Rhodes application in your RhoHub account. Click Next.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/add-new-app-step3-RhoHub.jpg"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/add-new-app-step3-RhoHub.jpg"/>
 
 #### Local Build
 
@@ -122,7 +122,7 @@ For Remote Build, enter the link to the application file.
 
 This example shows a link to an Android build on toshl.com, a third party expense tracking application.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/add-new-app-step3-remote.jpg"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/add-new-app-step3-remote.jpg"/>
 
 Click Next.
 
@@ -130,11 +130,11 @@ Click Next.
 
 In Review, click Finish.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/add-new-app-review.jpg"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/add-new-app-review.jpg"/>
 
 You now have an app in your RhoHub gallery. Here is an example of a gallery with a RhoHub app and a remote app.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/rhohub-gallery-apps.jpg"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/rhohub-gallery-apps.jpg"/>
 
 ## Adding Consumers to Your RhoHub Gallery
 
@@ -142,15 +142,15 @@ You also need consumers for your app. Consumers can use the RhoGallery mobile ap
 
 From your gallery, click the Invite button.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/rhohub-gallery-invite-button.jpg"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/rhohub-gallery-invite-button.jpg"/>
 
 In the Invite Consumers pop-up window, enter a login name for your consumer, your consumer's name, and check the checkboxes to notify the consumer via email, or SMS, or both. Enter your consumer's email address if you notify by email; enter your consumer's cell phone number if you notify by SMS. You can also enter groups you want your consumer to be in; if the group does not exist yet, this will create the group.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/invite-consumers.jpg"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/invite-consumers.jpg"/>
 
 You will see the consumer added to your gallery.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/gallery-consumers-added.jpg"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/gallery-consumers-added.jpg"/>
 
 The consumer will receive an email, or an SMS, or both, similar to the following:
 
@@ -171,47 +171,47 @@ You can create groups and add consumers to those groups. For example, you may wi
 
 To create a group, go to the Consumers section in your gallery by clicking on Consumers.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/consumers-button-section.jpg"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/consumers-button-section.jpg"/>
 
 In the Consumers section, click the Create Group button.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/create-group-button.jpg"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/create-group-button.jpg"/>
 
 In the Add new Group pop-up window, enter the name for your group, then click Create Group.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/add-new-group.jpg"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/add-new-group.jpg"/>
 
 Now you can add consumers to the group. Click on Add Consumer.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/Add-Consumer.jpg"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/Add-Consumer.jpg"/>
 
 In the Add Consumers pop-up window, under the New Consumers tab, you can add a new consumer to your group by entering a login name and consumer name, and entering your consumer's email address to notify by email, or cell phone number if you notify by SMS. (This is the same process you would use when you add a consumer from the Gallery section.) Then click Invite.
 
 Under the Existing Consumer tab, you see a list of consumers whom you have added to your gallery. To add these consumers to your group, check the checkbox for those consumers. Then click Invite. 
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/add-consumer-existing.jpg"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/add-consumer-existing.jpg"/>
 
 Those consumers are added to the group.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/consumers-group.jpg"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/consumers-group.jpg"/>
 
 Now add the group to your gallery. In the Galleries section, click on the Invite button, as you did when you invited consumers to the gallery.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/rhohub-gallery-invite-button2.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/rhohub-gallery-invite-button2.png"/>
 
 In the Invite Consumers pop-up window, click the Existing Consumers tab. Then check the checkbox for the group that you are adding to your gallery. Then click the Invite button, then Close.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/invite-group.jpg"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/invite-group.jpg"/>
 
 The group is now added to your gallery.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/galleries-group-added.jpg"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/galleries-group-added.jpg"/>
 
 ## Managing Collaborators
 
 You can add collaborators. Collaborators are other people who have RhoHub accounts who can work with you on this gallery. To add a collaborator, in the Galleries section, click on Manage Collaborators.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/manage-collaborators-link.jpg"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/manage-collaborators-link.jpg"/>
 
 In the Manage Collaborators pop-up window, enter the RhoHub user name, then click the Add Collaborator button.
 
@@ -219,11 +219,11 @@ In the Manage Collaborators pop-up window, enter the RhoHub user name, then clic
 
 You can build your own custom RhoGallery Mobile. From the "Galleries" tab, select the "RhoGallery Mobile" section.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/rhohub-section-rhogallery-mobile-link.jpg"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/rhohub-section-rhogallery-mobile-link.jpg"/>
 
 In the RhoGallery Mobile section, you can customize the look and feel of RhoGallery on the supported platforms that your RhoHub gallery consumers will see when they receive invitations to join your RhoHub gallery.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/rhohub-rhogallery-mobile.jpg"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/rhohub-rhogallery-mobile.jpg"/>
 
 ### Look and Feel: General Tab
 
@@ -231,7 +231,7 @@ Under the General tab for Look and Feel, you can adjust the size, weight, style,
 
 Click the Reset button to undo your changes.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/rhohub-mobile-look-feel-general.jpg"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/rhohub-mobile-look-feel-general.jpg"/>
 
 ### Look and Feel: Splash Screen
 
@@ -239,7 +239,7 @@ Under the Splash Screen tab for Look and Feel, you can add a custom image for th
 
 Click the Reset button to undo your changes.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/rhohub-mobile-look-feel-splash.jpg"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/rhohub-mobile-look-feel-splash.jpg"/>
 
 ### Look and Feel: My Galleries
 
@@ -263,23 +263,23 @@ Click the Reset button to undo your changes.
 
 If you want to go back to the defaults for the look and feel, losing any changes you made, click Reset all.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/rhohub-mobile-look-feel-reset-all.jpg"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/rhohub-mobile-look-feel-reset-all.jpg"/>
 
 ### Build and Publish
 
 For your RhoGallery users to access your custom landing pages, you must build and publish them. You publish your custom landing pages under Build and Publish. Click the Build button to build your custom landing page for your desired device type. Then click Publish to publish the landing page. You must have published one or more app builds for the respective device type in order to publish the custom landing page.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/build-and-publish.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/build-and-publish.png"/>
 
 ### Landing Page
 
 Under Landing Page, select which landing page is sent to your consumers. You can still use the standard RhoHub page, or you can link to your customized RhoGallery Mobile landing page, which contain the customizations that you have done in RhoGallery Mobile. This link will only display the pages that you have built and published.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/rhohub-mobile-look-feel-landing-page.jpg"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/rhohub-mobile-look-feel-landing-page.jpg"/>
 
 When your consumers navigate on their mobile device to the link provided for your custom landing pages, they will see a list where they can download the RhoGallery app that uses your published and built custom landing pages.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/RhoGallery-landing-page.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/RhoGallery-landing-page.png"/>
 
 ## Using RhoGallery to Get RhoHub Gallery Apps onto Your Mobile Device
 
@@ -293,7 +293,7 @@ A mobile device must have the RhoGallery application installed in order to sync 
 
 When you open the RhoGallery app on your mobile device, you enter the name of the RhoHub gallery to which you wish to connect, and your username and password. 
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/rhogallery-login.jpg"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/rhogallery-login.jpg"/>
 
 You received this information in the email and/or SMS that was sent when the RHoHub gallery administrator invited you to join that RhoHub gallery.
 
@@ -310,13 +310,13 @@ You received this information in the email and/or SMS that was sent when the RHo
 
 Once you have connected to a RhoHub gallery from your mobile device, you can install applications from that gallery onto your mobile device and run them. Here is an example of a mobile device logged into a RhoHub gallery, and a list of applications in that gallery. (This is under the Galleries tab in RHoGallery.)
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/rhogallery-myapps.jpg"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/rhogallery-myapps.jpg"/>
 
 To install any of those applications on your mobile device, click the Install button for that application. For example, if the RhoHub account has the external app Toshl, you can click its Install button in the RhoGallery apps list.
 
 You will be asked if you want to install the application. Click the Install button.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/rhogallery-want-to-install.jpg"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/rhogallery-want-to-install.jpg"/>
 
 After the application installs, click the Done button (or Open if you want to run it immediately).
 
@@ -324,17 +324,17 @@ After the application installs, click the Done button (or Open if you want to ru
 
 Once you have installed an app from a RhoHub gallery, you can run it. Click the Launch button to run the app.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/rhogallery-launch.jpg"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/rhogallery-launch.jpg"/>
 
 And the app runs.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/toshl.jpg"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/toshl.jpg"/>
 
 ### Uninstalling RhoHub Gallery Apps From Your Mobile Device
 
 To uninstall an app that you installed with RhoGallery, click the plus icon to the left of the app name in the app list in RhoGallery. Then click the Uninstall button.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/rhogallery-uninstall-app.jpg"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/rhogallery-uninstall-app.jpg"/>
 
 Note that this RhoGallery uninstall does not work for iOS apps; you cannot uninstall iPhone or iPad apps from RhoGallery. However, you can still use the standard iPhone/iPad uninstall procedure to uninstall the app.
 
@@ -342,17 +342,17 @@ Note that this RhoGallery uninstall does not work for iOS apps; you cannot unins
 
 Click the Account tab to see your account information.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/rhogallery-account.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/rhogallery-account.png"/>
 
 If you want to switch to another RhoGallery account, click the Edit button. Then enter the RhoHub Account name, Username, and Password for that account, as you did when you connected to the RhoHub gallery. Then click the Save button.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/rhogallery-account-edit.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/rhogallery-account-edit.png"/>
 
 ### Changing Your RhoGallery Settings
 
 Click the Settings tab to see your RhoGallery settings.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/rhogallery-settings.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/rhogallery-settings.png"/>
 
 Click on logout to log out of your RhoHub gallery connection.
 

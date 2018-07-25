@@ -86,13 +86,13 @@ To start the build process, create a Run Configuration: select your project in t
  * Select Run->Run Configurations... from the main menu,
  * Or right-click on your project, and select Run As->Run Configurations from the popup menu.
 
-<img src="http://rhodocs.s3.amazonaws.com/build-rhodes-app/run-configurations-menu.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/build-rhodes-app/run-configurations-menu.png"/>
 
 The Run Configurations window appears.
 
 To run on the iOS simulator, select iPhone in Platform, Simulator in Simulator type, and select iPhone or iPad. Then click the Run button.
 
-<img src="http://rhodocs.s3.amazonaws.com/build-rhodes-app/run-configurations-ios.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/build-rhodes-app/run-configurations-ios.png"/>
 
 ### Build a Rhodes Application with Xcode
 
@@ -120,21 +120,21 @@ Then in the Rhodes source code folder (the path in your Rhodes application build
 
 In the Xcode Scheme menu, select the proper scheme before you build and run your project. Click on the Scheme menu.
 
-<img src="http://rhodocs.s3.amazonaws.com/build-rhodes-app/rhorunner-xcode-scheme.png" alt="xcode scheme" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/build-rhodes-app/rhorunner-xcode-scheme.png" alt="xcode scheme" />
 
 Select the Scheme for your project under rhorunner. You can select to run in the simulator.
 
-<img src="http://rhodocs.s3.amazonaws.com/build-rhodes-app/rhorunner-xcode-scheme-simulator.png" alt="xcode scheme simulator" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/build-rhodes-app/rhorunner-xcode-scheme-simulator.png" alt="xcode scheme simulator" />
 
 Now you can build and run in Xcode to run your project in the iOS simulator.
 
 If you are an Apple developer, you can run your Rhodes application on your iOS device. In Xcode, select your rhorunner target, click on the Build Settings tab, and see that your code signing information that you installed as an Apple developer is set up and selected.
 
-<img src="http://rhodocs.s3.amazonaws.com/build-rhodes-app/rhorunner-xcode-build-device.png" alt="xcode build settings" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/build-rhodes-app/rhorunner-xcode-build-device.png" alt="xcode build settings" />
 
 Plug in your iOS device. In Xcode, under Scheme, select iOS device under rhorunner. Then build and run.
 
-<img src="http://rhodocs.s3.amazonaws.com/build-rhodes-app/rhorunner-xcode-scheme-device.png" alt="xcode scheme device" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/build-rhodes-app/rhorunner-xcode-scheme-device.png" alt="xcode scheme device" />
 
 For more information on running on your iOS device from Xcode, go to the [Apple developer site](http://developer.apple.com/), go to the iOS Developer Library, and search on "managing devices", or "run applications on a device," or similar.
 
@@ -298,7 +298,7 @@ Download and unzip the [Android NDK](http://developer.android.com/sdk/ndk/index.
 
 In RhoStudio -> Preferences on the Macintosh or Windows -> Preferences on Windows, open Rhomobile->Android and set the paths to your Android SDK and NDK installations.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/preferences-android-sdk.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/preferences-android-sdk.png"/>
 
 If you are not using RhoStudio, run rhodes-setup from the command line and set the paths to the Android SDK and NDK installations.
 
@@ -339,7 +339,7 @@ On Android, you must specify your device capabilities the your application will 
 
 In RhoStudio, you can double-click on your application's build.yml file, then click the Rhobuild setting tab, then click the Capabilities: Add button. You will see a list of capabilities you can check to activate for your application.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/select-capabilities.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/select-capabilities.png"/>
 
 You can also edit the build.yml file directly with a text editor. Here is a list of capabilities you can add to the capabilities section in your application build.yml file.
 
@@ -378,7 +378,7 @@ To start the build process, create a Run Configuration: select your project in t
  * select Run->Run Configurations... from the main menu,
  * or right-click on your project, and select Run As->Run Configurations from the popup menu.
 
-<img src="http://rhodocs.s3.amazonaws.com/build-rhodes-app/run-configurations-menu.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/build-rhodes-app/run-configurations-menu.png"/>
 
 The Run Configurations window appears.
 
@@ -386,11 +386,11 @@ The Run Configurations window appears.
 
 To run on the Android simulator, select Android in Platform, Simulator in Simulator type, and enter the name of the AVD in AVD name. Then click the Run button.
 
-<img src="http://rhodocs.s3.amazonaws.com/build-rhodes-app/run-configurations-avd.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/build-rhodes-app/run-configurations-avd.png"/>
 
 You can get a list of the AVD names by running the SDK setup: on Macintosh and Linux, navigate to and run <Android SDK>/tools/android. On Windows, navigate to and run <Android SDK>/SDK Setup.exe. Then click Virtual devices.
 
-<img src="http://rhodocs.s3.amazonaws.com/build-rhodes-app/android-virtual-devices.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/build-rhodes-app/android-virtual-devices.png"/>
 
 #### Running on an Android Device with RhoStudio
 
@@ -905,7 +905,7 @@ Now you may run and debug rhodes applications on Windows Mobile devices connecte
 
 In RhoStudio Windows -> Preferences, right-click on Rhomobile->Windows Mobile to show the rhobuild.yml preferences. Check that the Cab wizard path (which is contained in your Windows Mobile 6 SDK program installation) is correct.
 
-<img src="http://rhodocs.s3.amazonaws.com/build-rhodes-app/preferences-windows-mobile.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/build-rhodes-app/preferences-windows-mobile.png"/>
 
 Also check that the vcbuild path is shown in the rhobuild.yml file. The rhobuild.yml file is located in the Rhodes folder (example location: `C:/RhoStudio/ruby/lib/ruby/gems/1.8/gems/rhodes-3.1.1`).
 
@@ -942,7 +942,7 @@ To start the build process, create a Run Configuration: select your project in t
  * select Run->Run Configurations... from the main menu,
  * or right-click on your project, and select Run As->Run Configurations from the popup menu.
 
-<img src="http://rhodocs.s3.amazonaws.com/build-rhodes-app/run-configurations-menu.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/build-rhodes-app/run-configurations-menu.png"/>
 
 The Run Configurations window appears.
 
@@ -952,7 +952,7 @@ The Run Configurations window appears.
 
 To run on the Windows Mobile simulator, select Windows Mobile in Platform and Simulator in Simulator type. Then click the Run button.
 
-<img src="http://rhodocs.s3.amazonaws.com/build-rhodes-app/run-configurations-wm.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/build-rhodes-app/run-configurations-wm.png"/>
 
 #### Running on a Windows Mobile Device in RhoStudio
 

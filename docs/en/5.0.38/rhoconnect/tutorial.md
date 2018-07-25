@@ -91,7 +91,7 @@ If all went well, you should see:
 
 This means that your RhoConnect app is up and running on localhost:9292. If you go to this address in your browser you will see the RhoConnect Console, pictured below.
 
-<img src="https://s3.amazonaws.com/rhodocs/rhoconnect-tutorial/rhoconnect-console-4.0.png">
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/rhoconnect-tutorial/rhoconnect-console-4.0.png">
 
 ## Defining RhoConnect Source Adapters
 
@@ -387,13 +387,13 @@ To sync with the RhoConnect server, the Rhodes client must log in. The Rhodes ge
     <p>
       <b>App Home Page</b>
     </p>
-    <img src="https://s3.amazonaws.com/rhodocs/rhoconnect-tutorial/rhoconnect-client-logged-out.png">
+    <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/rhoconnect-tutorial/rhoconnect-client-logged-out.png">
   </div>
   <div class="span4" style="text-align:center">
     <p>
       <b>App Login Page</b>
     </p>
-    <img src="https://s3.amazonaws.com/rhodocs/rhoconnect-tutorial/rhoconnect-client-login.png">
+    <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/rhoconnect-tutorial/rhoconnect-client-login.png">
   </div>
 </div>
 
@@ -411,13 +411,13 @@ To sync with the RhoConnect server, the Rhodes client must log in. The Rhodes ge
     <p>
       <b>App Settings Page With Client ID</b>
     </p>
-    <img src="https://s3.amazonaws.com/rhodocs/rhoconnect-tutorial/rhoconnect-client-settings.png">
+    <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/rhoconnect-tutorial/rhoconnect-client-settings.png">
   </div>
   <div class="span4" style="text-align:center">
     <p>
       <b>List of Products on Local Storage</b>
     </p>
-    <img src="https://s3.amazonaws.com/rhodocs/rhoconnect-tutorial/rhoconnect-client-products.png">
+    <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/rhoconnect-tutorial/rhoconnect-client-products.png">
   </div>
 </div>
 
@@ -429,19 +429,19 @@ To sync with the RhoConnect server, the Rhodes client must log in. The Rhodes ge
     <p>
       <b>Create New Product Page</b>
     </p>
-    <img src="https://s3.amazonaws.com/rhodocs/rhoconnect-tutorial/rhoconnect-client-create-new-product.png">
+    <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/rhoconnect-tutorial/rhoconnect-client-create-new-product.png">
   </div>
   <div class="span4" style="text-align:center">
     <p>
       <b>Rhostore Before Sync</b>
     </p>
-    <img src="https://s3.amazonaws.com/rhodocs/rhoconnect-tutorial/rhoconnect-rhostore-before-sync.png">
+    <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/rhoconnect-tutorial/rhoconnect-rhostore-before-sync.png">
   </div>
   <div class="span4" style="text-align:center">
     <p>
       <b>Rhostore After Sync</b>
     </p>
-    <img src="https://s3.amazonaws.com/rhodocs/rhoconnect-tutorial/rhoconnect-rhostore-after-sync.png">
+    <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/rhoconnect-tutorial/rhoconnect-rhostore-after-sync.png">
   </div>
 </div>
 

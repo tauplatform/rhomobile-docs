@@ -50,13 +50,13 @@ To start the build process, create a Run Configuration: select your project in t
  * Select Run->Run Configurations... from the main menu,
  * Or right-click on your project, and select Run As->Run Configurations from the popup menu.
 
-<img style="height:500px" src="http://rhodocs.s3.amazonaws.com/build-rhodes-app/run-configurations-menu-4.0.png"/>
+<img style="height:500px" src="https://s3.amazonaws.com/docs.tau-technologies.com/images/build-rhodes-app/run-configurations-menu-4.0.png"/>
 
 The Run Configurations window appears.
 
 To run on the iOS simulator, select iPhone in Platform, Simulator in Simulator type, and select iPhone or iPad. Then click the Run button.
 
-<img style="height:500px" src="http://rhodocs.s3.amazonaws.com/build-rhodes-app/run-configurations-ios-4.0.png"/>
+<img style="height:500px" src="https://s3.amazonaws.com/docs.tau-technologies.com/images/build-rhodes-app/run-configurations-ios-4.0.png"/>
 
 ## Build an iOS App with Xcode
 
@@ -84,21 +84,21 @@ Then in the RhoMobile source code folder (the path in your RhoMobile application
 
 In the Xcode Scheme menu, select the proper scheme before you build and run your project. Click on the Scheme menu.
 
-<img src="http://rhodocs.s3.amazonaws.com/build-rhodes-app/rhorunner-xcode-scheme-4.0.png" alt="xcode scheme" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/build-rhodes-app/rhorunner-xcode-scheme-4.0.png" alt="xcode scheme" />
 
 Select the Scheme for your project under rhorunner. You can select to run in the simulator.
 
-<img src="http://rhodocs.s3.amazonaws.com/build-rhodes-app/rhorunner-xcode-scheme-simulator-4.0.png" alt="xcode scheme simulator" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/build-rhodes-app/rhorunner-xcode-scheme-simulator-4.0.png" alt="xcode scheme simulator" />
 
 Now you can build and run in Xcode to run your project in the iOS simulator.
 
 If you are an Apple developer, you can run your RhoMobile application on your iOS device. In Xcode, select your rhorunner target, click on the Build Settings tab, and see that your code signing information that you installed as an Apple developer is set up and selected.
 
-<img src="http://rhodocs.s3.amazonaws.com/build-rhodes-app/rhorunner-xcode-build-simulator-4.0.png" alt="xcode build settings" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/build-rhodes-app/rhorunner-xcode-build-simulator-4.0.png" alt="xcode build settings" />
 
 Plug in your iOS device. In Xcode, under Scheme, select iOS device under rhorunner. Then build and run.
 
-<img src="http://rhodocs.s3.amazonaws.com/build-rhodes-app/rhorunner-xcode-scheme-device-4.0.png" alt="xcode scheme device" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/build-rhodes-app/rhorunner-xcode-scheme-device-4.0.png" alt="xcode scheme device" />
 
 For more information on running on your iOS device from Xcode, go to the [Apple developer site](http://developer.apple.com/), go to the iOS Developer Library, and search on "managing devices", or "run applications on a device," or similar.
 
@@ -336,13 +336,13 @@ Once your application is submitted successfully you can view its review status b
   <div class="span3" style="text-align:center">
     <b><div>enabled</div></b>
     <div>
-      <img src="https://s3.amazonaws.com/rhodocs/build-rhodes-app/build_ios_ios7_changes_without_iphone_use_new_ios7_status_bar_style_4.0.png"/>
+      <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/build-rhodes-app/build_ios_ios7_changes_without_iphone_use_new_ios7_status_bar_style_4.0.png"/>
     </div>
   </div>
   <div class="span3" style="text-align:center">
     <b><div>disabled</div></b>
     <div>
-      <img src="https://s3.amazonaws.com/rhodocs/build-rhodes-app/build_ios_ios7_changes_with_iphone_use_new_ios7_status_bar_style_4.0.png"/>
+      <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/build-rhodes-app/build_ios_ios7_changes_with_iphone_use_new_ios7_status_bar_style_4.0.png"/>
     </div>
   </div>
 </div>
@@ -365,11 +365,11 @@ We do not currently support fullscreen mode on iOS7. We are working to solve thi
   </div>
   <div class="span3" style="text-align:center">
     <b><div>:background_color => 0xFFFF00</div></b>
-    <img src="https://s3.amazonaws.com/rhodocs/build-rhodes-app/build_ios_ios7_changes_toolbar_bg_color_4.0.png"/>
+    <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/build-rhodes-app/build_ios_ios7_changes_toolbar_bg_color_4.0.png"/>
   </div>
   <div class="span3" style="text-align:center">
     <b><div>:iOS7IconColor => 0xFFFF00</div></b>
-    <img src="https://s3.amazonaws.com/rhodocs/build-rhodes-app/build_ios_ios7_changes_toolbar_ios7_icon_color_4.0.png"/>
+    <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/build-rhodes-app/build_ios_ios7_changes_toolbar_ios7_icon_color_4.0.png"/>
   </div>
 </div>
 
@@ -381,11 +381,11 @@ We do not currently support fullscreen mode on iOS7. We are working to solve thi
   </div>  
   <div class="span3" style="text-align:center">
     <div><b>:colored_icon => true</b></div>
-    <img src="https://s3.amazonaws.com/rhodocs/build-rhodes-app/build_ios_ios7_changes_native_toolbar_colored_icon_true_4.0.png"/>
+    <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/build-rhodes-app/build_ios_ios7_changes_native_toolbar_colored_icon_true_4.0.png"/>
   </div>
   <div class="span3" style="text-align:center">
     <div><b>:colored_icon => true</b></div>
-    <img src="https://s3.amazonaws.com/rhodocs/build-rhodes-app/build_ios_ios7_changes_native_toolbar_colored_icon_false_4.0.png"/>
+    <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/build-rhodes-app/build_ios_ios7_changes_native_toolbar_colored_icon_false_4.0.png"/>
   </div> 
 </div>
 
@@ -403,6 +403,6 @@ We do not currently support fullscreen mode on iOS7. We are working to solve thi
   </div>
   <div class="span6" style="text-align:center">
     <b><div>:background_color => 0x00004F and :iOS7SelectedColor => 0xFFFF00</div></b>
-    <img style="height:480px" src="https://s3.amazonaws.com/rhodocs/build-rhodes-app/build_ios_ios7_changes_native_tabbar_bg_color_and_selected_icon_4.0.png"/>
+    <img style="height:480px" src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/build-rhodes-app/build_ios_ios7_changes_native_tabbar_bg_color_and_selected_icon_4.0.png"/>
   </div>
 </div>

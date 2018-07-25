@@ -41,7 +41,7 @@ or from RhoStudio by editing your run configuration and selecting Android - Emul
 
 Refer to [Google's documentation on using the Android emulator](http://developer.android.com/tools/devices/emulator.html) for a detailed overview of all the possibilities. Be aware, however, that while some features can only be invoked from the command line, other tasks like reviewing logs in real time, taking screenshots or setting fake GPS coordinates for geolocation apps can be performed from [Google's Android Developer Tools Eclipse plugin](http://developer.android.com/sdk/index.html). Use the DDMS perspective and select a device or emulator from the left, then use the "Emulator Control" tab and scroll down to set device coordinates or load them from a previously saved file.
 
-<img src="http://rhodocs-images.s3.amazonaws.com/guide/using_emulators/ddms.png" alt="Android DDMS perspective" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/guide/using_emulators/ddms.png" alt="Android DDMS perspective" />
 
 
 ## iOS
@@ -65,14 +65,14 @@ The Windows Phone 8 SDK can be [freely downloaded](https://dev.windowsphone.com/
 
 When the emulator is running, locate the toolbar:
 
-<img src="http://rhodocs-images.s3.amazonaws.com/guide/using_emulators/toolbar.png" alt="Windows Phone 8 emulator toolbar" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/guide/using_emulators/toolbar.png" alt="Windows Phone 8 emulator toolbar" />
 
 and click the icon with the double arrow pointing to the right to reveal an additional set of tools, where you can simulate
 
 * moving the device in 3D space, to [test the accelerometer](http://msdn.microsoft.com/en-us/library/windowsphone/develop/hh202936(v=vs.105).aspx)
 
-<img src="http://rhodocs-images.s3.amazonaws.com/guide/using_emulators/accelerometer.png" alt="Windows Phone 8 emulator accelerometer test" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/guide/using_emulators/accelerometer.png" alt="Windows Phone 8 emulator accelerometer test" />
 
 * [Test location data](http://msdn.microsoft.com/en-us/library/windowsphone/develop/hh202933(v=vs.105).aspx)
 
-<img src="http://rhodocs-images.s3.amazonaws.com/guide/using_emulators/location.png" alt="Windows Phone 8 emulator fake GPS coordinates" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/guide/using_emulators/location.png" alt="Windows Phone 8 emulator fake GPS coordinates" />

@@ -24,7 +24,7 @@ Ruby models can be generated using RhoStudio or from the command line. The appro
 
 &#49;. In Project Explorer, **right-click on the application project and select New -> RhoMobile model**.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/new-rhodes-model-menu-4.0.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/new-rhodes-model-menu-4.0.png"/>
 
 &#50;. **Enter the model name in the Model Information window**.
 
@@ -32,11 +32,11 @@ Ruby models can be generated using RhoStudio or from the command line. The appro
 
 &#51;. **Enter the model attributes separated by commas only (no spaces)**.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/model-information-4.0.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/model-information-4.0.png"/>
 
 &#52;. **Click Finish**. Model generator results will appear in the output console window similar to the image below.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/rhodes-model-generator-output-4.0.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/rhodes-model-generator-output-4.0.png"/>
 
 ### From the command line
 

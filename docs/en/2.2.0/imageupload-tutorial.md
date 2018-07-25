@@ -202,7 +202,7 @@ Here is that code from the server's image.rb.
 	    :access_key_id => ENV['AMAZON_ACCESS_KEY_ID'],
 	    :secret_access_key => ENV['AMAZON_SECRET_ACCESS_KEY']
 	  )
-	  @baseurl = 'http://s3.amazonaws.com/'  # Set up the base url.
+	  @baseurl = 'https://s3.amazonaws.com/docs.tau-technologies.com/images/'  # Set up the base url.
 	  @bucket = 'rhodes-samples-images'      # Set up the bucket.
 	  super(source,credential)
 	end

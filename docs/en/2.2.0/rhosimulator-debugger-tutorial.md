@@ -21,7 +21,7 @@ You use the Rhodes simulator and debugger with Rhodes projects in Eclipse. This 
 
 Start Eclipse. Then create a new Rhodes project (0:30 in the webinar video): File -> New -> Project, and select Rhomobile:Rhodes application. Name the application Store. Then click Finish to generate the application.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhosimulator-debugger-tutorial/Store.jpg" alt="Store project" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhosimulator-debugger-tutorial/Store.jpg" alt="Store project" />
 
 ### Adding a Model to the Rhodes Project
 
@@ -70,41 +70,41 @@ Before the Rhodes simulator, you needed the SDK installed for the platform you w
 
 For the Store application, open Run->Run Configurations (4:25 in the webinar video). You will see the list of simulators that you can run, such as Android simulator or iPhone simulator. Select Rhodes Application, and create a new configuration for the Store project. The example below shows a configuration named Rho sim.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhosimulator-debugger-tutorial/run-configuration.jpg" alt="Run Configuration" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhosimulator-debugger-tutorial/run-configuration.jpg" alt="Run Configuration" />
 
 Click Run to build and launch your application in the Rhodes simulator. You may notice that the Rhodes simulator launches much faster than other emulators.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhosimulator-debugger-tutorial/rhosimulator1.jpg" alt="Rho Simulator" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhosimulator-debugger-tutorial/rhosimulator1.jpg" alt="Rho Simulator" />
 
 You can login by pressing the Login button. (For this server, Login is Brian and Password is blank.) You can then sync by clicking Perform Sync. You can see that your application has synced its products with the backend by clicking Home and then clicking Products: you get a list of the synced products in the simulator.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhosimulator-debugger-tutorial/products-synced.jpg" alt="Products synced" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhosimulator-debugger-tutorial/products-synced.jpg" alt="Products synced" />
 
 ## Viewing and Changing Your Project in the Web Inspector
 
 The Rhodes simulator also has a web inspector (5:40 in the webinar video). You can click the Elements tag to see and modify your project's pages and styles. For example, in the index page, app/index.erb, you can open the div for the toolbar and see its buttons, and rename a button while your project is live in the simulator. Here, the Home button name is changed to Home2. The simulator did not need to be relaunched to see this change.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhosimulator-debugger-tutorial/web-inspector-home2.jpg" alt="Web Inspector - Home2 button" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhosimulator-debugger-tutorial/web-inspector-home2.jpg" alt="Web Inspector - Home2 button" />
 
 The Rhodes Simulator has a JavaScript console on the Console tab, allowing you to execute and debug your JavaScript.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhosimulator-debugger-tutorial/javascript-console.jpg" alt="JavaScript Console" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhosimulator-debugger-tutorial/javascript-console.jpg" alt="JavaScript Console" />
 
 The Profile tab lets you enable profiling so you can see how many scripts are being loaded, and how much is being cached. 
 
 The Resources tab allows you to enable resource tracking so you can see the resources being loaded; in this example, when you make your product call. You can click on the Documents and Stylesheets buttons and see how long it takes them to parse.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhosimulator-debugger-tutorial/resources.jpg" alt="Resources" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhosimulator-debugger-tutorial/resources.jpg" alt="Resources" />
  
 In the Resources tab, you also can click the XMR button to see the XML requests and how long they take to fetch.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhosimulator-debugger-tutorial/xmr.jpg" alt="XML Requests" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhosimulator-debugger-tutorial/xmr.jpg" alt="XML Requests" />
 
 ## Using the Debugger
 
 Close the web inspector and the simulator (7:58 in the webinar video). Start the debugger: Run->Debug Configurations. We want the Rho simulator platform with the Store project.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhosimulator-debugger-tutorial/debug-configurations.jpg" alt="Debug Configurations" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhosimulator-debugger-tutorial/debug-configurations.jpg" alt="Debug Configurations" />
 
 Click Debug to enter debugging mode. The Store application launches again in the simulator and the web inspector. If we go back to Eclipse, we can now set breakpoints.  Click on the Expressions tab to see your code. 
 
@@ -112,11 +112,11 @@ Click Debug to enter debugging mode. The Store application launches again in the
 
 Open the controller, app/Product/product_controller.rb, and set a breakpoint in its create method at the redirect statement (8:45 in the webinar video).
 
-<img src="http://rhodocs.s3.amazonaws.com/rhosimulator-debugger-tutorial/breakpoint-set.jpg" alt="Setting a Breakpoint" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhosimulator-debugger-tutorial/breakpoint-set.jpg" alt="Setting a Breakpoint" />
 
 Click on the Breakpoints tab. You will see a listing of the breakpoints that you have set.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhosimulator-debugger-tutorial/breakpoint-listed.jpg" alt="Breakpoints Listed" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhosimulator-debugger-tutorial/breakpoint-listed.jpg" alt="Breakpoints Listed" />
 
 If you set the breakpoint on code line of function definition then on start of debugger session it breakpoint will be disabled and debugger doesn't stopped on this line.
 
@@ -124,15 +124,15 @@ If you set the breakpoint on code line of function definition then on start of d
 
 Now go to the Store application in the simulator. Click on Products and then click New to create a new product. The webinar shows the example of a iPhone product. Once you fill in the data for this product, click Create.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhosimulator-debugger-tutorial/product-create.jpg" alt="Product Create" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhosimulator-debugger-tutorial/product-create.jpg" alt="Product Create" />
 
 The Create will hit the breakpoint that you set. The application stops at that breakpoint and displays the expressions. The expressions give you all the local and global variables being loaded here. You can open up the Expressions window to get a better look at the variables. We have our instance variables. @request shows all the post methods and the information that was posted. @params shows all the iPhone 4 information the you entered.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhosimulator-debugger-tutorial/variables.jpg" alt="Variables" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhosimulator-debugger-tutorial/variables.jpg" alt="Variables" />
 
 Note that when you set a breakpoint, and you delay long enough, the web view times out. To continue (11:15 in the webinar video), select Create again in the simulator, and click the continue button in the debugger (this is a typical play button); if you click the continue button in a reasonable time, your application will continue.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhosimulator-debugger-tutorial/continue.jpg" alt="Clicking Continue" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhosimulator-debugger-tutorial/continue.jpg" alt="Clicking Continue" />
 
 ## Setting and Viewing Local Variables
 

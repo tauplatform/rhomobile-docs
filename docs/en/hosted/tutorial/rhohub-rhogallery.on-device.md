@@ -12,7 +12,7 @@ NOTE: For demonstration purposes I'll be using the Android version of the RhoGal
 		<p>The default look and feel of the RhoGallery mobile app is quite plain but it definitely gets the job of distributing your apps through your galleries done. As you can see here, I am a member of one organization, "mtoews" which is the organization that invited me to use RhoGallery.</p>
 	</div>
 	<div class='span6'>
-		<img src="https://s3.amazonaws.com/rhodocs/cloud/tutorial/rhogallery-tutorial/rhogallery-mobile-organizations.png">
+		<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/cloud/tutorial/rhogallery-tutorial/rhogallery-mobile-organizations.png">
 	</div>
 </div>
 
@@ -20,7 +20,7 @@ NOTE: For demonstration purposes I'll be using the Android version of the RhoGal
 
 <div class='row-fluid'>
 	<div class='span6'>
-		<img src="https://s3.amazonaws.com/rhodocs/cloud/tutorial/rhogallery-tutorial/rhogallery-mobile-galleries.png">
+		<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/cloud/tutorial/rhogallery-tutorial/rhogallery-mobile-galleries.png">
 	</div>
 	<div class='span6'>
 		<p>Within the organization(s) of which I am a member, I can select any of the galleries that I was invited to. Here I was only invited to the one.</p>
