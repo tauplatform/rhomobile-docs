@@ -14,6 +14,12 @@ For more information about this and prior releases, including bug fixes and issu
   <th class="clsSyntaxHeadings">Device(s)</th>
   <th class="clsSyntaxHeadings">Operating System(s)</th>
  </tr>
+  <tr>
+   <td class="clsSyntaxCells clsOddRow"><img id="Android_ET1_pic" src="/images/supported_devices/sailfish-os.png?raw=true" height="75"></img></td>
+   <td class="clsSyntaxCells clsOddRow"><b>Sailfish</b></td>
+   <td class="clsSyntaxCells clsOddRow"></td>
+   <td class="clsSyntaxCells clsOddRow">From 2.1.1</td>
+  </tr>
  <tr>
   <td class="clsSyntaxCells clsOddRow"><img id="Android_ET1_pic" src="https://s3.amazonaws.com/docs.tau-technologies.com/images/supported_devices/Zebra_ET1.png?raw=true" height="75"></img></td>
   <td class="clsSyntaxCells clsOddRow"><b>Android</b></td>
@@ -42,10 +48,8 @@ For more information about this and prior releases, including bug fixes and issu
   <td class="clsSyntaxCells clsOddRow"><img id="win_tablet_pic" src="https://s3.amazonaws.com/docs.tau-technologies.com/images/supported_devices/Windows_tablet.png?raw=true" height="75"></img></td>
   <td class="clsSyntaxCells clsOddRow"><b>Windows</b></td>
   <td class="clsSyntaxCells clsOddRow">Third-party laptops, tablets and desktops</td>
-  <td class="clsSyntaxCells clsOddRow">Windows XP, Windows 7, Windows 8, Windows 8.1, Windows 10</td>
+  <td class="clsSyntaxCells clsOddRow">Windows XP, Windows 7, Windows 8, Windows 8.1, Windows 10, UWP</td>
  </tr></table>
-
-**NOTE: For more information about supported devices and operating systems, please refer to its accompanying documentation and [download the latest RMS release notes](http://rhomobile-suite.s3.amazonaws.com/6.0/6.0.0/Release_Notes_RMS_5_4.html).**
 
 ##Supported Zebra Devices
 RMS 6.0 has been approved for building apps that target the following Zebra Enterprise Mobility devices:
@@ -95,7 +99,7 @@ RMS 6.0 has been approved for building apps that target the following Zebra Ente
   <td class="clsSyntaxCells clsOddRow">Android 4.4 (KitKat)</td>
  </td>
  <tr>
-  <td class="clsSyntaxCells clsOddRow"><img id="tc51-56Pic" src="https://github.com/tauplatform/rhomobile-docs/blob/master/public/images/supported_devices/Zebra_TC51-56.jpg?raw=true" height="75"></img></td>
+  <td class="clsSyntaxCells clsOddRow"><img id="tc51-56Pic" src="/images/supported_devices/Zebra_TC51-56.jpg?raw=true" height="75"></img></td>
   <td class="clsSyntaxCells clsOddRow"><b>TC51</b></td>
   <td class="clsSyntaxCells clsOddRow"><nobr>TC51</nobr></td>
   <td class="clsSyntaxCells clsOddRow">Android 6.0 (Marshmallow)</td>
@@ -107,7 +111,7 @@ RMS 6.0 has been approved for building apps that target the following Zebra Ente
   <td class="clsSyntaxCells clsOddRow">Android 4.1 (JellyBean),<br>Android 4.4 (KitKat)</td>
  </tr>
  <tr>
-  <td class="clsSyntaxCells clsOddRow"><img id="tc51-56Pic" src="https://github.com/tauplatform/rhomobile-docs/blob/master/public/images/supported_devices/Zebra_TC51-56.jpg?raw=true" height="75"></img></td>
+  <td class="clsSyntaxCells clsOddRow"><img id="tc51-56Pic" src="/images/supported_devices/Zebra_TC51-56.jpg?raw=true" height="75"></img></td>
   <td class="clsSyntaxCells clsOddRow"><b>TC56</b></td>
   <td class="clsSyntaxCells clsOddRow"><nobr>TC56</nobr></td>
   <td class="clsSyntaxCells clsOddRow">Android 6.0 (Marshmallow)</td>
@@ -131,7 +135,7 @@ RMS 6.0 has been approved for building apps that target the following Zebra Ente
   <td class="clsSyntaxCells clsOddRow">Android 4.4 (KitKat),<br>Android 5.1 (Lollipop)</td>
  </tr>
   <tr>
-  <td class="clsSyntaxCells clsOddRow"><img id="mc17Pic" src="https://github.com/tauplatform/rhomobile-docs/blob/master/public/images/supported_devices/Zebra_MC17.png" height="75"></img></td>
+  <td class="clsSyntaxCells clsOddRow"><img id="mc17Pic" src="/images/supported_devices/Zebra_MC17.png" height="75"></img></td>
   <td class="clsSyntaxCells clsOddRow"><b>MC17</b></td>
   <td class="clsSyntaxCells clsOddRow">MC17</td>
   <td class="clsSyntaxCells clsOddRow">Windows CE 7.0,<br>Android 4.4 (KitKat),<br>Android 5.1 (Lollipop)</td>
@@ -283,11 +287,11 @@ RMS 6.0 has been approved for building apps that target the following Zebra Ente
 ## Device Memory and Other Considerations
 Memory constraints are important to consider, particularly when targeting the older devices supported by RhoElements. The following points might be helpful to keep in mind: 
 
-* RhoElements requires a *minimum* of 128MB physical device RAM<br>
+* Rhodes apps require a *minimum* of 128MB physical device RAM<br>
 
-* The more RhoElements apps running on a device, the greater its memory requirement; consider using [TabBar](../api/NativeTabbar) to combine several individual apps
+* The more Rhodes apps running on a device, the greater its memory requirement; consider using [TabBar](../api/NativeTabbar) to combine several individual apps
 
-* Use the [Memory API](../../2.2.0/rhoelements/memory) and memory logs to monitor your app's memory requirements 
+<!-- * Use the [Memory API](../../2.2.0/rhoelements/memory) and memory logs to monitor your app's memory requirements --> 
 
 * For low-end Zebra CE devices, try using Control Panel to increase available program memory
 
@@ -295,7 +299,7 @@ Memory constraints are important to consider, particularly when targeting the ol
 
 * Don't rely too heavily on performance tests for JavaScript and CSS found online unless they're written specifically for mobile devices
 
-* An active [RhoMobile developer community](https://developer.motorolasolutions.com) offers forums, blogs, webinars and other useful resources to aid in your development efforts 
+* An active [RhoMobile developer community](http://forums.tau-technologies.com/) offers forums, blogs, webinars and other useful resources to aid in your development efforts 
 
 
 ##Compatibility Alerts
@@ -306,7 +310,7 @@ Memory constraints are important to consider, particularly when targeting the ol
 
 * **The MC3190-Z and MC9190-Z devices require an [RFID plugin](../../2.2.0/rhoelements/rfid) to be installed separately**. This plug-in was originally developed for RhoElements version 2.2 but is still supported.
 
-* **Only local deveopment is supported for Micro Kiosk (MK) devices**. Zebra development options for supported MK devices include [RhoMobile Suite](http://rhomobile.com/) and [Enterprise Browser](http://goo.gl/V9zMxD). The use of [RhoMobile.com](../../hosted/guide/remote-build-guide) is not supported for building apps for MK devices. 
+* **Only local development is supported for Micro Kiosk (MK) devices**. Zebra development options for supported MK devices include [RhoMobile Suite](http://tau-technologies.com/products/rhomobile/) and [Rho Browser](http://tau-technologies.com/products/rhobrowser/). 
 
 <br>
 
@@ -387,6 +391,3 @@ Memory constraints are important to consider, particularly when targeting the ol
   <td class="clsSyntaxCells clsOddRow">Windows CE 5.0</td>
  </tr>
 </table>
-
-###Compatibility Alert
->Support for older or deprecated device families such as the MC9000 and MK4000 can be found in versions of RhoElements prior to 5.1. For access to earlier RMS versions, visit [Launchpad](https://developer.motorolasolutions.com/community/rhomobile-suite) and click on **Resources>>Download**. 
