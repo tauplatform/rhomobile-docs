@@ -10,7 +10,7 @@ The ‘key’ to the Adaptive Printer Driver is the “Printer ID” (PID) that 
 
 An example of the PID for a printer for use in a Wireless Local Area Network is shown below.
 
-<img src="http://rhodocs.s3.amazonaws.com/moto-adaptive-printer-driver/APD-Printer-ID-1.jpg" alt="APD-Printer-ID-1.jpg" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/moto-adaptive-printer-driver/APD-Printer-ID-1.jpg" alt="APD-Printer-ID-1.jpg" />
 
 In this case, two barcodes, using “Code 128” symbology, are used to define the full PID.
 
@@ -22,7 +22,7 @@ The IP address is encoded as 157235010002 to make the barcode more compact, but 
 
 The second example, below, is also based on the Zebra QL320 printer, but uses “Bluetooth” connectivity, which is indicated by the leading “B”.
 
-<img src="http://rhodocs.s3.amazonaws.com/moto-adaptive-printer-driver/APD-Printer-ID-2.jpg" alt="APD-Printer-ID-2.jpg" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/moto-adaptive-printer-driver/APD-Printer-ID-2.jpg" alt="APD-Printer-ID-2.jpg" />
 
 “:1” indicates that the Bluetooth Channel Number is “1”.
 

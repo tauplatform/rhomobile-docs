@@ -9,7 +9,7 @@ New to 5.0 we are introducing a subscription model for licensing for our product
 
 NOTE: Without choosing one of these subscription plans, you will not be able to build any app remotely OR locally using RhoMobile products.
 
-<img src="https://s3.amazonaws.com/rhodocs/rhomobile.com/rhomobile-account/sub-details.png">
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/rhomobile.com/rhomobile-account/sub-details.png">
 
 NOTE: This <b>does</b> mean that without a paid subscription your usage of RhoMobile products is limited to Rhodes and RhoStudio for local builds only.
 
@@ -27,7 +27,7 @@ NOTE: Once you login using your rhomobile.com account credentials, the token use
 		<p>This will ask for your username and password, logging you into your rhomobile.com account and downloading the API token to your machine and stored in the <code>~/.rhomobile/token</code> directory on Mac OS and the <code>/Users/&lt;username&gt;/.rhomobile/token</code> directory on Windows.</p>
 	</div>
 	<div class="span5">
-		<img src="https://s3.amazonaws.com/rhodocs/rhomobile.com/rhomobile-account/cli-login-dialog.png">
+		<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/rhomobile.com/rhomobile-account/cli-login-dialog.png">
 	</div>
 </div>
 
@@ -46,7 +46,7 @@ NOTE: Once you login using your rhomobile.com account credentials, the token use
 	</div>
 	<!-- Sign-In Picture -->
 	<div class="span5">
-		<img src="https://s3.amazonaws.com/rhodocs/rhomobile.com/rhomobile-account/rs-login-dialog.png">
+		<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/rhomobile.com/rhomobile-account/rs-login-dialog.png">
 	</div>
 </div>
 

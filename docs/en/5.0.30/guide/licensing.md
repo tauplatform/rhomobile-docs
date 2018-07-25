@@ -4,7 +4,7 @@ Licensing in 5.0 has changed quite a lot, the most significant of these changes 
 ## Subscriptions
 New to 5.0 we are introducing a subscription model for licensing for our products. The new licensing structure has three levels: Free, Silver, and Gold. The details of these plans are listed below.
 
-<img style="border:solid;border-color:#999" src="https://s3.amazonaws.com/rhodocs/cloud/licensing/sub-details.png">
+<img style="border:solid;border-color:#999" src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/cloud/licensing/sub-details.png">
 
 NOTE: This <b>does</b> mean that without a paid subscription your usage of RhoMobile products is limited to Rhodes and RhoStudio for local builds only.
 
@@ -20,7 +20,7 @@ Once you have signed up for a subscription on [rhomobile.com](http://www.rhomobi
 		<p>This will ask for your username and password, logging you into your rhomobile.com account and downloading the API token to your machine and stored in the <code>~/.rhomobile/token</code> directory on Mac OS and the <code>/Users/&lt;username&gt;/.rhomobile/token</code> directory on Windows.</p>
 	</div>
 	<div class="span5">
-		<img src="https://s3.amazonaws.com/rhodocs/cloud/licensing/cli-login-dialog.png">
+		<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/cloud/licensing/cli-login-dialog.png">
 	</div>
 </div>
 
@@ -39,7 +39,7 @@ Once you have signed up for a subscription on [rhomobile.com](http://www.rhomobi
 	</div>
 	<!-- Sign-In Picture -->
 	<div class="span5">
-		<img src="https://s3.amazonaws.com/rhodocs/cloud/licensing/rs-login-dialog.png">
+		<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/cloud/licensing/rs-login-dialog.png">
 	</div>
 </div>
 

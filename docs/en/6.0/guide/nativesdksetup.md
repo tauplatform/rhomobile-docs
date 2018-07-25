@@ -53,7 +53,7 @@ Download and unzip the [Android NDK 15c](https://developer.android.com/ndk/downl
 
 3) Expand "RhoMobile" and click on "Android".  Set the locations for the SDK and NDK as above.  To find the SDK location, run the "SDK Manager" from within Android Studio.
 
-![img](http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/preferences-android-sdk-4.0.png)
+![img](https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/preferences-android-sdk-4.0.png)
 
 If you are not using RhoStudio, run "rhodes-setup" from the command line and set the paths to the Android SDK and NDK installations.
 

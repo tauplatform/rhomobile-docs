@@ -28,7 +28,7 @@ This tutorial assumes that you know how to edit a Rhodes application, and that y
 
 If you have any Android SDK installed, you can check to see if it has Android 2.3.3 and Google APIs:10. Go to your tools folder in your Android SDK and run android. In the Android SDK and AVD Manager, click Installed packages. If you do not see SDK Platform Android SDK 2.3.3 and Google APIs by Google Inc., Android API 10 in the list of installed packages, click on Available Packages, find them, and install them. Also click Virtual Devices and check that you have an AVD (Android Virtual Device) set up for Google API level 10; create one if you do not.
 
-<img src="http://rhodocs.s3.amazonaws.com/nfc-rhodes-in-depth-tutorial/android-sdk-avd-manager.jpg" alt="Android SDK and AVD Manager" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/nfc-rhodes-in-depth-tutorial/android-sdk-avd-manager.jpg" alt="Android SDK and AVD Manager" />
 
 The webinar and this tutorial show Android running from the command line, rather than an IDE such as Eclipse. You can also run from Eclipse.
 
@@ -175,29 +175,29 @@ Do you have two NFC-enabled Android devices? You can install the nfc-rhodes app 
 
 The nfc-rhodes app shows up on your device.
 
-<img src="http://rhodocs.s3.amazonaws.com/nfc-with-rhodes-p2p-tutorial/nfc-rhodes-icon.png" alt="nfc-rhodes app icon" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/nfc-with-rhodes-p2p-tutorial/nfc-rhodes-icon.png" alt="nfc-rhodes app icon" />
 
 If you run the app, you will see the forms added to enter a push message and start the push, and to stop the push.
 
-<img src="http://rhodocs.s3.amazonaws.com/nfc-with-rhodes-p2p-tutorial/nfc-rhodes-view.png" alt="nfc-rhodes app view" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/nfc-with-rhodes-p2p-tutorial/nfc-rhodes-view.png" alt="nfc-rhodes app view" />
 
 You can install and run nfc-rhodes on another device.
 
-<img src="http://rhodocs.s3.amazonaws.com/nfc-with-rhodes-p2p-tutorial/nfc-rhodes-two-devices.png" alt="nfc-rhodes two devices" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/nfc-with-rhodes-p2p-tutorial/nfc-rhodes-two-devices.png" alt="nfc-rhodes two devices" />
 
 Now the device on the left is going to be the receiving device. Click the button to start the message push for the device on the right.
 
-<img src="http://rhodocs.s3.amazonaws.com/nfc-with-rhodes-p2p-tutorial/nfc-rhodes-start-push.png" alt="nfc-rhodes start push" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/nfc-with-rhodes-p2p-tutorial/nfc-rhodes-start-push.png" alt="nfc-rhodes start push" />
 
 By holding the sending device within NFC range of the receiving device, we see the pop-up window on the receiving device that shows the received message.
 
-<img src="http://rhodocs.s3.amazonaws.com/nfc-with-rhodes-p2p-tutorial/nfc-rhodes-pushed1.png" alt="nfc-rhodes pushed 1" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/nfc-with-rhodes-p2p-tutorial/nfc-rhodes-pushed1.png" alt="nfc-rhodes pushed 1" />
 
 You can also type a message into the sending device (like "hello rhomobile webinar!"), click the button to start the message push, and receive the new message.
 
-<img src="http://rhodocs.s3.amazonaws.com/nfc-with-rhodes-p2p-tutorial/nfc-rhodes-pushed2.png" alt="nfc-rhodes pushed 2" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/nfc-with-rhodes-p2p-tutorial/nfc-rhodes-pushed2.png" alt="nfc-rhodes pushed 2" />
 
 If you press the stop push button on the sending device and hold it within NFC range of the receiving device, no message appears. The receiving phone does not receive a message.
 
-<img src="http://rhodocs.s3.amazonaws.com/nfc-with-rhodes-p2p-tutorial/nfc-rhodes-stop-push.png" alt="nfc-rhodes stop push" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/nfc-with-rhodes-p2p-tutorial/nfc-rhodes-stop-push.png" alt="nfc-rhodes stop push" />
 

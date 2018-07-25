@@ -74,21 +74,21 @@ Note that you might get a pop-up window asking if it is okay for rhorunner to us
 
 In the iPad simulator, click the rhodes-system-api-samples icon. From the main page, click the Native tabbar test.
 
-<img src="http://rhodocs.s3.amazonaws.com/iPad-rhodes-tutorial/native-tabbar-test.png" alt="Native tabbar main page" /> 
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/iPad-rhodes-tutorial/native-tabbar-test.png" alt="Native tabbar main page" /> 
 
 The Native tabbar test page comes up, no spilt view, showing a tabbar at the botton of the screen.
 
-<img src="http://rhodocs.s3.amazonaws.com/iPad-rhodes-tutorial/native-tabbar-bottom.png" alt="native tabbar at bottom" /> 
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/iPad-rhodes-tutorial/native-tabbar-bottom.png" alt="native tabbar at bottom" /> 
 
 You can click on No bar to remove the bottom tabbar, and click on Tab bar to make the tabbar come back.
 
 Click on Tab bar using iPad split view. This shows the split view interface: on the left, you have the list of tabs, and on the right, you have the content for the selected tab. 
 
-<img src="http://rhodocs.s3.amazonaws.com/iPad-rhodes-tutorial/native-tabbar-splitview.png" alt="native tabbar splitview" /> 
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/iPad-rhodes-tutorial/native-tabbar-splitview.png" alt="native tabbar splitview" /> 
 
 If you click the Main Page tab on the left, you have the new content for that tab: the Main page tab shows the list of system API samples. 
 
-<img src="http://rhodocs.s3.amazonaws.com/iPad-rhodes-tutorial/main-page-splitview.png" alt="main page splitview" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/iPad-rhodes-tutorial/main-page-splitview.png" alt="main page splitview" />
 
 Split view is a very good way to display for a tablet: you have your navigation on the left, and your main viewing area on the right. You can use VTABBAR_TYPE to get the split view on the iPad.
 

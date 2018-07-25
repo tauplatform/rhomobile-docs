@@ -7,7 +7,7 @@ The .NET 4 framework library is designed for the [Rhoconnect](http://rhomobile.c
 
 Using the rhoconnect.NET plugin, your [ASP.NET MVC](http://www.asp.net/mvc/mvc4) application's data will transparently synchronize with a mobile application built on the [Rhodes framework](http://rhomobile.com/products/rhodes), or any of the available [Rhoconnect clients](http://rhomobile.com/products/rhoconnect/).
 
-<img src='https://s3.amazonaws.com/rhodocs/rhoconnect-service/rhoconnect-plugin-net.jpg' alt='image' />
+<img src='https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/rhoconnect-service/rhoconnect-plugin-net.jpg' alt='image' />
 
 ## Prerequisites
 
@@ -35,7 +35,7 @@ In addition, the sample application also contains the final code (the .NET plugi
 
 To run this application, build it in Visual Studio, create a deployment package (using Project --> Build Deployment Package), then deploy it on Microsoft's IIS server to run.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhoconnect-plugin/net-backend-running.png">
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhoconnect-plugin/net-backend-running.png">
 
 This sample ASP.NET MVC4 application was created using similar steps to [this tutorial to create a C# application and add support for basic database operations](http://www.asp.net/mvc/tutorials/contact-manager/iteration-1-create-the-application-cs).
 

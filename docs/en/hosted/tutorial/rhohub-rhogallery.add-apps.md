@@ -4,14 +4,14 @@
 		<p>Now you need to add apps to your gallery. Click the New App button.</p>
 	</div>
 	<div class="span6">
-		<img src="https://s3.amazonaws.com/rhodocs/cloud/tutorial/rhogallery-tutorial/rhogallery-new-app.png"/>
+		<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/cloud/tutorial/rhogallery-tutorial/rhogallery-new-app.png"/>
 	</div>
 </div>
 
 ## Step 1: Name, Description, and Icon
 <div class="row-fluid">
 	<div class="span6">
-		<img src="https://s3.amazonaws.com/rhodocs/cloud/tutorial/rhogallery-tutorial/rhogallery-new-app-details.png"/>
+		<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/cloud/tutorial/rhogallery-tutorial/rhogallery-new-app-details.png"/>
 	</div>
 	<div class="span6">
 		<p>In the Add new app pop-up, enter the name you want for your app. Optionally you can add a description and an icon to your app. When you are done editing the details, click "Save and Add Build" only once as it takes time for the build to be added.</p>
@@ -24,7 +24,7 @@
 		<p>Choose a platform for which to add a build. To expand the platform sections, click the "gears" in the upper-right hand corner of the platform logo tile.</p>
 	</div>
 	<div class="span6">
-		<img src="https://s3.amazonaws.com/rhodocs/cloud/tutorial/rhogallery-tutorial/rhogallery-add-app-build.png"/>
+		<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/cloud/tutorial/rhogallery-tutorial/rhogallery-add-app-build.png"/>
 	</div>
 </div>
 
@@ -32,7 +32,7 @@
 
 <div class="row-fluid">
 	<div class="span6">
-		<img src="https://s3.amazonaws.com/rhodocs/cloud/tutorial/rhogallery-tutorial/rhogallery-add-app-build-details.png"/>
+		<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/cloud/tutorial/rhogallery-tutorial/rhogallery-add-app-build-details.png"/>
 	</div>
 	<div class="span6">
 		<p>Here you'll need to fill in the information necessary to add the build to your gallery:</p>
@@ -53,7 +53,7 @@ Build source has three options:
 		<p>For RhoHub Build, select a rhomobile.com remote build for a Rhodes application in your RhoMobile account account.</p>
 	</div>
 	<div class="span6">
-		<img src="https://s3.amazonaws.com/rhodocs/cloud/tutorial/rhogallery-tutorial/rhogallery-add-app-build-details-rhohub-build.png"/>
+		<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/cloud/tutorial/rhogallery-tutorial/rhogallery-add-app-build-details-rhohub-build.png"/>
 	</div>
 </div>
 
@@ -108,6 +108,6 @@ For Remote Build, enter the link to the application file. No need for the other 
 		<p>Once you have finished specifying the details of your app's build to add to the gallery, click "Save Changes" and you now have an app in your RhoHub gallery.</p>
 	</div>
 	<div class='span6'>
-		<img src="https://s3.amazonaws.com/rhodocs/cloud/tutorial/rhogallery-tutorial/rhogallery-gallery-with-app.png">
+		<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/cloud/tutorial/rhogallery-tutorial/rhogallery-gallery-with-app.png">
 	</div>
 </div>

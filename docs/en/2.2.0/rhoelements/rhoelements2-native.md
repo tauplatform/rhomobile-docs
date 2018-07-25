@@ -46,7 +46,7 @@ In RhoMobile Suite, select File->New->Project...
 
 The New Project window opens. Select the RhoMobile: RhoMobile application wizard and click the Next button.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/new-project.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/new-project.png"/>
 
 Enter the name for your RhoElements application in Project name; in this case, "rhoelementsapp". You may specify a specific folder for your destination where your project is stored, by default, the destination is your workspace folder.
 
@@ -54,11 +54,11 @@ Click the checkbox for the RhoElements application type.
 
 Then press the Finish button.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhoelements/rhomobile-appgen-wizard-rhoelements.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhoelements/rhomobile-appgen-wizard-rhoelements.png"/>
 
 After pressing the Finish button, you'll see the RhoElements app generator script output in the output console (Rhomobile build console).
 
-<img src="http://rhodocs.s3.amazonaws.com/rhoelements/rhomobile-appgen-output-rhoelements.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhoelements/rhomobile-appgen-output-rhoelements.png"/>
 
 ### Adding a Model to a RhoElements Native Application
 
@@ -70,15 +70,15 @@ The `build.yml` file for your application manages your RhoElements build time co
 
 Rhobuild setting WYSIWIG editor:
 
-<img src="http://rhodocs.s3.amazonaws.com/rhoelements/buildyml-rhoelbuildsetting.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhoelements/buildyml-rhoelbuildsetting.png"/>
 
 build.yml text editor:
 
-<img src="http://rhodocs.s3.amazonaws.com/rhoelements/buildyml-rhoeltextedit.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhoelements/buildyml-rhoeltextedit.png"/>
 
 You can add capabilities to your application, such as camera and vibrate, by pressing the Capabilities: Add button, selecting the capabilities from the popup window, and clicking the Ok button.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/select-capabilities.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/select-capabilities.png"/>
 
 The selected application capabilities will appear in the Capabilities: text field in the WISIWIG editor.
 
@@ -90,11 +90,11 @@ You need to edit your build.yml file before you build and run a RhoElements appl
 
 To start the build process in RhoStudio, create a Run Configuration: select your project in the Project Explorer, and select Run->Run Configurations… from the menu. The Run Configurations window appears.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/run-configurations.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/run-configurations.png"/>
 
 To create a new build configuration for your application, select RhoMobile Application. Then either right-click on RhoMobile Application or click the New button. A new configuration appears under RhoMobile Application. Select your platform and simulator type, and click Run to run your application.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhoelements/new-configuration-rhoelements.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhoelements/new-configuration-rhoelements.png"/>
 
 ## Building RhoElements Native Applications for Zebra Devices
 

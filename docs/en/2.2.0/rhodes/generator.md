@@ -10,15 +10,15 @@ In RhoStudio, select File->New->Project...
 
 The New Project window opens. Select the Rhodes application wizard and click the Next button.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/new-project.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/new-project.png"/>
 
 Enter the name for your Rhodes application in Project name; in this case, "storemanager". You may specify a specific folder for your destination where your project is stored, by default, the destination is your RhoStudio workspace folder. Then press the Finish button.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/rhodes-application-wizard.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/rhodes-application-wizard.png"/>
 
 After pressing the Finish button, you'll see the Rhodes app generator script output in the output console (Rhomobile build console).
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/rhodes-app-generator-output.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/rhodes-app-generator-output.png"/>
 
 The generated application has the following directory structure and files.
 
@@ -60,7 +60,7 @@ The generated application has the following directory structure and files.
 
 Rhodes applications support a Model-View-Controller (MVC) pattern.  To start our application, we will generate a Model. To generate a Rhodes model and create the associated Controller and View templates, right-click on the application project in the Project Explorer and select New->RhoMobile model.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/menu-new-rhodes-model.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/menu-new-rhodes-model.png"/>
 
 In the Model Information window, enter the name for your model: in this case, `Product`. 
 
@@ -68,11 +68,11 @@ In the Model Information window, enter the name for your model: in this case, `P
 
 Also enter the Model attributes as a string with no spaces and each attribute separated by a comma: in this case, `name,brand,price,quantity,sku`. (Whitespaces at the field name beginning and end will be trimmed and whitespaces in the middle of the field name will be replaced with an underscore character.)
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/model-information.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/model-information.png"/>
 
 After pressing the Finish button, you'll see the RhoMobile model generator script output in the output console (Rhodes build log console).
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/rhodes-model-generator-output.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/rhodes-model-generator-output.png"/>
 
 You should now see a 'Product' folder below the 'app' folder in your storemanager application. These files constitute the Model, Views and Controller file for the Product Model we just created. The files are organized as follows:
 

@@ -12,7 +12,7 @@ There are again, two ways to accomplish this:
 		<p>Add groups to your gallery from within the gallery, open the gallery to which you want to add the group and click the "Groups" tab and then click the "Invite Group" button.</p>
 	</div>
 	<div class='span6'>
-		<img src="https://s3.amazonaws.com/rhodocs/cloud/tutorial/rhogallery-tutorial/rhogallery-invite-group-gallery.png">
+		<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/cloud/tutorial/rhogallery-tutorial/rhogallery-invite-group-gallery.png">
 	</div>
 </div>
 
@@ -20,7 +20,7 @@ There are again, two ways to accomplish this:
 
 <div class='row-fluid'>
 	<div class='span6'>
-		<img src="https://s3.amazonaws.com/rhodocs/cloud/tutorial/rhogallery-tutorial/rhogallery-invite-group-gallery-detail.png">
+		<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/cloud/tutorial/rhogallery-tutorial/rhogallery-invite-group-gallery-detail.png">
 	</div>
 	<div class='span6'>
 		<p>In the Invite Group pop-up window, choose a name for the group and add existing consumers to the group. Then type a message to be seen by those invited to this gallery via this group invite.</p>
@@ -34,7 +34,7 @@ There are again, two ways to accomplish this:
 		<p>Now this group of consumers is added to your gallery!</p>
 	</div>
 	<div class='span6'>
-		<img src="https://s3.amazonaws.com/rhodocs/cloud/tutorial/rhogallery-tutorial/rhogallery-group-added-gallery.png">
+		<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/cloud/tutorial/rhogallery-tutorial/rhogallery-group-added-gallery.png">
 	</div>
 </div>
 
@@ -44,7 +44,7 @@ There are again, two ways to accomplish this:
 		<p>To add a group to your list of groups, click the "My Groups" tab at the top of the page, and then click the "New Group" button.</p>
 	</div>
 	<div class='span6'>
-		<img src="https://s3.amazonaws.com/rhodocs/cloud/tutorial/rhogallery-tutorial/rhogallery-new-group-list.png">
+		<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/cloud/tutorial/rhogallery-tutorial/rhogallery-new-group-list.png">
 	</div>
 </div>
 
@@ -52,7 +52,7 @@ There are again, two ways to accomplish this:
 
 <div class='row-fluid'>
 	<div class='span6'>
-		<img src="https://s3.amazonaws.com/rhodocs/cloud/tutorial/rhogallery-tutorial/rhogallery-new-group-list-detail.png">
+		<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/cloud/tutorial/rhogallery-tutorial/rhogallery-new-group-list-detail.png">
 	</div>
 	<div class='span6'>
 		<p>In the New Group pop-up window, choose a name for the group, and add existing consumers. Then type a message to be seen by those invited to this gallery via this group invite.</p>
@@ -66,7 +66,7 @@ There are again, two ways to accomplish this:
 		<p>After you have added the group(s) to your list of groups, you'll need to add that group to a gallery before anyone will be invited. To do this, open the gallery to which you would like to add the group, click the "Groups" tab in the gallery, and then click "Invite Group".</p>
 	</div>
 	<div class='span6'>
-		<img src="https://s3.amazonaws.com/rhodocs/cloud/tutorial/rhogallery-tutorial/rhogallery-invite-group-gallery.png">
+		<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/cloud/tutorial/rhogallery-tutorial/rhogallery-invite-group-gallery.png">
 	</div>
 </div>
 
@@ -74,7 +74,7 @@ There are again, two ways to accomplish this:
 
 <div class='row-fluid'>
 	<div class='span6'>
-		<img src="https://s3.amazonaws.com/rhodocs/cloud/tutorial/rhogallery-tutorial/rhogallery-invite-group-to-gallery-detail.png">
+		<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/cloud/tutorial/rhogallery-tutorial/rhogallery-invite-group-to-gallery-detail.png">
 	</div>
 	<div class='span6'>
 		<p>In the Invite Group pop-up window, Use the "Add Existing Groups" field to add the groups you want to invite to this gallery. You should see a list of all eligible groups in the drop-down menu but you can also type the names. Then type a message to be seen by those invited to this gallery via this group invite. As you can see here, you can add multiple groups at a time.</p>
@@ -88,7 +88,7 @@ There are again, two ways to accomplish this:
 		<p>This group is now invited to your gallery!</p>
 	</div>
 	<div class='span6'>
-		<img src="https://s3.amazonaws.com/rhodocs/cloud/tutorial/rhogallery-tutorial/rhogallery-group-added-to-gallery.png">
+		<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/cloud/tutorial/rhogallery-tutorial/rhogallery-group-added-to-gallery.png">
 	</div>
 </div>
 

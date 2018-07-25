@@ -9,11 +9,11 @@ In RhoStudio, select File->New->Project...
 
 The New Project window opens. Select the RhoConnect application wizard and click the Next button.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhoconnect-tutorial/new-project-rhoconnect.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhoconnect-tutorial/new-project-rhoconnect.png"/>
 
 Enter the name for your RhoConnect application in Project name. You may specify a specific folder for your destination where your project is stored, by default, the destination is your RhoStudio workspace folder. Then press the Finish button.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhoconnect-tutorial/rhoconnect-application-wizard.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhoconnect-tutorial/rhoconnect-application-wizard.png"/>
 
 ## Generating a RhoConnect App from the Command Line
 

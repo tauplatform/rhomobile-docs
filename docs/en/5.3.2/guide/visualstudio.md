@@ -35,7 +35,7 @@ NOTE: During installion (and removal) of the extension, a User Account Control p
 
 Once the app is generated, a folder structure like the one below will appear in your workspace in a folder with the name you gave your app. 
 
-![Anatomy of a Rho app](https://github.com/rhomobile/rhomobile-docs/blob/master/public/images/rhoelementstutorial/Anatomy_of_a_Rho_application.png?raw=true =350x)
+![Anatomy of a Rho app](https://s3.amazonaws.com/docs.tau-technologies.com/images/rhoelementstutorial/Anatomy_of_a_Rho_application.png?raw=true =350x)
 
 ## Adding a productid GUID
 

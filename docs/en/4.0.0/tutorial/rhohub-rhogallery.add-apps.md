@@ -3,13 +3,13 @@ RhoHub Gallery and RhoGallery Tutorial
 
 Now you need to add apps to your gallery. Click the Add a new App button.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/add-new-app-button.jpg"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/add-new-app-button.jpg"/>
 
 ## Step 1: Manage Your App
 
 In the Add new app pop-up window, enter the name you want for your app. You can add an optional description and an optional icon to your app (the icon defaults to a Rhodes logo). Click Next.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/add-new-app-step1.jpg"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/add-new-app-step1.jpg"/>
 
 ## Step 2: Device Target
 
@@ -20,7 +20,7 @@ Select the Device type (Android, iOS, Blackberry, Windows Mobile), enter the fol
  * A security token. You enter this if you are adding a Rhodes app and you used a security_token setting in your build.yml; the app will only launch if that security token is entered.
  * OS version: the OS version. Only enter this for Blackberry.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/add-new-app-step2.jpg"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/add-new-app-step2.jpg"/>
 
 ## Step 3: Select the Build Type
 
@@ -30,7 +30,7 @@ In Step 3: Select Builds, select the type of build. (The pop-up window title cha
 
 For RhoHub Build, select a RhoHub build for a Rhodes application in your RhoHub account. Click Next.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/add-new-app-step3-RhoHub.jpg"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/add-new-app-step3-RhoHub.jpg"/>
 
 ### Local Build
 
@@ -78,7 +78,7 @@ For Remote Build, enter the link to the application file.
 
 This example shows a link to an Android build on toshl.com, a third party expense tracking application.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/add-new-app-step3-remote.jpg"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/add-new-app-step3-remote.jpg"/>
 
 Click Next.
 
@@ -86,8 +86,8 @@ Click Next.
 
 In Review, click Finish.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/add-new-app-review.jpg"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/add-new-app-review.jpg"/>
 
 You now have an app in your RhoHub gallery. Here is an example of a gallery with a RhoHub app and a remote app.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/rhohub-gallery-apps.jpg"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/rhohub-gallery-apps.jpg"/>

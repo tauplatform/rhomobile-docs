@@ -13,7 +13,7 @@ To create your app in the cloud on rms.rhomobile.com you'll first need to [creat
 
 Once you have signed up or signed in, all you need to do is create your app by clicking the big green "Create App" button. When you do, it will ask you what kind of app you are making and to give it a name. Click "RhoConnect" and choose a name for it. For this tutorial I'll be using "my_rc_app" as the name for my RhoConnect app.
 
-[!img](https://s3.amazonaws.com/rhodocs/rhoconnect-tutorial/rhoconnect-remote-create-app.png)
+[!img](https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/rhoconnect-tutorial/rhoconnect-remote-create-app.png)
 
 Once you click the "create" button, you'll be brought to a page that has all the info you'll need for your RhoConnect app including the Git URL which we will need in order to associate your local RC app to your remote RC app (Step 3).
 
@@ -51,6 +51,6 @@ Now that you have associated the remote repo with your local repo, you are ready
 ## Deploy Your RC App in the Cloud
 Back over at rms.rhomobile.com, on the page concerning your RC app you should see a green "deploy" button. Simply click this button to deploy your app and make it live by clicking the "".
 
-[!img](https://s3.amazonaws.com/rhodocs/rhoconnect-tutorial/rhoconnect-remote-deploy-and-make-live.png)
+[!img](https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/rhoconnect-tutorial/rhoconnect-remote-deploy-and-make-live.png)
 
 At this point you simply need to apply this as the sync server in your client-side app in your rhoconfig.txt file as we did earlier in this tutorial. After doing this, you're ready to sync just as you did before but now your app is hosted for you in the cloud.

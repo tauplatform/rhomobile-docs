@@ -203,11 +203,11 @@ For example, you can make the layout on your UI show content stacked in portrait
     
 Here is how the layout looks in portrait...
 
-![Portrait](http://rhodocs-images.s3.amazonaws.com/guide/screen_orientation/portrait_layout.png)
+![Portrait](https://s3.amazonaws.com/docs.tau-technologies.com/images/guide/screen_orientation/portrait_layout.png)
 
 ...and here is how it adapts to landscape
 
-![Landscape](http://rhodocs-images.s3.amazonaws.com/guide/screen_orientation/landscape_layout.png)
+![Landscape](https://s3.amazonaws.com/docs.tau-technologies.com/images/guide/screen_orientation/landscape_layout.png)
 
 ##### Responsive design frameworks
 

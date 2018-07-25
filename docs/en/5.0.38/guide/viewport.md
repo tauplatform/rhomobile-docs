@@ -29,15 +29,15 @@ In your app's html:
 <div class="row-fluid">
   <div class="span4" style="text-align:center">
     <p>iPhone 5c iOS 7</p>
-    <img src="https://s3.amazonaws.com/rhodocs/guide/viewport_config/ios_viewport_demo.png">
+    <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/guide/viewport_config/ios_viewport_demo.png">
   </div>
   <div class="span4" style="text-align:center">
     <p>Nexus 5 Android 5 (KitKat)</p>
-    <img src="https://s3.amazonaws.com/rhodocs/guide/viewport_config/android_viewport_demo.png">
+    <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/guide/viewport_config/android_viewport_demo.png">
   </div>
   <div class="span4" style="text-align:center">
     <p>MC75A Windows Mobile 6.5</p>
-    <img src="https://s3.amazonaws.com/rhodocs/guide/viewport_config/winmo_viewport_demo.png">
+    <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/guide/viewport_config/winmo_viewport_demo.png">
   </div>
 </div>
 
@@ -55,11 +55,11 @@ In your app's html:
 <div class="row-fluid">
   <div class="span6" style="text-align:center">
     <p>Nexus 5 Android 5 (KitKat)</p>
-    <img src="https://s3.amazonaws.com/rhodocs/guide/viewport_config/android_no_initial_scale.png">
+    <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/guide/viewport_config/android_no_initial_scale.png">
   </div>
   <div class="span6" style="text-align:center">
     <p>MC75A Windows Mobile 6.5</p>
-    <img src="https://s3.amazonaws.com/rhodocs/guide/viewport_config/winmo_no_initial_scale.png">
+    <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/guide/viewport_config/winmo_no_initial_scale.png">
   </div>
 </div>
 

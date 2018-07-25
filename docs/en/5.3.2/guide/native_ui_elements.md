@@ -95,7 +95,7 @@ JavaScript:
     	Rho.Notification.showPopup("Switching to tab "+params.tab_index);
     }
 
-![NativeTabbar](http://rhodocs-images.s3.amazonaws.com/guide/native_ui_elements/nativetabbar.png)
+![NativeTabbar](https://s3.amazonaws.com/docs.tau-technologies.com/images/guide/native_ui_elements/nativetabbar.png)
 
 Apart from `label` and `action`, there are more properties you can specify for each tab, including `icon` and `disabled` among others. Refer to [NativeTabbar.create](../api/NativeTabbar#mcreate) for the complete list.
 

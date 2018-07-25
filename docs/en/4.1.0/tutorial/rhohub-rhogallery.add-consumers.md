@@ -5,15 +5,15 @@ You also need consumers for your app. Consumers can use the RhoGallery mobile ap
 
 From your gallery, click the Invite button.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/rhohub-gallery-invite-button.jpg"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/rhohub-gallery-invite-button.jpg"/>
 
 In the Invite Consumers pop-up window, enter a login name for your consumer, your consumer's name, and check the checkboxes to notify the consumer via email, or SMS, or both. Enter your consumer's email address if you notify by email; enter your consumer's cell phone number if you notify by SMS. You can also enter groups you want your consumer to be in; if the group does not exist yet, this will create the group.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/invite-consumers.jpg"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/invite-consumers.jpg"/>
 
 You will see the consumer added to your gallery.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhohub-rhogallery/gallery-consumers-added.jpg"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhohub-rhogallery/gallery-consumers-added.jpg"/>
 
 The consumer will receive an email, or an SMS, or both, similar to the following:
 
