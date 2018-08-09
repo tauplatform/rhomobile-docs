@@ -7,7 +7,7 @@ section 'getting-started',                'Introduction','Mobile Guides' do
   topic 'en/edge/guide/appdesign',        'App Architecture'
   topic 'en/edge/guide/uichoices',        'UI Architecture'
   topic 'en/edge/guide/kitchensink',      'KitchenSink Application'
-  topic 'en/edge/guide/apiusage',         '2.2 Migration Guide'
+  topic 'en/edge/guide/apiusage',         'Migration Guide'
   topic 'en/edge/guide/api_js',           'RhoMobile JavaScript Usage'
   topic 'en/edge/guide/api_ruby',         'RhoMobile Ruby Usage'
   topic 'en/edge/guide/licensing',        'Licensing'
@@ -25,7 +25,6 @@ section 'rhodescommonapi-reference',                                'API Referen
   topic 'en/edge/api/cardreader',                                   'CardReader'
   topic 'en/2.2.0/rhoelements/comm',                                'Comm'
   topic 'en/edge/api/Config',                                       'Config'
-  # topic 'en/2.2.0/rhoelements/contact',                             'Contact'
   topic 'en/edge/api/Clipboard',                                    'Clipboard'
   topic 'en/edge/api/Database',                                     'Database'
   topic 'en/edge/api/device',                                       'Device'
@@ -224,7 +223,6 @@ end
 section 'rhoconnect-administration',             'Administration','RhoConnect Guides' do
   topic 'en/edge/rhoconnect/settings',           'RhoConnect Settings'
   topic 'en/edge/rhoconnect/web-console',        'Admin Web Interface'
-  #topic 'en/hosted/guide/licensing-rhoconnect',    'Licensing your RhoConnect App'
   topic 'en/edge/rhoconnect/benchmarks',         'Rhoconnect Benchmarking'
   topic 'en/edge/rhoconnect/benchmarks-running', 'Running Rhoconnect Benchmarks'
   topic 'en/edge/rhoconnect/stats-middleware',   'Collecting Runtime Stats'
@@ -232,7 +230,6 @@ end
 
 section 'rhoconnect-deployment',                      'Deployment','RhoConnect Guides' do
   topic 'en/edge/rhoconnect/preparing-production',    'Preparing for Production'
-  # topic 'en/edge/rhoconnect/hosting-rhohub',          'Hosting on RhoHub'
   topic 'en/edge/rhoconnect/deploying',               'Deploying RhoConnect'
   topic 'en/edge/rhoconnect/rhoconnect-redis-stack',  'High Availability Deployment on AWS'
 end
