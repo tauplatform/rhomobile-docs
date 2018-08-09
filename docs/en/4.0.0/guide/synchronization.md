@@ -8,7 +8,7 @@ The RhoConnectClient interacts with RhoConnect over http(s) using [JSON](http://
 
 Below is a simplified diagram of the RhoConnectClient workflow:
 
-<img src="https://s3.amazonaws.com/rhodocs/guide/synchronization/sync-flow.png">
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/guide/synchronization/sync-flow.png">
 
 This workflow consists of the following steps:
 
@@ -71,11 +71,11 @@ The flow charts below shows the logic flow for notifications concerning model sy
 <div class="row-fluid">
 	<div class="span6">
 		<p style="text-align:center"><b>Incremental Sync</b></p>
-		<img src="https://s3.amazonaws.com/rhodocs/guide/synchronization/incremental-sync.png">
+		<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/guide/synchronization/incremental-sync.png">
 	</div>
 	<div class="span6">
 		<p style="text-align:center"><b>Bulk Sync</b></p>
-		<img src="https://s3.amazonaws.com/rhodocs/guide/synchronization/bulk-sync.png">
+		<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/guide/synchronization/bulk-sync.png">
 	</div>
 </div>
 

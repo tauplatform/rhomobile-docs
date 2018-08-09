@@ -36,7 +36,7 @@ And navigate to the 'Statistics' tab in your RhoConnect console:
 ## Stats Console
 You should see graphs, organized by categories:
 
-<img src="http://rhodocs.s3.amazonaws.comstats-console.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/imagesstats-console.png"/>
 
 RhoConnect statistics are organized into the following categories:
 

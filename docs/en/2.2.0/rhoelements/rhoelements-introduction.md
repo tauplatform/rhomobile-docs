@@ -1,6 +1,6 @@
 # RhoElements Introduction
 
-<img src="http://rhodocs.s3.amazonaws.com/rhoelements/RhodesvsRhoElements.png" width="550" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhoelements/RhodesvsRhoElements.png" width="550" />
 
 Motorola's RhoMobile Suite provides developers the best of all worlds for building cross platform enterprise applications. Most often, there is hesitation around developing cross platform applications because of the concern that certain features will be lost or cannot replicate properly in a non-native environment.  Developers now have a choice of using Ruby, JavaScript or HTML META tags for accessing device capabilities. These cross platform applications can be delivered to the device as a native application, or existing web applications can be extended to provide RhoElements features. RhoElement applications also provide a common user exeperience through a standard enterprise enhanced Zebra Webkit that not only runs on Android, but Windows Mobile and CE as well. 
 

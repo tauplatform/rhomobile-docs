@@ -66,7 +66,7 @@ We can now go back to our Products list template and wrap the product item in th
 
 Notice that the `{{link-to}}` helper function references `productedit` and also includes another parameter called `this`. The `this` will be replaced by the current model record's id from the data store.
 
-![](https://s3.amazonaws.com/rhodocs-images/rhotut-emberjs/Screen+Shot+2013-11-18+at+4.16.58+PM.jpg)
+![](https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs-images/rhotut-emberjs/Screen+Shot+2013-11-18+at+4.16.58+PM.jpg)
 
 If we look in the Web Inspector we will see that the `href` is now pointing to `#/1` for our first item in the list. The `1` corresponds to the id that our data store has for this record. Recall that this is coming from the `App.Product.FIXTURES` object right now.
 
@@ -115,6 +115,6 @@ Since the view has a checkbox control we have to read the current value from the
 
 You should now be able to update the models' data. Notice that when you change the name of the product, it automatically changes the `Edit {{name}}` section on the form.
 
-![](https://s3.amazonaws.com/rhodocs-images/rhotut-emberjs/Screen+Shot+2013-11-18+at+4.37.40+PM.jpg)
+![](https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs-images/rhotut-emberjs/Screen+Shot+2013-11-18+at+4.37.40+PM.jpg)
 
 In the next step of the tutorial, we will add delete capabilities.

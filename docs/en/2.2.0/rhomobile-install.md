@@ -47,7 +47,7 @@ Install Ruby 1.9.3 with the following RVM command.
 Download the latest [Zebra RhoMobile Suite Installer for Macintosh](http://rhomobile.com/rhostudio-mac). This contains [Redis](http://redis.io/), [RhoConnect](rhoconnect/introduction) and [Rhodes](rhodes/introduction).
 
 Click on the Zebra RhoMobile Suite Installer for Mac download file to open it. You will get a window similar to this:<br>
-  <img src="http://rhodocs.s3.amazonaws.com/rhodes-devel/rhostudio-mac-install.png" alt="RhoStudioInstaller Mac" />
+  <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodes-devel/rhostudio-mac-install.png" alt="RhoStudioInstaller Mac" />
 
 Run "Install gems". A terminal window will open. Select suitable Ruby version and whether to use 'sudo' prefix for gem installation. Wait for the gems install process to complete.
 

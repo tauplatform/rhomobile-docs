@@ -4,7 +4,7 @@ The generated RhoConnect application code includes a file called "application_co
 ## Authentication Workflow
 The following diagram shows how this authenticate method is called:
 
-<img src="https://s3.amazonaws.com/rhodocs/rhoconnect/authentication/rhoconnect-auth-flow.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/rhoconnect/authentication/rhoconnect-auth-flow.png"/>
 
 ## Example
 If your back-end service requires authentication, simply add code to the login route and return true if authentication was successful or false to deny access to the application from this device.  For example:

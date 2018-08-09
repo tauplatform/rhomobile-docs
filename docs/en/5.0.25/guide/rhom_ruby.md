@@ -5,7 +5,7 @@ There are two ways to generate a Ruby model: one is using RhoStudio and the othe
 ### Adding a Model from RhoStudio
 To generate a model, right-click on the application project in the Project Explorer and select New -> RhoMobile model.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/new-rhodes-model-menu-4.0.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/new-rhodes-model-menu-4.0.png"/>
 
 In the Model Information window, enter the name for your model: in this case, `Product`.
 
@@ -13,11 +13,11 @@ In the Model Information window, enter the name for your model: in this case, `P
 
 The other required piece of information is the list of attributes, which must be entered as a string with no spaces, each attribute separated by a comma: in this `Product` example, `name,brand,price,quantity,sku`.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/model-information-4.0.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/model-information-4.0.png"/>
 
 After pressing the Finish button, you'll see the results of the RhoMobile model generator in the output console.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/rhodes-model-generator-output-4.0.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/rhodes-model-generator-output-4.0.png"/>
 
 ### Adding a Model from the command line
 If you prefer to use the command line or another development environment instead of RhoStudio, the `rhodes` tool can be invoked manually. To create the `Product` model with `name, brand, price, quantity` and `sku` as the attributes, switch to the root directory of your application (the one that contains `app` as a child) and run:

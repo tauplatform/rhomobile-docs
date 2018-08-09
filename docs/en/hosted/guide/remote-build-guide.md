@@ -112,7 +112,7 @@ At this point, you can actually build the app for the platform of your choice an
     <p>Once you've set up your account and generated an app it's time to build that app for a device. To build locally using RhoStudio or the command line interface follow our guide on <a href="../../latest/guide/creating_a_project">running your app locally</a>. To build your app remotely, start by logging into your <a href="https://rms.rhomobile.com/">rhomobile.com account</a> and add an app to your account that has the same name as the app that you just created in RhoStudio or with the CLI. The name of the remote project does not need to be the same but it aids in reducing confusion. If you experience trouble during any of the steps below, please see our <a href="#troubleshooting">troubleshooting</a> section below.</p>
   </div>
   <div class="span6">
-    <img src="https://s3.amazonaws.com/rhodocs/cloud/remote-build-guide/create-new-app.png">
+    <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/cloud/remote-build-guide/create-new-app.png">
   </div>
 </div>
 
@@ -121,7 +121,7 @@ At this point, you can actually build the app for the platform of your choice an
 ### Online Interface
 <div class="row-fluid">
   <div class="span6">
-    <img src="https://s3.amazonaws.com/rhodocs/cloud/remote-build-guide/app-details.png">
+    <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/cloud/remote-build-guide/app-details.png">
   </div>
   <div class="span6">
     <p>Once you have created the remote end of the app you will see a screen like this. On this screen you can either build your app remotely from inside your browser or you can copy the git URL to build from RhoStudio or the command line. For the purposes of this guide, let's copy the git URL by clicking the copy icon next to the Git URL field. Once you have done that, you'll need to associate your local project with your remote project.</p>
@@ -161,7 +161,7 @@ Inside of Github, invite the user 'rhohubbuild' to a team in your organization. 
 ### Step Two: Accept Invitation
 <div class="row-fluid">
   <div class="span6">
-    <img src="https://s3.amazonaws.com/rhodocs/cloud/remote-build-guide/online-accept-invite.png">
+    <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/cloud/remote-build-guide/online-accept-invite.png">
   </div>
   <div class="span6">
     <p>In your Rhomobile.com account profile, click the GitHub tab on the left to access the GitHub integration info. You'll need to add your organization's GitHub name in the first text box. This name needs to be EXACTLY the same as what's on GitHub or the connection will not work. Then push the 'Accept Invite' button. This will use GitHub's API V3 to accept the 'rhohubbuild' user invitation.</p>
@@ -174,14 +174,14 @@ Inside of Github, invite the user 'rhohubbuild' to a team in your organization. 
     <p>First click the "Change Git Source" button and then enter your SSH GitHub clone address in the main build page and hit save. This is the address that starts with `git@github.com`. Now you're ready to build using your private GitHub repository.</p>
   </div>
   <div class="span6">
-    <img src="https://s3.amazonaws.com/rhodocs/cloud/remote-build-guide/online-private-git.png">
+    <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/cloud/remote-build-guide/online-private-git.png">
   </div>
 </div>
 
 ### Optional Step: Confirm Acceptance of Invite
 <div class="row-fluid">
   <div class="span6">
-    <img src="https://s3.amazonaws.com/rhodocs/cloud/remote-build-guide/online-check-invite.png">
+    <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/cloud/remote-build-guide/online-check-invite.png">
   </div>
   <div class="span6">
     <p>If you would like to confirm that your organization has fully accepted the 'rhohubbuild' user, and that you are set to clone from a private repository, please enter your organization name below and click the 'Check Invite' button.</p>
@@ -197,13 +197,13 @@ Inside of Github, invite the user 'rhohubbuild' to a team in your organization. 
     <p>3. Build your app remotely through the <a href="#cli-build">Command Line Interface</a>.</p>
   </div>
   <div class="span2">
-    <img src="https://s3.amazonaws.com/rhodocs/cloud/remote-build-guide/online-build.png">
+    <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/cloud/remote-build-guide/online-build.png">
   </div>
   <div class="span2">
-    <img src="https://s3.amazonaws.com/rhodocs/cloud/remote-build-guide/rhostudio-build.png">
+    <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/cloud/remote-build-guide/rhostudio-build.png">
   </div>
   <div class="span2">
-    <img src="https://s3.amazonaws.com/rhodocs/cloud/remote-build-guide/cli-build.png">
+    <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/cloud/remote-build-guide/cli-build.png">
   </div>
 </div>
 <!-- Second row to get text in the right spot -->
@@ -223,7 +223,7 @@ Inside of Github, invite the user 'rhohubbuild' to a team in your organization. 
 ### Rhomobile.com Build
 <div class="row-fluid">
   <div class="span6">
-    <img src="https://s3.amazonaws.com/rhodocs/cloud/remote-build-guide/build-app-online.png">
+    <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/cloud/remote-build-guide/build-app-online.png">
   </div>
   <div class="span6">
     <p>Building on rhomobile.com is fairly straight forward, once you have completed the steps above, you'll see a screen similar to this one once you sign into <a href="https://rms.rhomobile.com/">rhomobile.com</a>. From here, all you need to do is select the parameters you want to build with from the drop-down boxes shown and click build.</p>
@@ -238,7 +238,7 @@ Inside of Github, invite the user 'rhohubbuild' to a team in your organization. 
     <p>Once you have built your app through the online console, you will be able to  click the download icon to download the app package (.apk for android, .cab for Windows Mobile, etc), put the package on your device, and install it. If the build failed, you'll be able to download the logs of the build to debug the reason for the failed build.</p>
   </div>
   <div class="span6">
-    <img src="https://s3.amazonaws.com/rhodocs/cloud/remote-build-guide/online-build-success-and-failure.png">
+    <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/cloud/remote-build-guide/online-build-success-and-failure.png">
   </div>
 </div>
 
@@ -246,7 +246,7 @@ Inside of Github, invite the user 'rhohubbuild' to a team in your organization. 
 
 <div class="row-fluid">
   <div class="span6">
-    <img src="https://s3.amazonaws.com/rhodocs/cloud/remote-build-guide/qr-code-example.png">
+    <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/cloud/remote-build-guide/qr-code-example.png">
   </div>
   <div class="span6">
     <p>In addition to the clickable link download your app's package, you can also hover over the QR icon and it will expand, showing a QR you can use to download the app directly to your device. Alternatively, if you click the QR icon it will download the app to your machine.</p>
@@ -262,7 +262,7 @@ Inside of Github, invite the user 'rhohubbuild' to a team in your organization. 
     <p>When you start RhoStudio for the first time, you'll be prompted to provide your rhomobile.com email and password (You must have an active and open internet connection for this to work properly). This will connect your RhoStudio installation with your account on rhomobile.com and allow for cloud building, should your subscription level permit cloud builds.</p>
   </div>
   <div class="span6">
-    <img src="https://s3.amazonaws.com/rhodocs/cloud/remote-build-guide/rhostudio-login-prompt.png">
+    <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/cloud/remote-build-guide/rhostudio-login-prompt.png">
   </div>
 </div>
 
@@ -270,7 +270,7 @@ Inside of Github, invite the user 'rhohubbuild' to a team in your organization. 
 
 <div class="row-fluid">
   <div class="span6">
-    <img src="https://s3.amazonaws.com/rhodocs/cloud/remote-build-guide/rhostudio-remote-build-config.png">
+    <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/cloud/remote-build-guide/rhostudio-remote-build-config.png">
   </div>
   <div class="span6">
     <p>Once you have logged in and RhoStudio has verified your subscription, you <a href="../../latest/guide/creating_a_project#creating-a-project-with-rhostudio">build your app the same way you normally would</a> but in the build configuration for your app, choose "Rhomobile.com" in the Build field. This type of build can only be done for device and simulator builds. Click run and the app will start to build remotely. If you receive error concerning your local build during this step, it does not necessarily mean the the remote build failed.</p>
@@ -284,7 +284,7 @@ Inside of Github, invite the user 'rhohubbuild' to a team in your organization. 
     <p>Once the app has finished building, the app will be downloaded and placed into the <code>&lt;appname&gt;/bin/&lt;platform&gt;/</code> folder. Upon build failure, the build log will also be stored in the aforementioned folder, as well as all app build behavior being printed out in the RhoStudio console.</p>
   </div>
   <div class="span6">
-    <img src="https://s3.amazonaws.com/rhodocs/cloud/remote-build-guide/rhostudio-console-remote-build.png">
+    <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/cloud/remote-build-guide/rhostudio-console-remote-build.png">
   </div>
 </div>
 
@@ -297,7 +297,7 @@ Inside of Github, invite the user 'rhohubbuild' to a team in your organization. 
     <p>The first time you attempt to build, you'll be prompted to enter the email and password you used to sign up with on rhomobile.com. Entering this information will connect your installation to your account on rhomobile.com and allow you to build according to the restrictions of your account subscription.</p>
   </div>
   <div class="span6">
-    <img src="https://s3.amazonaws.com/rhodocs/cloud/remote-build-guide/cli-login-prompt.png">
+    <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/cloud/remote-build-guide/cli-login-prompt.png">
   </div>
 </div>
 
@@ -305,7 +305,7 @@ Inside of Github, invite the user 'rhohubbuild' to a team in your organization. 
 
 <div class="row-fluid">
   <div class="span6">
-    <img src="https://s3.amazonaws.com/rhodocs/cloud/remote-build-guide/cli-rake-tasks.png">
+    <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/cloud/remote-build-guide/cli-rake-tasks.png">
   </div>
   <div class="span6">
     <p>To build your app remotely from the command line, after you've logged in, you will need to use one of many rake commands. To view the available rake commands, run the command <code>$ rake -T</code>. Once you have decided on the command to use, run that command and wait for the build process to finish. For this example, we will keep with the Android theme and build for an android device using the command <code>$ rake cloud:android:device</code> which will build our app into an .apk that we can download and install onto our device.</p>
@@ -319,7 +319,7 @@ Inside of Github, invite the user 'rhohubbuild' to a team in your organization. 
     <p>Once the build process finishes, it will automatically download and uncompress the app package into the <code>&lt;app-project-directory&gt;/bin/&lt;platform&gt;/</code> directory, similar to the way that RhoStudio does this.</p>
   </div>
   <div class="span6">
-    <img src="https://s3.amazonaws.com/rhodocs/cloud/remote-build-guide/cli-remote-building.png">
+    <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/cloud/remote-build-guide/cli-remote-building.png">
   </div>
 </div>
 

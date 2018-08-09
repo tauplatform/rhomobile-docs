@@ -10,7 +10,7 @@ Let's get started by resetting our environment to the starting point of our proj
 
 
 Not very exciting, but if you type in the input box you will see the Hello message change automatically. 
-![](https://s3.amazonaws.com/rhodocs-images/rhotut-emberjs/Screen+Shot+2013-11-18+at+10.35.12+AM.jpg)
+![](https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs-images/rhotut-emberjs/Screen+Shot+2013-11-18+at+10.35.12+AM.jpg)
 
 ## The HTML
 Let's explain what is going on here by first taking a look at `index.html`
@@ -96,7 +96,7 @@ The `<script type="text/x-handlebars" >` tag indicates to the browser that the f
 ## Chrome Ember Inspector
 Ember has built a Chrome Inspector, which is very useful tool for debugging and inspecting your Ember application components. It is highly recommended that you install it. Simple visit [the Chrome Web Store](https://chrome.google.com/webstore/category/apps) and search for [Ember JS](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
 
-![](https://s3.amazonaws.com/rhodocs-images/rhotut-emberjs/Screen+Shot+2013-11-18+at+10.50.58+AM.jpg)
+![](https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs-images/rhotut-emberjs/Screen+Shot+2013-11-18+at+10.50.58+AM.jpg)
 
 Then since we are viewing files locally you will need to change the permissions of Chrome for the Ember JS inspector by first:
 
@@ -104,10 +104,10 @@ chrome://extensions/
 
 And then enabling the ` Allow access to file URLs` setting.
 
-![](https://s3.amazonaws.com/rhodocs-images/rhotut-emberjs/Screen+Shot+2013-11-18+at+10.56.27+AM.jpg)
+![](https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs-images/rhotut-emberjs/Screen+Shot+2013-11-18+at+10.56.27+AM.jpg)
 
 You will then be able to use this tab to inspect the Ember app as we go through the tutorial.
-![](https://s3.amazonaws.com/rhodocs-images/rhotut-emberjs/Screen+Shot+2013-11-18+at+10.59.24+AM.jpg)
+![](https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs-images/rhotut-emberjs/Screen+Shot+2013-11-18+at+10.59.24+AM.jpg)
 
 ## Summary
 So far we just introduced a simple Ember JS application and started to provide the framework for the rest of the application. In the next section of the tutorial we will introduce other Ember JS concepts like models, routing and views. 

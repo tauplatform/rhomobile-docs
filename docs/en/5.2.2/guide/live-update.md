@@ -80,7 +80,7 @@ This section contains detailed instructions for configuring Live Update on a dev
 
 Live Update works only on apps built with the RhoElements option box checked (as below). To confirm that your app is compatible, check for the line **app_type: "rhoelements"** in its `build.yml` file (as in the image that follows, below). 
 
-![RhoElements Checkbox](http://rhodocs.s3.amazonaws.com/guide/LiveUpdate/01_RhoElements_checkbox.png)
+![RhoElements Checkbox](https://s3.amazonaws.com/docs.tau-technologies.com/images/guide/LiveUpdate/01_RhoElements_checkbox.png)
 <br>
 
 ###How to modify the Build.yml:
@@ -92,7 +92,7 @@ Live Update works only on apps built with the RhoElements option box checked (as
 * **Locate the 'extensions:' line and add '- development' on a new indented line**
 * **Save your changes** but ** *do not build yet* **
 
-![Build.yml extensions](http://rhodocs.s3.amazonaws.com/guide/LiveUpdate/02_Build.yml_extensions.png)
+![Build.yml extensions](https://s3.amazonaws.com/docs.tau-technologies.com/images/guide/LiveUpdate/02_Build.yml_extensions.png)
 
 ##2- Establish Single Wi-Fi Subnet
 
@@ -106,7 +106,7 @@ To try it yourself:
 * **Make a note** of the IP address(es)   
 * **Change the IP address of the development host to match device(s)** 
 
-![Mac OS X Wi-Fi prefs panel](http://rhodocs.s3.amazonaws.com/guide/LiveUpdate/04_Mac_Wi-Fi_prefs.png)
+![Mac OS X Wi-Fi prefs panel](https://s3.amazonaws.com/docs.tau-technologies.com/images/guide/LiveUpdate/04_Mac_Wi-Fi_prefs.png)
 
 The screenshot above shows the **Network Preferences panel of Mac OS X** after entering the Wi-Fi section, clicking the Advanced… button and selecting the TCP/IP tab. In the case, the machine's subnet is "10.186.6" and it's using DHCP. Click on the drop-down (indicated by the arrow) and **select "Use DHCP with manual address**" to allow a user-assigned IP address that's in the same subnet as the target device(s).
 
@@ -123,13 +123,13 @@ NOTE: CAUTION: Manually editing IP addresses can lead to address conflicts and i
 
 NOTE: A USB cable is required for initial application deployment; RhoStudio does not support deployment over Wi-Fi. 
 
-![Build.yml settings](http://rhodocs.s3.amazonaws.com/guide/LiveUpdate/03_new_Build_config.png)
+![Build.yml settings](https://s3.amazonaws.com/docs.tau-technologies.com/images/guide/LiveUpdate/03_new_Build_config.png)
 
 NOTE: CAUTION: When bringing up the Run Configurations screen, RhoStudio opens the most recenly used build config, which could cause you to mistakenly re-build the last app you were working on. A good practice is to name your build config after the app it builds, and always to confirm the selected build config before clicking 'Run.'
 
 When first launched, an app that has been properly modified for Live Update will display a message similar to the one below. The name of the example app is "Bloopy." 
 
-<img src="http://rhodocs.s3.amazonaws.com/guide/LiveUpdate/05_DeviceSubscribed.png" width="380" height="600" border="10" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/guide/LiveUpdate/05_DeviceSubscribed.png" width="380" height="600" border="10" />
 #####Successful deployment of a Live Update-enabled app.
 
 <br>
@@ -147,14 +147,14 @@ With the modified app(s) running on the device(s):
 7. **Open `dev-config.yml` with the text editor and add 'refresh: 1'** (not indented) after the device section(s) to enable Live Update for all devices<br>
 
 
-![dev-config.yml mods](http://rhodocs.s3.amazonaws.com/guide/LiveUpdate/06_dev-config.yml.png)
+![dev-config.yml mods](https://s3.amazonaws.com/docs.tau-technologies.com/images/guide/LiveUpdate/06_dev-config.yml.png)
 <br>
 
 **Congratulations!** Your dev host and target device(s) are now ready to use Live Update. To test it, make an obvious change to any file in the app's **/app or /public folder** and save it. 
 
 After a moment, your device(s) should display the change along with a  message like the one below. In this case, the app name was changed from Bloopy to "WorkerBee." 
 
-<img src="http://rhodocs.s3.amazonaws.com/guide/LiveUpdate/09_AppUpdated.png" width="380" height="600" border="10" />
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/guide/LiveUpdate/09_AppUpdated.png" width="380" height="600" border="10" />
 #####Successful deployment of an update bundle. 
 <br>
 
@@ -218,7 +218,7 @@ Here are some common problems and known issues of Live Update. If Live Update is
 
 >"ERROR when downloading or unpack[ing]"<br>
 
-> <img src="http://rhodocs.s3.amazonaws.com/guide/LiveUpdate/10_Live_Update_fail_download_error.png" width="380" height="600" border="10" />
+> <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/guide/LiveUpdate/10_Live_Update_fail_download_error.png" width="380" height="600" border="10" />
 
 >**POSSIBLE CAUSE**<br>
 >Network connectivity issue
@@ -229,7 +229,7 @@ Here are some common problems and known issues of Live Update. If Live Update is
 ###PROBLEM
 >"Your application files too old"
 
-> <img src="http://rhodocs.s3.amazonaws.com/guide/LiveUpdate/11_Live_Update_fail_FileTooOld.png" width="380" height="600" border="10" />
+> <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/guide/LiveUpdate/11_Live_Update_fail_FileTooOld.png" width="380" height="600" border="10" />
 
 >**POSSIBLE CAUSE**<br>
 >Mutiple files are out of sync between the dev host and the deployed app.
@@ -240,7 +240,7 @@ Here are some common problems and known issues of Live Update. If Live Update is
 ###PROBLEM
 >"Error when update Bundle ... replace bundle ... unable to rename folder"<br>
 
-> <img src="http://rhodocs.s3.amazonaws.com/guide/LiveUpdate/12_Live_Update_fail_unableToRename.png" width="380" height="600" border="10" />
+> <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/guide/LiveUpdate/12_Live_Update_fail_unableToRename.png" width="380" height="600" border="10" />
  
 >**POSSIBLE CAUSE**<br>
 >This is a known issue in Live Update. 

@@ -48,7 +48,7 @@ Download Android NDK r9 from Google's servers:
 
 In RhoStudio -> Preferences on the Macintosh or Windows -> Preferences on Windows, open Rhomobile->Android and set the paths to your Android SDK and NDK installations.
 
-![img](http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/preferences-android-sdk-4.0.png)
+![img](https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/preferences-android-sdk-4.0.png)
 
 If you are not using RhoStudio, run rhodes-setup from the command line and set the paths to the Android SDK and NDK installations.
 

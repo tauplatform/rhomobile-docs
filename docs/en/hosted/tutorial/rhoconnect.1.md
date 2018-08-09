@@ -63,4 +63,4 @@ If all went well, you should see:
 
 This means that your RhoConnect app is up and running on localhost:9292. If you go to this address in your browser you will see the RhoConnect Console, pictured below.
 
-<img src="https://s3.amazonaws.com/rhodocs/rhoconnect-tutorial/rhoconnect-console-4.0.png">
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/rhoconnect-tutorial/rhoconnect-console-4.0.png">

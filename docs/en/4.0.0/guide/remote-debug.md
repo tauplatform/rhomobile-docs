@@ -33,21 +33,21 @@ For example, here is my output from the above command
 
 Verify that Weinre is running correctly by navigating your browser to the address Weinre gives you. You should see a page like this.
 
-<img src="http://rhodocs.s3.amazonaws.com/weinre/weinre-web-console.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/weinre/weinre-web-console.png"/>
 
 ## Enabling Weinre In Your App
 
 Notice the section in the web console labeled "Target Script". This is a string that you must copy into your app in order for Weinre to be able to interact with your app. This string is `<script src="http://<your local ip address>:<your port>/target/target-script-min.js#anonymous"></script>`. I'm going to put this line into my barcode_enumerate.html file so that when I load that file in my app, it will connect to Weinre and start capturing info. Remember when editing HTML in RhoStudio, the default double click action is to open the browser representation in the editor, so to edit the HTML itself, make sure to right-click the file and select open with "Text Editor" as shown below. After editing this file, you would rebuild and relaunch the application so that the changes take effect. 
 
-<img src="http://rhodocs.s3.amazonaws.com/weinre/weinre-edit-barcode-enumerate.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/weinre/weinre-edit-barcode-enumerate.png"/>
 
 Here is what the line looks like in my HTML:
 
-<img src="http://rhodocs.s3.amazonaws.com/weinre/weinre-target-script-example.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/weinre/weinre-target-script-example.png"/>
 
 Now that we have those steps out of the way, it's time to start up Weinre's `debug client user interface` by clicking the link in the  `Access Points` section of the page we just loaded in our browser.
 
-<img src="http://rhodocs.s3.amazonaws.com/weinre/weinre-link-to-debug-ui.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/weinre/weinre-link-to-debug-ui.png"/>
 
 ## Debug Client UI
 
@@ -55,11 +55,11 @@ You may notice that there are many options at the top of the debug UI that very 
 
 Here you see both the Weinre debug UI connected to my device (when the device is connected, the Targets and Clients fields are populated with green text describing the device connection.) and my device's screen. I am screen-casting my Android device's screen to my monitor with the help of an app called [Droid@Screen](http://droid-at-screen.ribomation.com/) which uses USB and adb in order to stream screen shots to your computer. It's got some lag but is very useful.
 
-<img src="http://rhodocs.s3.amazonaws.com/weinre/weinre-debug-and-device.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/weinre/weinre-debug-and-device.png"/>
 
 Now you can inspect your app just as you would any other HTML page if you were using the Chrome web inspector. Select the Elements tool at the top of the page and select an element to inspect. You will also see the element highlighted on your device showing you that two-way communication is established.
 
-<img src="http://rhodocs.s3.amazonaws.com/weinre/weinre-two-way-communication-inspection.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/weinre/weinre-two-way-communication-inspection.png"/>
 
 You can use the Elements tool to change things on the app's view on the fly just by changing the code in the inspector itself. For instance, in the below images I am simply changing the text on the button from "Enumerate" to "Changed!".
 
@@ -67,11 +67,11 @@ You can use the Elements tool to change things on the app's view on the fly just
   <div>
     <div class="span6" style="text-align:center">
         <p><b>Button text "Enumerate"</b></p>
-        <img src="http://rhodocs.s3.amazonaws.com/weinre/weinre-button-element-before-change.png"/>
+        <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/weinre/weinre-button-element-before-change.png"/>
     </div>
     <div class="span6" style="text-align:center">
         <p><b>Button text "Changed!"</b></p>
-        <img src="http://rhodocs.s3.amazonaws.com/weinre/weinre-button-element-after-change.png"/>
+        <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/weinre/weinre-button-element-after-change.png"/>
     </div>
   </div>
 </div>
@@ -84,7 +84,7 @@ One of the most helpful features of Weinre is the console. You can use this cons
 
 In this example, I am showing just a few commands that can be run from the console to verify that the JS APIs are operating properly. Here I use the JS API to check the platform I am running on, use the camera to scan a barcode, and then issue a command to the ScreenOrientation API which returns an error.
 
-<img src="http://rhodocs.s3.amazonaws.com/weinre/weinre-barcode-take-and-failed-extension.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/weinre/weinre-barcode-take-and-failed-extension.png"/>
 
 As you can see, I have verified using API calls that my JS APIs are functioning properly. My device is a Zebra Technologies ET1 which is in fact an Android device, so we know that the System API is working. The item's barcode that I scanned reads exactly what was returned here by the Barcode.take() method, so I know that the Barcode module is working properly.
 
@@ -94,7 +94,7 @@ Notice that when the barcode callback handler function is executed we are doing 
 
 Now notice the error I received from the last API call: `TypeError: cannot call method 'normal' of undefined.` This error means that it cannot find the [ScreenOrientation](../api/screenorientation) module. This is because ScreenOrientation is not included by default in RhoMobile apps. To add this module in, all we have to do is list it in the app's build.yml in the extensions section as shown below and then rebuild the app.
 
-<img src="http://rhodocs.s3.amazonaws.com/weinre/weinre-adding-extension.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/weinre/weinre-adding-extension.png"/>
 
 <div class="row-fluid">
     <div class="span6">
@@ -107,15 +107,15 @@ Now notice the error I received from the last API call: `TypeError: cannot call 
     </div>
     <div class="span6" style="text-align:center">
         <p><b>Auto-Completing Code</b></p>
-        <img src="http://rhodocs.s3.amazonaws.com/weinre/weinre-auto-complete.png"/>
+        <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/weinre/weinre-auto-complete.png"/>
         <p><b>Extension Working properly</b></p>
-        <img src="http://rhodocs.s3.amazonaws.com/weinre/weinre-extension-included-return-value.png"/>
+        <img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/weinre/weinre-extension-included-return-value.png"/>
     </div>
 </div>
 
 ### Other Tabs in Debugger UI
 
-<img src="http://rhodocs.s3.amazonaws.com/weinre/weinre-tabs.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/weinre/weinre-tabs.png"/>
 
 There are a few other tabs that we have seen in the debugger UI that I should briefly mention. 
 

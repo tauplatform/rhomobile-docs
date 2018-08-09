@@ -38,11 +38,12 @@ The stand alone Android SDK is deprecated, but the SDK Manager is included with 
 Recommended NDK version is 15c. NDK v16+ is not yet supported.
 Download and unzip the [Android NDK 15c](https://developer.android.com/ndk/downloads/older_releases.html) to the location of your choice.
 
+Direct links for NDK 15c downloads:
+* [for Linux](https://dl.google.com/android/repository/android-ndk-r15c-linux-x86_64.zip)
+* [for Mac OS X](https://dl.google.com/android/repository/android-ndk-r15c-darwin-x86_64.zip)
+* [for Windows](https://dl.google.com/android/repository/android-ndk-r15c-windows-x86_64.zip)
+
 > Note: You should update the Android SDK and NDK as you update to new versions of Rhodes.
-> Direct links for NDK 15c downloads:
-> * [for Linux](https://dl.google.com/android/repository/android-ndk-r15c-linux-x86_64.zip)
-> * [for Mac OS X](https://dl.google.com/android/repository/android-ndk-r15c-darwin-x86_64.zip)
-> * [for Windows](https://dl.google.com/android/repository/android-ndk-r15c-windows-x86_64.zip)
 
 ### Pointing RhoStudio to the SDKs
 1) Start RhoStudio
@@ -53,14 +54,14 @@ Download and unzip the [Android NDK 15c](https://developer.android.com/ndk/downl
 
 3) Expand "RhoMobile" and click on "Android".  Set the locations for the SDK and NDK as above.  To find the SDK location, run the "SDK Manager" from within Android Studio.
 
-![img](http://rhodocs.s3.amazonaws.com/rhostudio-tutorial/preferences-android-sdk-4.0.png)
+![img](https://s3.amazonaws.com/docs.tau-technologies.com/images/rhostudio-tutorial/preferences-android-sdk-4.0.png)
 
 If you are not using RhoStudio, run "rhodes-setup" from the command line and set the paths to the Android SDK and NDK installations.
 
 ### Setting up the Android Maps API
 In case you are planning to work with native geo mapping (the MapView interface), you must do two things:
 
-* Retrieve the Android Maps API key from Google. Follow these [instructions](http://code.google.com/intl/en/android/add-ons/google-apis/mapkey.html) to get it. When key received, put it in your application's `build.yml` or share it across all your applications by adding it to `rhobuild.yml`. Note that the `apikey` value must match a certificate used to sign an application (the key is different for debug and production signed build and debug key cannot be shared between different build computers).
+* Retrieve the Android Maps API key from Google. Follow these [instructions](https://developers.google.com/maps/documentation/embed/get-api-key) to get it. When key received, put it in your application's `build.yml` or share it across all your applications by adding it to `rhobuild.yml`. Note that the `apikey` value must match a certificate used to sign an application (the key is different for debug and production signed build and debug key cannot be shared between different build computers).
 
     android:
       apikey: "GOOGLE-API-KEY-FOR-ANDROID"
@@ -77,7 +78,7 @@ Make sure you installed the following software.
 * Lastest version of [Virtual Box](https://www.virtualbox.org/)
 * Lastest version of sdk from [SailfishOS site](https://sailfishos.org/wiki/Application_SDK)
 
-> Note: for now to use sailfish - you must copy rhodes folder from your ruby gems to home folder, write its path in build.yml (for example "sdk: C:\Users\UserName\rhodes") and write in `<rhodes-root>/rhobuild.yml` path to installed sailfish sdk that kind a way:
+> Note: for now to use sailfish - you must copy rhodes folder from your ruby gems to home folder, write its path in build.yml (for example `sdk: C:\Users\UserName\rhodes`) and write in `<rhodes-root>/rhobuild.yml` path to installed sailfish sdk that kind a way:
 	:::yml
 	env:
 		paths:
@@ -118,10 +119,10 @@ Make sure you have installed the following software. Since Rhdoes builds a unifi
 * Visual Studio 2015 Community Edition UP3 or higher installed
   * Make sure that `VS140COMNTOOLS` environment variable is defined and points to the correct location, e.g. to `C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools`
 
-* Install [Qt libraries 5.8 for Visual Studio 2015](https://download.qt.io/official_releases/qt/5.8/5.8.0/qt-opensource-windows-x86-msvc2015-5.8.0.exe) - 1 GB (or [build Qt libraries 5.1.1 for Visual Studio 2008](build_win#build-qt5-for-vs2008))
+* Install [Qt libraries 5.9 with QtWebEngine for Visual Studio 2015](https://download.qt.io/official_releases/qt/5.9/5.9.6/qt-opensource-windows-x86-5.9.6.exe) - 2,3 GB (or [build Qt libraries 5.1.1 for Visual Studio 2008](build_win#build-qt5-for-vs2008))
   * The Qt binaries for Visual Studio 2012 are not compatible with Windows XP. For targeting Windows XP, please refer to the [Build for Windows](build_win) instructions.
 
-* Create new (or update existing) system environment variable `QTDIR` and make sure it points to root folder of the installed Qt libraries, e.g. `C:\Qt\Qt5\5.8\msvc2015`
+* Create new (or update existing) system environment variable `QTDIR` and make sure it points to root folder of the installed Qt libraries, e.g. `C:\Qt\Qt5.9.6\5.9.6\msvc2015`
 
 >Note: If the application uses HTTPS, the Qt binaries must be built against OpenSSL. Please refer to [Build for Windows](build_win) for instructions and links to Zebra's pre-built Qt binaries.
 

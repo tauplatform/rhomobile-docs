@@ -36,4 +36,4 @@ If you want to disable this web interface, you can do so by editing the rackup f
 
 Here is a screenshot of the web console:
 
-<img src="http://rhodocs.s3.amazonaws.com/rhoconnect/web-console.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhoconnect/web-console.png"/>

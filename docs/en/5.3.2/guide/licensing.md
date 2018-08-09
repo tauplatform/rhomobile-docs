@@ -4,7 +4,7 @@ Licensing in RMS 5.x has changed considerably. Most significant is the requireme
 ## Subscriptions
 Zebra's new subscription licensing model offers three levels: Free, Silver and Gold. The the plans are detailed below.
 
-<img style="border:solid;border-color:#999" src="https://s3.amazonaws.com/rhodocs/cloud/licensing/sub-details.png">
+<img style="border:solid;border-color:#999" src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/cloud/licensing/sub-details.png">
 
 NOTE: The free subscription is limited to local builds using Rhodes and RhoStudio only.
 
@@ -20,7 +20,7 @@ Once you have signed up for a subscription on [rhomobile.com](http://www.rhomobi
 		<p>This will prompt for a username and password, log into the rhomobile.com account and download the API token to the local machine.</p><p>Token storage:</p> <b>On Mac OS X-</b> <code>~/.rhomobile/token</code></p> <p> <b>On Windows-</b> <code>/Users/&lt;username&gt;/.rhomobile/token</code> </p>
 	</div>
 	<div class="span5">
-		<img src="https://s3.amazonaws.com/rhodocs/cloud/licensing/cli-login-dialog.png">
+		<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/cloud/licensing/cli-login-dialog.png">
 	</div>
 </div>
 
@@ -39,7 +39,7 @@ Once you have signed up for a subscription on [rhomobile.com](http://www.rhomobi
 	</div>
 	<!-- Sign-In Picture -->
 	<div class="span5">
-		<img src="https://s3.amazonaws.com/rhodocs/cloud/licensing/rs-login-dialog.png">
+		<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs/cloud/licensing/rs-login-dialog.png">
 	</div>
 </div>
 

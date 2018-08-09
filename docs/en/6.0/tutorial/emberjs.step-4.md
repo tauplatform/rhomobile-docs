@@ -63,11 +63,11 @@ Notice that the `{{link-to}}` helper function references `productdelete` and als
 
 If we look in the Web Inspector we will see that the `href` is now pointing to `#/3/delete` for our third item in the list. The `3` corresponds to the id that our data store has for this record. Recall that this is coming from the `App.Product.FIXTURES` object right now.
 
-![](https://s3.amazonaws.com/rhodocs-images/rhotut-emberjs/Screen+Shot+2013-11-18+at+4.53.23+PM.jpg)
+![](https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs-images/rhotut-emberjs/Screen+Shot+2013-11-18+at+4.53.23+PM.jpg)
 
 And clicking in the delete button will navigate to the delete template we just created.
 
-![](https://s3.amazonaws.com/rhodocs-images/rhotut-emberjs/Screen+Shot+2013-11-18+at+4.52.35+PM.jpg)
+![](https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs-images/rhotut-emberjs/Screen+Shot+2013-11-18+at+4.52.35+PM.jpg)
 
 ## Adding a controller
 Like with the New and Edit pages, we have to add a controller for the Delete page so we can perform the delete action. Open up the `public/js/controllers/product.js` and paste the following code:
@@ -89,6 +89,6 @@ Keeping with the Ember naming conventions this controller will be for the `produ
 
 The `delete` action uses the `deleteRecord()` and `.save()` methods to remove the record reference from the Ember Data store.
 
-![](https://s3.amazonaws.com/rhodocs-images/rhotut-emberjs/Screen+Shot+2013-11-18+at+5.00.48+PM.jpg)
+![](https://s3.amazonaws.com/docs.tau-technologies.com/images/rhodocs-images/rhotut-emberjs/Screen+Shot+2013-11-18+at+5.00.48+PM.jpg)
 
 You have now successfully created a Ember JS CRUD app for a data model. In the next step of the tutorial, we will add some actions to the products list to update the quantity without even changing the view.

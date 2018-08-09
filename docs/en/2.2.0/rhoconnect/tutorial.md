@@ -22,11 +22,11 @@ In RhoStudio, select File->New->Project...
 
 The New Project window opens. Select the RhoConnect application wizard and click the Next button.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhoconnect-tutorial/new-project-rhoconnect.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhoconnect-tutorial/new-project-rhoconnect.png"/>
 
 Enter the name for your RhoConnect application in Project name; in this case, "storeserver". You may specify a specific folder for your destination where your project is stored, by default, the destination is your RhoStudio workspace folder. Then press the Finish button.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhoconnect-tutorial/rhoconnect-application-wizard.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhoconnect-tutorial/rhoconnect-application-wizard.png"/>
 
 ### Generating a RhoConnect App from the Command Line
 
@@ -62,17 +62,17 @@ Once RhoConnect is installed we're ready to build a RhoConnect source to integra
 
 To generate a RhoConnect source adapter and create the associated Controller templates, right-click on the application project in the Project Explorer and select New->Rhoconnect Source Adapter.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhoconnect-tutorial/menu-new-rhoconnect_source-adapter.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhoconnect-tutorial/menu-new-rhoconnect_source-adapter.png"/>
 
 In the Source Adapter Information window, enter the name for your source adapter: in this case, "product".
 
 Click the Finish button to create the source adapter.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhoconnect-tutorial/source-adapter-information.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhoconnect-tutorial/source-adapter-information.png"/>
 
 After pressing the Finish button, you'll see the RhoConnect source adapter generator script output in the output console (Rhomobile build console).
 
-<img src="http://rhodocs.s3.amazonaws.com/rhoconnect-tutorial/rhoconnect-source-generator-output.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhoconnect-tutorial/rhoconnect-source-generator-output.png"/>
 
 You should now have files for the source adapter in your storeserver application. The files are organized as follows:
 
@@ -254,11 +254,11 @@ For example:
 
 From RhoStudio, select your RhoConnect project in the Project Explorer, and select Run->Run Configurations… from the menu. The Run Configurations window appears.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhoconnect-tutorial/run-configurations-rc.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhoconnect-tutorial/run-configurations-rc.png"/>
 
 To create a new build configuration for your application, select RhoConnect Application. Then either right-click on RhoConnect Application or click the New button. A new configuration appears under RhoConnect Application. Click the Run button to run it.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhoconnect-tutorial/run-config-rhoconnect-new-rc.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhoconnect-tutorial/run-config-rhoconnect-new-rc.png"/>
 
 If you are working from the command line, first make sure you are running redis. From the folder in which your app is located, run this command.
 
@@ -295,17 +295,17 @@ To get a feel for what is happening, it is helpful to watch the server log (the 
 To sync with the RhoConnect server, the Rhodes client must log in. The Rhodes generated app includes some screens for login and other common functions, which you will typically modify to suit the design of your application.  The generated UI is useful since it allows you to focus on the core functionality of your application before implementing the important, but mundane, details of user authentication and settings.
 
 1. From the home page in the Rhodes app, click on the login button in the upper right corner. Alternatively, you can click on the tool icon at the bottom of the screen to go to the Settings screen, and click the login button from there.
-<img src="http://rhodocs.s3.amazonaws.com/rhoconnect-tutorial/storemanager-rhosimulator-home-arrows.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhoconnect-tutorial/storemanager-rhosimulator-home-arrows.png"/>
 
 2. Login using any name & password. The generated code allows any login, but you can modify that in application.rb.
-<img src="http://rhodocs.s3.amazonaws.com/rhoconnect-tutorial/rhosimulator-login.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhoconnect-tutorial/rhosimulator-login.png"/>
 
 3. If login is successful, you will see a Client ID in the settings screen. The ClientID is generated the first time you log in and is stored in the client database.  It serves as a unique identifier which is required for rhoconnect. (Note: this value will persist across logins, but if you reset the client database or the user re-installs the app, a new ClientID will be generated.)
 4. Sync is triggered automatically. Click on the home icon and then select "Products" and you should see the list of product records from the server.
 
 This example shows a couple of iPhone products.
 
-<img src="http://rhodocs.s3.amazonaws.com/rhoconnect-tutorial/rhosimulator-product-list.png"/>
+<img src="https://s3.amazonaws.com/docs.tau-technologies.com/images/rhoconnect-tutorial/rhosimulator-product-list.png"/>
 
 ## Creating Objects with RhoConnect
 

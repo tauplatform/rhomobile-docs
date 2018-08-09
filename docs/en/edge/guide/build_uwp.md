@@ -3,9 +3,6 @@
 ## Setup
 Follow the instructions for [setting up the development environment](nativesdksetup#setup-for-windows-10uwp) for building Windows Phone 10 applications.
 
-### Building Remotely
-Alternatively, you can create the device builds remotely with RhoMobile hosted builds. Refer to our [remote build guide](../../hosted/guide/remote-build-guide) for more info.
-
 ## Application changes
     
 * Add a productid GUID to application build.yml . For example:
@@ -17,6 +14,8 @@ NOTE: When you use the `rhodes app` command to generate an application, a produc
 ## Build and run using Rhodes gem
 
 * Install Rhodes gem
+
+* If it is the first time, you building uwp application, you may need to install all MSVS dependencies, needed by an application. To do that, from power shell go to the directory '<rhodes directory>\platform\uwp' and run nuget_restore.sh
 
 * Run application simulator:
 
@@ -106,10 +105,6 @@ On Windows 10 for PC you should also add certificate from the preferences of *.a
     A confirmation dialog should appear; if so, click OK. 
 
 ## Publishing on Windows Phone Store
-
-### Getting a Windows Phone Dev Center account
-
-To publish your app on Windows Phone Store you need a [Dev Center account](http://dev.windowsphone.com/en-us/join).
 
 ### Uploading and Publishing your application
 
