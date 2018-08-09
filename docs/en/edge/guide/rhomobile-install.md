@@ -1,7 +1,7 @@
 # Install RhoMobile Suite
 The RhoMobile Suite allows the development of apps that can run on multiple mobile platforms from a single code base. In essence, these apps employ a web-like front end that renders on a platform-specific webkit, which passes device calls through to the underlying hardware. RhoStudio also can build native apps for Android, iOS and Windows Mobile and Windows Phone 8 using the corresponding SDK(s). 
 
-At minimum, the RhoMobile installer places the Rhodes open-source development framework and the RhoStudio (Eclipse) IDE on the development host system. Also included are Zebra's RhoConnect and RhoElements components, optional modules for creating apps that connect and sync with one or more back-end systems and/or that support Zebra's enterprise-grade devices. Native SDKs, if desired, are installed separately. 
+At minimum, the RhoMobile installer places the Rhodes open-source development framework and the RhoStudio (Eclipse) IDE on the development host system. Also included RhoConnect, optional module for creating apps that connect and sync with one or more back-end systems. Rhodes supports Zebra's enterprise-grade devices. Native SDKs, if desired, are installed separately. 
 
 RhoMobile depends on Java, Ruby, Git and other tools. Depending on the development host platform, these components are either installed automatically with the main suite or must be installed manually using the platform-specific processes below. **Please read and follow all instructions carefully to ensure a trouble-free installation.**
 
@@ -43,7 +43,7 @@ If the upgrade steps have failed, or if you're installing RhoMobile Suite for th
 
 ## Windows First-time Install (32- and 64-bit)
 ### STEP 1: Run the RhoMobile Suite Installer
-[Download the RhoMobile Suite Installer for Windows](http://tau-technologies.com/developers/downloads/) and launch it. This will install Rhodes, RhoStudio, RhoConnect and RhoElements, as well as [Ruby](http://www.ruby-lang.org/en/) and [Redis](http://redis.io/) open source tools. 
+[Download the RhoMobile Suite Installer for Windows](http://tau-technologies.com/developers/downloads/) and launch it. This will install Rhodes, RhoStudio, RhoConnect, as well as [Ruby](http://www.ruby-lang.org/en/) and [Redis](http://redis.io/) open source tools. 
 
 Additional installers will automatically launch for [Git](https://github.com/) and [Node.js](https://nodejs.org/). Follow prompts and read and accept their respective open-source license agreements as appropriate. 
 
@@ -84,7 +84,7 @@ The RhoMobile installer for Windows places the following items in the Windows St
 
 * Launchers for RhoStudio 32- and 64-bit editions
 * A link to the Readme file
-* Links to the [RhoMobile Developer Community](http://developer.motorolasolutions.com) and [RhoMobile Documentation](/home) sites
+* Links to the [RhoMobile Developer Community](http://forums.tau-technologies.com/) and [RhoMobile Documentation](/home) sites
 * A link to the RhoConnect Push Service files
 * An uninstaller for RhoMobile Suite
 
@@ -114,7 +114,7 @@ The RhoMobile installer for Windows places the following items in the Windows St
 #####4. Use RVM to install Ruby 1.9.3 (even if you have a newer version)<br>
 #####5. Run the "install gems" Terminal script from the RhoMobile Suite .dmg
 **OPTIONAL STEPS:** 
-#####Set up native SDKs for specific target devices (Android, iOS)<br>
+#####Set up native SDKs for specific target devices (Android, iOS, Sailfish)<br>
 #####Run the "Install RhoConnect-push" Terminal script<br><br>
 
 #### Detailed instructions for Mac OS X Installations:
@@ -200,7 +200,7 @@ A Terminal window will open and execute an installation script.<br>
 
 
 ## Installing Native SDKs (Optional)
-RhoStudio permits development of native apps for Android, iOS and Windows Mobile and Windows 10 Mobile on the local development host. If you plan to build native apps locally, you'll need to install the corresponding SDKs for each. For detailed instructions, please visit RhoMobile's [native SDK setup documentation page](/guide/nativesdksetup).<br>
+RhoStudio permits development of native apps for Android, iOS, Sailfish, Windows Mobile and Windows 10 Mobile on the local development host. If you plan to build native apps locally, you'll need to install the corresponding SDKs for each. For detailed instructions, please visit RhoMobile's [native SDK setup documentation page](/guide/nativesdksetup).<br>
 <br>
 
 ## Troubleshooting Windows Installs
