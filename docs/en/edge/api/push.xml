@@ -18,6 +18,8 @@ For FCM:
     fcmSenderID: 'your_fcm_sender_id'
     fcmAppID: 'your_fcm_app_id'
 
+    or put google-services.json file in the root folder of the app.
+
 For GCM ( NB: GCM is deprecated, we recommend using FCM push ):
     :::ruby
     capabilities: ["push"]
