@@ -814,6 +814,12 @@ If you need to call JNI functions from your native code, you need to retrieve th
 
 If your native extension uses prebuilt libraries (jars), your build script must copy all such jar files to the TARGET_TEMP_DIR. The jar files must have the extension '.jar'; RhoMobile will include these files automatically in the final build.
 
+Another option is to specify prebuilts location under android/prebuilts section of build.yml:
+
+	:::yaml
+	android:
+		prebuilts: ext/platform/android/prebuilts
+
 ### Creating Native Threads
 
 If your native extension creates a native thread (using pthread_create, for example), this thread should be attached to the JVM so that it can call Java methods from its context. Do this by using the rho_nativethread_start/rho_nativethread_end functions, called at the start/end of your thread routine. 
