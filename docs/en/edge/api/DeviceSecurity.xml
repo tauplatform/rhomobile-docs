@@ -6,53 +6,49 @@
         <MORE_HELP>
 ## Enabling the API
 This API is part of the `devicesecurity` extension.
-
-    :::ruby
-    extensions: ["devicesecurity"]
-
+:::ruby
+extensions: ["devicesecurity"]
 
 ## Setting allowed certificate signatures for the app
 It is only applicable to Android platform.
 This will embed certain certificate signatures to the app that can be checked with calling:
+:::ruby
+Rho::DeviceSecurity.getAppCertificateSignatures
 
-    :::ruby
-    Rho::DeviceSecurity.getAppCertificateSignatures
-
-    Rho::DeviceSecurity.getAllowedCertificateSignatures
-
+:::ruby
+Rho::DeviceSecurity.getAllowedCertificateSignatures
 
 To determine required signature you may use this demo app:
-[DeviceSecurityDemo](https://github.com/tauplatform/demos/tree/master/DeviceSecurityDemo)
+[a link](https://github.com/tauplatform/demos/tree/master/DeviceSecurityDemo)
 
 Sign it with your production certificate and observe signature value after running the app.
 Then paste the value into build.yml. Signature value will look like Base64 encoded string, for instance '4o7xYWLVqbE+lK020bKX0+wnM48='.
 Multiple values can be used.
 
-    :::ruby
-    android:
-      security:
-        allowed_cert_signatures:
-        - "4o7xYWLVqbE+lK020bKX0+wnM48="
-        - "signature1"
-        - "signature2"
-        - "signature3"
+:::ruby
+android:
+  security:
+    allowed_cert_signatures:
+    - 4o7xYWLVqbE+lK020bKX0+wnM48=
+    - "signature1"
+    - "signature2"
+    - "signature3"
 
 ## Setting allowed installer packages for the app
 This will embed certain package names to the app which can be compared against actuall app intaller package. It is only applicable to Android platform.
+:::ruby
+Rho::DeviceSecurity.getInstallerPackageName
 
-    :::ruby
-    Rho::DeviceSecurity.getInstallerPackageName
-
-    Rho::DeviceSecurity.getAllowedInstallerPackages
-
+:::ruby
+Rho::DeviceSecurity.getAllowedInstallerPackages
 
 For instance if you only want your app to be installed from Google Play Store, allow 'com.android.vending' installer package. Multiple values can be used.
 
-    :::ruby
-    android:
-      security:
-        allowed_installers:
-        - 'com.android.vending'
+:::ruby
+android:
+  security:
+    allowed_installers:
+    - 'com.android.vending'
 
 
         </MORE_HELP>
