@@ -18,8 +18,8 @@ class Topic
     dirs = AppConfig['dirs'] || {}
     paths = dirs.values.map! { |path| path += "*.md" }
     # puts paths
-    paths << 'docs/en/**/**/*.md'
-    FileList[paths]
+    paths << ['docs/en/5.5/**/*.md', 'docs/en/6.0/**/*.md', 'docs/en/edge/**/*.md']
+    FileList[paths].exclude(/\/rhoconnectjs\//)
   end
 
   attr_reader :topic, :title, :content, :toc, :toc_sub, :intro, :body
