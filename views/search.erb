@@ -1,14 +1,10 @@
 <% @title = "Search for #{params[:q]}" %>
-
+<% puts total %>
 <h1><%=search['matches'] %> Results for <em style="color:#4c4074"><%= params[:q] %></em>:</h1>
 
 <label for="versions">Choose a version:</label>
 <select id="versions">
-	<% versions = total['facets']['version'].collect {|versionName, matches| versionName}
-		 versions = versions.sort {|x, y| y <=> x}
-		 versions = versions - [Version::CURR_VERSION, 'hosted']
-		 versions.unshift(Version::CURR_VERSION)
-		 versions.each do |each| %>
+	<% [Version::NEXT_VERSION, Version::CURR_VERSION, Version::PREV_VERSION].each do |each| %>
 		<option value="<%= each %>"
 						<% if @docversion == each %> selected
 						<% end %> ><%= each %></option>
@@ -18,7 +14,8 @@
 <div id="facets" data-query="<%= params[:q] %>">
 	<%
 		@allselected = true
-		total['facets']['category'].each do |category, matches| %>
+		cats = total['facets']['category'] || []
+		cats.each do |category, matches| %>
 		<%
 			# if combination is in the search reseults then set item to highlugh and true
 			# if !search["facets"][facettype].nil? && !search["facets"][facettype][key].nil?
