@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    //console.log("Document is ready", new Date().valueOf());
     $(".js-pjax").pjax({
         container: "#t_content",
         fragment: "#rendered_topic",
@@ -109,7 +110,6 @@ $(document).ready(function() {
         var docCatKey = $(this).attr('data-id');
         var docCat = $(this).attr('data-type');
         var sCats = [];
-        var sVers = [];
 
         if ($(this).attr('data-selected') == 'true') {
             $(this).attr('data-selected', 'false');
@@ -121,17 +121,27 @@ $(document).ready(function() {
             // do something
             sCats.push($(this).attr('data-id'));
         });
-        $('#facets > span[data-selected="true"][data-type="version"]').each(function() {
-            // do something
-            sVers.push($(this).attr('data-id'));
-        });
+        var sVers = [$("#versions option:selected").val()];
 
 
         window.location = window.location.protocol + '//' + window.location.host + window.location.pathname + '?q=' + $('#facets').attr('data-query') + '&c=' + sCats.join(",") + '&v=' + sVers.join(",");
     });
 
+    //search handler for filtering
+    $('#versions').change(function(e) {
+        //console.log("version is changed", new Date().valueOf());
+        var sVers = [$("#versions option:selected").val()];
+        var sCats = [];
+        $('#facets > span[data-selected="true"][data-type="category"]').each(function() {
+            // do something
+            sCats.push($(this).attr('data-id'));
+        });
+        window.location = window.location.protocol + '//' + window.location.host + window.location.pathname + '?q=' + $('#facets').attr('data-query') + '&c=' + sCats.join(",") + '&v=' + sVers.join(",");
+    });
+
     $('#facets > span[data-type="all"]').click(function(e) {
-        window.location = window.location.protocol + '//' + window.location.host + window.location.pathname + '?q=' + $('#facets').attr('data-query');
+        var sVers = [$("#versions option:selected").val()];
+        window.location = window.location.protocol + '//' + window.location.host + window.location.pathname + '?q=' + $('#facets').attr('data-query') + '&v=' + sVers.join(",");
     });
 
     $("#searchForm").indextank_Ize('http://rd4f.api.searchify.com', 'rhodocs');

@@ -2,41 +2,46 @@
 
 <h1><%=search['matches'] %> Results for <em style="color:#4c4074"><%= params[:q] %></em>:</h1>
 
+<label for="versions">Choose a version:</label>
+<select id="versions">
+	<% versions = total['facets']['version'].collect {|versionName, matches| versionName}
+		 versions = versions.sort {|x, y| y <=> x}
+		 versions = versions - [Version::CURR_VERSION, 'hosted']
+		 versions.unshift(Version::CURR_VERSION)
+		 versions.each do |each| %>
+		<option value="<%= each %>"
+						<% if @docversion == each %> selected
+						<% end %> ><%= each %></option>
+	<% end %>
+</select>
+
 <div id="facets" data-query="<%= params[:q] %>">
-  <% 
-  @allselected=true
-  			
-total['facets'].each do |facettype,facet| %>
-  	<% facet.each do |key,value| %>
-  		<%
-  			# if combination is in the search reseults then set item to highlugh and true
-  			# if !search["facets"][facettype].nil? && !search["facets"][facettype][key].nil?
-  			if (!categories[facettype].nil? && categories[facettype].include?(key)) || categories == {}
-  			 
-  				badgetype='badge-info'
-				typeselected='true'
+	<%
+		@allselected = true
+		total['facets']['category'].each do |category, matches| %>
+		<%
+			# if combination is in the search reseults then set item to highlugh and true
+			# if !search["facets"][facettype].nil? && !search["facets"][facettype][key].nil?
+			if (!categories['category'].nil? && categories['category'].include?(category)) || categories['category'].nil?
+				badgetype = 'badge-info'
+				typeselected = 'true'
 			else
-				badgetype='badge'
-				typeselected='false'
-				@allselected=false
-  			end
-  		%>
-    	<span class="badge filter <%=badgetype%>" data-selected= "<%=typeselected%>" data-type="<%=facettype%>" data-id='<%=key %>'><%=key %> </span>
-    <% end %>
-  <% end %>
-  <%
-  # puts @allselected
-  if  categories != {} && !@allselected
-  %>
-  <span class="badge badge-inverse" data-type="all" ><i class="icon icon-refresh icon-large icon-muted"></i></span>
-  <%
-  	end
-  %>
+				badgetype = 'badge'
+				typeselected = 'false'
+				@allselected = false
+			end
+		%>
+		<span class="badge filter <%= badgetype %>" data-selected="<%= typeselected %>" data-type="category" data-id='<%= category %>'><%= category %> </span>
+
+	<% end %>
+	<% if categories != {} && !@allselected %>
+		<span class="badge badge-inverse" data-type="all"><i class="icon icon-refresh icon-large icon-muted"></i></span>
+	<% end %>
 
 </div>
 
 <div id="results">
-  <% search['results'].each do |result| 
+	<% search['results'].each do |result|
     # puts result
     %>
     <div class="result">
