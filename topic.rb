@@ -2,40 +2,40 @@ require 'rdiscount'
 require './models'
 
 class Topic
-  
+
   def text_only
     @body = @body.gsub(/\<[^\<]+\>/,'')
     self
   end
-  
+
   def self.load(topic, source)
     topic = new(topic, source)
     topic.parse
     return topic
   end
-  
+
   def self.all_topics
     dirs = AppConfig['dirs'] || {}
     paths = dirs.values.map! { |path| path += "*.md" }
     # puts paths
-    paths <<'docs/en/**/**/*.md'
+    paths << 'docs/en/**/**/*.md'
     FileList[paths]
   end
-  
+
   attr_reader :topic, :title, :content, :toc, :toc_sub, :intro, :body
-  
+
   def initialize(name, source)
     @topic = name
     @source = source
   end
-  
+
   def parse
     @topic = topic
     @content = markdown(source)
     @title, @content = _title(@content)
     @toc, @content = _toc(@content)
     @toc_sub, @content = _tocSub(@content)
-    
+
     if @toc.any?
       @intro, @body = @content.split('<h2>', 2)
       @body = "<h2>#{@body}"
@@ -43,7 +43,7 @@ class Topic
       @intro, @body = '', @content
     end
   end
-  
+
   protected
 
   def source
@@ -94,7 +94,7 @@ class Topic
     content.scan(/<h3 data-h2="([^<]+)">([^<]+)<\/h3>/m).each {|m|
       hash = { "h2" => m[0], "h3" => m[1] }
       toc.push(hash)
-  
+
     } #.to_a #.map #{ |m| m.first }
     # puts toc
     content_with_anchors = content.gsub(/(<h3 data-h2="([^<]+)">[^<]+<\/h3>)/m) do |m|
@@ -106,8 +106,6 @@ class Topic
   def self.model(topicfile)
     model = nil
     model = Models.docmodel(topicfile)
-    
-    
     return model
   end
 
