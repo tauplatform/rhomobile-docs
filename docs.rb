@@ -136,8 +136,13 @@ class Docs < Sinatra::Base
     q = params[:q].gsub(':','\:')
     page = params[:page].to_i
     category = params[:c]
-    version = params[:v]
+    version =  params[:v]
+
+    if version.nil? || version == ''
+      version = Version::CURR_VERSION
+    end
     @docversion = version
+
     total,dum_prev,dumb_next = search_for(q, page, '','')
 
     search, prev_page, next_page = search_for(q, page, params[:c],params[:v])
