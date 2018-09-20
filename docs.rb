@@ -20,7 +20,7 @@ class Docs < Sinatra::Base
   end
 
   use PdfMaker
-  use Rack::Codehighlighter, :coderay, :markdown => true, :element => "pre>code", 
+  use Rack::Codehighlighter, :coderay, :markdown => true, :element => "pre>code",
     :pattern => /:::(\w+)\s*(\n|&#x000A;)/i, :logging => false
 
   $LOAD_PATH << File.dirname(__FILE__) + '/lib'
@@ -37,7 +37,7 @@ class Docs < Sinatra::Base
     subpath = request.path.split('/')[3]
     @alt_url = "#{request.scheme}://#{request.host}/en/2.2.0/#{subpath}/#{topic}"
     # puts @alt_url
-    
+
     docversion = '2.2.0'
     if topic.include?('/')
         topic_file = topic
@@ -46,7 +46,7 @@ class Docs < Sinatra::Base
           # topic_file = File.join(AppConfig['dirs'][subpath], "#{topic}.md")
         else
           topic_file = File.join("docs/en/#{docversion}/#{subpath}/", "#{topic}.md")
-        end  
+        end
       else
         if docversion.nil?
          topic_file = "#{settings.root}/docs/#{topic}.md"
@@ -55,14 +55,14 @@ class Docs < Sinatra::Base
         end
       end
     if  topic == 'apicompatibility'
-      source = Indicators.apimatrix_markdown()  
+      source = Indicators.apimatrix_markdown()
     else
       source = File.read(topic_file)
     end
     source = source
     # puts "SOURCE:#{source}"
      topic = Topic.load(topic, source)
-    @alt_title   = topic.title 
+    @alt_title   = topic.title
     @alt_content = topic.content
     @alt_intro   = topic.intro
     @alt = true
@@ -94,7 +94,7 @@ class Docs < Sinatra::Base
         redirect "en/edge"
       else
         @docversion = AppConfig['current_version']
-      end        
+      end
       @docversion = params[:vnum]
       if @docversion.nil?
         @docversion = AppConfig['current_version']
@@ -125,7 +125,7 @@ class Docs < Sinatra::Base
     end
   end
 
-  get '/print/home' do 
+  get '/print/home' do
     @print = 1
     cache_long
     erb :index
@@ -137,11 +137,12 @@ class Docs < Sinatra::Base
     page = params[:page].to_i
     category = params[:c]
     version = params[:v]
+    @docversion = version
     total,dum_prev,dumb_next = search_for(q, page, '','')
 
     search, prev_page, next_page = search_for(q, page, params[:c],params[:v])
 
-    #searchify object 
+    #searchify object
     categories = {}
       if !category.nil? && category != ''
         catArray = []
@@ -177,7 +178,7 @@ class Docs < Sinatra::Base
     xml_string +=  '      <opensearch:startIndex>' + ((page + 1) * 10).to_s + '</opensearch:startIndex>'
     xml_string +=  '      <opensearch:itemsPerPage>10</opensearch:itemsPerPage>'
     xml_string +=  '      <opensearch:Query role="request" searchTerms="' + params[:q] + '" startPage="1" />'
-    search['results'].each do |result| 
+    search['results'].each do |result|
     xml_string +=  '<item>'
     xml_string +=  '       <title><![CDATA[' + result['title'] + ']]></title>'
     xml_string +=  '       <link>' + request.base_url + '/' + result['docid'] + '</link>'
@@ -187,11 +188,11 @@ class Docs < Sinatra::Base
     xml_string +=  '       ]]></description>'
     xml_string +=  '     </item>'
 
-  end 
+  end
   xml_string +=  '   </channel>'
   xml_string +=  ' </rss>	'
 #<?xml version="1.0" encoding="UTF-8"?>
-# <rss version="2.0" 
+# <rss version="2.0"
 #      xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/"
 #      xmlns:atom="http://www.w3.org/2005/Atom">
 #   <channel>
@@ -207,17 +208,17 @@ class Docs < Sinatra::Base
 #       <title>New York History</title>
 #       <link>http://www.columbia.edu/cu/lweb/eguids/amerihist/nyc.html</link>
 #       <description>
-#         ... Harlem.NYC - A virtual tour and information on 
-#         businesses ...  with historic photos of Columbia's own New York 
+#         ... Harlem.NYC - A virtual tour and information on
+#         businesses ...  with historic photos of Columbia's own New York
 #         neighborhood ... Internet Resources for the City's History. ...
 #       </description>
 #     </item>
 #   </channel>
-# </rss>	
+# </rss>
 
 	#xml_string = '<?xml version="1.0" encoding="UTF-8"?>'
 	#xml_string += '<rss version="2.0"  xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/"    xmlns:atom="http://www.w3.org/2005/Atom">'
-#		xml_string += '   <channel>	     <title>Example.com Search: New York history</title>	     <link>http://example.com/New+York+history</link>	     <description>Search results for "New York history" at Example.com</description>	     <opensearch:totalResults>4230000</opensearch:totalResults>	     <opensearch:startIndex>21</opensearch:startIndex>	     <opensearch:itemsPerPage>10</opensearch:itemsPerPage>	     <atom:link rel="search" type="application/opensearchdescription+xml" href="http://example.com/opensearchdescription.xml"/>	     <opensearch:Query role="request" searchTerms="New York History" startPage="1" />	     <item>	       <title>New York History</title>	       <link>http://www.columbia.edu/cu/lweb/eguids/amerihist/nyc.html</link>	       <description>	         ... Harlem.NYC - A virtual tour and information on 	         businesses ...  with historic photos of Columbias own New York 	         neighborhood ... Internet Resources for the Citys History. ...	       </description>	     </item>	   </channel>	 </rss>'	
+#		xml_string += '   <channel>	     <title>Example.com Search: New York history</title>	     <link>http://example.com/New+York+history</link>	     <description>Search results for "New York history" at Example.com</description>	     <opensearch:totalResults>4230000</opensearch:totalResults>	     <opensearch:startIndex>21</opensearch:startIndex>	     <opensearch:itemsPerPage>10</opensearch:itemsPerPage>	     <atom:link rel="search" type="application/opensearchdescription+xml" href="http://example.com/opensearchdescription.xml"/>	     <opensearch:Query role="request" searchTerms="New York History" startPage="1" />	     <item>	       <title>New York History</title>	       <link>http://www.columbia.edu/cu/lweb/eguids/amerihist/nyc.html</link>	       <description>	         ... Harlem.NYC - A virtual tour and information on 	         businesses ...  with historic photos of Columbias own New York 	         neighborhood ... Internet Resources for the Citys History. ...	       </description>	     </item>	   </channel>	 </rss>'
     xml_string
   end
 
@@ -230,7 +231,7 @@ class Docs < Sinatra::Base
       end
 
       # If the topic ends in ".pdf" or ".print", tell render_topic to use the print view
-      
+
       @tut = TUT.steps(params[:topic])
       @doc = @tut[0]
       @docTitle = @tut[1]
@@ -258,7 +259,7 @@ class Docs < Sinatra::Base
       end
       render_topic topic_doc, 'tutorial', 0, @docversion
       erb :tutorial
-      
+
     end
   end
 
@@ -277,14 +278,14 @@ class Docs < Sinatra::Base
       if params[:topic] =~ /(\.pdf|\.print)$/
         newtopic = params[:topic].gsub(/(\.pdf|\.print)/,"")
             render_topic newtopic, params[:subpath], 1
-      
+
       else
         if params[:topic].nil?
           render_topic params[:topic], params[:subpath], 0
         else
           @docversion = params[:vnum]
           render_topic params[:topic], params[:subpath], 0, params[:vnum]
-        end          
+        end
 
       end
     end
@@ -303,7 +304,7 @@ end
   	def render_topic(topic, subpath = nil, print = 0, docversion = nil)
          # puts "#{subpath} :#{topic} :  #{docversion}"
       if TOC.find("/#{subpath}/#{topic}") == '' && docversion.nil?
-        
+
           #if not in TOC then make it default to 2.2 version
           # docversion='2.2'
           # @docversion = '2.2'
@@ -312,21 +313,21 @@ end
       @topic_file = topic_file(topic,subpath,docversion)
        # puts @topic_file
       if  topic == 'apicompatibility'
-        source = Indicators.apimatrix_markdown()  
+        source = Indicators.apimatrix_markdown()
       else
         source = File.read(topic_file(topic, subpath,docversion))
       end
       source = source
       @topic = Topic.load(topic, source)
 
-  		@title   = @topic.title 
+  		@title   = @topic.title
   		@content = @topic.content
       @intro   = @topic.intro
       @indicatorslang = ""
       @oslist = ""
 
       if(subpath and topic)
-  		  # @title  += Indicators.load('/' + subpath + '/' + topic + '/') 
+  		  # @title  += Indicators.load('/' + subpath + '/' + topic + '/')
          @indicatorslang = Indicators.languages('/' + subpath + '/' + topic + '/')
          @oslist = Indicators.oslist('/' + subpath + '/' + topic + '/')
 		  end
@@ -334,7 +335,7 @@ end
   		@toc     = @topic.toc
   		@toc_sub     = @topic.toc_sub
       @body    = @topic.body
-      		
+
   		@print = print
       if subpath.nil? || subpath == ''
         @topicmodel = Topic.model('/' + topic)
@@ -347,15 +348,15 @@ end
           erb :topic, :layout => !pjax?
         end
       end
-      
+
   	rescue Errno::ENOENT
   		status 404
   	end
-	
+
   	def search_for(query, page = 0, category='', version='')
       client = IndexTank::Client.new(ENV['SEARCHIFY_API_URL'])
       index = client.indexes(AppConfig['index'])
-    
+
       categories = {}
       if !category.nil? && category != ''
         catArray = []
@@ -368,11 +369,11 @@ end
         verArray = version.split(",")
         categories["version"] = verArray
       end
-      
-     
-      
-      search = index.search(query, :start => page * 10, :len => 10, 
-        :fetch => 'title,dockey,version,category,docexternal', 
+
+
+
+      search = index.search(query, :start => page * 10, :len => 10,
+        :fetch => 'title,dockey,version,category,docexternal',
         :snippet => 'text', :category_filters => categories)
       next_page =
         if search and search['matches'] and search['matches'] > (page + 1) * 10
@@ -385,10 +386,10 @@ end
 
       [search, prev_page, next_page]
   	end
-	
+
     def recent_updates(count = 5, category='', version='')
       client = IndexTank::Client.new(ENV['SEARCHIFY_API_URL'])
-  
+
       index = client.indexes(AppConfig['index'])
       query = "category:(#{category})"
       categories = {
@@ -397,18 +398,18 @@ end
       }
       # puts categories
       if version != ''
-      search = index.search(query, 
+      search = index.search(query,
        :len => count,
-       :function => 1, 
-       :fetch => 'title,timestamp,docexternal,dockey', 
+       :function => 1,
+       :fetch => 'title,timestamp,docexternal,dockey',
        :category_filters => categories)
       else
-      search = index.search(query, 
+      search = index.search(query,
        :len => count,
-       :function => 1, 
+       :function => 1,
        :fetch => 'title,timestamp,docexternal,dockey')
       end
-    
+
       puts search["matches"]
       search
     end
@@ -423,12 +424,12 @@ end
     #       File.join(AppConfig['dirs'][subpath], "#{topic}.md")
     #     else
     #       File.join((AppConfig['dirs'][subpath]).gsub("docs/","v/#{docversion}/docs/"), "#{topic}.md")
-    #     end  
+    #     end
   		else
         File.join("docs/en/#{docversion}/#{subpath}/#{topic}.md")
   		end
   	end
-	
+
   	def topic_path
   	  params[:subpath] ? [params[:subpath],params[:topic]].join('/') : params[:topic]
     end
@@ -451,7 +452,7 @@ end
     def related
       #toc.rb in root will be latest TOC
       #doc versions can have unique TOC found in /v/VERSION/toc.rb
-      
+
       TOC.related
     end
 
@@ -467,7 +468,7 @@ end
   		# end
   		# nil
   	end
-  
+
     def pjax?
       env['HTTP_X_PJAX'] || params['_pjax']
     end
@@ -504,7 +505,7 @@ module TOC
 	def topic(name, title)
 		sections.last.last << [name, title, []]
 	end
-  
+
   def find(path)
      # puts "#{path}"
     compare = path.dup
@@ -514,7 +515,7 @@ module TOC
     # found = @sections[0][0] # Default to first section
     @sections.map do |section|
       section[3].map do |slug, title, _|
-        
+
         found = section[0] if slug == compare
 
       end
@@ -556,7 +557,7 @@ module TUT
   def gitlabel(name, title)
     tutorials.last.last << [name, title, []]
   end
-  
+
   def steps(tut)
     # puts "#{tut}"
     found={}
