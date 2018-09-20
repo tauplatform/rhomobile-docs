@@ -222,7 +222,7 @@ end
 section 'rhoconnect-administration',             'Administration','RhoConnect Guides' do
   topic 'en/5.5/rhoconnect/settings',           'RhoConnect Settings'
   topic 'en/5.5/rhoconnect/web-console',        'Admin Web Interface'
-topic 'en/hosted/guide/licensing-rhoconnect',    'Licensing your RhoConnect App'
+  topic 'en/hosted/guide/licensing-rhoconnect',    'Licensing your RhoConnect App'
   topic 'en/5.5/rhoconnect/benchmarks',         'Rhoconnect Benchmarking'
   topic 'en/5.5/rhoconnect/benchmarks-running', 'Running Rhoconnect Benchmarks'
   topic 'en/5.5/rhoconnect/stats-middleware',   'Collecting Runtime Stats'
@@ -246,10 +246,10 @@ section 'rhoconnect-nonrhodes-client-reference',  'Clients','RhoConnect Guides' 
   topic 'en/5.5/rhoconnect/rest-api',            'RhoConnect REST API'
   topic 'en/5.5/rhoconnect/client-objc',         'RhoConnect Client for iOS'
   topic 'en/5.5/rhoconnect/client-java',         'RhoConnect without Rhodes: Android Java'
-  topic 'en/5.5/rhoconnectjs/introduction',      'RhoConnect.JS Client'
-  topic 'en/5.5/rhoconnectjs/getting-started',   'RhoConnect.JS Getting Started'
-  topic 'en/5.5/rhoconnectjs/reference',         'RhoConnect.JS API Reference'
-  topic 'en/5.5/rhoconnectjs/creating-app',      'RhoConnect.JS Creating an App'
+  # topic 'en/5.5/rhoconnectjs/introduction',      'RhoConnect.JS Client'
+  # topic 'en/5.5/rhoconnectjs/getting-started',   'RhoConnect.JS Getting Started'
+  # topic 'en/5.5/rhoconnectjs/reference',         'RhoConnect.JS API Reference'
+  # topic 'en/5.5/rhoconnectjs/creating-app',      'RhoConnect.JS Creating an App'
 end
 
 section 'rhoconnect-adapters-reference',      'Vendor Adapters','RhoConnect Guides' do
