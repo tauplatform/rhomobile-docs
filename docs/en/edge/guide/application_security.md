@@ -5,7 +5,7 @@
 
 When developing a mobile application, you should remember that the data used by this application may be of some interest to third parties.
 The value of this data varies widely, however, even the most simple private information, such as an application login and password, requires elaboration of its protection. 
-This is especially important for mobile applications in all areas of electronic services, including financial, banking, storage and transfer of personal data, etc.
+This is especially important for mobile applications in all areas of web services, including financial, banking, storage and transfer of personal data, etc.
 
 
 ## The main types of attacks
