@@ -109,6 +109,11 @@ If your application requires local (on-device) database encryption, enable it by
     :::yaml
     encrypt_database: 1
 
+If you are using RMS with version lesser than 6.0.58 and want to update your application with a version, built on newer RMS version, and you don't want to database be automatically clean - you should enable a flag in `build.yml`: 
+    
+    :::yaml
+    use_deprecated_encryption: 1
+
 **NOTE: Database encryption is not currently supported for applications that use bulk sync.**
 
 ### Platform Notes
