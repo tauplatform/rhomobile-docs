@@ -1,4 +1,4 @@
-desc 'Push latest docs to edgedocs'
+desc '[Non actual] Push latest docs to edgedocs'
 task :publish_edge do
   `git add .`
   `git commit -m "jenkins auto-commit"`

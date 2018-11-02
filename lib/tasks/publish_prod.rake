@@ -1,4 +1,4 @@
-desc 'Publish docs to production'
+desc '[Non actual] Publish docs to production'
 task :publish_prod do
   `git pull`
   `git push production master`

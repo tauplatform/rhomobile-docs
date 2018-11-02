@@ -1,4 +1,4 @@
-desc 'Create offline archive'
+desc '[Non working] Create offline archive'
 task :archive do
   serverpid = Process.fork { Rake::Task['server'].invoke }
 
@@ -7,7 +7,7 @@ task :archive do
 
   `wget -mirror -k -E -nH -nv -P archive http://127.0.0.1:9393/`
   puts "Mirroring complete. Killing server."
-  
+
   Process.kill(9,serverpid)
   Rake::Task['process_archive'].invoke
 

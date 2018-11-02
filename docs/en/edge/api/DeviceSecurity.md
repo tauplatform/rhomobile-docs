@@ -3,57 +3,55 @@
 <p>API for check device securty (JailBrake for iOS, root for Android etc.)</p>
 <h2>Enabling the API</h2>
 
-<p>This API is part of the <code>devicesecurity</code> extension.</p>
-
-<pre><code>:::ruby
-extensions: ["devicesecurity"]
-</code></pre>
+<p>This API is part of the <code>devicesecurity</code> extension.
+:::ruby
+extensions: [&ldquo;devicesecurity&rdquo;]</p>
 
 <h2>Setting allowed certificate signatures for the app</h2>
 
 <p>It is only applicable to Android platform.
-This will embed certain certificate signatures to the app that can be checked with calling:</p>
+This will embed certain certificate signatures to the app that can be checked with calling:
+:::ruby
+Rho::DeviceSecurity.getAppCertificateSignatures</p>
 
-<pre><code>:::ruby
-Rho::DeviceSecurity.getAppCertificateSignatures
-
-Rho::DeviceSecurity.getAllowedCertificateSignatures
-</code></pre>
+<p>:::ruby
+Rho::DeviceSecurity.getAllowedCertificateSignatures</p>
 
 <p>To determine required signature you may use this demo app:
-<a href="https://github.com/tauplatform/demos/tree/master/DeviceSecurityDemo">DeviceSecurityDemo</a></p>
+<a href="https://github.com/tauplatform/demos/tree/master/DeviceSecurityDemo">a link</a></p>
 
 <p>Sign it with your production certificate and observe signature value after running the app.
 Then paste the value into build.yml. Signature value will look like Base64 encoded string, for instance &lsquo;4o7xYWLVqbE+lK020bKX0+wnM48=&rsquo;.
 Multiple values can be used.</p>
 
-<pre><code>:::ruby
+<p>:::ruby
 android:
-  security:
-    allowed_cert_signatures:
-    - "4o7xYWLVqbE+lK020bKX0+wnM48="
-    - "signature1"
-    - "signature2"
-    - "signature3"
+  security:</p>
+
+<pre><code>allowed_cert_signatures:
+- 4o7xYWLVqbE+lK020bKX0+wnM48=
+- "signature1"
+- "signature2"
+- "signature3"
 </code></pre>
 
 <h2>Setting allowed installer packages for the app</h2>
 
-<p>This will embed certain package names to the app which can be compared against actuall app intaller package. It is only applicable to Android platform.</p>
+<p>This will embed certain package names to the app which can be compared against actuall app intaller package. It is only applicable to Android platform.
+:::ruby
+Rho::DeviceSecurity.getInstallerPackageName</p>
 
-<pre><code>:::ruby
-Rho::DeviceSecurity.getInstallerPackageName
-
-Rho::DeviceSecurity.getAllowedInstallerPackages
-</code></pre>
+<p>:::ruby
+Rho::DeviceSecurity.getAllowedInstallerPackages</p>
 
 <p>For instance if you only want your app to be installed from Google Play Store, allow &lsquo;com.android.vending&rsquo; installer package. Multiple values can be used.</p>
 
-<pre><code>:::ruby
+<p>:::ruby
 android:
-  security:
-    allowed_installers:
-    - 'com.android.vending'
+  security:</p>
+
+<pre><code>allowed_installers:
+- 'com.android.vending'
 </code></pre>
 
 

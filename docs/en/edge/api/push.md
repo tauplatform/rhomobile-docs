@@ -18,6 +18,8 @@ capabilities: ["push"]
 extensions: ["fcm-push"]
 fcmSenderID: 'your_fcm_sender_id'
 fcmAppID: 'your_fcm_app_id'
+
+or put google-services.json file in the root folder of the app.
 </code></pre>
 
 <p>For GCM ( NB: GCM is deprecated, we recommend using FCM push ):</p>

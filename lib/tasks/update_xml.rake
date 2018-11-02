@@ -3,7 +3,7 @@ task :update_xml do
   update_xml
 end
 
-desc 'update api docs for eb'
+desc '[Non actual] update api docs for eb'
 task :update_xml_eb do
   update_xml_eb
 end

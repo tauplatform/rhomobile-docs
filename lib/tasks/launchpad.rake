@@ -1,9 +1,9 @@
-desc 'imageVersion= location of images generate Launchpad HTMl from MD for EB'
+desc '[Non actual] imageVersion= location of images generate Launchpad HTMl from MD for EB'
 task :lp_generate_html do
   lp_generate_html
 end
 
-desc 'publish Launchpad HTMl pass in user= password= ex: rake lp_publish_html user=abc password=abc123 [filelimit=true]'
+desc '[Non actual] publish Launchpad HTMl pass in user= password= ex: rake lp_publish_html user=abc password=abc123 [filelimit=true]'
 task :lp_publish_html do
   if ENV['user'].nil? || ENV['password'].nil? || ENV['server'].nil?
   	puts "Wrong format: rake lp_publish_html user=abc password=abc123 server=uat or prod"
@@ -13,7 +13,7 @@ task :lp_publish_html do
 end
 
 
-desc 'delete docs from LP'
+desc '[Non actual] delete docs from LP'
 task :lp_delete_docs do
   if ENV['user'].nil? || ENV['password'].nil? || ENV['server'].nil?
   	puts "Wrong format: rake lp_publish_html user=abc password=abc123 server=uat or prod"
@@ -22,12 +22,12 @@ task :lp_delete_docs do
   end
 end
 
-desc 'generate baseline mapping index file for Lp Url rewrite'
+desc '[Non actual] generate baseline mapping index file for Lp Url rewrite'
 task :lp_generate_mapping_index do
   Launchpad.generate_mapping_index
 end
 
-desc 'JSON to go in Lp theme child-sharedvars.ftl EMDKContent'
+desc '[Non actual] JSON to go in Lp theme child-sharedvars.ftl EMDKContent'
 task :lp_generate_theme_content_json do
   if ENV['server'].nil?
     puts "Wrong format: rake lp_generate_theme_content_json server=uat or prod"
@@ -43,7 +43,7 @@ task :lp_generate_theme_content_json do
       url_map.each do |key,item|
         lpid = key.gsub('/','')
         lpid = lpid.gsub('-','')
-        
+
         lpurl = item['url'][env]
         puts "\"#{lpid}\":\"#{lpurl}\","
       end
@@ -54,7 +54,7 @@ task :lp_generate_theme_content_json do
   end
 end
 
-desc 'JSON to go in Lp theme child-sharedvars.ftl EMDKContent'
+desc '[Non actual] JSON to go in Lp theme child-sharedvars.ftl EMDKContent'
 task :lp_generate_api_theme_content_json do
   apiMD = File.join(AppConfig['api_eb'],"**","*.md")
   apiFiles = Dir.glob(apiMD)
@@ -63,11 +63,11 @@ task :lp_generate_api_theme_content_json do
       puts "{"
       puts '"urlProp":"${ebContent.api' + basename + '}",'
       puts '"displayNameProp":"'+  basename + '",'
-      puts '"iconProp" : "", ' 
+      puts '"iconProp" : "", '
       puts '"iconPropSm" : "",  '
       puts '"descProp" : ""'
       puts '},'
-    
+
   end
 
 end

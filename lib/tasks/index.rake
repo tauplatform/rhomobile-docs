@@ -33,7 +33,7 @@ task :index do
       maxsize = 100000
       last_commit = '1293911429'
       begin
-        rest_result = RestClient.get("https://api.github.com/repos/rhomobile/rhomobile-docs/commits?path=#{doc}", :Authorization => "token #{ENV['GIT_TOKEN']}").body
+        rest_result = RestClient.get("https://api.github.com/repos/tauplatform/rhomobile-docs/commits?path=#{doc}", :Authorization => "token #{ENV['GIT_TOKEN']}").body
 
         if rest_result.code != 200
           puts ('Error communicating with site')

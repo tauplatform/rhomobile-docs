@@ -512,7 +512,7 @@ module TOC
 	end
 
   def find(path)
-     # puts "#{path}"
+    puts "find path: #{path}"
     compare = path.dup
     compare.slice!(0)
     compare.gsub!(/v\/([^\/]+)\//,'')
@@ -525,7 +525,7 @@ module TOC
 
       end
     end
-    # puts "FOund:#{found}"
+    puts "Found:#{found}"
     found
   end
 

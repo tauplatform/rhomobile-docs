@@ -1,6 +1,6 @@
-desc 'Check docs.rhomobile.com for broken links'
+desc '[Non working] Check docs.tau-technologies.com for broken links'
 task :check_links do
-  URI = "http://docs.rhomobile.com"
+  URI = "http://docs.tau-technologies.com"
   OPTIONS = "--no-warnings --max-threads 400"
 
   def check_links

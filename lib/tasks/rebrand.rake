@@ -1,4 +1,4 @@
-desc 'Analyze current version toc for missing docs'
+desc '[Non actual] Analyze current version toc for missing docs'
 task :rebrand_moto do
 	ctr = 0
 	Topic.all_topics.each do |doc|
@@ -15,7 +15,7 @@ task :rebrand_moto do
 	          fd.write(source)
 	        end
 
-		end   
+		end
 	end
 	puts "...done: #{ctr} files updated"
 end
