@@ -227,7 +227,36 @@ class Docs < Sinatra::Base
     xml_string
   end
 
-['/tutorial/:step/:topic/?',  '/tutorial/:topic/?','/en/:vnum/tutorial/:step/:topic/?',  '/en/:vnum/tutorial/:topic/?'].each do |path|
+
+  #get '/:topic' do
+  # TODO: use proper regex
+  ['/en/:vnum/:topic/?', '/en/:vnum/:subpath/:topic/?', '/tutorial/welcome'].each do |path|
+    get path do
+      # puts params[:vnum]
+      # puts params[:subpath]
+      # puts params[:topic]
+
+  	  cache_long
+      @docversion = nil
+
+      # If the topic ends in ".pdf" or ".print", tell render_topic to use the print view
+      if params[:topic] =~ /(\.pdf|\.print)$/
+        newtopic = params[:topic].gsub(/(\.pdf|\.print)/,"")
+            render_topic newtopic, params[:subpath], 1
+
+      else
+        if params[:topic].nil?
+          render_topic params[:topic], params[:subpath], 0
+        else
+          @docversion = params[:vnum]
+          render_topic params[:topic], params[:subpath], 0, params[:vnum]
+        end
+
+      end
+    end
+  end
+
+  ['/tutorial/:step/:topic/?',  '/tutorial/:topic/?','/en/:vnum/tutorial/:step/:topic/?',  '/en/:vnum/tutorial/:topic/?'].each do |path|
     get path do
       cache_long
       @docversion = params[:vnum]
@@ -260,39 +289,13 @@ class Docs < Sinatra::Base
 
       topic_doc = params[:topic]
       if !@step.nil?
+        puts "topic_doc 1 #{topic_doc} #{@step}"
         topic_doc += '.' + @step
+        puts "topic_doc2  #{topic_doc}"
       end
       render_topic topic_doc, 'tutorial', 0, @docversion
       erb :tutorial
 
-    end
-  end
-
-  #get '/:topic' do
-  # TODO: use proper regex
-  ['/en/:vnum/:topic/?', '/en/:vnum/:subpath/:topic/?'].each do |path|
-    get path do
-      # puts params[:vnum]
-      # puts params[:subpath]
-      # puts params[:topic]
-
-  	  cache_long
-      @docversion = nil
-
-      # If the topic ends in ".pdf" or ".print", tell render_topic to use the print view
-      if params[:topic] =~ /(\.pdf|\.print)$/
-        newtopic = params[:topic].gsub(/(\.pdf|\.print)/,"")
-            render_topic newtopic, params[:subpath], 1
-
-      else
-        if params[:topic].nil?
-          render_topic params[:topic], params[:subpath], 0
-        else
-          @docversion = params[:vnum]
-          render_topic params[:topic], params[:subpath], 0, params[:vnum]
-        end
-
-      end
     end
   end
 
@@ -440,7 +443,7 @@ end
     end
 
   	def cache_long
-  		response['Cache-Control'] = "public, max-age=#{60 * 60}" unless development?
+  		response['Cache-Control'] = "public, max-age=#{60 * 60}" unless Sinatra::Base.environment == :development
   	end
 
   	def slugify(title)

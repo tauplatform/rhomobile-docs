@@ -53,6 +53,7 @@
       homepath    = "#{vpath}/home"
       mapipath    = "#{vpath}/guide/apisummary"
       mguidepath  = "#{vpath}/guide/welcome"
+      tutorialpath  = "#{vpath}/tutorial/welcome"
       rcguidepath = "#{vpath}/rhoconnect/introduction"
     else
       vpath       = "/en/#{@docversion}"
@@ -78,6 +79,13 @@
         <li class="<%=sectionGroup == 'Mobile Guides' ? 'active' : ''%>">
           <a href="<%=mguidepath%>"><i class="icon-book"></i> RhoMobile Guides</a>
         </li>
+
+        <% if @docversion != '2.2.0' %>
+          <li class="<%= sectionGroup == 'RhoMobile Tutorials' ? 'active' : '' %>">
+            <a href="<%= tutorialpath %>"><i class="icon-book"></i> RhoMobile Tutorials</a>
+          </li>
+        <% end %>
+
         <li class="<%=sectionGroup == 'RhoConnect Guides' ? 'active' : ''%>">
           <a href="<%=rcguidepath%>"><i class="icon-refresh"></i> RhoConnect Guides</a>
         </li>

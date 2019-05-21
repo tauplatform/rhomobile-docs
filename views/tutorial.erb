@@ -1,16 +1,16 @@
 <div id="rendered_topic_container" style="overflow:auto;padding-right: 5px;">
 	<div id="rendered_topic" data-title="Rhomobile | <%=h @title %>">
-		<% if @stepTitle != '' %>	
-		
+		<% if @stepTitle != '' %>
+
 		<div class="row-fluid">
 			<ul doc-tutorial-nav="0" class="btn-group pull-left">
-				
+
 				<%if @prevStep!=''%>
 					<a href="/en/<%=@docversion %>/tutorial/<%=@prevStep %>/<%=@doc %>"><li class="btn btn-primary <%='disabled' if @prevStep==''%>" ><i class="icon-step-backward icon-muted"></i> Previous</li></a>
 				<% else %>
-					<li class="btn disabled"><i class="icon-step-backward"></i> Previous</li> 
+					<li class="btn disabled"><i class="icon-step-backward"></i> Previous</li>
 				<%end%>
-				
+
 				<%if @nextStep!=''%>
 				<a href="/en/<%=@docversion %>/tutorial/<%=@nextStep %>/<%=@doc %>"><li class="btn  btn-primary ">Next <i class="icon-step-forward icon-muted"></i></li></a>
 				<% else %>
@@ -20,17 +20,17 @@
 			</ul>
 			<%if !@codediffUrl.nil? %>
 			<ul class="btn-group pull-right">
-			
+
 				<a href="<%=@codediffUrl%>" target="_blank"><li class="btn btn-primary "><i class="icon-search  icon-muted"></i> Code Diff</li></a>
 			</ul>
 
 				<%end%>
 		</div>
 		<% end %>
-		
+
 
 		<div class="row-fluid">
-		<% if @stepTitle != '' %>	
+		<% if @stepTitle != '' %>
 			<H1><%=@stepTitle%></H1>
 		<% else %>
 			<H1><%=@docTitle%></H1>
@@ -40,24 +40,24 @@
 		</div>
 
 		<div class="row-fluid">
-		
+
 
 		<%= @body %>
 		</div>
 
-		
-		
-		<% if @stepTitle != '' %>	
-		
+
+
+		<% if @stepTitle != '' %>
+
 		<div class="row-fluid">
 			<ul doc-tutorial-nav="0" class="btn-group pull-left">
 				<a href="<%= topic_path %>"><li class="btn btn-primary "><i class="icon icon-arrow-up icon-muted"></i> Back to Top</li></a>
 				<%if @prevStep!=''%>
 					<a href="/en/<%=@docversion %>/tutorial/<%=@prevStep %>/<%=@doc %>"><li class="btn <%='disabled' if @prevStep==''%> btn-primary "><i class="icon-step-backward icon-muted"></i> Previous</li></a>
 				<% else %>
-					<li class="btn disabled"><i class="icon-step-backward"></i> Previous</li> 
+					<li class="btn disabled"><i class="icon-step-backward"></i> Previous</li>
 				<%end%>
-				
+
 				<%if @nextStep!=''%>
 				<a href="/en/<%=@docversion %>/tutorial/<%=@nextStep %>/<%=@doc %>"><li class="btn  btn-primary ">Next <i class="icon-step-forward icon-muted"></i></li></a>
 				<% else %>
@@ -67,7 +67,7 @@
 			</ul>
 			<%if !@codediffUrl.nil? %>
 			<ul class="btn-group pull-right">
-			
+
 				<a href="<%=@codediffUrl%>" target="_blank"><li class="btn btn-primary "><i class="icon-search icon-muted"></i> Code Diff</li></a>
 			</ul>
 
@@ -80,9 +80,9 @@
 		<div style="padding:20px">
 		</div>
 		<% end %>
-		
+
 
 	</div>
 
-	
+
 </div>
