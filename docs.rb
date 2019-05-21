@@ -230,19 +230,67 @@ class Docs < Sinatra::Base
 
   #get '/:topic' do
   # TODO: use proper regex
-  ['/en/:vnum/:topic/?', '/en/:vnum/:subpath/:topic/?', '/tutorial/welcome'].each do |path|
+
+  ['/tutorial/:step/:topic/?',  '/tutorial/:topic/?','/en/:vnum/tutorial/:step/:topic/?',  '/en/:vnum/tutorial/:topic/?'].each do |path|
+    puts "2 matched for /en/edge/tutorial/welcome #{path}"
+    get path do
+      cache_long
+      @docversion = params[:vnum]
+      if @docversion.nil?
+        @docversion = AppConfig['current_version']
+      end
+
+      # If the topic ends in ".pdf" or ".print", tell render_topic to use the print view
+
+      topic_doc = params[:topic]
+      if topic_doc != 'welcome'
+        @tut = TUT.steps(params[:topic])
+        @doc = @tut[0]
+        @docTitle = @tut[1]
+        @baseurl = @tut[3]
+        @steps = @tut[4]
+        @topic = params[:topic]
+        @step = params[:step]
+        @prevStep = ''
+        @nextStep = ''
+        @currindex = -1
+        @stepTitle = ''
+        @steps.each do |gitlabel, title|
+
+          @currindex += 1 if !@step.nil?
+          @stepTitle = title if !@step.nil?
+          break if @step == gitlabel
+        end
+        @prevStep = @steps[@currindex - 1][0] if @currindex > 0
+        @nextStep = @steps[@currindex + 1][0] if @currindex < @steps.length - 1
+        @codediffUrl = "#{@baseurl}/compare/#{@prevStep}...#{@step}" if @prevStep != '' && @baseurl != ''
+
+        if !@step.nil?
+          topic_doc += '.' + @step
+        end
+        render_topic topic_doc, 'tutorial', 0, @docversion
+        erb :tutorial
+      else
+        render_topic topic_doc, 'tutorial', 0, @docversion
+        erb :topic, :layout => !pjax?
+      end
+
+    end
+  end
+
+  ['/en/:vnum/:topic/?', '/en/:vnum/:subpath/:topic/?'].each do |path|
     get path do
       # puts params[:vnum]
       # puts params[:subpath]
       # puts params[:topic]
 
-  	  cache_long
+      cache_long
       @docversion = nil
 
       # If the topic ends in ".pdf" or ".print", tell render_topic to use the print view
       if params[:topic] =~ /(\.pdf|\.print)$/
         newtopic = params[:topic].gsub(/(\.pdf|\.print)/,"")
-            render_topic newtopic, params[:subpath], 1
+        render_topic newtopic, params[:subpath], 1
 
       else
         if params[:topic].nil?
@@ -253,49 +301,6 @@ class Docs < Sinatra::Base
         end
 
       end
-    end
-  end
-
-  ['/tutorial/:step/:topic/?',  '/tutorial/:topic/?','/en/:vnum/tutorial/:step/:topic/?',  '/en/:vnum/tutorial/:topic/?'].each do |path|
-    get path do
-      cache_long
-      @docversion = params[:vnum]
-      if @docversion.nil?
-        @docversion = AppConfig['current_version']
-      end
-
-      # If the topic ends in ".pdf" or ".print", tell render_topic to use the print view
-
-      @tut = TUT.steps(params[:topic])
-      @doc = @tut[0]
-      @docTitle = @tut[1]
-      @baseurl = @tut[3]
-      @steps = @tut[4]
-      @topic = params[:topic]
-      @step = params[:step]
-      @prevStep = ''
-      @nextStep = ''
-      @currindex = -1
-      @stepTitle = ''
-      @steps.each do |gitlabel, title|
-
-        @currindex += 1 if !@step.nil?
-        @stepTitle = title if !@step.nil?
-        break if @step == gitlabel
-      end
-      @prevStep = @steps[@currindex-1][0] if @currindex > 0
-      @nextStep = @steps[@currindex+1][0] if @currindex < @steps.length-1
-      @codediffUrl = "#{@baseurl}/compare/#{@prevStep}...#{@step}" if @prevStep != '' && @baseurl !=''
-
-      topic_doc = params[:topic]
-      if !@step.nil?
-        puts "topic_doc 1 #{topic_doc} #{@step}"
-        topic_doc += '.' + @step
-        puts "topic_doc2  #{topic_doc}"
-      end
-      render_topic topic_doc, 'tutorial', 0, @docversion
-      erb :tutorial
-
     end
   end
 
