@@ -1,3 +1,4 @@
+ruby "2.6.1"
 source 'http://rubygems.org'
 
 gem 'xml-simple'
