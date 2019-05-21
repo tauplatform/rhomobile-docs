@@ -1,9 +1,9 @@
 development:
-  api_sources: 
-    - '../rhodes/lib/commonAPI/'
-    - '../Motorola-Extensions/lib/commonAPI/'
-    - '../rhodes/res/generators/templates/api/xml_templates/'
-    - '../rhoconnect-client/ext/rhoconnect-client/ext/'
+  api_sources:
+    - '~/projects⁩/rhomobile⁩/rhodes/lib/commonAPI/'
+    - '~/projects⁩/rhomobile⁩/rhodes/res/generators/templates/api/xml_templates/'
+    - '~/projects⁩/rhomobile⁩/rhoconnect-client/ext/rhoconnect-client/ext/'
+    #- '../Motorola-Extensions/lib/commonAPI/'
   api: 'docs/en/edge/api/'
   api_eb: 'eb/en/edge/api/'
   guides_eb: 'eb/en/edge/guide/'
@@ -16,7 +16,7 @@ development:
   pdfkithost: 'localhost:9393'
   current_version: '6.0'
 jenkins:
-  api_sources: 
+  api_sources:
     - '../../rhodes/workspace/lib/commonAPI/'
     - '../../Motorola-Extensions/workspace/lib/commonAPI/'
     - '../../rhodes/workspace/res/generators/templates/api/xml_templates/'

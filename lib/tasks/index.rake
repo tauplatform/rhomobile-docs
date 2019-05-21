@@ -33,20 +33,22 @@ task :index do
       maxsize = 100000
       last_commit = '1293911429'
       begin
-        rest_result = RestClient.get("https://api.github.com/repos/tauplatform/rhomobile-docs/commits?path=#{doc}", :Authorization => "token #{ENV['GIT_TOKEN']}").body
-
+        url = "https://api.github.com/repos/tauplatform/rhomobile-docs/commits?path=#{doc}"
+        rest_result = RestClient.get(url, :Authorization => "token #{ENV['GIT_TOKEN']}")
         if rest_result.code != 200
           puts ('Error communicating with site')
           parsed = JSON.parse(rest_result)
           puts parsed["message"]
         else
-           parsed = JSON.parse(rest_result)
-           last_commit = DateTime.parse(parsed[0]['commit']['committer']['date']).strftime('%s')
-           puts last_commit
+          parsed = JSON.parse(rest_result.body)
+          value = DateTime.parse(parsed[0]['commit']['committer']['date'])
+          last_commit = value.strftime('%s')
+          puts "The latest commit of  #{doc} was at #{value}"
         end
 
       rescue Exception => e
-        puts "Failed to get last commit date"
+        puts e.backtrace
+        puts "Failed to get last commit date of #{doc}"
       end
 
       if topic.body.size() > maxsize

@@ -6,7 +6,7 @@ require "coderay"
 module CodeRay
   module Scanners
     class Term < Scanner
-      include CodeRay::Streamable
+      #include CodeRay::Streamable
       register_for :term
 
       def scan_tokens (tokens, options)
