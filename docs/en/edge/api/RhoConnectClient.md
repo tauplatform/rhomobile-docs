@@ -4,11 +4,9 @@
 
 <h2>Enabling the API</h2>
 
-<p>In order to use this API you must include the following extension in your <code>build.yml</code></p>
-
-<pre><code>:::ruby
-extensions: ["rhoconnect-client"]
-</code></pre>
+<p>In order to use this API you must include the following extension in your <code>build.yml</code>
+    :::ruby
+    extensions: [&ldquo;rhoconnect-client&rdquo;]</p>
 
 <h2>JavaScript Usage</h2>
 
@@ -362,56 +360,56 @@ end
 <p>These parameters are included in all notifications.</p>
 
 <ul>
-<li>source_id &ndash; The id of the current model that is synchronizing.</li>
-<li>source_name &ndash; Name of the model (i.e. &ldquo;Product&rdquo;)</li>
-<li>sync_type &ndash; Type of sync used for this model: &ldquo;incremental&rdquo; or &ldquo;bulk&rdquo;</li>
-<li>status &ndash; Status of the current sync process. See below for the possible values:</li>
+<li>source_id - The id of the current model that is synchronizing.</li>
+<li>source_name - Name of the model (i.e. &ldquo;Product&rdquo;)</li>
+<li>sync_type - Type of sync used for this model: &ldquo;incremental&rdquo; or &ldquo;bulk&rdquo;</li>
+<li>status - Status of the current sync process. See below for the possible values:</li>
 </ul>
 
 
 <p>In the following sections we cover the different status values and parameters available with each status.</p>
 
-<h3>status: &ldquo;in_progress&rdquo; &ndash; incremental sync progress</h3>
+<h3>status: &ldquo;in_progress&rdquo; - incremental sync progress</h3>
 
 <ul>
-<li>total_count &ndash; Total number of records that exist for this RhoConnect source.</li>
-<li>processed_count &ndash; Number of records included in the sync page.</li>
-<li>cumulative_count &ndash; Number of records the SyncEngine has processed so far for this source.</li>
+<li>total_count - Total number of records that exist for this RhoConnect source.</li>
+<li>processed_count - Number of records included in the sync page.</li>
+<li>cumulative_count - Number of records the SyncEngine has processed so far for this source.</li>
 </ul>
 
 
-<h3>status: &ldquo;in_progress&rdquo; &ndash; bulk sync progress</h3>
+<h3>status: &ldquo;in_progress&rdquo; - bulk sync progress</h3>
 
 <ul>
-<li><p>bulk_status &ndash; The state of the bulk sync process:</p>
+<li><p>bulk_status - The state of the bulk sync process:</p>
 
 <ul>
-<li>start &ndash; Bulk sync has started for a specific partition</li>
-<li>download &ndash; Bulk sync file download has started</li>
-<li>change_db &ndash; New bulk sync database change has started</li>
-<li>blobs &ndash; Bulk sync blob files have started to download</li>
-<li>ok &ndash; Current partition has completed</li>
-<li>complete &ndash; All partitions have completed</li>
+<li>start - Bulk sync has started for a specific partition</li>
+<li>download - Bulk sync file download has started</li>
+<li>change_db - New bulk sync database change has started</li>
+<li>blobs - Bulk sync blob files have started to download</li>
+<li>ok - Current partition has completed</li>
+<li>complete - All partitions have completed</li>
 </ul>
 </li>
-<li><p>partition &ndash; Current bulk sync partition.</p></li>
+<li><p>partition - Current bulk sync partition.</p></li>
 </ul>
 
 
 <h3>status: &ldquo;error&rdquo;</h3>
 
 <ul>
-<li>error_code &ndash; HTTP response code of the RhoConnect server error: 401, 500, 404, etc.</li>
-<li>error_message &ndash; Response body (if any)</li>
-<li>server_errors &ndash; Hash of Type objects of RhoConnect adapter error (if exists):
+<li>error_code - HTTP response code of the RhoConnect server error: 401, 500, 404, etc.</li>
+<li>error_message - Response body (if any)</li>
+<li>server_errors - Hash of Type objects of RhoConnect adapter error (if exists):
 
 <ul>
-<li>login-error &ndash; An error in adapter login method</li>
-<li>query-error &ndash; An error in adapter query method</li>
-<li>create-error &ndash; An error in adapter create method</li>
-<li>update-error &ndash; An error in adapter update method</li>
-<li>delete-error &ndash; An error in adapter delete method</li>
-<li>logoff-error &ndash; An error in adapter logoff method</li>
+<li>login-error - An error in adapter login method</li>
+<li>query-error - An error in adapter query method</li>
+<li>create-error - An error in adapter create method</li>
+<li>update-error - An error in adapter update method</li>
+<li>delete-error - An error in adapter delete method</li>
+<li>logoff-error - An error in adapter logoff method</li>
 </ul>
 </li>
 </ul>
@@ -419,19 +417,15 @@ end
 
 <p>Each error contains a &lsquo;message&rsquo; key with the error message.</p>
 
-<p>Ruby Example:</p>
+<p>Ruby Example:
+    :::ruby
+    @params[&ldquo;server_errors&rdquo;][&ldquo;query-error&rdquo;][&ldquo;message&rdquo;]
+    #=> &ldquo;Error connecting to backend server: http://rhostore.herokuapp.com&rdquo;</p>
 
-<pre><code>:::ruby
-@params["server_errors"]["query-error"]["message"] 
-#=&gt; "Error connecting to backend server: http://rhostore.herokuapp.com"
-</code></pre>
-
-<p>JavaScript Example:</p>
-
-<pre><code>:::javascript
-params.server_errors["query-error"].message
-//=&gt; "Error connecting to backend server: http://rhostore.herokuapp.com"
-</code></pre>
+<p>JavaScript Example:
+    :::javascript
+    params.server_errors[&ldquo;query-error&rdquo;].message
+    //=> &ldquo;Error connecting to backend server: http://rhostore.herokuapp.com&rdquo;</p>
 
 <h4>Handling &lsquo;create-error&rsquo;</h4>
 

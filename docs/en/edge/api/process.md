@@ -3,11 +3,9 @@
 <p>This API is used to either navigate to a URL or call a javascript function when an attached card reader decodes data. Only the foreground application is given access to the card reader hardware, when an application is sent to the background its state will be saved and it will automatically relinquish control of the card reader. When brought back to the foreground, an application previously using the card reader will have its previous configuration (eg. pinTimeout) reapplied to the card reader automatically.</p>
 <h2>Enabling the API</h2>
 
-<p>This API is part of the <code>coreapi</code> extension that is included automatically.</p>
-
-<pre><code>:::ruby
-extensions: ["coreapi"]
-</code></pre>
+<p>This API is part of the <code>coreapi</code> extension that is included automatically.
+    :::ruby
+    extensions: [&ldquo;coreapi&rdquo;]</p>
 
 <h2>JavaScript Usage</h2>
 

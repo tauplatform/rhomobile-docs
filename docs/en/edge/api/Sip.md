@@ -3,11 +3,9 @@
 <p>The SIP API controls whether the default software input panel (SIP) is displayed on the Android Device.</p>
 <h2>Enabling the API</h2>
 
-<p>In order to use this API you must include the following extension in your <code>build.yml</code></p>
-
-<pre><code>:::ruby
-extensions: ["sip"]
-</code></pre>
+<p>In order to use this API you must include the following extension in your <code>build.yml</code>
+    :::ruby
+    extensions: [&ldquo;sip&rdquo;]</p>
 
 
 <a name='Methods'></a>

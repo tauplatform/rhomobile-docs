@@ -3,11 +3,9 @@
 <p>This JavaScript API class allows you to interact with the local RHOM database and programatically add models or get references to models.</p>
 <h2>Enabling the API</h2>
 
-<p>This API is part of the <code>coreapi</code> extension that is included automatically.</p>
-
-<pre><code>:::ruby
-extensions: ["coreapi"]
-</code></pre>
+<p>This API is part of the <code>coreapi</code> extension that is included automatically.
+    :::ruby
+    extensions: [&ldquo;coreapi&rdquo;]</p>
 
 <h2>JavaScript Usage</h2>
 
@@ -37,7 +35,7 @@ extensions: ["coreapi"]
 </dt><dt>fixedSchema</dt><dd><p>Model will be of type fixedSchema.</p>
 </dt></dl></li><li>property("name","type") : <span class='text-info'>STRING,STRING</span> <span class='label label-info'>Optional</span><p><p>Used to create properties on your model.</p>
  </p></li><ul><li>name : <span class='text-info'>STRING</span><p><p>The name of the property.</p>
- </p></li><li>type : <span class='text-info'>STRING</span><p><p>The type of property value: String, Float, integer, Varchar, Blob &ndash; String is default.</p>
+ </p></li><li>type : <span class='text-info'>STRING</span><p><p>The type of property value: String, Float, integer, Varchar, Blob - String is default.</p>
  </p></li></ul><li>addIndex("name",[colArray]) : <span class='text-info'>STRING, ARRAY</span> <span class='label label-info'>Optional</span><p><p>Add an index to your fixedSchema model.</p>
  </p></li><ul><li>name : <span class='text-info'>STRING</span><p><p>The name of the index.</p>
  </p></li><li>colArray : <span class='text-info'>ARRAY</span><p><p>Array of model column names to use in index, Ex: [&lsquo;name&rsquo;,&lsquo;qty&rsquo;]</p>

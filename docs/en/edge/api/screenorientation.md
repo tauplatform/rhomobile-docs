@@ -3,11 +3,9 @@
 <p>The ScreenOrientation Module is used to control the screen orientation / layout and register to receive an event when it changes.</p>
 <h2>Enabling the API</h2>
 
-<p>In order to use this API you must include the following extension in your <code>build.yml</code>.</p>
-
-<pre><code>:::ruby
-extensions: ["screenorientation"]
-</code></pre>
+<p>In order to use this API you must include the following extension in your <code>build.yml</code>.
+    :::ruby
+    extensions: [&ldquo;screenorientation&rdquo;]</p>
 
 <h2>JavaScript Usage</h2>
 

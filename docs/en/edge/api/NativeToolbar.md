@@ -1,15 +1,13 @@
 #NativeToolbar
 <div class="btn-group"><a href="#Methods" class="btn"><i class="icon-cog"></i> Methods<sup>&nbsp;2</sub></a><a class="btn dropdown-toggle" data-toggle="dropdown" data-target="#" href="#Methods" >  <span class="caret"></span>&nbsp;</a><ul class="dropdown-menu" style="max-height: 500px;overflow: auto;"><li class="disabled"><a tabindex="-1" href="#"><b><i>Methods - Class</i></b></a><li><a href="#mcreate" data-target="cMethodcreate" class="autouncollapse">create</a></li><li><a href="#mremove" data-target="cMethodremove" class="autouncollapse">remove</a></li></li></ul></div><div class="btn-group"><a href="#Examples" class="btn"><i class="icon-edit"></i> Examples<sup>&nbsp;2</sup></a><button href="#" class="btn dropdown-toggle" data-toggle="dropdown">  <span class="caret"></span>&nbsp;</button><ul class="dropdown-menu" style="max-height: 500px;overflow: auto;"><li><a href="#e0" data-target="eExample0" class="autouncollapse">Create native toolbar</a></li><li><a href="#e1" data-target="eExample1" class="autouncollapse">Remove the toolbar</a></li></ul></div><div class="btn-group pull-right"><button class="btn dropdown-toggle" id="apiFilterBtn" data-toggle="dropdown" href="#" title="Filter Properties and Methods"><i class="icon-filter "></i>Show</button><select id="apiFilter" class="dropdown-menu apiFilter"><option value="all">All</option><option value="js">JavaScript</option><option value="ruby">Ruby</option><option value="android">Android</option><option value="ios">iOS</option><option value="wm">Windows Mobile</option><option value="wp8">Windows Phone 8</option><option value="w32">Windows Desktop</option><option value="msi">MSI Only</option></select></div><div  id="apibody" style="overflow:auto;padding-right: 5px;">
 <p>The NativeToolbar method let you create and remove a toolbar at runtime.</p>
-<p> Either Toolbar or Tabbar should be used in an application &ndash; Toolbar and Tabbar shouldnot be used simultaneously.</p>
+<p> Either Toolbar or Tabbar should be used in an application - Toolbar and Tabbar shouldnot be used simultaneously.</p>
 
 <h2>Enabling the API</h2>
 
-<p>This API is part of the <code>coreapi</code> extension that is included automatically.</p>
-
-<pre><code>:::ruby
-extensions: ["coreapi"]
-</code></pre>
+<p>This API is part of the <code>coreapi</code> extension that is included automatically.
+    :::ruby
+    extensions: [&ldquo;coreapi&rdquo;]</p>
 
 <h2>JavaScript Usage</h2>
 
@@ -45,7 +43,7 @@ extensions: ["coreapi"]
  Platforms: <p>WM, CE, Win32</p>
 </dt><dt>SIP</dt><dd><p>Display software keyboard window.Set <code>Rho.System.keyboardState</code> to <code>Rho.System.KEYBOARD_AUTOMATIC</code> to use this element.</p>
  Platforms: <p>WM</p>
-</dt></dl></li><li>icon : <span class='text-info'>STRING</span><p><p>Relative path to toolbar item icon in your rhodes app (typically located in &lsquo;/public/images/&rsquo;). Icon is ignored for predefined actions, icon will be displayed even if no icon specified. iPhone and Android: Icons must be no more than 30x30 pixels and must be in .png format. Windows Mobile: Icons can be any size, but all icons should have same size (default &ndash; 48x48). .png and .bmp formats are supported.</p>
+</dt></dl></li><li>icon : <span class='text-info'>STRING</span><p><p>Relative path to toolbar item icon in your rhodes app (typically located in &lsquo;/public/images/&rsquo;). Icon is ignored for predefined actions, icon will be displayed even if no icon specified. iPhone and Android: Icons must be no more than 30x30 pixels and must be in .png format. Windows Mobile: Icons can be any size, but all icons should have same size (default - 48x48). .png and .bmp formats are supported.</p>
  </p></li><li>coloredIcon : <span class='text-info'>BOOLEAN</span><span class='label '> Default: false</span><p><p>Use colored icon in toolbar on iPhone instead of standard monochrome white icon (prepared from image alpha).</p>
  Platforms:iOS </p></li><li>width : <span class='text-info'>INTEGER</span><p><p>Button width in pixel. Used to define separator width when more than one separator specified.</p>
  Platforms:WM </p></li></ul></ul><li>toolBarProperties : <span class='text-info'>HASH</span><p><p>Properties of TabBar.</p>

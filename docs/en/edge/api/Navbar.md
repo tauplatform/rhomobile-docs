@@ -3,11 +3,9 @@
 <p>The NavBar API supports a native navigation bar for iOS devices.</p>
 <h2>Enabling the API</h2>
 
-<p>This API is part of the <code>coreapi</code> extension that is included automatically.</p>
-
-<pre><code>:::ruby
-extensions: ["coreapi"]
-</code></pre>
+<p>This API is part of the <code>coreapi</code> extension that is included automatically.
+    :::ruby
+    extensions: [&ldquo;coreapi&rdquo;]</p>
 
 <h3>JavaScript Usage</h3>
 

@@ -3,11 +3,9 @@
 <p>captures video files from the default camera device.Only the foreground application is given access to capture video, when an application is sent to the background any capture that is in progress will be canceled and it will automatically relinquish control of the video hardware. When brought back to the foreground, an application previously using the video capture will have its previous configuration (eg. name etc.) reapplied to the plug-in automatically. Please note that any file transfer that is in progress continues even if the application is sent to the background.</p>
 <h2>Enabling the API</h2>
 
-<p>In order to use this API you must include the following extension in your <code>build.yml</code></p>
-
-<pre><code>:::ruby
-extensions: ["mediacapture"]
-</code></pre>
+<p>In order to use this API you must include the following extension in your <code>build.yml</code>
+    :::ruby
+    extensions: [&ldquo;mediacapture&rdquo;]</p>
 
 <h2>JavaScript Usage</h2>
 

@@ -3,11 +3,9 @@
 <p>Audio capture API allows you to capture audio from the device&rsquo;s built in microphone or input source.</p>
 <h2>Enabling the API</h2>
 
-<p>In order to use this API you must include the following extension in your <code>build.yml</code></p>
-
-<pre><code>:::ruby
-extensions: ["audiocapture"]
-</code></pre>
+<p>In order to use this API you must include the following extension in your <code>build.yml</code>
+    :::ruby
+    extensions: [&ldquo;audiocapture&rdquo;]</p>
 
 <h3>JavaScript Usage</h3>
 

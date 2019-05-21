@@ -3,17 +3,13 @@
 <p>The Card Reader module decodes the card data when read through a card reader attachment. Currently this is available only on Symbol Technologies devices.Only the foreground application is given access to the card reader hardware, when an application is sent to the background its state will be saved and it will automatically relinquish control of the card reader. When brought back to the foreground, an application previously using the card reader will have its previous configuration (eg. pinTimeout) reapplied to the card reader automatically.</p>
 <h2>Enabling the API</h2>
 
-<p>In order to use this API you must include the following extension in your <code>build.yml</code>.</p>
+<p>In order to use this API you must include the following extension in your <code>build.yml</code>.
+    :::ruby
+    extensions: [&ldquo;cardreader&rdquo;]</p>
 
-<pre><code>:::ruby
-extensions: ["cardreader"]
-</code></pre>
-
-<p>The <code>cardreader</code> extension is also included automatically if you specify the following in your <code>build.yml</code>.</p>
-
-<pre><code>:::ruby
-app_type: "rhoelements"
-</code></pre>
+<p>The <code>cardreader</code> extension is also included automatically if you specify the following in your <code>build.yml</code>.
+    :::ruby
+    app_type: &ldquo;rhoelements&rdquo;</p>
 
 <p>NOTE: If you are building a Windows Mobile or Windows CE app with this API, you must set your app_type as &ldquo;rhoelements&rdquo; in your build.yml as shown <a href="../guide/build_config#other-build-time-settings">here</a>.</p>
 

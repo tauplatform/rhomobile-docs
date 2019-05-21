@@ -3,17 +3,13 @@
 <p>The Battery API is used to notify the user of the remaining power in the battery. Windows Mobile / CE devices also support displaying a small indicator to show the available power.</p>
 <h2>Enabling the API</h2>
 
-<p>In order to use this API you must include the following extension in your <code>build.yml</code>.</p>
+<p>In order to use this API you must include the following extension in your <code>build.yml</code>.
+    :::ruby
+    extensions: [&ldquo;indicators&rdquo;]</p>
 
-<pre><code>:::ruby
-extensions: ["indicators"]
-</code></pre>
-
-<p>The <code>indicators</code> extension is also included automatically if you specify the following in your <code>build.yml</code></p>
-
-<pre><code>:::ruby
-app_type: "rhoelements"
-</code></pre>
+<p>The <code>indicators</code> extension is also included automatically if you specify the following in your <code>build.yml</code>
+    :::ruby
+    app_type: &ldquo;rhoelements&rdquo;</p>
 
 <blockquote><p>Note: If you are building a Windows Mobile or Windows CE app with this API, you must set your app_type as &ldquo;rhoelements&rdquo; in your <code>build.yml</code> as shown in this <a href="../guide/build_config#other-build-time-settings">build-time settings example</a>.</p></blockquote>
 

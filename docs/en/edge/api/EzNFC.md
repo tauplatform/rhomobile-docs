@@ -3,10 +3,8 @@
 <p>This API is used to enable/disable the NFC Adapter and read NFC Tags. <strong>The EzNFC API is currently supported on Android only</strong>.</p>
 <h2>Enabling the API</h2>
 
-<p>In order to use this API you must include the following extension in your <code>build.yml</code>.</p>
-
-<pre><code>extensions: ["eznfc"]
-</code></pre>
+<p>In order to use this API you must include the following extension in your <code>build.yml</code>.
+    extensions: [&ldquo;eznfc&rdquo;]</p>
 
 
 <a name='Methods'></a>

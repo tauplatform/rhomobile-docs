@@ -3,17 +3,13 @@
 <p>creates a rectangular box within which the user can draw by using a finger or the device&rsquo;s stylus to record handwritten data. Common usages for this tag include the capture of client/customer signatures and the input of handwritten text/notations. It is recommended to not to rotate the device when Signature window is shown.</p>
 <h2>Enabling the API</h2>
 
-<p>In order to use this API you must include the following extension in your <code>build.yml</code></p>
+<p>In order to use this API you must include the following extension in your <code>build.yml</code>
+    :::ruby
+    extensions: [&ldquo;signature&rdquo;]</p>
 
-<pre><code>:::ruby
-extensions: ["signature"]
-</code></pre>
-
-<p>The <code>signature</code> extension is also included automatically if you specify the following in your <code>build.yml</code></p>
-
-<pre><code>:::ruby
-app_type: "rhoelements"
-</code></pre>
+<p>The <code>signature</code> extension is also included automatically if you specify the following in your <code>build.yml</code>
+    :::ruby
+    app_type: &ldquo;rhoelements&rdquo;</p>
 
 <blockquote><p>Note: If you are building a Windows Mobile or Windows CE app with this API, you must set your app_type as &ldquo;rhoelements&rdquo; in your build.yml as shown <a href="../guide/build_config#other-build-time-settings">here</a>.</p></blockquote>
 
