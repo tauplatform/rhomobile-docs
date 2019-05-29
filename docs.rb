@@ -444,7 +444,7 @@ end
   	end
 
   	def topic_path
-  	  params[:subpath] ? [params[:subpath],params[:topic]].join('/') : params[:topic]
+  	  params[:subpath] ? ['en', params[:vnum], params[:subpath], params[:topic]].join('/') : params[:topic]
     end
 
   	def cache_long
