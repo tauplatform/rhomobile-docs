@@ -704,6 +704,15 @@ The `<CALLBACK>` tag uses exactly the same syntax as `<RETURN>`.
 
 * `ext/platform/android/ext_java.files` contains a list of the files that are required for an extension to build. If you add new Java files to your extension, you must add them to this list also or they will not be found at compile-time.
 
+* Specifiyng dependencies on Maven modules
+
+If your extension uses packages from Android Maven repository ( used by Anroid's Gradle build system ) then ensure you have installed repositories with Android SDK Manager and enumerate them in ext.yml file as in following example:
+
+	android:
+		maven_deps:
+		- 'com.google.firebase:firbase-messaging:11:0:2'
+		- 'com.vendor.package:detailed-package:1.2.3'
+
 * Making changes to application AndroidManifest.xml
 
 You can specify changes to AndroidManifest.xml in the ext.yml file as a list of paths to the files containing change instructions. There are three formats recognized by the build system, depending on the file extension:

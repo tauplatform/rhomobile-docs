@@ -25,23 +25,21 @@ The stand alone Android SDK is deprecated, but the SDK Manager is included with 
 3) Make a note of the SDK location, or (optionally) select a different location for the Android SDK repository.  This may be located on a shared network location to avoid multiple large downloads of each API level in multi-developer environments.
 
 3) On the "SDK Platforms" tab, select the API levels required.
-> Note: A minimum Android API level 10 must be installed for RhoStudio
+> Note: A minimum Android API level 19 must be installed for RhoStudio. Recommended API level is 28.
 
 > Note: To use Google Map View you need to install latest Google API from Android SDK Manager
 
-4) On the "SDK Tools" tab, select the "Android Support Repository" child option underneath "Android Support Repository".
+4) On the "SDK Tools" tab, select following items:
+* Support Repository
+* Google Play Services
+* NDK
 
 5) Once everything is selected, click "OK".  The SDK manager will then download all required files.  Click the "Background" to perform this in the background and continue with this setup
 
 ### Setting Up the Android NDK
 
-Recommended NDK version is 17b. NDK v18+ is not yet supported.
-Download and unzip the [Android NDK 17b](https://developer.android.com/ndk/downloads/older_releases.html) to the location of your choice.
-
-Direct links for NDK 17c downloads:
-* [for Linux](https://dl.google.com/android/repository/android-ndk-r17c-linux-x86_64.zip)
-* [for Mac OS X](https://dl.google.com/android/repository/android-ndk-r17c-darwin-x86_64.zip)
-* [for Windows](https://dl.google.com/android/repository/android-ndk-r17c-windows-x86_64.zip)
+Recommended NDK version is 20. Supported versions are 15c, 16b, 17c and 19. If NDK installed with SDK Manager does not work you can get supported version from Google NDK archive.
+Download and unzip the [Android NDK](https://developer.android.com/ndk/downloads/older_releases.html) to the location of your choice.
 
 > Note: You should update the Android SDK and NDK as you update to new versions of Rhodes.
 

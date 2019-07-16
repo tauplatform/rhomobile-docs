@@ -2,16 +2,25 @@
 ## Setup
 Follow the instructions for [setting up the development environment](nativesdksetup#setup-for-android) for building Android applications.
 
-### Building Remotely
-Alternatively, you can create the device builds remotely with RhoMobile hosted builds. Refer to our [remote build guide](../../hosted/guide/remote-build-guide) for more info.
-
 ## Set up minimal Android SDK API level
-The minimal API level supported by Rhodes is 4 (Android 1.6)
-You can set a greater minimal API level in build.yml. For example, the following entry will restrict installing your application on any Android OS prior to 3.0:
+The minimal API level supported by Rhodes is 19 (Android 4.4)
+You can set a greater minimal API level in build.yml. For example, the following entry will restrict installing your application on any Android OS prior to 7.0:
 
 	:::yml
 	android:
-		minSDK: 11
+		minSDK: 24
+
+## Set up native ABI for the application
+Rhodes and native extensions are built for target hardware architechture. The Rhodes app will not run on hardware for which the native part wasn't built. Architecture is specified by the ABI. Default ABI for Rhodes application is `arm`. To override or expand this setting modify the build.yml and enumerate required ABIs:
+
+	:::yml
+	android:
+		abis:
+		- arm
+		- aarch64
+		- x86
+
+* Supported ABIs are `arm`, `aarch64` and `x86`. Google requires the app to support `aarch64` ABI to be published to the Play Store.
 
 ## Device capabilities settings in build.yml
 On Android, you must specify your device capabilities the your application will use. By default, these capabilities are NOT enabled.
@@ -259,16 +268,16 @@ Extensions which came from RhoElements (i.e. AudioCapture) that could possibly w
 * MediaCapture
 
 ### Supported Icons
-The android build script supports icons for different screen density. To use this feature .png icons with exact size suffix should be added to `<app>/icon` folder.
+The android build script supports icons for different screen density. To use this feature .png icons with exact size suffix should be added to `<app>/resources/android/res` folder. The exact icon resource ID is specified in AndroidManifest.xml and unless it is overridden the default value is '@mipmap/icon'. This mean you should create `mipmap-<suffix>` subfolders with `icon.png` file inside. Suffix is DPI value and Android would use different icons for devices with different screen DPI. Usual values for the suffix are `hdpi`, `ldpi`, `mdpi`, `xhdpi`, `xxhdpi`, `xxxhdpi`.
 
-Next icon file names are supported:
+Default set of Android icon resources for newly-generated Rhodes app is:
 
-* icon.png    - remains as default icon resource
-* icon36.png  - LDPI screen density icon.
-* icon48.png  - MDPI
-* icon72.png  - HDPI
-* icon96.png  - XHDPI
-* icon144.png - XXHDPI
-* icon192.png - XXXHDPI
+* res/mipmap/icon.png
+* res/mipmap-ldpi/icon.png
+* res/mipmap-hdpi/icon.png
+* res/mipmap-mdpi/icon.png
+* res/mipmap-xhdpi/icon.png
+* res/mipmap-xxhdpi/icon.png
+* res/mipmap-xxxhdpi/icon.png
 
-The suffix means _recommended_ icon dimension in pixels and it is allowed to have slightly different size. In other words in icon36.png can actually be an image with size 32x32 or even 72x72.
+The suffix means _recommended_ icon dimension in pixels and it is allowed to have slightly different size. In other words an LDPI icon can actually be an image with size 32x32 or even 72x72.
