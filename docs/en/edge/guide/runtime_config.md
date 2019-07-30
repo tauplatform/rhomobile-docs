@@ -116,6 +116,12 @@ Sample yaml code:
     # show top menu on Windows desktop in full screen mode (default is 0=don't show top menu)
     # w32_fullscreen_menu = 1
 
+    # hides top system menu bar on Windows desktop (default is 0)
+    # w32_hide_menu_bar = 1
+
+    # starts application in maximized mode on Windows desktop (default is 0)
+    # start_maximized = 1
+
     # disable the Android page loading progress bar
     disable_loading_indication = 1
 
