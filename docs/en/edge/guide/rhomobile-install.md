@@ -91,9 +91,9 @@ The RhoMobile installer for Windows places the following items in the Windows St
 **NOTE:To run RhoStudio, you MUST USE THE RHOSTUDIO LAUNCHERS.
 
 ### *Ruby Notes*
->The RhoMobile Suite installer for Windows contains Ruby 1.9.3-p194. This version of Ruby is used for executing rake commands on the development host computer and for running RhoConnect applications.
+>The RhoMobile Suite installer for Windows contains Ruby 2.3.3. This version of Ruby is used for executing rake commands on the development host computer and for running RhoConnect applications.
 
->Native applications built with RhoStudio use Ruby 1.9.2-p290 on the target device.
+>Native applications built with RhoStudio use Ruby 2.3.3 on the target device.
 <br>
 
 
@@ -111,7 +111,7 @@ The RhoMobile installer for Windows places the following items in the Windows St
 #####1b. Copy RhoStudio to the development system's Applications folder `DO NOT LAUNCH!`<br>
 #####2. Download and install the Java 6 SDK from Java.com (see link, below)<br>
 #####3. Use Terminal to install Ruby Version Manager (RVM)<br>
-#####4. Use RVM to install Ruby 1.9.3 (even if you have a newer version)<br>
+#####4. Use RVM to install Ruby 2.3.3 (even if you have a newer version)<br>
 #####5. Run the "install gems" Terminal script from the RhoMobile Suite .dmg
 **OPTIONAL STEPS:** 
 #####Set up native SDKs for specific target devices (Android, iOS, Sailfish)<br>
@@ -137,7 +137,7 @@ RhoStudio relies on desktop Java, which Apple stopped including with Mac OS X as
 **Download and open the JDK .dmg, double-click the package within it and follow prompts to install the latest JDK.** 
 
 ### STEP 3: Install Ruby Version Manager (RVM) 
-This step installs a tool called Ruby Version Manager (RVM) that we'll use to install Ruby 1.9.3. RhoStudio requires Ruby v1.9.3 and is not compatible with any other version, incuding the newer version (2.0) that comes with Mac OS X Mavericks and Yosemite. Fortunately, RVM makes it easy to switch between Ruby versions if you need to later.
+This step installs a tool called Ruby Version Manager (RVM) that we'll use to install Ruby 2.3.3. RVM makes it easy to switch between Ruby versions if you need to later.
 
 **NOTE: WARNING: Do not use `sudo` to install RVM; it can cause problems with file permissions when running bundle commands from within RhoStudio.<br>**
 
@@ -152,21 +152,21 @@ This command securely downloads the latest stable version of RVM from the "get.r
 Terminal is included with Mac OS X and is in the Applications folder.
 To launch Terminal without having to navigate to the Apps folder: **CMD-SPACE >> Type 'Term' >> Hit ENTER**
 
-### STEP 4: Install Ruby 1.9.3
-Now that you have RVM, you can use it to install Ruby 1.9.3 and some other useful stuff. Remember, RhoMobile requires Ruby 1.9.3 and will not work with other versions. This step will not effect existing Ruby version(s) on your Mac, but Ruby 1.9.3 will become the default. 
+### STEP 4: Install Ruby 2.3.x
+Now that you have RVM, you can use it to install Ruby 2.3.x and some other useful stuff. Remember, RhoMobile requires Ruby 2.3.x and may not work with other versions. This step will not affect existing Ruby version(s) on your Mac, but Ruby 2.3.x will become the default. 
 
-**Open a _NEW_ Terminal window and install Ruby 1.9.3 with the following command:** 
+**Open a _NEW_ Terminal window and install Ruby 2.3.3 with the following command:** 
 
-`rvm install 1.9.3`
+`rvm install 2.3`
 
 **You also might be prompted to install [homebrew](http://brew.sh/).** If so, just hit ENTER to install it in the default `/user/local` directory. Respond to additional prompts as needed. This step may take a few minutes. 
 
-**Once complete, verify that Ruby 1.9.3 is the default by entering this command:**
+**Once complete, verify that Ruby 2.3 is the default by entering this command:**
 
 `ruby -v`
 
 The result should be something similar to this:
-`ruby 1.9.3p551 (2014-11-13 revision 48407) [x86_64-darwin14.0.0]`
+`ruby 2.3.7p456 (2018-03-28 revision 63024) [x86_64-darwin14.0.0]`
 
 
 ### STEP 5: Install Ruby Gems
