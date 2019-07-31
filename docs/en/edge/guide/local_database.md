@@ -101,6 +101,7 @@ Possible Values:
 * 1 = use newer ORM Common API
 
 NOTE: If this parameter is left unspecified, the older Rhom/ORM API will be used. 
+NOTE: New ORM API is still experimental and is not guaranteed to work correctly with Ruby. Use at your own risk.
 
 ## Database Encryption
 
