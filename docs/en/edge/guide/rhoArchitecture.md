@@ -24,13 +24,13 @@ For more information about this and prior releases, including bug fixes and issu
   <td class="clsSyntaxCells clsOddRow"><img id="Android_ET1_pic" src="https://s3.amazonaws.com/docs.tau-technologies.com/images/supported_devices/Zebra_ET1.png?raw=true" height="75"></img></td>
   <td class="clsSyntaxCells clsOddRow"><b>Android</b></td>
   <td class="clsSyntaxCells clsOddRow">Zebra devices (see below), third-party devices (ARM, ARM64 and x86)</td>
-  <td class="clsSyntaxCells clsOddRow">Android  4.4 to 9: Gingerbread, Ice Cream Sandwich, Jelly Bean, KitKat, Lollipop, Marshmallow, Nougat, Oreo, Pie</td>
+  <td class="clsSyntaxCells clsOddRow">Android  4.4 to 9: KitKat, Lollipop, Marshmallow, Nougat, Oreo, Pie</td>
  </tr>
   <tr>
   <td class="clsSyntaxCells clsOddRow"><img id="Android_LollyPic" src="https://s3.amazonaws.com/docs.tau-technologies.com/images/supported_devices/samsung-galaxy-s-6-edge.png?raw=true" height="75"></img></td>
   <td class="clsSyntaxCells clsOddRow"><b>Android</b></td>
   <td class="clsSyntaxCells clsOddRow">Third-party consumer tablets and smartphones (ARM, ARM64 and x86)</td>
-  <td class="clsSyntaxCells clsOddRow">Android 4.4 to 9: Gingerbread, Ice Cream Sandwich, Jelly Bean, KitKat, Lollipop, Marshmallow, Nougat, Oreo, Pie</td>
+  <td class="clsSyntaxCells clsOddRow">Android 4.4 to 9: KitKat, Lollipop, Marshmallow, Nougat, Oreo, Pie</td>
  </tr>
  <tr>
   <td class="clsSyntaxCells clsOddRow"><img id="iOS_pic" src="https://s3.amazonaws.com/docs.tau-technologies.com/images/supported_devices/Apple-iPhone-5S.jpg?raw=true" height="75"></img></td>
