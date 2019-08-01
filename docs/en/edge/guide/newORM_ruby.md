@@ -4,6 +4,8 @@ The RhoMobile Suite provides several methods of handling device data. For RhoMob
 
 ## How to Include the ORM API
 
+NOTE: New ORM API is still experimental and is not guaranteed to work correctly with Ruby. Use at your own risk.
+
 By default, RhoMobile apps will be built to use the older Rhom implementation (for Ruby) and ORM implementation (for JavaScript). To activate the newer ORM Common API (which supports both JavaScript _and_ Ruby), add the following line to application’s `rhoconfig.txt` file:
 
     :::yaml
@@ -15,6 +17,7 @@ Possible Values:
 * 1 = use newer ORM Common API
 
 NOTE: If this parameter is left unspecified, the older Rhom/ORM API will be used. 
+NOTE: New ORM API is still experimental and is not guaranteed to work correctly with Ruby. Use at your own risk.
 
 ## Creating a Ruby Data Model
 
