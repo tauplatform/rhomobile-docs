@@ -161,3 +161,8 @@ We use AES 256 bit encoding (“AES-256-CBC” algorithm string when using OpenS
 ### ProGuard extension
 ProGuard is tool that shrinks, optimizes and obfuscates Java code. It is able to optimize bytecode as well as detect and remove unused instructions.
 
+### Prevent taking app screenshot on iOS
+RhoConfig.txt option: WebView.replaceContentBySplashWhenSnapshotBySystem = 1
+
+Replaces actual app screenshot that may contain sensitive data with app's loading splash screen.
+

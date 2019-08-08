@@ -217,6 +217,10 @@ Sample yaml code:
     ios_direct_local_requests=1
     #If true, request to local server will be applied directly, bypassing socket intercommunication, no network requests are involved. If false, a legacy client-server intercommunication will be made for local requests. Default is FALSE, but to support per-app VPN (i.e. MobileIron) this option should be set to TRUE.
 
+    WebView.replaceContentBySplashWhenSnapshotBySystem = 1
+    #Related to iOS applications's multitasking switcher. If you can have any private info on screen you can prevent system to use snapshot in task list UI.
+    # by enable this option screenshot will be replaced by splash loading screen.
+
 
 ## Config.xml
 
