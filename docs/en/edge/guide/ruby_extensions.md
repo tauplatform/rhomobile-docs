@@ -4,7 +4,7 @@ This doc will explain extensions to the Rhodes framework using Ruby and how to a
 
 ## Extensions
 
-In order to strike a balance between functionality and size, some Ruby libraries are available as extensions instead of being compiled into your application by default. Available extensions are located within the rhodes-4.x.x gem in `lib/extensions`. To use any of them in your application, all you need to do is add its name to the `extensions` section in `build.yml`. For example:
+In order to strike a balance between functionality and size, some Ruby libraries are available as extensions instead of being compiled into your application by default. Available extensions are located within the rhodes gem in `lib/extensions`. To use any of them in your application, all you need to do is add its name to the `extensions` section in `build.yml`. For example:
 
     :::yaml
     extensions: ["pdf-writer"]
@@ -156,6 +156,14 @@ DryRun, NoWrite and Verbose are commented out modules since they use the `eval` 
 
 Before adding the FileUtils extension, consider using the built-in Ruby class `Dir` whenever possible.
 
+## Bigdecimal
+
+BigDecimal provides arbitrary-precision floating point decimal arithmetic. Refer to [Ruby documentation](https://ruby-doc.org/stdlib-2.3.3/libdoc/bigdecimal/rdoc/BigDecimal.html).
+
+Add to build.yml:
+	
+	extensions: ["bigdecimal"]
+
 ## Adding Ruby Extension Libraries to Your Rhodes Application
 
 Create folder 'extensions' under application root if it does not exist already.
@@ -231,19 +239,19 @@ If you find yourself using the same library in most of your applications, you ca
 
 There are two ways to add Ruby libraries to the RhoMobile framework:
 
-* If you are using Rhodes via the RubyGems installation, you must add external Ruby libraries to your RubyGems installation directory for the 'rhodes-4.x.x' gem. Your RubyGems installation directory can be found with `gem env` in a terminal.
+* If you are using Rhodes via the RubyGems installation, you must add external Ruby libraries to your RubyGems installation directory for the 'rhodes' gem. Your RubyGems installation directory can be found with `gem env` in a terminal.
 
 For example, a user on Linux might place additional libraries in the following directory:
 
-	/usr/local/lib/ruby/gems/1.9/gems/rhodes-x.x.x/lib/framework
+	/usr/local/lib/ruby/gems/2.3/gems/rhodes-x.x.x/lib/framework
 
 Similarly, a user on Mac OSX running the recommended RVM setup might place them here:
 
-	~/.rvm/gems/ruby-1.9.x-pxxx/gems/rhodes-x.x.x/lib/framework
+	~/.rvm/gems/ruby-2.3.x-pxxx/gems/rhodes-x.x.x/lib/framework
 
 For Windows, this location might be:
 
- C:/ruby/lib/ruby/gems/1.9/gems/rhodes-x.x.x/lib/framework
+ C:/ruby/lib/ruby/gems/2.3/gems/rhodes-x.x.x/lib/framework
 
 
 If you are using a clone of the Rhodes Git repository, you can put additional libraries in the following directory (preferably on your own github fork):
