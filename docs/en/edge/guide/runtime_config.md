@@ -221,6 +221,9 @@ Sample yaml code:
     #Related to iOS applications's multitasking switcher. If you can have any private info on screen you can prevent system to use snapshot in task list UI.
     # by enable this option screenshot will be replaced by splash loading screen.
 
+    Barcode.ReleaseEMDKOnPause = 1
+    #Use to release exclusive lock on EMDK on Zebra scanners when app is put to background. Will allow to use other apps that use EMDK in parallel. EMDK lock will be re-aquired when app is back in foreground but you will need to re-enable scanner(s) if required.
+
 
 ## Config.xml
 
