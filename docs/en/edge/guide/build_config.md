@@ -93,7 +93,7 @@ When you create your app, a default version of the build.yml file will be genera
     <tr>
         <td class="clsEvenRow">iphone\\sdk</td>
         <td class="clsEvenRow">The version of the sdk used to build. Typically, iphonesimulatorX.X or iphoneosX.X.</td>
-        <td class="clsEvenRow">iPhone SDK Version</td>
+        <td class="clsEvenRow">iPhone SDK Version, or "latest"</td>
         <td class="clsEvenRow">iphoneos8.0</td>
     </tr>
     <tr>
@@ -131,6 +131,12 @@ When you create your app, a default version of the build.yml file will be genera
         <td>Whitelist of URL schemes that can be used by your app to provide a service, pass data or launch another app. URL schemes specified here are added during build to the LSApplicationQueriesSchemes key in the app's info.plist. For more information, refer to the iOS 9-specific Settings section, below.</td>
         <td>Array of strings</td>
         <td>["http", "sms", "tel", "facetime"]</td>
+    </tr>
+    <tr>
+        <td>iphone\\emulatortarget</td>
+        <td>Target emulator to launch the app. Can use default iPhone and iPad emulators, or already existing emulator by its UUID.</td>
+        <td>iphone<br>ipad<br>UUID</td>
+        <td>iphone</td>
     </tr>
     <tr>
         <td class="clsEvenRow">wp8\\productid</td>
