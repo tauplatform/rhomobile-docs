@@ -102,13 +102,11 @@
 <p>For now, you shouldn't use notification section to show a message (because of you wouldn't get a callback if an application is closed (google changed API)). You should use <code>notification_title</code> and <code>notification_text</code> variables in your json. For example:</p>
 
 <code>:::ruby
-
     HTTParty.post('http://fcm.googleapis.com/fcm/send', 
     :body => { "to" => "#{token}", "priority" => "high", "data" => 
     { "dataOne"=>"some data","dataTwo"=>"another data",'massage_type'=>'text', 
         'notification_title' => 'Some simple title', 'notification_text' => 'some message text'}}.to_json, 
     :headers => { 'Content-Type' => 'application/json', 'Authorization' => "key=#{server_token}" } )
-
 </code>
 
 <a name='Examples'></a>
