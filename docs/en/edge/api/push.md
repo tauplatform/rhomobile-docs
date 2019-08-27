@@ -128,3 +128,15 @@ def push_callback
 end
                                 
                             </code></pre></div></div>  </div></div></div></div></div>
+
+<h2>Edge feature</h2>
+
+<p>From the version 7.1.0.dev16 we created an additional extension for supporting FCM version 18. For using it, you should add extensions 'fcm-push-18' to your extension list in <code>build.yml</code></p>
+
+<p>For now, you shouldn't use notification section to show a message (because of you wouldn't get a callback if an application is closed (google changed API)). You should use <code>notification_title</code> and <code>notification_text</code> variables in your json. For example:</p>
+
+<code>HTTParty.post('http://fcm.googleapis.com/fcm/send', 
+    :body => { "to" => "#{token}", "priority" => "high", "data" => 
+    { "dataOne"=>"some data","dataTwo"=>"another data",'massage_type'=>'text', 
+        'notification_title' => 'Some simple title', 'notification_text' => 'some message text'}}.to_json, 
+    :headers => { 'Content-Type' => 'application/json', 'Authorization' => "key=#{server_token}" } )</code>
