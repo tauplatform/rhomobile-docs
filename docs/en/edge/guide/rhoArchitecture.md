@@ -1,4 +1,4 @@
-# RMS 6.0 Supported Platforms
+# RMS 7.0 Supported Platforms
 
 The RhoMobile Suite (RMS) is an integrated development environment for Mac OS X and Windows development hosts that can target multiple mobile-device platforms from a single code base. RhoMobile apps employ an HTML front-end that presents the UI component and passes device calls through to the underlying hardware. RhoStudio also supports native app development. 
 
@@ -23,20 +23,20 @@ For more information about this and prior releases, including bug fixes and issu
  <tr>
   <td class="clsSyntaxCells clsOddRow"><img id="Android_ET1_pic" src="https://s3.amazonaws.com/docs.tau-technologies.com/images/supported_devices/Zebra_ET1.png?raw=true" height="75"></img></td>
   <td class="clsSyntaxCells clsOddRow"><b>Android</b></td>
-  <td class="clsSyntaxCells clsOddRow">Zebra devices (see below), third-party devices (ARM and x86)</td>
-  <td class="clsSyntaxCells clsOddRow">Android  2.3 to 4.4: Gingerbread, Ice Cream Sandwich, Jelly Bean, KitKat, Lollipop, Marshmallow</td>
+  <td class="clsSyntaxCells clsOddRow">Zebra devices (see below), third-party devices (ARM, ARM64 and x86)</td>
+  <td class="clsSyntaxCells clsOddRow">Android  4.4 to 9: KitKat, Lollipop, Marshmallow, Nougat, Oreo, Pie</td>
  </tr>
   <tr>
   <td class="clsSyntaxCells clsOddRow"><img id="Android_LollyPic" src="https://s3.amazonaws.com/docs.tau-technologies.com/images/supported_devices/samsung-galaxy-s-6-edge.png?raw=true" height="75"></img></td>
   <td class="clsSyntaxCells clsOddRow"><b>Android</b></td>
-  <td class="clsSyntaxCells clsOddRow">Third-party consumer tablets and smartphones (ARM and x86)</td>
-  <td class="clsSyntaxCells clsOddRow">Android  2.3 to 4.4: Gingerbread, Ice Cream Sandwich, Jelly Bean, KitKat, Lollipop, Marshmallow, Nougat</td>
+  <td class="clsSyntaxCells clsOddRow">Third-party consumer tablets and smartphones (ARM, ARM64 and x86)</td>
+  <td class="clsSyntaxCells clsOddRow">Android 4.4 to 9: KitKat, Lollipop, Marshmallow, Nougat, Oreo, Pie</td>
  </tr>
  <tr>
   <td class="clsSyntaxCells clsOddRow"><img id="iOS_pic" src="https://s3.amazonaws.com/docs.tau-technologies.com/images/supported_devices/Apple-iPhone-5S.jpg?raw=true" height="75"></img></td>
   <td class="clsSyntaxCells clsOddRow"><b>Apple iOS</b></td>
-  <td class="clsSyntaxCells clsOddRow">iPad, iPhone, iPod Touch</td>
-  <td class="clsSyntaxCells clsOddRow">iOS 6, iOS 7, iOS 8, iOS 9, iOS10</td>
+  <td class="clsSyntaxCells clsOddRow">iPad, iPhone ( up to XS, XS Max, XR ), iPod Touch</td>
+  <td class="clsSyntaxCells clsOddRow">iOS 6, iOS 7, iOS 8, iOS 9, iOS10, iOS 11, iOS 12</td>
  </tr>
  <tr>
   <td class="clsSyntaxCells clsOddRow"><img id="WM_pic" src="https://s3.amazonaws.com/docs.tau-technologies.com/images/supported_devices/Zebra_MC3100.jpeg?raw=true" height="75"></img></td>
@@ -52,7 +52,7 @@ For more information about this and prior releases, including bug fixes and issu
  </tr></table>
 
 ##Supported Zebra Devices
-RMS 6.0 has been approved for building apps that target the following Zebra Enterprise Mobility devices:
+RMS 7.0 has been approved for building apps that target the following Zebra Enterprise Mobility devices:
 
 <H4>Mobile Computers</H4>
 <table class="table table-striped table-bordered">
@@ -100,9 +100,9 @@ RMS 6.0 has been approved for building apps that target the following Zebra Ente
  </td>
  <tr>
   <td class="clsSyntaxCells clsOddRow"><img id="tc51-56Pic" src="/images/supported_devices/Zebra_TC51-56.jpg?raw=true" height="75"></img></td>
-  <td class="clsSyntaxCells clsOddRow"><b>TC51</b></td>
-  <td class="clsSyntaxCells clsOddRow"><nobr>TC51</nobr></td>
-  <td class="clsSyntaxCells clsOddRow">Android 6.0 (Marshmallow)</td>
+  <td class="clsSyntaxCells clsOddRow"><b>TC51/52</b></td>
+  <td class="clsSyntaxCells clsOddRow"><nobr>TC51/52</nobr></td>
+  <td class="clsSyntaxCells clsOddRow">Android 6.0 (Marshmallow),<br>Android 7.0 (Lollipop),<br>Android 8.0 (Oreo)</td>
  </tr>
   <tr>
   <td class="clsSyntaxCells clsOddRow"><img id="tc55Pic" src="https://s3.amazonaws.com/docs.tau-technologies.com/images/supported_devices/Zebra_TC55.jpg?raw=true" height="75"></img></td>
@@ -304,7 +304,7 @@ Memory constraints are important to consider, particularly when targeting the ol
 
 ##Compatibility Alerts
 
-* **RMS 6.0 supports printing via USB from Android apps** to a subset of [Zebra printers that support USB printing](printing#zebra-printers-with-usb-printing). 
+* **RMS 7.0 supports printing via USB from Android apps** to a subset of [Zebra printers that support USB printing](printing#zebra-printers-with-usb-printing). 
 
 * **The TC55 supports [4.0 APIs](apiusage#api-migration-table) and only a subset of [2.2 APIs](apiusage#using-22-apirsquos)**. Applications developed using certain 2.2 APIs might need to be rebuilt using a newer version of the API. For example, apps built with the [2.2 Scanner API](../../2.2.0/rhoelements/scanner) must now use the [6.x Barcode API](../api/barcode). Please consult the [migration table](apiusage#api-migration-table) for more information.
 
