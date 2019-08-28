@@ -13,7 +13,7 @@ The RhoMobile Suite (RMS) is an integrated development environment for Mac OS X 
   <tr>
    <td class="clsSyntaxCells clsOddRow"><img id="sailfish" src="/images/supported_devices/sailfish.jpg?raw=true" height="75"></img></td>
    <td class="clsSyntaxCells clsOddRow"><b>Sailfish</b></td>
-   <td class="clsSyntaxCells clsOddRow">Third-party consumer smartphones</td>
+   <td class="clsSyntaxCells clsOddRow">Third-party consumer smartphones and enterprise level devices</td>
    <td class="clsSyntaxCells clsOddRow">From 2.1.1</td>
   </tr>
  <tr>
