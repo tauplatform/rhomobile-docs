@@ -160,7 +160,7 @@ Be sure to review the [Ruby API Usage](/guide/api_ruby) guide for important info
                 </PARAM>
 
                 <PARAM name="queryParams" type="STRING">
-                    <DESC>Parameters to be passed to server.</DESC>
+                    <DESC>Parameters to be passed to server. QueryParams must a string like "query='your params here'". Your params may be just a string or json in string representation.</DESC>
                     <CAN_BE_NIL/>
                 </PARAM>
 
@@ -541,7 +541,7 @@ def sync_notify
   error_code = @params['error_code'].to_i
   error_message = @params['error_message']
   if error_code == Rho::RhoError::ERR_NETWORK
-    puts "We received a network error: " + error_message 
+    puts "We received a network error: " + error_message
   end
 end
 
@@ -695,7 +695,7 @@ Each error contains a 'message' key with the error message.
 
 Ruby Example:
     :::ruby
-    @params["server_errors"]["query-error"]["message"] 
+    @params["server_errors"]["query-error"]["message"]
     #=> "Error connecting to backend server: http://rhostore.herokuapp.com"
 
 JavaScript Example:
