@@ -5,36 +5,25 @@
 
 <p>To use this API, you must include the following extension in your <code>build.yml</code>:</p>
 
-<p>For APNS:</p>
+<p>For APNS:
+    :::ruby
+    capabilities: [&ldquo;push&rdquo;]</p>
 
-<pre><code>
-:::ruby
-capabilities: ["push"]
-</code></pre>
+<p>For FCM:
+    :::ruby
+    capabilities: [&ldquo;push&rdquo;]
+    extensions: [&ldquo;fcm-push&rdquo;]
+    fcmSenderID: &lsquo;your_fcm_sender_id&rsquo;
+    fcmAppID: &lsquo;your_fcm_app_id&rsquo;</p>
 
-<p>For FCM:</p>
+<p>For GCM ( NB: GCM is deprecated, we recommend using FCM push ):
+    :::ruby
+    capabilities: [&ldquo;push&rdquo;]
+    extensions: [&ldquo;gcm-push&rdquo;]</p>
 
-<pre><code>
-:::ruby
-capabilities: ["push"]
-extensions: ["fcm-push"]
-fcmSenderID: 'your_fcm_sender_id'
-fcmAppID: 'your_fcm_app_id'
-</code></pre>
-
-<p>For GCM ( NB: GCM is deprecated, we recommend using FCM push ):</p>
-
-<pre><code>
-:::ruby
-capabilities: ["push"]
-extensions: ["gcm-push"]
-</code></pre>
-
-<p>For RhoConnect Push Service:</p>
-
-<pre><code>:::ruby
-extensions: ["rhoconnect-push", "rhoconnect-client"]
-</code></pre>
+<p>For RhoConnect Push Service:
+    :::ruby
+    extensions: [&ldquo;rhoconnect-push&rdquo;, &ldquo;rhoconnect-client&rdquo;]</p>
 
 <p><strong>NOTES</strong></p>
 

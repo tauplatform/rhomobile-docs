@@ -160,7 +160,10 @@ Be sure to review the [Ruby API Usage](/guide/api_ruby) guide for important info
                 </PARAM>
 
                 <PARAM name="queryParams" type="STRING">
-                    <DESC>Parameters to be passed to server. QueryParams must a string like "query='your params here'". Your params may be just a string or json in string representation.</DESC>
+                    <DESC>Parameters to be passed to server.
+                        The value must be like 'query=&lt;your params here&gt;
+                        .
+                        Your params may be just a string or string representation of JSON structure. For example:  'query=abc' or 'query={abc: "foo"}'</DESC>
                     <CAN_BE_NIL/>
                 </PARAM>
 
