@@ -122,7 +122,7 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
         <a href="../api/cardreader">CardReader<img src="/img/zebra-logo.png" style="height: 16px;padding-top: 0px;padding-left:3px" rel="tooltip" title="Zebra Devices Only"></a>
       </td>
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center;border-right:thin solid #cccccc;" class=" "><span class="icon-check-empty icon-primary"  rel="tooltip"></span></td>
+      <td style="text-align:center;border-right:thin solid #cccccc;" class=" "><span class="icon-check icon-primary"  rel="tooltip"></span></td>
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
       <td style="text-align:center" class=" "></td>
@@ -145,7 +145,7 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td>
         <a href="../api/Config">Config </a>
       </td>
-      <td style="text-align:center" class=" "><span class="icon-check-empty icon-primary"></span></td>
+      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
       <td style="text-align:center;border-right:thin solid #cccccc;" class=" "><span class="icon-check icon-primary"></span></td>
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
@@ -506,7 +506,7 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
         <a href="../api/Notification">Notification</a>
       </td>
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center;border-right:thin solid #cccccc;" class=" "><span class="icon-check-empty icon-primary"></span></td>
+      <td style="text-align:center;border-right:thin solid #cccccc;" class=" "><span class="icon-check icon-primary"></span></td>
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
