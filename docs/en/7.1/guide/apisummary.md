@@ -1,5 +1,5 @@
 # RhoMobile API Summary
-Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recommended for all new projects. If you're moving a 2.x app to 7.x, please consult the [2.x migration guide](apiusage). 
+Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recommended for all new projects. If you're moving a app built with previous version of Rhodes to 7.x, please consult the [7.x migration guide](apiusage). 
 
 ## 7.1 APIs
 <div class="alert alert-warning">
@@ -20,7 +20,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <th colspan="2" style="border-right:thin solid #cccccc;text-align:center">LANGUAGES</th>
       <th colspan = "6" style="text-align:center">PLATFORMS</th>
     </tr>
-
     <tr>
       <th>Class</th>
       <th style="text-align:center"><img src="/img/js.png" style="width: 20px;padding-top: 8px" rel="tooltip" title="JavaScript"></th>
@@ -34,32 +33,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
   </thead>
 
   <tbody>
-    <!--<tr>
-      <td>
-        <a href="../../2.2.0/rhoelements/addressbar">Addressbar *</a>
-      </td>
-      <td style="text-align:center" class=" "><span class="icon-check-empty icon-primary"></span></td>
-      <td style="text-align:center;border-right:thin solid #cccccc;" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-    </tr>
-
-    <tr>
-      <td>
-        <a href="../../2.2.0/rhoelements/alarm">Alarm *</a>
-      </td>
-      <td style="text-align:center" class=" "><span class="icon-check-empty icon-primary"></span></td>
-      <td style="text-align:center;border-right:thin solid #cccccc;" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-    </tr>-->
-
     <tr>
       <td>
         <a href="../api/Application">Application</a>
@@ -72,7 +45,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
     </tr>
-
      <tr>
       <td>
         <a href="../api/audiocapture">AudioCapture</a>
@@ -85,20 +57,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "></td>
       <td style="text-align:center" class=" "></td>
     </tr>
-
-    <!--<tr>
-      <td>
-        <a href="../../2.2.0/rhoelements/backlight">Backlight *</a>
-      </td>
-      <td style="text-align:center" class=" "><span class="icon-check-empty icon-primary"></span></td>
-      <td style="text-align:center;border-right:thin solid #cccccc;" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-    </tr>-->
-
     <tr>
       <td>
         <a href="../api/barcode">Barcode</a>
@@ -108,10 +66,9 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "></span></td>
+      <td style="text-align:center" class=" "></td>
       <td style="text-align:center" class=" "></td>
     </tr>
-
     <tr>
       <td>
         <a href="../api/battery">Battery</a>
@@ -124,7 +81,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "></td>
       <td style="text-align:center" class=" "></td>
     </tr>
-
     <tr>
       <td>
         <a href="../../2.2.0/rhodesapi/bluetoothmanager-api">BluetoothManager *</a>
@@ -137,7 +93,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
     </tr>
-
     <tr>
       <td>
         <a href="../../2.2.0/rhodesapi/bluetoothsession-api">BluetoothSession *</a>
@@ -150,20 +105,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
     </tr>
-
-    <!-- <tr>
-      <td>
-        <a href="../api/camera">Camera</a>
-      </td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center;border-right:thin solid #cccccc;" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "></td>
-      <td style="text-align:center" class=" "></td>
-    </tr> -->
-
     <tr>
       <td>
         <a href="../api/camera">Camera </a>
@@ -176,10 +117,9 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
       <td style="text-align:center" class=" "></td>
     </tr>
-
     <tr>
       <td>
-        <a href="../api/cardreader">CardReader<img src="/img/zebra-logo.png" style="height: 16px;padding-top: 0px;padding-left:3px" rel="tooltip" title="Zebra Devices Only">
+        <a href="../api/cardreader">CardReader<img src="/img/zebra-logo.png" style="height: 16px;padding-top: 0px;padding-left:3px" rel="tooltip" title="Zebra Devices Only"></a>
       </td>
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
       <td style="text-align:center;border-right:thin solid #cccccc;" class=" "><span class="icon-check-empty icon-primary"  rel="tooltip"></span></td>
@@ -189,8 +129,7 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "></td>
       <td style="text-align:center" class=" "></td>
     </tr>
-
-    <!--<tr>
+    <tr>
       <td>
         <a href="../../2.2.0/rhoelements/comm">Comm </a>
       </td>
@@ -201,7 +140,7 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "></td>
       <td style="text-align:center" class=" "></td>
       <td style="text-align:center" class=" "></td>
-    </tr>-->
+    </tr>
     <tr>
       <td>
         <a href="../api/Config">Config </a>
@@ -214,33 +153,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "></td>
       <td style="text-align:center" class=" "></td>
     </tr>
-
-    <!-- <tr>
-      <td>
-        <a href="../../2.2.0/rhoelements/ConfigurationSettings">Config *</a>
-      </td>
-      <td style="text-align:center" class=" "><span class="icon-check-empty icon-primary"></span></td>
-      <td style="text-align:center;border-right:thin solid #cccccc;" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "></td>
-      <td style="text-align:center" class=" "></td>
-      <td style="text-align:center" class=" "></td>
-    </tr> -->
-
-    <!-- <tr>
-      <td>
-        <a href="../api/contact">Contact</a>
-      </td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center;border-right:thin solid #cccccc;" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "></td>
-      <td style="text-align:center" class=" "></td>
-      <td style="text-align:center" class=" "></td>
-    </tr> -->
-
     <tr>
       <td>
         <a href="../api/Database">Database</a>
@@ -265,20 +177,18 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "></td>
       <td style="text-align:center" class=" "></td>
     </tr>
-
-    <!--<tr>
+    <tr>
       <td>
-        <a href="../api/SimulScan">Document Capture (BETA)</a>
+        <a href="../api/DeviceSecurity">Device Security</a>
       </td>
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
       <td style="text-align:center;border-right:thin solid #cccccc;" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "></td>
+      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
       <td style="text-align:center" class=" "></td>
       <td style="text-align:center" class=" "></td>
       <td style="text-align:center" class=" "></td>
-    </tr>-->
-
+    </tr>
     <tr>
       <td>
         <a href="../api/geolocation">Geolocation</a>
@@ -291,33 +201,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "></td>
       <td style="text-align:center" class=" "></td>
     </tr>
-
-    <!--<tr>
-      <td>
-        <a href="../../2.2.0/rhoelements/Gesture">Gesture *</a>
-      </td>
-      <td style="text-align:center" class=" "><span class="icon-check-empty icon-primary"></span></td>
-      <td style="text-align:center;border-right:thin solid #cccccc;" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "></td>
-      <td style="text-align:center" class=" "></td>
-    </tr>
-
-    <tr>
-      <td>
-        <a href="../../2.2.0/rhoelements/hourglass">Hourglass *</a>
-      </td>
-      <td style="text-align:center" class=" "><span class="icon-check-empty icon-primary"></span></td>
-      <td style="text-align:center;border-right:thin solid #cccccc;" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "></td>
-      <td style="text-align:center" class=" "></td>
-    </tr>-->
-
     <tr>
       <td>
         <a href="../api/Intent">Intent</a>
@@ -330,7 +213,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "></td>
       <td style="text-align:center" class=" "></td>
     </tr>
-
     <tr>
       <td>
         <a href="../api/keycapture">KeyCapture</a>
@@ -343,20 +225,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "></td>
       <td style="text-align:center" class=" "></td>
     </tr>
-
-    <!--<tr>
-      <td>
-        <a href="../../2.2.0/rhoelements/Keylight">Keylight *</a>
-      </td>
-      <td style="text-align:center" class=" "><span class="icon-check-empty icon-primary"></span></td>
-      <td style="text-align:center;border-right:thin solid #cccccc;" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "></td>
-      <td style="text-align:center" class=" "></td>
-    </tr>-->
-
     <tr>
       <td>
         <a href="../api/keystate">KeyState<img src="/img/zebra-logo.png" style="height: 16px;padding-top: 0px;padding-left:3px" rel="tooltip" title="Zebra Devices Only"></a>
@@ -369,7 +237,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "></td>
       <td style="text-align:center" class=" "></td>
     </tr>
-
     <tr>
       <td>
         <a href="../api/Log">Log</a>
@@ -382,7 +249,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
     </tr>
-
     <tr>
       <td>
         <a href="../../2.2.0/rhodesapi/mapview-api">Mapview *</a>
@@ -395,7 +261,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
     </tr>
-
     <tr>
       <td>
         <a href="../api/mediaplayer">Mediaplayer</a>
@@ -408,20 +273,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "></td>
       <td style="text-align:center" class=" "></td>
     </tr>
-
-    <!--<tr>
-      <td>
-        <a href="../../2.2.0/rhoelements/memory">Memory *</a>
-      </td>
-      <td style="text-align:center" class=" "><span class="icon-check-empty icon-primary"></span></td>
-      <td style="text-align:center;border-right:thin solid #cccccc;" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "></td>
-      <td style="text-align:center" class=" "></td>
-    </tr>-->
-
     <tr>
       <td>
         <a href="../api/NativeMenubar">NativeMenubar</a>
@@ -434,7 +285,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "></td>
       <td style="text-align:center" class=" "></td>
     </tr>
-
     <tr>
       <td>
         <a href="../api/NativeTabbar">NativeTabbar</a>
@@ -447,7 +297,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
     </tr>
-
     <tr>
       <td>
         <a href="../api/NativeToolbar">NativeToolbar</a>
@@ -460,7 +309,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
     </tr>
-
     <tr>
       <td>
         <a href="../api/Navbar">Navbar</a>
@@ -473,7 +321,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "></td>
       <td style="text-align:center" class=" "></td>
     </tr>
-
     <tr>
       <td>
         <a href="../../2.2.0/rhodesapi/NdefMessage-api">NdefMessage *</a>
@@ -486,7 +333,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "></td>
       <td style="text-align:center" class=" "></td>
     </tr>
-
     <tr>
       <td>
         <a href="../../2.2.0/rhodesapi/NdefRecord-api">NdefRecord *</a>
@@ -499,7 +345,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "></td>
       <td style="text-align:center" class=" "></td>
     </tr>
-
     <tr>
       <td>
         <a href="../api/Network">Network</a>
@@ -512,59 +357,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
     </tr>
-
-    <!--<tr>
-      <td>
-        <a href="../api/Adapter">NFC - Adapter (BETA)</a>
-      </td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center;border-right:thin solid #cccccc;" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "></td>
-      <td style="text-align:center" class=" "></td>
-      <td style="text-align:center" class=" "></td>
-      <td style="text-align:center" class=" "></td>
-    </tr>
-
-    <tr>
-      <td>
-        <a href="../api/Message">NFC - Message (BETA)</a>
-      </td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center;border-right:thin solid #cccccc;" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "></td>
-      <td style="text-align:center" class=" "></td>
-      <td style="text-align:center" class=" "></td>
-      <td style="text-align:center" class=" "></td>
-    </tr>
-
-    <tr>
-      <td>
-        <a href="../api/Record">NFC - Record (BETA)</a>
-      </td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center;border-right:thin solid #cccccc;" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "></td>
-      <td style="text-align:center" class=" "></td>
-      <td style="text-align:center" class=" "></td>
-      <td style="text-align:center" class=" "></td>
-    </tr>
-
-    <tr>
-      <td>
-        <a href="../api/Tag">NFC - Tag (BETA)</a>
-      </td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center;border-right:thin solid #cccccc;" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "></td>
-      <td style="text-align:center" class=" "></td>
-      <td style="text-align:center" class=" "></td>
-      <td style="text-align:center" class=" "></td>
-    </tr>-->
-
     <tr>
       <td>
         <a href="../../2.2.0/rhodesapi/NFCManager-api">NFCManager *</a>
@@ -577,7 +369,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "></td>
       <td style="text-align:center" class=" "></td>
     </tr>
-
     <tr>
       <td>
         <a href="../../2.2.0/rhodesapi/NFCTag-api">NFCTag *</a>
@@ -590,7 +381,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "></td>
       <td style="text-align:center" class=" "></td>
     </tr>
-
     <tr>
       <td>
         <a href="../../2.2.0/rhodesapi/NFCTagTechnology_IsoDep-api">NFCTagTechnology_IsoDep *</a>
@@ -603,7 +393,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "></td>
       <td style="text-align:center" class=" "></td>
     </tr>
-
     <tr>
       <td>
         <a href="../../2.2.0/rhodesapi/NFCTagTechnology_MifareClassic-api">NFCTagTechnology_MifareClassic *</a>
@@ -616,7 +405,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "></td>
       <td style="text-align:center" class=" "></td>
     </tr>
-
     <tr>
       <td>
         <a href="../../2.2.0/rhodesapi/NFCTagTechnology_MifareUltralight-api">NFCTagTechnology_MifareUltralight *</a>
@@ -629,7 +417,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "></td>
       <td style="text-align:center" class=" "></td>
     </tr>
-
     <tr>
       <td>
         <a href="../../2.2.0/rhodesapi/NFCTagTechnology_Ndef-api">NFCTagTechnology_Ndef *</a>
@@ -642,7 +429,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "></td>
       <td style="text-align:center" class=" "></td>
     </tr>
-
     <tr>
       <td>
         <a href="../../2.2.0/rhodesapi/NFCTagTechnology_NdefFormatable-api">NFCTagTechnology_NdefFormatable *</a>
@@ -655,7 +441,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "></td>
       <td style="text-align:center" class=" "></td>
     </tr>
-
     <tr>
       <td>
         <a href="../../2.2.0/rhodesapi/NFCTagTechnology_NfcA-api">NFCTagTechnology_NfcA *</a>
@@ -668,7 +453,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "></td>
       <td style="text-align:center" class=" "></td>
     </tr>
-
     <tr>
       <td>
         <a href="../../2.2.0/rhodesapi/NFCTagTechnology_NfcB-api">NFCTagTechnology_NfcB *</a>
@@ -681,7 +465,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "></td>
       <td style="text-align:center" class=" "></td>
     </tr>
-
     <tr>
       <td>
         <a href="../../2.2.0/rhodesapi/NFCTagTechnology_NfcF-api">NFCTagTechnology_NfcF *</a>
@@ -694,7 +477,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "></td>
       <td style="text-align:center" class=" "></td>
     </tr>
-
     <tr>
       <td>
         <a href="../../2.2.0/rhodesapi/NFCTagTechnology_NfcV-api">NFCTagTechnology_NfcV *</a>
@@ -707,7 +489,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "></td>
       <td style="text-align:center" class=" "></td>
     </tr>
-
     <tr>
       <td>
         <a href="../../2.2.0/rhodesapi/NFCTagTechnology-api">NFCTagTechnology *</a>
@@ -720,7 +501,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "></td>
       <td style="text-align:center" class=" "></td>
     </tr>
-
     <tr>
       <td>
         <a href="../api/Notification">Notification</a>
@@ -733,7 +513,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "></td>
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
     </tr>
-
     <tr>
       <td>
         <a href="../api/Orm">ORM</a> &amp; <a href="../api/OrmModel">ORMModel</a>
@@ -746,7 +525,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
     </tr>
-
     <tr>
       <td>
         <a href="../api/printing">Printer</a>
@@ -759,7 +537,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "></td>
       <td style="text-align:center" class=" "></td>
     </tr>
-
     <tr>
       <td>
         <a href="../api/printingzebra">Printer Zebra</a>
@@ -772,7 +549,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "></td>
       <td style="text-align:center" class=" "></td>
     </tr>
-
     <tr>
       <td>
         <a href="../api/push">Push</a>
@@ -785,47 +561,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "></td>
       <td style="text-align:center" class=" "></td>
     </tr>
-
-    <!--<tr>
-      <td>
-        <a href="../../2.2.0/rhoelements/reboot">Reboot *</a>
-      </td>
-      <td style="text-align:center" class=" "><span class="icon-check-empty icon-primary"></span></td>
-      <td style="text-align:center;border-right:thin solid #cccccc;" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "></td>
-      <td style="text-align:center" class=" "></td>
-    </tr>
-
-    <tr>
-      <td>
-        <a href="../../2.2.0/rhoelements/registry">Registry *</a>
-      </td>
-      <td style="text-align:center" class=" "><span class="icon-check-empty icon-primary"></span></td>
-      <td style="text-align:center;border-right:thin solid #cccccc;" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "></td>
-      <td style="text-align:center" class=" "></td>
-    </tr>
-
-    <tr>
-      <td>
-        <a href="../../2.2.0/rhoelements/rfid">RFID *</a>
-      </td>
-      <td style="text-align:center" class=" "><span class="icon-check-empty icon-primary"></span></td>
-      <td style="text-align:center;border-right:thin solid #cccccc;" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "></td>
-      <td style="text-align:center" class=" "></td>
-    </tr>-->
-
-
     <tr>
       <td>
         <a href="../api/RhoConnectClient">RhoConnectClient</a>
@@ -838,7 +573,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
     </tr>
-
     <tr>
       <td>
         <a href="../../2.2.0/rhodesapi/rhocontact-api">RhoContact *</a>
@@ -851,7 +585,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "></td>
       <td style="text-align:center" class=" "></td>
     </tr>
-
     <tr>
       <td>
         <a href="../../2.2.0/rhodesapi/rhocontroller-api">RhoController *</a>
@@ -864,7 +597,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "></td>
       <td style="text-align:center" class=" "></td>
     </tr>
-
     <tr>
       <td>
         <a href="../../2.2.0/rhodesapi/rhoerror-api">RhoError *</a>
@@ -877,7 +609,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "></td>
       <td style="text-align:center" class=" "></td>
     </tr>
-
     <tr>
       <td>
         <a href="../../2.2.0/rhodesapi/rhoevent-api">RhoEvent *</a>
@@ -890,7 +621,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "></td>
       <td style="text-align:center" class=" "></td>
     </tr>
-
     <tr>
       <td>
         <a href="../api/File">RhoFile</a>
@@ -903,7 +633,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
     </tr>
-
     <tr>
       <td>
         <a href="../../2.2.0/rhodesapi/rhomsource-api">RhomSource *</a>
@@ -916,7 +645,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
     </tr>
-
     <tr>
       <td>
         <a href="../../2.2.0/rhodesapi/rhoprofiler-api">RhoProfiler *</a>
@@ -929,7 +657,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
     </tr>
-
     <tr>
       <td>
         <a href="../../2.2.0/rhodesapi/rhoutils-api">RhoUtils *</a>
@@ -942,7 +669,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
     </tr>
-
     <tr>
       <td>
         <a href="../api/screenorientation">ScreenOrientation</a>
@@ -955,7 +681,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "></td>
       <td style="text-align:center" class=" "></td>
     </tr>
-
     <tr>
       <td>
         <a href="../api/sensor">Sensor</a>
@@ -968,7 +693,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "></td>
       <td style="text-align:center" class=" "></td>
     </tr>
-
     <tr>
       <td>
         <a href="../api/signalindicators">SignalIndicators</a>
@@ -981,7 +705,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "></td>
       <td style="text-align:center" class=" "></td>
     </tr>
-
     <tr>
       <td>
         <a href="../api/signature">Signature</a>
@@ -994,7 +717,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "></td>
       <td style="text-align:center" class=" "></td>
     </tr>
-
     <tr>
       <td>
         <a href="../../2.2.0/rhodesapi/signaturecapture-api">SignatureCapture (inline) *</a>
@@ -1019,20 +741,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "></td>
       <td style="text-align:center" class=" "></td>
     </tr>
-
-    <!--<tr>
-      <td>
-        <a href="../../2.2.0/rhoelements/stylus">Stylus *</a>
-      </td>
-      <td style="text-align:center" class=" "><span class="icon-check-empty icon-primary"></span></td>
-      <td style="text-align:center;border-right:thin solid #cccccc;" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "></td>
-      <td style="text-align:center" class=" "></td>
-    </tr>-->
-
     <tr>
       <td>
         <a href="../api/system">System</a>
@@ -1045,20 +753,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
     </tr>
-
-    <!--<tr>
-      <td>
-        <a href="../../2.2.0/rhoelements/systemTime">SystemTime *</a>
-      </td>
-      <td style="text-align:center" class=" "><span class="icon-check-empty icon-primary"></span></td>
-      <td style="text-align:center;border-right:thin solid #cccccc;" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-    </tr>-->
-
     <tr>
       <td>
         <a href="../api/Timer">Timer</a>
@@ -1071,59 +765,6 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
       <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
     </tr>
-
-    <!-- <tr>
-      <td>
-        <a href="../api/videocapture">Video Capture</a>
-      </td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center;border-right:thin solid #cccccc;" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "></td>
-      <td style="text-align:center" class=" "></td>
-      <td style="text-align:center" class=" "></td>
-      <td style="text-align:center" class=" "></td>
-    </tr> -->
-
-    <!--<tr>
-      <td>
-        <a href="../../2.2.0/rhoelements/VideoCapture">VideoCapture *</a>
-      </td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center;border-right:thin solid #cccccc;" class=" "><span class="icon-check-empty icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "></td>
-      <td style="text-align:center" class=" "></td>
-      <td style="text-align:center" class=" "></td>
-      <td style="text-align:center" class=" "></td>
-    </tr>
-
-    <tr>
-      <td>
-        <a href="../../2.2.0/rhoelements/volume">Volume *</a>
-      </td>
-      <td style="text-align:center" class=" "><span class="icon-check-empty icon-primary"></span></td>
-      <td style="text-align:center;border-right:thin solid #cccccc;" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "></td>
-      <td style="text-align:center" class=" "></td>
-      <td style="text-align:center" class=" "></td>
-      <td style="text-align:center" class=" "></td>
-    </tr>
-
-    <tr>
-      <td>
-        <a href="../../2.2.0/rhoelements/wake">Wake *</a>
-      </td>
-      <td style="text-align:center" class=" "><span class="icon-check-empty icon-primary"></span></td>
-      <td style="text-align:center;border-right:thin solid #cccccc;" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "><span class="icon-check icon-primary"></span></td>
-      <td style="text-align:center" class=" "></td>
-      <td style="text-align:center" class=" "></td>
-      <td style="text-align:center" class=" "></td>
-      <td style="text-align:center" class=" "></td>
-    </tr>-->
-
     <tr>
       <td>
         <a href="../api/webview">Webview</a>
@@ -1141,47 +782,9 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
 
 **These API classes are implemented in RhoMobile Suite 2.2 but are not yet included in the new Common API class set for RhoMobile Suite 7.1. They use the older 2.2 format and support Ruby only except as noted.*
 
-**NOTE: When using 2.2 APIs in RhoMobile 7.1, the [2.2 API compatibility matrix](../../2.2.0/rhoelements/apicompatibility) applies.**
-
-
-### JavaScript APIs
-To use the JavaScript APIs in RhoElements 2.2, **you must add the `public/js/rho_javascript_api.js` file to the .html, .erb, or .js file that's calling the JavaScript method**. This file is created at build time as part of the application package  and can coexist with RhoMobile 7.1 JavaScript API file `rhoapi-modules.js`. However, it has been altered from the version built using 2.2, and must be regenerated to allow it to properly coexist with other files of your 7.1 app.
-
 
 ### JavaScript ORM
 If you're using the JavaScript ORM API, include this line in any files that will be calling it:
+
     :::html
     <script type="text/javascript" charset="utf-8" src="/public/api/rhoapi-modules-ORM.js"></script>
-
-### Using older JavaScript APIs
-In the event that a pre-4.0 JavaScript API is required to work with one of the new Common JavaScript APIs, it is possible to create a compatibility layer this way:
-
-    :::html
-    <!-- required for pre-4.0 JS API: -->
-    <script type="text/javascript" src="/public/jquery/jquery-1.6.4.min.js"></script>
-    <script type="text/javascript" src="/public/jquery/jquery.json-2.3.min.js"></script>
-
-    <!-- pre-4.0 JS API: -->
-    <script type="text/javascript" src="/public/js/rho_javascript_api.js"></script>
-    
-    <!-- compatibility layer: -->
-    <script type="text/javascript" src="/public/js/rho_common_api_noconflict.js"></script>
-    
-    <!-- new Common JS API: -->
-    <script type="text/javascript" charset="utf-8" src="/public/api/rhoapi-modules.js"></script>
-
-NOTE: Important: Modules must be loaded in this order!
-
-##Future Common APIs
-Toward the goal of supplying a Common API format for both JavaScript and Ruby, the following API classes will be included in future versions of RhoMobile Suite 6.x.
-
-### RhoElements 2.2 APIs
-The 2.2 RhoElement APIs are supported only on Zebra WebKit, which is still available on Windows Mobile/CE and Android platforms. The APIs for 6.x support the stock Android WebKit by default.
-
-### Rhodes 2.2 APIs
-2.2 Rhodes APIs that were not replaced by an equivalent RhoMobile 7.1 API (ex: Camera) are supported on all platforms that were supported previously. Ruby APIs will behave exactly as they did before.  Note that some of the Rhodes 2.2 APIs provided JavaScript support  but used a different version of the RhoMobile JavaScript API library: `rho_javascript_api.js`
-
-To generate this file you must enable JavaScript by putting `rho-javascript` into extensions in your build.yml.
-
-    :::yaml
-    extensions: ["rho-javascript"]
