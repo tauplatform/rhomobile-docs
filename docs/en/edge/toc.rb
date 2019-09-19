@@ -112,6 +112,7 @@ section 'rhomob-apps', 'Developing Apps', 'Mobile Guides' do
   topic 'en/edge/guide/proguard', 'Using ProGuard'
   topic 'en/edge/guide/bundle_encryption', 'Encrypting application bundle'
   topic 'en/edge/guide/application_security', 'Application Security'
+  topic 'en/edge/guide/rhodes_lib', 'Using Rhodes App from Native Apps'
 end
 
 section 'rhomob-data', 'Data Handling', 'Mobile Guides' do
