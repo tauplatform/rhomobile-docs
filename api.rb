@@ -1751,7 +1751,7 @@ end
 	  	md += "#" + getApiName(doc,'',true) + "\n"
 	  	if methlinks["count"]>0
 		  	md += '<div class="btn-group">'
-		    md += '<a href="#Methods" class="btn"><i class="icon-cog"></i> Methods<sup>&nbsp;' + methlinks["count"].to_s + '</sub></a>'
+		    md += '<a href="#Methods" class="btn"><i class="icon-cog"></i> Methods<sub>&nbsp;' + methlinks["count"].to_s + '</sub></a>'
 		    md += '<a class="btn dropdown-toggle" data-toggle="dropdown" data-target="#" href="#Methods" >'
 		    md += '  <span class="caret"></span>&nbsp;'
 		    md += '</a>'
