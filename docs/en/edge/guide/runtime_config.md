@@ -138,6 +138,9 @@ Sample yaml code:
 
     # disable close app when pressing back on home screen on blackberry
     # bb_disable_closebyback = 0
+    
+    # disable back button on Android
+    disable_back_button = 0
 
     # load images in background, this improve reaction speed on user actions, 0 by default
     # bb_loadimages_async = 0
