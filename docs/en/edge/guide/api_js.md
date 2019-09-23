@@ -207,6 +207,8 @@ You may want the callback to return to a ruby controller method or a particular 
 	:::javascript
 	Rho.Camera.takePicture(...,'/Images/imageTakeHandler');
 
+&nbsp; 
+
 	:::ruby
 	def imageTakeHandler
 		#callback object will be in params object
