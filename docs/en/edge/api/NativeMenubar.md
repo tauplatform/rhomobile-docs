@@ -3,9 +3,11 @@
 <p>The NativeMenubar API lets you customize the Windows Mobile/CE native menu buttons.</p>
 <h2>Enabling the API</h2>
 
-<p>This API is part of the <code>coreapi</code> extension that is included automatically.
-    :::ruby
-    extensions: [&ldquo;coreapi&rdquo;]</p>
+<p>This API is part of the <code>coreapi</code> extension that is included automatically.</p>
+
+<pre><code>:::ruby
+extensions: ["coreapi"]
+</code></pre>
 
 <h2>JavaScript Usage</h2>
 

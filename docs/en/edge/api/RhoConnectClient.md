@@ -1,12 +1,14 @@
 #RhoConnectClient
-<div class="btn-group"><a href="#Methods" class="btn"><i class="icon-cog"></i> Methods<sup>&nbsp;13</sub></a><a class="btn dropdown-toggle" data-toggle="dropdown" data-target="#" href="#Methods" >  <span class="caret"></span>&nbsp;</a><ul class="dropdown-menu" style="max-height: 500px;overflow: auto;"><li class="disabled"><a tabindex="-1" href="#"><b><i>Methods - Class</i></b></a><li><a href="#maddObjectNotify" data-target="cMethodaddObjectNotify" class="autouncollapse">&nbsp;<span class='text-info'>addObjectNotify</span></a></li><li><a href="#mcleanObjectNotify" data-target="cMethodcleanObjectNotify" class="autouncollapse">&nbsp;<span class='text-info'>cleanObjectNotify</span></a></li><li><a href="#mclearNotification" data-target="cMethodclearNotification" class="autouncollapse">clearNotification</a></li><li><a href="#mdoSync" data-target="cMethoddoSync" class="autouncollapse">&nbsp;<span class='text-info'>doSync</span></a></li><li><a href="#mdoSyncSource" data-target="cMethoddoSyncSource" class="autouncollapse">doSyncSource</a></li><li><a href="#misLoggedIn" data-target="cMethodisLoggedIn" class="autouncollapse">isLoggedIn</a></li><li><a href="#misSyncing" data-target="cMethodisSyncing" class="autouncollapse">isSyncing</a></li><li><a href="#mlogin" data-target="cMethodlogin" class="autouncollapse">login</a></li><li><a href="#mlogout" data-target="cMethodlogout" class="autouncollapse">logout</a></li><li><a href="#msearch" data-target="cMethodsearch" class="autouncollapse">search</a></li><li><a href="#msetNotification" data-target="cMethodsetNotification" class="autouncollapse">setNotification</a></li><li><a href="#msetObjectNotification" data-target="cMethodsetObjectNotification" class="autouncollapse">&nbsp;<span class='text-info'>setObjectNotification</span></a></li><li><a href="#mstopSync" data-target="cMethodstopSync" class="autouncollapse">&nbsp;<span class='text-info'>stopSync</span></a></li></li></ul></div><div class="btn-group"><a href="#Properties" class="btn"><i class="icon-list"></i> Properties<sup>&nbsp;7</sup></a><button href="#" class="btn dropdown-toggle" data-toggle="dropdown">  <span class="caret"></span>&nbsp;</button><ul class="dropdown-menu" style="max-height: 500px;overflow: auto;"><li class="disabled"><a tabindex="-1" href="#"><b><i>Class Properties</i></b></a><li><a href="#pbulksyncState" data-target="cPropertybulksyncState" class="autouncollapse">bulksyncState</a></li><li><a href="#ppageSize" data-target="cPropertypageSize" class="autouncollapse">pageSize</a></li><li><a href="#ppollInterval" data-target="cPropertypollInterval" class="autouncollapse">pollInterval</a></li><li><a href="#pshowStatusPopup" data-target="cPropertyshowStatusPopup" class="autouncollapse">showStatusPopup</a></li><li><a href="#psslVerifyPeer" data-target="cPropertysslVerifyPeer" class="autouncollapse">sslVerifyPeer</a></li><li><a href="#psyncServer" data-target="cPropertysyncServer" class="autouncollapse">syncServer</a></li><li><a href="#puserName" data-target="cPropertyuserName" class="autouncollapse">userName</a></li></li></ul></div><div class="btn-group"><a href="#Examples" class="btn"><i class="icon-edit"></i> Examples<sup>&nbsp;5</sup></a><button href="#" class="btn dropdown-toggle" data-toggle="dropdown">  <span class="caret"></span>&nbsp;</button><ul class="dropdown-menu" style="max-height: 500px;overflow: auto;"><li><a href="#e0" data-target="eExample0" class="autouncollapse">Sync Authentication</a></li><li><a href="#e1" data-target="eExample1" class="autouncollapse">Notifications</a></li><li><a href="#e2" data-target="eExample2" class="autouncollapse">Object notifications</a></li><li><a href="#e3" data-target="eExample3" class="autouncollapse">Handling Errors</a></li><li><a href="#e4" data-target="eExample4" class="autouncollapse">Using search (Ruby Only)</a></li></ul></div><div class="btn-group"><a href="#Remarks" class="btn"><i class="icon-warning-sign"></i> Remarks<sup>&nbsp;2</sup></a><button href="#" class="btn dropdown-toggle" data-toggle="dropdown">  <span class="caret"></span>&nbsp;</button><ul class="dropdown-menu" style="max-height: 500px;overflow: auto;"><li><a href="#r0" data-target="rRemark0" class="autouncollapse">Notification Callback Parameters</a></li><li><a href="#r1" data-target="rRemark1" class="autouncollapse">Backround Sync on iOS</a></li></ul></div><div class="btn-group pull-right"><button class="btn dropdown-toggle" id="apiFilterBtn" data-toggle="dropdown" href="#" title="Filter Properties and Methods"><i class="icon-filter "></i>Show</button><select id="apiFilter" class="dropdown-menu apiFilter"><option value="all">All</option><option value="js">JavaScript</option><option value="ruby">Ruby</option><option value="android">Android</option><option value="ios">iOS</option><option value="wm">Windows Mobile</option><option value="wp8">Windows Phone 8</option><option value="w32">Windows Desktop</option><option value="msi">MSI Only</option></select></div><div  id="apibody" style="overflow:auto;padding-right: 5px;">
+<div class="btn-group"><a href="#Methods" class="btn"><i class="icon-cog"></i> Methods<sub>&nbsp;13</sub></a><a class="btn dropdown-toggle" data-toggle="dropdown" data-target="#" href="#Methods" >  <span class="caret"></span>&nbsp;</a><ul class="dropdown-menu" style="max-height: 500px;overflow: auto;"><li class="disabled"><a tabindex="-1" href="#"><b><i>Methods - Class</i></b></a><li><a href="#maddObjectNotify" data-target="cMethodaddObjectNotify" class="autouncollapse">&nbsp;<span class='text-info'>addObjectNotify</span></a></li><li><a href="#mcleanObjectNotify" data-target="cMethodcleanObjectNotify" class="autouncollapse">&nbsp;<span class='text-info'>cleanObjectNotify</span></a></li><li><a href="#mclearNotification" data-target="cMethodclearNotification" class="autouncollapse">clearNotification</a></li><li><a href="#mdoSync" data-target="cMethoddoSync" class="autouncollapse">&nbsp;<span class='text-info'>doSync</span></a></li><li><a href="#mdoSyncSource" data-target="cMethoddoSyncSource" class="autouncollapse">doSyncSource</a></li><li><a href="#misLoggedIn" data-target="cMethodisLoggedIn" class="autouncollapse">isLoggedIn</a></li><li><a href="#misSyncing" data-target="cMethodisSyncing" class="autouncollapse">isSyncing</a></li><li><a href="#mlogin" data-target="cMethodlogin" class="autouncollapse">login</a></li><li><a href="#mlogout" data-target="cMethodlogout" class="autouncollapse">logout</a></li><li><a href="#msearch" data-target="cMethodsearch" class="autouncollapse">search</a></li><li><a href="#msetNotification" data-target="cMethodsetNotification" class="autouncollapse">setNotification</a></li><li><a href="#msetObjectNotification" data-target="cMethodsetObjectNotification" class="autouncollapse">&nbsp;<span class='text-info'>setObjectNotification</span></a></li><li><a href="#mstopSync" data-target="cMethodstopSync" class="autouncollapse">&nbsp;<span class='text-info'>stopSync</span></a></li></li></ul></div><div class="btn-group"><a href="#Properties" class="btn"><i class="icon-list"></i> Properties<sup>&nbsp;7</sup></a><button href="#" class="btn dropdown-toggle" data-toggle="dropdown">  <span class="caret"></span>&nbsp;</button><ul class="dropdown-menu" style="max-height: 500px;overflow: auto;"><li class="disabled"><a tabindex="-1" href="#"><b><i>Class Properties</i></b></a><li><a href="#pbulksyncState" data-target="cPropertybulksyncState" class="autouncollapse">bulksyncState</a></li><li><a href="#ppageSize" data-target="cPropertypageSize" class="autouncollapse">pageSize</a></li><li><a href="#ppollInterval" data-target="cPropertypollInterval" class="autouncollapse">pollInterval</a></li><li><a href="#pshowStatusPopup" data-target="cPropertyshowStatusPopup" class="autouncollapse">showStatusPopup</a></li><li><a href="#psslVerifyPeer" data-target="cPropertysslVerifyPeer" class="autouncollapse">sslVerifyPeer</a></li><li><a href="#psyncServer" data-target="cPropertysyncServer" class="autouncollapse">syncServer</a></li><li><a href="#puserName" data-target="cPropertyuserName" class="autouncollapse">userName</a></li></li></ul></div><div class="btn-group"><a href="#Examples" class="btn"><i class="icon-edit"></i> Examples<sup>&nbsp;5</sup></a><button href="#" class="btn dropdown-toggle" data-toggle="dropdown">  <span class="caret"></span>&nbsp;</button><ul class="dropdown-menu" style="max-height: 500px;overflow: auto;"><li><a href="#e0" data-target="eExample0" class="autouncollapse">Sync Authentication</a></li><li><a href="#e1" data-target="eExample1" class="autouncollapse">Notifications</a></li><li><a href="#e2" data-target="eExample2" class="autouncollapse">Object notifications</a></li><li><a href="#e3" data-target="eExample3" class="autouncollapse">Handling Errors</a></li><li><a href="#e4" data-target="eExample4" class="autouncollapse">Using search (Ruby Only)</a></li></ul></div><div class="btn-group"><a href="#Remarks" class="btn"><i class="icon-warning-sign"></i> Remarks<sup>&nbsp;2</sup></a><button href="#" class="btn dropdown-toggle" data-toggle="dropdown">  <span class="caret"></span>&nbsp;</button><ul class="dropdown-menu" style="max-height: 500px;overflow: auto;"><li><a href="#r0" data-target="rRemark0" class="autouncollapse">Notification Callback Parameters</a></li><li><a href="#r1" data-target="rRemark1" class="autouncollapse">Backround Sync on iOS</a></li></ul></div><div class="btn-group pull-right"><button class="btn dropdown-toggle" id="apiFilterBtn" data-toggle="dropdown" href="#" title="Filter Properties and Methods"><i class="icon-filter "></i>Show</button><select id="apiFilter" class="dropdown-menu apiFilter"><option value="all">All</option><option value="js">JavaScript</option><option value="ruby">Ruby</option><option value="android">Android</option><option value="ios">iOS</option><option value="wm">Windows Mobile</option><option value="wp8">Windows Phone 8</option><option value="w32">Windows Desktop</option><option value="msi">MSI Only</option></select></div><div  id="apibody" style="overflow:auto;padding-right: 5px;">
 <p>RhoConnectClient is used for synchronization with RhoConnect applications.</p>
 
 <h2>Enabling the API</h2>
 
-<p>In order to use this API you must include the following extension in your <code>build.yml</code>
-    :::ruby
-    extensions: [&ldquo;rhoconnect-client&rdquo;]</p>
+<p>In order to use this API you must include the following extension in your <code>build.yml</code></p>
+
+<pre><code>:::ruby
+extensions: ["rhoconnect-client"]
+</code></pre>
 
 <h2>JavaScript Usage</h2>
 
@@ -28,10 +30,12 @@
 <p><div><p><img src="/img/js.png" style="width: 20px;padding-top: 8px" rel="tooltip" title="JavaScript"><img src="/img/ruby.png" style="width: 20px;padding-top: 8px" rel="tooltip" title="Ruby"><img src="/img/android.png" style="width: 20px;padding-top: 8px" rel="tooltip" title="Android"><img src="/img/ios.png" style="width: 20px;padding-top: 8px" rel="tooltip" title="iphone, ipod touch, ipad"><img src="/img/windowsmobile.png" style="height: 20px;padding-top: 8px" rel="tooltip" title="Windows Mobile, Windows CE, Windows Embedded"><img src="/img/wp8.png" style="width: 20px;padding-top: 8px" rel="tooltip" title="Windows Phone 8, Windows Embedded 8"><img src="/img/windows.jpg" style="width: 20px;padding-top: 8px" rel="tooltip" title="Windows Desktop"></p></div></p></div><div class="tab-pane fade" id="mclearNotification2"><div><p><strong>Parameters</strong></p><ul><li>sourceName : <span class='text-info'>STRING</span><p><p>Source name to clear notification. Use &lsquo;*&rsquo; to clear notification for all models.</p>
  </p></li></ul></div></div><div class="tab-pane fade" id="mclearNotification3"></div><div class="tab-pane fade" id="mclearNotification4"><div><p><strong>Synchronous Return:</strong></p><ul><li>Void</li></ul></div></div><div class="tab-pane fade" id="mclearNotification6"><div><p><strong>Method Access:</strong></p><ul><li><i class="icon-book"></i>Class Method: This method can only be accessed via the API class object. <ul><li>JavaScript: <code>Rho.RhoConnectClient.clearNotification(<span class="text-info">STRING</span> sourceName)</code> </li><li>Ruby: <code>Rho::RhoConnectClient.clearNotification(<span class="text-info">STRING</span> sourceName)</code></li></ul></li></ul></div></div></div>  </div><a name ='mdoSync'/><div class=' method  js ruby android ios wp8' id='mdoSync'><h3><strong  ><span class="text-info">doSync</span></strong><span style='font-size:.7em;font-weight:normal;'>(<span class="text-info">BOOLEAN</span> showStatusPopup, <span class="text-info">STRING</span> queryParams, <span class="text-info">BOOLEAN</span> syncOnlyChangedSources)</span></h3><ul class="nav nav-tabs" style="padding-left:8px"><li class='active'><a href="#mdoSync1" data-toggle="tab">Description</a></li><li ><a href="#mdoSync2" data-toggle="tab">Parameters</a></li><li ><a href="#mdoSync4" data-toggle="tab">Return</a></li><li ><a href="#mdoSync6" data-toggle="tab">Access</a></li></ul><div class='tab-content' style='padding-left:8px' id='tc-doSync'><div class="tab-pane fade active in" id="mdoSync1"><span class='label label-info'>Replaces:</span> <span class='label label-info'>dosync</span>  <p>Start the RhoConnectClient sync process.</p>
 <p><div><p><img src="/img/js.png" style="width: 20px;padding-top: 8px" rel="tooltip" title="JavaScript"><img src="/img/ruby.png" style="width: 20px;padding-top: 8px" rel="tooltip" title="Ruby"><img src="/img/android.png" style="width: 20px;padding-top: 8px" rel="tooltip" title="Android"><img src="/img/ios.png" style="width: 20px;padding-top: 8px" rel="tooltip" title="iphone, ipod touch, ipad"><img src="/img/windowsmobile.png" style="height: 20px;padding-top: 8px" rel="tooltip" title="Windows Mobile, Windows CE, Windows Embedded"><img src="/img/wp8.png" style="width: 20px;padding-top: 8px" rel="tooltip" title="Windows Phone 8, Windows Embedded 8"><img src="/img/windows.jpg" style="width: 20px;padding-top: 8px" rel="tooltip" title="Windows Desktop"></p></div></p></div><div class="tab-pane fade" id="mdoSync2"><div><p><strong>Parameters</strong></p><ul><li>showStatusPopup : <span class='text-info'>BOOLEAN</span> <span class='label label-info'>Optional</span><p><p>Set to true to show status popup.</p>
- </p></li><li>queryParams : <span class='text-info'>STRING</span> <span class='label label-info'>Optional</span><p><p>Parameters to be passed to server.
-                        The value must be like &lsquo;query=<your params here>
-                        .
-                        Your params may be just a string or string representation of JSON structure. For example:  'query=abc&rsquo; or &lsquo;query={abc: &ldquo;foo&rdquo;}&rsquo;</p>
+ </p></li><li>queryParams : <span class='text-info'>STRING</span> <span class='label label-info'>Optional</span><p><p>Parameters to be passed to server.</p>
+
+<pre><code>                    The value must be like 'query=&lt;your params here&gt;
+                    .
+                    Your params may be just a string or string representation of JSON structure. For example:  'query=abc' or 'query={abc: "foo"}'
+</code></pre>
  </p></li><li>syncOnlyChangedSources : <span class='text-info'>BOOLEAN</span> <span class='label label-info'>Optional</span><p><p>Sync only sources that have local changes.</p>
  </p></li></ul></div></div><div class="tab-pane fade" id="mdoSync3"></div><div class="tab-pane fade" id="mdoSync4"><div><p><strong>Synchronous Return:</strong></p><ul><li>STRING</li></ul></div></div><div class="tab-pane fade" id="mdoSync6"><div><p><strong>Method Access:</strong></p><ul><li><i class="icon-book"></i>Class Method: This method can only be accessed via the API class object. <ul><li>JavaScript: <code>Rho.RhoConnectClient.doSync(<span class="text-info">BOOLEAN</span> showStatusPopup, <span class="text-info">STRING</span> queryParams, <span class="text-info">BOOLEAN</span> syncOnlyChangedSources)</code> </li><li>Ruby: <code>Rho::RhoConnectClient.doSync(<span class="text-info">BOOLEAN</span> showStatusPopup, <span class="text-info">STRING</span> queryParams, <span class="text-info">BOOLEAN</span> syncOnlyChangedSources)</code></li></ul></li></ul></div></div></div>  </div><a name ='mdoSyncSource'/><div class=' method  js ruby android ios wp8' id='mdoSyncSource'><h3><strong  >doSyncSource</strong><span style='font-size:.7em;font-weight:normal;'>(<span class="text-info">STRING</span> sourceName, <span class="text-info">BOOLEAN</span> showStatusPopup, <span class="text-info">STRING</span> queryParams)</span></h3><ul class="nav nav-tabs" style="padding-left:8px"><li class='active'><a href="#mdoSyncSource1" data-toggle="tab">Description</a></li><li ><a href="#mdoSyncSource2" data-toggle="tab">Parameters</a></li><li ><a href="#mdoSyncSource4" data-toggle="tab">Return</a></li><li ><a href="#mdoSyncSource6" data-toggle="tab">Access</a></li></ul><div class='tab-content' style='padding-left:8px' id='tc-doSyncSource'><div class="tab-pane fade active in" id="mdoSyncSource1"><p>Start RhoConnectClient sync process for a given source name.</p>
 <p><div><p><img src="/img/js.png" style="width: 20px;padding-top: 8px" rel="tooltip" title="JavaScript"><img src="/img/ruby.png" style="width: 20px;padding-top: 8px" rel="tooltip" title="Ruby"><img src="/img/android.png" style="width: 20px;padding-top: 8px" rel="tooltip" title="Android"><img src="/img/ios.png" style="width: 20px;padding-top: 8px" rel="tooltip" title="iphone, ipod touch, ipad"><img src="/img/windowsmobile.png" style="height: 20px;padding-top: 8px" rel="tooltip" title="Windows Mobile, Windows CE, Windows Embedded"><img src="/img/wp8.png" style="width: 20px;padding-top: 8px" rel="tooltip" title="Windows Phone 8, Windows Embedded 8"><img src="/img/windows.jpg" style="width: 20px;padding-top: 8px" rel="tooltip" title="Windows Desktop"></p></div></p></div><div class="tab-pane fade" id="mdoSyncSource2"><div><p><strong>Parameters</strong></p><ul><li>sourceName : <span class='text-info'>STRING</span><p><p>Source name.</p>
@@ -363,56 +367,56 @@ end
 <p>These parameters are included in all notifications.</p>
 
 <ul>
-<li>source_id - The id of the current model that is synchronizing.</li>
-<li>source_name - Name of the model (i.e. &ldquo;Product&rdquo;)</li>
-<li>sync_type - Type of sync used for this model: &ldquo;incremental&rdquo; or &ldquo;bulk&rdquo;</li>
-<li>status - Status of the current sync process. See below for the possible values:</li>
+<li>source_id &ndash; The id of the current model that is synchronizing.</li>
+<li>source_name &ndash; Name of the model (i.e. &ldquo;Product&rdquo;)</li>
+<li>sync_type &ndash; Type of sync used for this model: &ldquo;incremental&rdquo; or &ldquo;bulk&rdquo;</li>
+<li>status &ndash; Status of the current sync process. See below for the possible values:</li>
 </ul>
 
 
 <p>In the following sections we cover the different status values and parameters available with each status.</p>
 
-<h3>status: &ldquo;in_progress&rdquo; - incremental sync progress</h3>
+<h3>status: &ldquo;in_progress&rdquo; &ndash; incremental sync progress</h3>
 
 <ul>
-<li>total_count - Total number of records that exist for this RhoConnect source.</li>
-<li>processed_count - Number of records included in the sync page.</li>
-<li>cumulative_count - Number of records the SyncEngine has processed so far for this source.</li>
+<li>total_count &ndash; Total number of records that exist for this RhoConnect source.</li>
+<li>processed_count &ndash; Number of records included in the sync page.</li>
+<li>cumulative_count &ndash; Number of records the SyncEngine has processed so far for this source.</li>
 </ul>
 
 
-<h3>status: &ldquo;in_progress&rdquo; - bulk sync progress</h3>
+<h3>status: &ldquo;in_progress&rdquo; &ndash; bulk sync progress</h3>
 
 <ul>
-<li><p>bulk_status - The state of the bulk sync process:</p>
+<li><p>bulk_status &ndash; The state of the bulk sync process:</p>
 
 <ul>
-<li>start - Bulk sync has started for a specific partition</li>
-<li>download - Bulk sync file download has started</li>
-<li>change_db - New bulk sync database change has started</li>
-<li>blobs - Bulk sync blob files have started to download</li>
-<li>ok - Current partition has completed</li>
-<li>complete - All partitions have completed</li>
+<li>start &ndash; Bulk sync has started for a specific partition</li>
+<li>download &ndash; Bulk sync file download has started</li>
+<li>change_db &ndash; New bulk sync database change has started</li>
+<li>blobs &ndash; Bulk sync blob files have started to download</li>
+<li>ok &ndash; Current partition has completed</li>
+<li>complete &ndash; All partitions have completed</li>
 </ul>
 </li>
-<li><p>partition - Current bulk sync partition.</p></li>
+<li><p>partition &ndash; Current bulk sync partition.</p></li>
 </ul>
 
 
 <h3>status: &ldquo;error&rdquo;</h3>
 
 <ul>
-<li>error_code - HTTP response code of the RhoConnect server error: 401, 500, 404, etc.</li>
-<li>error_message - Response body (if any)</li>
-<li>server_errors - Hash of Type objects of RhoConnect adapter error (if exists):
+<li>error_code &ndash; HTTP response code of the RhoConnect server error: 401, 500, 404, etc.</li>
+<li>error_message &ndash; Response body (if any)</li>
+<li>server_errors &ndash; Hash of Type objects of RhoConnect adapter error (if exists):
 
 <ul>
-<li>login-error - An error in adapter login method</li>
-<li>query-error - An error in adapter query method</li>
-<li>create-error - An error in adapter create method</li>
-<li>update-error - An error in adapter update method</li>
-<li>delete-error - An error in adapter delete method</li>
-<li>logoff-error - An error in adapter logoff method</li>
+<li>login-error &ndash; An error in adapter login method</li>
+<li>query-error &ndash; An error in adapter query method</li>
+<li>create-error &ndash; An error in adapter create method</li>
+<li>update-error &ndash; An error in adapter update method</li>
+<li>delete-error &ndash; An error in adapter delete method</li>
+<li>logoff-error &ndash; An error in adapter logoff method</li>
 </ul>
 </li>
 </ul>
@@ -420,15 +424,19 @@ end
 
 <p>Each error contains a &lsquo;message&rsquo; key with the error message.</p>
 
-<p>Ruby Example:
-    :::ruby
-    @params[&ldquo;server_errors&rdquo;][&ldquo;query-error&rdquo;][&ldquo;message&rdquo;]
-    #=> &ldquo;Error connecting to backend server: http://rhostore.herokuapp.com&rdquo;</p>
+<p>Ruby Example:</p>
 
-<p>JavaScript Example:
-    :::javascript
-    params.server_errors[&ldquo;query-error&rdquo;].message
-    //=> &ldquo;Error connecting to backend server: http://rhostore.herokuapp.com&rdquo;</p>
+<pre><code>:::ruby
+@params["server_errors"]["query-error"]["message"]
+#=&gt; "Error connecting to backend server: http://rhostore.herokuapp.com"
+</code></pre>
+
+<p>JavaScript Example:</p>
+
+<pre><code>:::javascript
+params.server_errors["query-error"].message
+//=&gt; "Error connecting to backend server: http://rhostore.herokuapp.com"
+</code></pre>
 
 <h4>Handling &lsquo;create-error&rsquo;</h4>
 

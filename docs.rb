@@ -232,7 +232,6 @@ class Docs < Sinatra::Base
   # TODO: use proper regex
 
   ['/tutorial/:step/:topic/?',  '/tutorial/:topic/?','/en/:vnum/tutorial/:step/:topic/?',  '/en/:vnum/tutorial/:topic/?'].each do |path|
-    puts "2 matched for /en/edge/tutorial/welcome #{path}"
     get path do
       cache_long
       @docversion = params[:vnum]
@@ -307,7 +306,6 @@ class Docs < Sinatra::Base
 get '/exists' do
   status 200
   topic = params[:doc]
-  puts topic
   if !File.exist?("docs/#{topic}.md")
     status 404
   end
