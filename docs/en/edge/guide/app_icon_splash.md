@@ -1,4 +1,4 @@
-# Application Icon and Splash Screen
+# Application Name, Icons and Splash Screen
 ## Application Name
 In the build.yml in your application folder there is an entry "name". This is the display name that the user will see on the device. Example:
 
@@ -6,20 +6,21 @@ In the build.yml in your application folder there is an entry "name". This is th
 	name: My Own App
 
 ## Application Icons
-Place your image to use as an icon into the folder called `icon` in your application. If you created an app called `testapp` then the folder would be `testapp/icon`.
+NOTE: The work with icons and splashes were changed for iOS ans Android since Rhodes 7.0.<br /> Drawable resources for these platforms  are located in `resourse/<android, ios>` path now. See Android, iOS sections for details. <br />The Rhodes framework continues to support the old way of working with icons and splashes for other platforms.
 
-* Windows Mobile and Windows: You can add an icon in two formats: `icon.png` and  `icon.ico`.
-* iOS 4.0: Apple require three icons for application: 57x57, 72x72 and 114x114 pixels. Prepare such files, name them as `icon57.png`, `icon72.png` and `icon114.png` and place into `icon` folder
+If you created an app called `testapp` then the folder would be `testapp/icon`.
 
-	testapp/
-		build.yml
-		Rakefile
-		rhoconfig.txt
-		app/
-		public/
-		icon/
-			icon.png
-			icon.ico
+* Windows Mobile, Windows: You can add an icon in two formats: `icon.png` and  `icon.ico`.
+
+	    testapp/
+		    build.yml
+		    Rakefile
+		    rhoconfig.txt
+		    app/
+		    public/
+		    icon/
+			    icon.png
+			    icon.ico
 
 ### iOS
 * Target->info->General->Name
@@ -78,14 +79,26 @@ If you choose to manually add the files into your XCode project, you'll need to 
 	</array>
 
 ### Android
-You can change the icon for your Android application by replacing icon.png, which is in your application icon folder, with a new icon.png.
+The application icons and splashes are located in `/resources/android/res/drawable[-resolution]`.<br />
+For example , the image `/resources/android/res/drawable/icon.png` will be used as the application icon.<br />
+You can add icon with apppriate resolution to `drawable-[resultion]` folders. 
 
 ### Windows Mobile
 Windows Mobile Shell program caches program icons. This cache is cleared only when the device or the simulator is restarted. If you change the icon of your application, you have to restart the device or simulator: uninstall/install is not enough.
 
 
 ## Loading screen
-Rhodes supports the display of a custom "Loading" screen while your application is launching. This screen's source is the file loading.html, located at <application-root>/app/loading.html.
+
+NOTE: The work with icons and splashes were changed for iOS ans Android since Rhodes 7.0.<br /> Drawable resources for these platforms  are located in `resourse/<android, ios>` path now. See Android, iOS sections for details. <br />The Rhodes framework continues to support the old way of working with icons and splashes for other platforms.
+
+Rhodes supports the display of a custom "Loading" screen while your application is launching.<br />
+
+### iOS and Android
+  - Android: The application splashes are located in `/resources/android/res/drawable[-resolution]`/loading.png.<br />
+  - iOS: The application splash are located in `/resources/ios/Default[-resolution].png`.<br />
+
+### Windows, Sailfish and deprecated way for iOS and Android
+This screen's source is the file loading.html, located at <application-root>/app/loading.html.
 
 Alternatively, you can replace loading.html with an image named loading.png if you just want a simple image to be displayed.
 
