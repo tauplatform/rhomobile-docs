@@ -20,6 +20,8 @@ fcmSenderID: 'your_fcm_sender_id'
 fcmAppID: 'your_fcm_app_id'
 </code></pre>
 
+<p><strong>Supporting FCM Push on iOS</strong> Download GoogleService-Info.plist and put it into the root of your application. Please read  guide <a href="https://firebase.google.com/docs/ios/setup">Add Firebase to your iOS project</a></p>
+
 <p>For GCM ( NB: GCM is deprecated, we recommend using FCM push ):</p>
 
 <pre><code>:::ruby
