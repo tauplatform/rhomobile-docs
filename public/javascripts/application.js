@@ -1,6 +1,6 @@
 $(document).ready(function() {
     //console.log("Document is ready", new Date().valueOf());
-    $(".js-pjax").pjax({
+    $(document).pjax('a', {
         container: "#t_content",
         fragment: "#rendered_topic",
         timeout: 4000
