@@ -6,7 +6,7 @@ $(document).ready(function() {
         timeout: 4000
     });
     // Update the current topic
-    $("#t_content").live('pjax:end', function(e, xhr, err) {
+    $("#t_content").on('pjax:end', function(e, xhr, err) {
         // Enable previous anchor
         var prevAnchor = $('li.active a');
         console.log(prevAnchor);
@@ -22,7 +22,7 @@ $(document).ready(function() {
         cur.parent().attr('class', 'active');
         $(window).scrollTop(0);
     });
-    $('.accordion-heading > li').live('click', function() {
+    $('.accordion-heading > li').on('click', function() {
         $(this).find('i').toggleClass('icon-chevron-right').toggleClass('icon-chevron-down');
     });
     //Change url to include version
