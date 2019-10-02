@@ -1,12 +1,12 @@
-$(document).ready(function() {
+$(document).ready(function () {
     //console.log("Document is ready", new Date().valueOf());
-    $(document).pjax('a', {
+/*    $(document).pjax('a', {
         container: "#t_content",
         fragment: "#rendered_topic",
         timeout: 4000
-    });
+    });*/
     // Update the current topic
-    $("#t_content").on('pjax:end', function(e, xhr, err) {
+/*    $("#t_content").on('pjax:end', function (e, xhr, err) {
         // Enable previous anchor
         var prevAnchor = $('li.active a');
         console.log(prevAnchor);
@@ -22,33 +22,32 @@ $(document).ready(function() {
         cur.parent().attr('class', 'active');
         $(window).scrollTop(0);
     });
-    $('.accordion-heading > li').on('click', function() {
+    $('.accordion-heading > li').on('click', function () {
         $(this).find('i').toggleClass('icon-chevron-right').toggleClass('icon-chevron-down');
-    });
+    });*/
+
     //Change url to include version
-    $('#version_select').bind('change', function() {
-        var ver = $(this).val(); // get selected value
-        loc = window.location.pathname;
-        url = loc.replace(/\/(.[^\/]*)\/(.[^\/]*)(.*)/, '$1/' + ver + '$3');
+    $('#version-selector a.dropdown-item').click(function (event) {
+        event.preventDefault();
+        var ver = $(this).attr('data-version'); // get selected value
+        console.log(ver);
+        var loc = window.location.pathname;
+        var url = loc.replace(/\/(.[^\/]*)\/(.[^\/]*)(.*)/, '$1/' + ver + '$3');
         $.ajax({
             type: "GET",
             url: "/exists",
-            data: { 'doc': url },
-            success: function() {
-                newurl = window.location.protocol + "//" + window.location.host + "/" + url;
-                // console.log('success' + newurl);
-                window.location = newurl;
+            data: {'doc': url},
+            success: function () {
+                var newUrl = window.location.protocol + "//" + window.location.host + "/" + url;
+                console.log('success', newurl);
+                window.location = newUrl;
             },
-            error: function() {
-                newurl = window.location.protocol + "//" + window.location.host + "/" + loc.replace(/\/(.[^\/]*)\/(.[^\/]*)(.*)/, '$1/' + ver);
-                // console.log('error' + newurl);
-                window.location = newurl;
+            error: function () {
+                var newUrl = window.location.protocol + "//" + window.location.host + "/" + loc.replace(/\/(.[^\/]*)\/(.[^\/]*)(.*)/, '$1/' + ver);
+                console.log('error', newUrl);
+                window.location = newUrl;
             }
         });
-
-
-
-        return false;
     });
 
     $('.bxslider').bxSlider({
@@ -57,10 +56,10 @@ $(document).ready(function() {
     });
 
     sizeContent();
-    $(".apiCheckbox").bind('change', function() {
+    $(".apiCheckbox").bind('change', function () {
         $('.property').hide();
         $('.method').hide();
-        $(".apiCheckbox").each(function(index) {
+        $(".apiCheckbox").each(function (index) {
             console.log(index + ": " + this.checked + ":" + this.value);
             var cbClass = '.' + this.value;
             if (this.checked) {
@@ -68,14 +67,13 @@ $(document).ready(function() {
             }
         });
     });
-    $(".apiFilter").bind('change', function() {
+    $(".apiFilter").bind('change', function () {
 
         // console.log(this);
         if ($(".apiFilter option:selected").text() == "All") {
             $("#apiFilterBtn").html('<i class="icon-filter "></i> Show');
 
-        }
-        else {
+        } else {
             $("#apiFilterBtn").html('<i class="icon-filter "></i>' + $(".apiFilter option:selected").text());
 
         }
@@ -83,8 +81,7 @@ $(document).ready(function() {
             $('.property').show();
             $('.method').show();
 
-        }
-        else {
+        } else {
             $('.property').hide();
             $('.method').hide();
             // console.log(this.value);
@@ -97,27 +94,25 @@ $(document).ready(function() {
 
     });
 
-    $(".icon-bug").parent().click(function() {
+    $("[data-action=report-doc-issue]").on('click', function () {
         //var url = "http://github.com/rhomobile/rhomobile-docs/issues/new?title=Doc Issue:" + document.title + '&body=' + encodeURIComponent('Bad Link: ' + window.location.href + ' came from: ' + document.referrer);
         var url = "https://tautechnologies.zendesk.com/hc/en-us/requests/new";
         window.open(url);
-
     });
 
 
     //search handler for filtering
-    $('#facets > .filter').click(function(e) {
+    $('#facets > .filter').click(function (e) {
         var docCatKey = $(this).attr('data-id');
         var docCat = $(this).attr('data-type');
         var sCats = [];
 
         if ($(this).attr('data-selected') == 'true') {
             $(this).attr('data-selected', 'false');
-        }
-        else {
+        } else {
             $(this).attr('data-selected', 'true');
         }
-        $('#facets > span[data-selected="true"][data-type="category"]').each(function() {
+        $('#facets > span[data-selected="true"][data-type="category"]').each(function () {
             // do something
             sCats.push($(this).attr('data-id'));
         });
@@ -128,18 +123,19 @@ $(document).ready(function() {
     });
 
     //search handler for filtering
-    $('#versions').change(function(e) {
+    $('#versions').change(function (e) {
         //console.log("version is changed", new Date().valueOf());
         var sVers = [$("#versions option:selected").val()];
         var sCats = [];
-        $('#facets > span[data-selected="true"][data-type="category"]').each(function() {
+        $('#facets > span[data-selected="true"][data-type="category"]').each(function () {
             // do something
             sCats.push($(this).attr('data-id'));
         });
         window.location = window.location.protocol + '//' + window.location.host + window.location.pathname + '?q=' + $('#facets').attr('data-query') + '&c=' + sCats.join(",") + '&v=' + sVers.join(",");
     });
 
-    $('#facets > span[data-type="all"]').click(function(e) {
+
+    $('#facets > span[data-type="all"]').click(function (e) {
         var sVers = [$("#versions option:selected").val()];
         window.location = window.location.protocol + '//' + window.location.host + window.location.pathname + '?q=' + $('#facets').attr('data-query') + '&v=' + sVers.join(",");
     });
@@ -149,7 +145,6 @@ $(document).ready(function() {
     $("#query").indextank_Autocomplete();
 
 });
-
 
 
 //Every resize of window
