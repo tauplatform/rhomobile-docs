@@ -1,6 +1,6 @@
 $(document).ready(function () {
     //console.log("Document is ready", new Date().valueOf());
-/*    $(document).pjax('a', {
+/*    $('.js-pjax').pjax('a', {
         container: "#t_content",
         fragment: "#rendered_topic",
         timeout: 4000
@@ -21,10 +21,11 @@ $(document).ready(function () {
         cur.attr('onclick', 'return false');
         cur.parent().attr('class', 'active');
         $(window).scrollTop(0);
-    });
-    $('.accordion-heading > li').on('click', function () {
-        $(this).find('i').toggleClass('icon-chevron-right').toggleClass('icon-chevron-down');
     });*/
+
+    $('ul.section li').on('click', function () {
+        $(this).find('i').toggleClass('icon-chevron-right').toggleClass('icon-chevron-down');
+    });
 
     //Change url to include version
     $('#version-selector a.dropdown-item').click(function (event) {
@@ -39,12 +40,10 @@ $(document).ready(function () {
             data: {'doc': url},
             success: function () {
                 var newUrl = window.location.protocol + "//" + window.location.host + "/" + url;
-                console.log('success', newurl);
                 window.location = newUrl;
             },
             error: function () {
                 var newUrl = window.location.protocol + "//" + window.location.host + "/" + loc.replace(/\/(.[^\/]*)\/(.[^\/]*)(.*)/, '$1/' + ver);
-                console.log('error', newUrl);
                 window.location = newUrl;
             }
         });

@@ -61,7 +61,7 @@
      end
   %>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="top_navbar" style="background-image: url(/img/header-bg.jpg);">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="top_navbar" style="background-image: url('/img/header-bg.jpg');">
 
     <!-- Brand logo -->
     <a class="navbar-brand" href="<%= home_path %>">
@@ -131,21 +131,20 @@
 
   </nav>
 
-  <div id="" class="">
-    <div id="doc_container">
-      <div id="docsnav" class="span2"
+  <div class="container-fluid mt-3">
+
+    <div id="doc_container" class="row">
+      <div class="col-2 mt-1"
            <% if @print != 0 %> style="display:none"
            <% end %>>
         <% collapsed = true
            first = true
         %>
-        <%
-          if !@steps.nil?
-        %>
+        <% if !@steps.nil? %>
           <div class='well'>
             <ul class='nav nav-list'>
               <li class="nav-header">
-                <a href="/en/<%= @docversion %>/tutorial/<%= @doc %>"><i class='icon '</i> <%= @docTitle %></a></li>
+                <a href="/en/<%= @docversion %>/tutorial/<%= @doc %>"><i class='icon '></i> <%= @docTitle %></a></li>
 
               <% @steps.each do |gitlabel, title| %>
                 <li class="<%= 'active' if gitlabel == @step %> ">
@@ -166,40 +165,40 @@
           </div>
 
         <% else
-             sections.each do |slug, title, sectgroup, topics|
-        %>
+             sections.each do |slug, title, sectgroup, topics| %>
+
             <% if sectionGroup == sectgroup %>
-              <% if topics and topics.length > 0 %>
+
+              <% if topics && topics.length > 0 %>
                 <% collapsed = false if TOC.find(request.path_info) == slug %>
-                <%
-                  if collapsed
-                    header_icon = "icon-chevron-right"
+                <% header_icon = collapsed ? "icon-chevron-right" : "icon-chevron-down" %>
 
-                  else
-                    header_icon = "icon-chevron-down"
-                  end
-                %>
-                <div class="accordion-heading">
-                  <li class="nav-header" data-target="#<%= slug %>" data-toggle="collapse">
-                    <%= title %><i class="<%= header_icon %>" style="float:left"></i>
+                <ul class="list-group section">
+                  <li class="d-flex align-items-center pb-1" data-target="#<%= slug %>" data-toggle="collapse">
+                    <i class="<%= header_icon %> mr-1 fa-fw"></i><span><%= title %></span></li>
+                </ul>
 
-                  </li>
-                </div>
-                <ul class="nav nav-list  <%= collapsed ? 'collapse' : 'in' %>" id="<%= slug %>">
+                <div id="<%= slug %>" class="ml-2 <%= collapsed ? '' : 'show' %>">
+                  <ul class="nav nav-pills flex-column ">
 
-                  <% topics.each do |slug, title, _|
-                  %>
-                    <% if topic_path == slug %>
-                      <li class="active"><a onclick="return false" href="/<%= slug %>"><%= h title %></a></li>
-                    <% else %>
-                      <% if slug != 'rhoelements/apicompatibility' %>
-                        <li><a class='js-pjax' href="/<%= slug %>"><%= h title %></a></li>
+                    <% topics.each do |slug, title, _|
+                    %>
+                      <% if topic_path == slug %>
+                        <li class="nav-item">
+                          <a class="nav-link active pt-0 pb-1" onclick="return false" href="/<%= slug %>"><%= h title %></a>
+                        </li>
                       <% else %>
-                        <li><a href="/<%= slug %>"><%= h title %></a></li>
+                        <% if slug != 'rhoelements/apicompatibility' %>
+                          <li class="nav-item">
+                            <a class='nav-link pt-0 pb-1 js-pjax' href="/<%= slug %>"><%= h title %></a></li>
+                        <% else %>
+                          <li class="nav-item">
+                            <a class="nav-link pt-0 pb-1" href="/<%= slug %>">topic-3<%= h title %></a></li>
+                        <% end %>
                       <% end %>
                     <% end %>
-                  <% end %>
-                </ul>
+                  </ul>
+                </div>
                 <% collapsed = true %>
               <% else %>
                 <% if first
@@ -208,9 +207,9 @@
                   <li class="divider"></li>
                   </ul>
                 <% end %>
-                <h3><%= title %></h3>
                 <ul class="nav nav-list">
               <% end %>
+
             <% end %>
           <% end %>
           </ul>
@@ -218,8 +217,11 @@
       </div>
 
       <!-- Warning if user views previous or upcoming docs version -->
-      <div class="container mt-3">
+      <div class="col-10 pl-5">
+
         <% if !@docversion.nil? && @docversion != Version::CURR_VERSION && @docversion != 'hosted' %>
+
+
           <% if @docversion == Version::NEXT_VERSION %>
             <div class="alert alert-danger">
               Warning Unreleased Docs! - You may be viewing documentation that reflects an upcoming release and the
@@ -231,14 +233,14 @@
               Warning Older Docs! - You are viewing documentation for a previous released version of RhoMobile Suite.
             </div>
           <% end %>
+
+
         <% end %>
+        <!-- Page content -->
+        <div id="t_content" class="topic_content">
+          <%= yield %>
+        </div>
       </div>
-
-      <!-- Page content -->
-      <div id="t_content" class="topic_content">
-        <%= yield %>
-      </div>
-
     </div>
   </div>
 </div>
