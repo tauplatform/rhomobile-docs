@@ -1,5 +1,5 @@
 #Configreadwrite
-<div class="btn-group pull-right"><button class="btn dropdown-toggle" id="apiFilterBtn" data-toggle="dropdown" href="#" title="Filter Properties and Methods"><i class="icon-filter "></i>Show</button><select id="apiFilter" class="dropdown-menu apiFilter"><option value="all">All</option><option value="js">JavaScript</option><option value="ruby">Ruby</option><option value="android">Android</option><option value="ios">iOS</option><option value="wm">Windows Mobile</option><option value="wp8">Windows Phone 8</option><option value="w32">Windows Desktop</option><option value="msi">MSI Only</option></select></div><div  id="apibody" style="overflow:auto;padding-right: 5px;">
+<div id="apibody" class="mt-3">
 <p>The Configreadwrite API provides access to read and write to temporary config files in Android platform. It also provides capabilities to update the user configured attribute value in actual config file.</p>
 <h2>Enabling the API</h2>
 
