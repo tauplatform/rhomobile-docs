@@ -12,13 +12,15 @@ class Api
   		return desc
   	end
   end
-  def self.getElementName(element)
+
+def self.getElementName(element)
   	if !element["docNameOverride"].nil?
   		return element["docNameOverride"]
   	else
   		return element["name"]
   	end
   end
+
 #returns markdown for the name of the API
   def self.getApiName(doc,lang,allowoverride)
   	md=""
@@ -61,7 +63,7 @@ class Api
   	return s
   end
 
- def self.getApiDesc(doc)
+  def self.getApiDesc(doc)
   	md=""
   	if !doc["MODULE"][0]["HELP_OVERVIEW"][0].nil? && doc["MODULE"][0]["HELP_OVERVIEW"][0].length >0
 
@@ -182,7 +184,7 @@ class Api
 	  	s=doc["MODULE"][0]["EXAMPLES"][0]["EXAMPLE"]
 	  	ctr = s.count()
 	  	s.each_with_index() { |element,index|
-	  	md += '<li><a href="#e' + index.to_s + '" data-target="eExample' + index.to_s + '" class="autouncollapse">' + element['title'] + "</a></li>"
+	  	md += '<a href="#e' + index.to_s + '" data-target="eExample' + index.to_s + '" class="dropdown-item">' + element['title'] + "</a>"
 		}
   	end
   	return { "md" => md, "count" => ctr}
@@ -195,25 +197,24 @@ class Api
 	  	s=doc["MODULE"][0]["REMARKS"][0]["REMARK"]
 	  	ctr = s.count()
 	  	s.each_with_index() { |element,index|
-	  	md += '<li><a href="#r' + index.to_s + '" data-target="rRemark' + index.to_s + '" class="autouncollapse">' + element['title'] + "</a></li>"
+	  	md += '<a href="#r' + index.to_s + '" data-target="rRemark' + index.to_s + '" class="dropdown-item">' + element['title'] + "</a>"
 		}
   	end
   	return {"md" => md, "count" => ctr}
   end
 
-def self.getconstantlinks(doc)
+	def self.getconstantlinks(doc)
   	md = ""
   	ctr = 0
   	if !doc["MODULE"][0]["CONSTANTS"].nil? && !doc["MODULE"][0]["CONSTANTS"][0]["CONSTANT"].nil?
 	  	s=doc["MODULE"][0]["CONSTANTS"][0]["CONSTANT"]
 	  	ctr = s.count()
 	  	s.each_with_index() { |element,index|
-	  	md += '<li><a href="#c' + index.to_s + '" data-target="rConstant' + index.to_s + '" class="autouncollapse">' + element['name'] + "</a></li>"
+	  	md += '<a href="#c' + index.to_s + '" data-target="rConstant' + index.to_s + '" class="dropdown-item">' + element['name'] + "</a>"
 		}
   	end
   	return {"md" => md, "count" => ctr}
   end
-
 
   def self.getpropertieslinks(doc)
   	md = ""
@@ -282,11 +283,11 @@ def self.getconstantlinks(doc)
 					menuGroupName = "Class Properties"
 				end
 
-			  	md += '<li><a href="#p' + element["name"] + '" data-target="cProperty' + element["name"] + '" class="autouncollapse">' + propdisplayname + "#{accesstype}</a></li>"
+			  	md += '<a href="#p' + element["name"] + '" data-target="cProperty' + element["name"] + '" class="dropdown-item">' + propdisplayname + "#{accesstype}</a>"
 			  	if mdgroups[menuGroupName].nil?
-			  		mdgroups[menuGroupName] = '<li><a href="#p' + element["name"] + '" data-target="cProperty' + element["name"] + '" class="autouncollapse">' + propdisplayname + "</a></li>"
+			  		mdgroups[menuGroupName] = '<a href="#p' + element["name"] + '" data-target="cProperty' + element["name"] + '" class="dropdown-item">' + propdisplayname + "</a>"
 			  	else
-			  		mdgroups[menuGroupName] += '<li><a href="#p' + element["name"] + '" data-target="cProperty' + element["name"] + '" class="autouncollapse">' + propdisplayname + "</a></li>"
+			  		mdgroups[menuGroupName] += '<a href="#p' + element["name"] + '" data-target="cProperty' + element["name"] + '" class="dropdown-item">' + propdisplayname + "</a>"
 			  	end
 	  		end
 		}
@@ -294,99 +295,92 @@ def self.getconstantlinks(doc)
   	end
 
   	submenus = ""
-  	divider = ""
-  	mdgroups.sort_by { |key, value| key }.each { |k,v|
-  		submenus += divider
-  		submenus += '<li class="disabled"><a tabindex="-1" href="#"><b><i>' + k + '</i></b></a>' + v + '</li>'
-  		divider = '<li class="divider"></li>'
-  		 }
+		mdgroups.sort_by { |key, value| key }.each { |k, v|
+			submenus += "<h6 class=\"dropdown-header\">#{k}</h6>\n#{v}"
+		}
 
   	return { "md" => submenus, "count" => ctr}
   end
 
-  def self.getmethodslinks(doc)
-  	md = ""
-  	mdgroups = {}
+	def self.getmethodslinks(doc)
+		md = ""
+		mdgroups = {}
 
-  	ctr = 0
-  	if !doc["MODULE"][0]["METHODS"].nil?
-	  	s=doc["MODULE"][0]["METHODS"][0]["METHOD"].sort {|x,y| x["name"] <=> y["name"]} rescue {}
+		ctr = 0
+		if !doc["MODULE"][0]["METHODS"].nil?
+			s = doc["MODULE"][0]["METHODS"][0]["METHOD"].sort { |x, y| x["name"] <=> y["name"] } rescue {}
 
-	  	s.each() { |element|
-	  		element["name"] = getElementName(element)
+			s.each() { |element|
+				element["name"] = getElementName(element)
 
-	  		if element["generateDoc"].nil? || element["generateDoc"] == "true"
-	 			ctr+=1
-	  			methname = element["name"]
+				if element["generateDoc"].nil? || element["generateDoc"] == "true"
+					ctr += 1
+					methname = element["name"]
 
-		  		if !doc["MODULE"][0]["METHODS"].nil? && !doc["MODULE"][0]["METHODS"][0]["ALIASES"].nil?  && !doc["MODULE"][0]["METHODS"][0]["ALIASES"][0].empty?
-		    	doc["MODULE"][0]["METHODS"][0]["ALIASES"][0]["ALIAS"].each() { |a|
-					#puts a
-					if a["existing"] == element["name"]
-						methname = "&nbsp;<span class='text-info'>" + element["name"] + "</span>"
-		  			end
-				}
-				end
-		  		methdeprecated = ""
-				if !element["deprecated"].nil?
-					methdeprecated = element["deprecated"]
-				end
-		  		if methdeprecated == "true"
-		  			methname = "<span class='text-error'>" + element["name"] + "</span>"
-				end
-				methtype=''
-				if element["access"].nil? && element["scopeOverride"].nil?
+					if !doc["MODULE"][0]["METHODS"].nil? && !doc["MODULE"][0]["METHODS"][0]["ALIASES"].nil? && !doc["MODULE"][0]["METHODS"][0]["ALIASES"][0].empty?
+						doc["MODULE"][0]["METHODS"][0]["ALIASES"][0]["ALIAS"].each() { |a|
+							#puts a
+							if a["existing"] == element["name"]
+								methname = "<span class='text-info'>" + element["name"] + "</span>"
+							end
+						}
+					end
+					methdeprecated = ""
+					if !element["deprecated"].nil?
+						methdeprecated = element["deprecated"]
+					end
+					if methdeprecated == "true"
+						methname = "<span class='text-error'>" + element["name"] + "</span>"
+					end
+					methtype = ''
+					if element["access"].nil? && element["scopeOverride"].nil?
 						#use global methods field
 						methodsAccess = doc["MODULE"][0]["METHODS"][0]["access"]
-				else
-					if !element["scopeOverride"].nil?
-						methodsAccess = element["scopeOverride"]
 					else
-						methodsAccess = element["access"]
+						if !element["scopeOverride"].nil?
+							methodsAccess = element["scopeOverride"]
+						else
+							methodsAccess = element["access"]
+						end
 					end
-				end
-				if methodsAccess.nil? || methodsAccess == 'INSTANCE' || methodsAccess == ''
-					methtype = '<i class="icon-file pull-right"></i>'
-					menuGroupName = "Methods - Instance"
+					if methodsAccess.nil? || methodsAccess == 'INSTANCE' || methodsAccess == ''
+						methtype = '<i class="icon-file pull-right"></i>'
+						menuGroupName = "Methods - Instance"
 
-				else
-					methtype = '<i class="icon-book pull-right"></i>'
-					menuGroupName = "Methods - Class"
-
-				end
-			  	if !element["constructor"].nil?
-					if element["constructor"] == "true"
+					else
 						methtype = '<i class="icon-book pull-right"></i>'
-						menuGroupName = "Constructs"
-						methname = "Constructor"
-					end
-			  	end
-			  	if !element["destructor"].nil?
-					if element["destructor"] == "true"
-					    methtype = '<i class="icon-book pull-right"></i>'
-						menuGroupName = "Constructs"
-						methname = "Destructor"
-					end
-			  	end
-		  		md += '<li><a href="#m' + getshortcut(element) + '" data-target="cMethod' + element["name"] + '" class="autouncollapse">' + methname + "#{methtype}</a></li>"
-				if mdgroups[menuGroupName].nil?
-			  		mdgroups[menuGroupName] = '<li><a href="#m' + getshortcut(element) + '" data-target="cMethod' + element["name"] + '" class="autouncollapse">' + methname + "</a></li>"
-			  	else
-			  		mdgroups[menuGroupName] += '<li><a href="#m' + getshortcut(element) + '" data-target="cMethod' + element["name"] + '" class="autouncollapse">' + methname + "</a></li>"
-			  	end
-			end
-		}
-  	end
-  	submenus = ""
-  	divider = ""
+						menuGroupName = "Methods - Class"
 
-  	mdgroups.sort_by { |key, value| key }.each { |k,v|
-  		submenus += divider
-  		submenus += '<li class="disabled"><a tabindex="-1" href="#"><b><i>' + k + '</i></b></a>' + v + '</li>'
-  		divider = '<li class="divider"></li>'
-  		 }
-  	return { "md" => submenus, "count" => ctr}
-  end
+					end
+					if !element["constructor"].nil?
+						if element["constructor"] == "true"
+							methtype = '<i class="icon-book pull-right"></i>'
+							menuGroupName = "Constructs"
+							methname = "Constructor"
+						end
+					end
+					if !element["destructor"].nil?
+						if element["destructor"] == "true"
+							methtype = '<i class="icon-book pull-right"></i>'
+							menuGroupName = "Constructs"
+							methname = "Destructor"
+						end
+					end
+					md += '<a href="#m' + getshortcut(element) + '" data-target="cMethod' + element["name"] + '" class="dropdown-item">' + methname + "#{methtype}</a>"
+					if mdgroups[menuGroupName].nil?
+						mdgroups[menuGroupName] = '<a href="#m' + getshortcut(element) + '" data-target="cMethod' + element["name"] + '" class="dropdown-item">' + methname + "</a>"
+					else
+						mdgroups[menuGroupName] += '<a href="#m' + getshortcut(element) + '" data-target="cMethod' + element["name"] + '" class="dropdown-item">' + methname + "</a>"
+					end
+				end
+			}
+		end
+		submenus = ""
+		mdgroups.sort_by { |key, value| key }.each { |k, v|
+			submenus += "<h6 class=\"dropdown-header\">#{k}</h6>\n#{v}"
+		}
+		return {"md" => submenus, "count" => ctr}
+	end
 
   def self.getexamples(doc)
   	md = ""
@@ -456,19 +450,19 @@ def self.getconstantlinks(doc)
 	  			end
 
 				exampletabs = "<ul class='nav nav-tabs' id='#{exampleid}Tab'>"
-				activeindicator = "class='active'"
+				activeindicator = "active"
 				if codejs != ''
-					exampletabs +=  "<li #{activeindicator}><a href='##{exampleid}JS' data-toggle='tab'>JavaScript</a></li>"
+					exampletabs +=  "<li class=\"nav-item\"><a class=\"nav-link #{activeindicator}\" href='##{exampleid}JS' data-toggle='tab'>JavaScript</a></li>"
 					activeindicator = ''
 				end
 				if coderuby != ''
-					exampletabs +=  "<li #{activeindicator}><a href='##{exampleid}RUBY' data-toggle='tab'>Ruby</a></li>"
+					exampletabs +=  "<li class=\"nav-item\"><a class=\"nav-link #{activeindicator}\" href='##{exampleid}RUBY' data-toggle='tab'>Ruby</a></li>"
 				end
 				exampletabs += "</ul>"
 
-				activeindicator = "class='tab-pane active'"
+				activeindicator = "class='tab-pane active show'"
 
-				extabcontent = "<div class='tab-content'>"
+				extabcontent = "<div class='tab-content border border-top-0 mb-3 p-3'>"
 				exJSTabcontent = ''
 				exRubyTabcontent = ''
 				if codejs != ''
@@ -556,7 +550,6 @@ def self.getconstantlinks(doc)
 	return md
   end
 
-
   def self.getplatformindicators (platforms,msionly,ruby,javascript,usemoduleplatforms,doc)
   	if usemoduleplatforms
   		# puts 'using platform override' + doc["MODULE"][0]["name"]
@@ -597,7 +590,7 @@ def self.getconstantlinks(doc)
   	return indicators
   end
 
-def self.getplatformindicatorsfilter (platforms,msionly,ruby,javascript)
+	def self.getplatformindicatorsfilter (platforms,msionly,ruby,javascript)
   	indicators = ""
   	if javascript
 		indicators += ' js'
@@ -663,10 +656,12 @@ def self.getplatformindicatorsfilter (platforms,msionly,ruby,javascript)
 			propnote = ""
 			# type is optional default is STRING
 			 #puts element
+=begin
 			if !element["VER_INTRODUCED"].nil?
 				propver= "<span class='muted pull-right'>" + element["VER_INTRODUCED"][0] + "</span>"
 
 			end
+=end
 			msionly = false
 			ruby = true
 			javascript = true
@@ -729,7 +724,7 @@ def self.getplatformindicatorsfilter (platforms,msionly,ruby,javascript)
 			else
 				propreadOnly= element["readOnly"]
 				if propreadOnly=="true"
-					propreadOnly="<span class='label'>Read Only</span>"
+					propreadOnly="<span class='badge badge-dark'>Read Only</span>"
 				else
 					propreadOnly=""
 				end
@@ -817,14 +812,14 @@ def self.getplatformindicatorsfilter (platforms,msionly,ruby,javascript)
 			#methname = methname + " <span class='pull-right label label-info'>Replaces:#{methreplaces}</span>"
 			# @methdesc = " <span class='label label-info'>Replaces:#{methreplaces}</span>" + @methdesc
 			propdisplayname = '<span class="text-info">' + propname + '</span>'
-			@propdesc = "<span class='label label-info'>Replaces:#{propreplaces}</span> " + @propdesc
+			@propdesc = "<span class='badge badge-info'>Replaces:#{propreplaces}</span> " + @propdesc
 
 	end
 	if deprecated != ""
 			#methname = methname + " <span class='pull-right label label-info'>Replaces:#{methreplaces}</span>"
 			# @methdesc = " <span class='label label-info'>Replaces:#{methreplaces}</span>" + @methdesc
 			propdisplayname = '<span class="text-error">' + propname + '</span>'
-			@propdesc = "<span class='label label-important'>Deprecated</span> " + @propdesc
+			@propdesc = "<span class='badge badge-danger'>Deprecated</span> " + @propdesc
 
 	end
 	templateDefault = false
@@ -904,21 +899,21 @@ def self.getplatformindicatorsfilter (platforms,msionly,ruby,javascript)
   		@propsectionaccess += '<p>This property cannot be accessed via setter or getter methods. It can be used in methods that allow a HASH or Array of properties to be passed in.</p>'
 	end
   	md += "<div class=' method #{@propplatformsfilter}' id='p"+ propname + "'>"
-    md += '<h3><strong  >' + propdisplayname + '</strong>' + "<span style='font-size:.7em;font-weight:normal;'>#{proptype} #{propreadOnly} #{propver}</span></h3>"
-    md += '<ul class="nav nav-tabs" style="padding-left:8px">'
-  	md += "<li class='active'>" + '<a href="#p' + propname + '1" data-toggle="tab">Description</a>' + "</li>"
+    md += '<div class="signature d-flex"><div class="name">' + propdisplayname + "</div><div class='return-values'>#{proptype} #{propreadOnly} #{propver}</div></div>"
+    md += '<ul class="nav nav-tabs">'
+  	md += "<li class='nav-item'>" + '<a class="nav-link active" href="#p' + propname + '1" data-toggle="tab">Description</a>' + "</li>"
   	if propParasDef != ''
-    	md += "<li >"  + '<a href="#p' + propname + '2" data-toggle="tab">Params</a>' + "</li>"
+    	md += "<li  class='nav-item'>"  + '<a  class="nav-link" href="#p' + propname + '2" data-toggle="tab">Params</a>' + "</li>"
     end
   	if @propvalues != ''
 
-		md += "<li >"  + '<a href="#p' + propname + '5" data-toggle="tab">Values</a>' + "</li>"
+		md += "<li class='nav-item'>"  + '<a class="nav-link" href="#p' + propname + '5" data-toggle="tab">Values</a>' + "</li>"
   	end
-  	md += "<li >"  + '<a href="#p' + propname + '6" data-toggle="tab">Access</a>' + "</li>"
+  	md += "<li class='nav-item'>"  + '<a class="nav-link" href="#p' + propname + '6" data-toggle="tab">Access</a>' + "</li>"
   	# md += "<li >"  + '<a href="#p' + propname + '7" data-toggle="tab">Usage</a>' + "</li>"
   	md += '</ul>'
-  	md += "<div class='tab-content' style='padding-left:8px' id='tc-"+ propname + "'>"
-    md += '<div class="tab-pane fade active in" id="p' + propname + '1">' + "#{@propdesc}<p>#{@propsectionplatforms}</p></div>"
+  	md += "<div class='tab-content border border-top-0 p-3 mb-3' id='tc-"+ propname + "'>"
+    md += '<div class="tab-pane fade active show" id="p' + propname + '1">' + "#{@propdesc}<p>#{@propsectionplatforms}</p></div>"
     md += '<div class="tab-pane fade" id="p' + propname + '2">' + propParasDef + "</div>"
   	md += '<div class="tab-pane fade" id="p' + propname + '5">' + @propvalues + "</div>"
   	md += '<div class="tab-pane fade" id="p' + propname + '6">' + @propsectionaccess + "</div>"
@@ -936,7 +931,7 @@ def self.getplatformindicatorsfilter (platforms,msionly,ruby,javascript)
   	return md
   end
 
-def self.getparams(element,toplevel)
+	def self.getparams(element,toplevel)
 	# @seperator = ""
 
 	# puts '***** IN GETPARAMS'
@@ -979,7 +974,7 @@ def self.getparams(element,toplevel)
 					methparamsnildesc=""
 					if !param["CAN_BE_NIL"].nil?
 						param["CAN_BE_NIL"].each { |paramsnil|
-							methparamsnil=" <span class='label label-info'>Optional</span>"
+							methparamsnil=" <span class='badge badge-info'>Optional</span>"
 							if !paramsnil["DESC"].nil?
 								methparamsnildesc =  getMDDesc(paramsnil["DESC"][0])
 							end
@@ -988,7 +983,7 @@ def self.getparams(element,toplevel)
 					end
 
 					if !param["default"].nil?
-						methparamsnil += "<span class='label '> Default: " + param["default"] + "</span>"
+						methparamsnil += "<span class='badge badge-secondary '> Default: " + param["default"] + "</span>"
 
 					end
 
@@ -1090,7 +1085,7 @@ if !element["PARAM"].nil?
 					methparamsnildesc=""
 					if !param["CAN_BE_NIL"].nil?
 						param["CAN_BE_NIL"].each { |paramsnil|
-							methparamsnil=" <span class='label label-info'>Optional</span>"
+							methparamsnil=" <span class='badge badge-info'>Optional</span>"
 							if !paramsnil["DESC"].nil?
 								methparamsnildesc =  getMDDesc(paramsnil["DESC"][0])
 							end
@@ -1098,7 +1093,7 @@ if !element["PARAM"].nil?
 						}
 					end
 					if !param["default"].nil?
-						methparamsnil += " <span class='label '> Default: " + param["default"] + "</span>"
+						methparamsnil += " <span class='badge badge-secondary '> Default: " + param["default"] + "</span>"
 
 					end
 
@@ -1176,7 +1171,7 @@ if !element["PARAM"].nil?
 	return methsectionparams
 end
 
-#returns Markdown for the <Properties section
+	#returns Markdown for the <Properties section
   def self.getmethods(doc)
   	#puts "********************* METHODS *************"
 	#puts doc["MODULE"][0]["METHODS"][0]
@@ -1217,7 +1212,7 @@ end
 	    	doc["MODULE"][0]["METHODS"][0]["ALIASES"][0]["ALIAS"].each() { |a|
 				#puts a
 				if a["existing"] == element["name"]
-					methreplaces += "<span class='label label-info'>" + a["new"] + "</span> "
+					methreplaces += "<span class='badge badge-info'>" + a["new"] + "</span> "
 				end
 			}
 		end
@@ -1320,10 +1315,10 @@ end
 
 				@methcallbackoptional= ""
 				if @methhascallback == "optional"
-					@methcallbackoptional = " <span class='label label-info'>Optional</span> "
+					@methcallbackoptional = " <span class='badge badge-info'>Optional</span> "
 				end
 				if @methhascallback == "mandatory"
-					@methcallbackoptional = " <span class='label label-warning'>Mandatory</span> "
+					@methcallbackoptional = " <span class='badge badge-warning'>Mandatory</span> "
 				end
 				firstcallbackreturnparam = "calbackreturnparamname"
 				callbacktype = "CallBackHandler"
@@ -1411,13 +1406,13 @@ end
   		if methdeprecated == "true"
 			#methname = methname + ' <span class="pull-right label label-important">deprecated</span>'
 			methname = '<span class="text-error">' + methname + '</span>'
-			@methdesc = "<span class='label label-important'>Deprecated</span> " + @methdesc
+			@methdesc = "<span class='badge badge-danger'>Deprecated</span> " + @methdesc
 		end
 		if methreplaces != ""
 			#methname = methname + " <span class='pull-right label label-info'>Replaces:#{methreplaces}</span>"
 			# @methdesc = " <span class='label label-info'>Replaces:#{methreplaces}</span>" + @methdesc
 			methname = '<span class="text-info">' + methname + '</span>'
-			@methdesc = "<span class='label label-info'>Replaces:</span> #{methreplaces} " + @methdesc
+			@methdesc = "<span class='badge badge-info'>Replaces:</span> #{methreplaces} " + @methdesc
 
 		end
 		# md += "\n" + '<h3 data-h2="methods">' + "#{methname}</h3>\n"
@@ -1538,7 +1533,7 @@ end
   	if !element["constructor"].nil?
 		if element["constructor"] == "true"
 		    constructor = true
-		    constructorLabel = '<span class="label label-inverse"> Constructor</span> '
+		    constructorLabel = '<span class="badge badge-dark"> Constructor</span> '
 		end
   	end
   	destructor = false
@@ -1546,7 +1541,7 @@ end
   	if !element["destructor"].nil?
 		if element["destructor"] == "true"
 		    destructor = true
-		    destructorLabel = '<span class="label label-inverse"> Destructor</span> '
+		    destructorLabel = '<span class="badge badge-dark"> Destructor</span> '
 		end
   	end
 	if masterAccess.nil? || masterAccess == 'INSTANCE' || masterAccess == ''
@@ -1622,26 +1617,28 @@ end
   	md += "<div class=' method #{@methplatformsfilter}' id='m"+ getshortcut(element) + "'>"
 
   	if constructor
-	    md += "<h3>#{constructorLabel} <strong  > new " + @@apiName + '</strong>' + "<span style='font-size:.7em;font-weight:normal;'>(#{@methparams})</span></h3>"
+	   #md += "<h3>#{constructorLabel} <strong  > new " + @@apiName + '</strong>' + "<span style='font-size:.7em;font-weight:normal;'>(#{@methparams})</span></h3>"
+			md += '<div class="signature d-flex"><div class="name">' + constructorLabel + @@apiName  + "</div><div class='parameters'>(#{@methparams})</div></div>"
   	else
-	    md += "<h3><strong  >#{destructorLabel}" + methname + '</strong>' + "<span style='font-size:.7em;font-weight:normal;'>(#{@methparams})</span></h3>"
+	    #md += "<h3><strong  >#{destructorLabel}" + methname + '</strong>' + "<span style='font-size:.7em;font-weight:normal;'>(#{@methparams})</span></h3>"
+			md += '<div class="signature d-flex"><div class="name">' + destructorLabel + methname + "</div><div class='parameters'>(#{@methparams})</div></div>"
   	end
 
-    md += '<ul class="nav nav-tabs" style="padding-left:8px">'
-  	md += "<li class='active'>" + '<a href="#m' + getshortcut(element) + '1" data-toggle="tab">Description</a>' + "</li>"
+    md += '<ul class="nav nav-tabs">'
+  	md += "<li class='nav-item'>" + '<a class="nav-link active" href="#m' + getshortcut(element) + '1" data-toggle="tab">Description</a>' + "</li>"
   	if @methsectionparams != ''
-    	md += "<li >"  + '<a href="#m' + getshortcut(element) + '2" data-toggle="tab">Parameters</a>' + "</li>"
+    	md += "<li  class='nav-item'>"  + '<a class="nav-link" href="#m' + getshortcut(element) + '2" data-toggle="tab">Parameters</a>' + "</li>"
     end
   	if @methsectioncallbackparams != ''
 
-    	md += "<li >"  + '<a href="#m' + getshortcut(element) + '3" data-toggle="tab">Callback</a>' + "</li>"
+    	md += "<li  class='nav-item'>"  + '<a class="nav-link" href="#m' + getshortcut(element) + '3" data-toggle="tab">Callback</a>' + "</li>"
 	end
-		md += "<li >"  + '<a href="#m' + getshortcut(element) + '4" data-toggle="tab">Return</a>' + "</li>"
+		md += "<li  class='nav-item'>"  + '<a class="nav-link" href="#m' + getshortcut(element) + '4" data-toggle="tab">Return</a>' + "</li>"
     # md += "<li >"  + '<a href="#m' + element["name"] + '5" data-toggle="tab">Platforms</a>' + "</li>"
-  	md += "<li >"  + '<a href="#m' + getshortcut(element) + '6" data-toggle="tab">Access</a>' + "</li>"
+  	md += "<li  class='nav-item'>"  + '<a class="nav-link" href="#m' + getshortcut(element) + '6" data-toggle="tab">Access</a>' + "</li>"
   	md += '</ul>'
-  	md += "<div class='tab-content' style='padding-left:8px' id='tc-"+ getshortcut(element) + "'>"
-    md += '<div class="tab-pane fade active in" id="m' + getshortcut(element) + '1">' + @methdesc + "<p>#{@methsectionplatforms}</p>" + "</div>"
+  	md += "<div class='tab-content border border-top-0 mb-3 p-3' id='tc-"+ getshortcut(element) + "'>"
+    md += '<div class="tab-pane fade active show" id="m' + getshortcut(element) + '1">' + @methdesc + "<p>#{@methsectionplatforms}</p>" + "</div>"
     md += '<div class="tab-pane fade" id="m' + getshortcut(element) + '2">' + @methsectionparams + "</div>"
   	md += '<div class="tab-pane fade" id="m' + getshortcut(element) + '3">' + @methsectioncallbackparams + "</div>"
     md += '<div class="tab-pane fade" id="m' + getshortcut(element) + '4">' + @methsectionreturns + "</div>"
@@ -1661,7 +1658,6 @@ end
 
   	return md
   end
-
 
   def self.markdown(topic)
     md = ''
@@ -1751,23 +1747,23 @@ end
 	  	md += "#" + getApiName(doc,'',true) + "\n"
 	  	if methlinks["count"]>0
 		  	md += '<div class="btn-group">'
-		    md += '<a href="#Methods" class="btn"><i class="icon-cog"></i> Methods<sub>&nbsp;' + methlinks["count"].to_s + '</sub></a>'
-		    md += '<a class="btn dropdown-toggle" data-toggle="dropdown" data-target="#" href="#Methods" >'
-		    md += '  <span class="caret"></span>&nbsp;'
-		    md += '</a>'
-		    md += '<ul class="dropdown-menu" style="max-height: 500px;overflow: auto;">'
+		    md += "<a href=\"#Methods\" class=\"btn btn-outline-secondary\">Methods<span class=\"badge badge-secondary ml-3\">#{methlinks["count"]}</span></a>"
+		    md += '<button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent"></button>'
+		    md += '<div class="dropdown-menu" style="max-height: 500px;overflow: auto;">'
 		    md += methlinks["md"]
-		    md += '</ul>'
+		    md += '</div>'
 		  	md += '</div>'
 	  	end
 	  	if proplinks["count"]>0
 		  	md += '<div class="btn-group">'
-		  	md += ''
-		  	md += '<a href="#Properties" class="btn"><i class="icon-list"></i> Properties<sup>&nbsp;' + proplinks["count"].to_s + '</sup></a>'
-		    md += '<button href="#" class="btn dropdown-toggle" data-toggle="dropdown">'
-		    md += '  <span class="caret"></span>&nbsp;'
-		    md += '</button>'
-		    md += '<ul class="dropdown-menu" style="max-height: 500px;overflow: auto;">'
+				md += "<a href=\"#Properties\" class=\"btn btn-outline-secondary\">Properties<span class=\"badge badge-secondary ml-3\">#{proplinks["count"]}</span></a>"
+		  	#md += '<a href="#Properties" class="btn"><i class="icon-list"></i> Properties<sup>&nbsp;' + proplinks["count"].to_s + '</sup></a>'
+				md += '<button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent"></button>'
+		    #md += '<button href="#" class="btn dropdown-toggle" data-toggle="dropdown">'
+		    #md += '  <span class="caret"></span>&nbsp;'
+		    #md += '</button>'
+				md += '<div class="dropdown-menu" style="max-height: 500px;overflow: auto;">'
+		    # md += '<ul class="dropdown-menu" style="max-height: 500px;overflow: auto;">'
 		    # md += '<li class="dropdown-submenu">
 	     #              <a href="#">More options</a>
 	     #              <ul class="dropdown-menu">
@@ -1788,43 +1784,46 @@ end
 	     #              </ul>
 	     #            </li>'
 		    md += proplinks["md"]
-		    md += '</ul>'
+		    md += '</div>'
 		  	md += '</div>'
 	  	end
 	  	if constantlinks["count"]>0
 		  	md += '<div class="btn-group">'
-		  	md += ''
-		  	md += '<a href="#Constants" class="btn"><i class="icon-warning-sign"></i> Constants<sup>&nbsp;' + constantlinks["count"].to_s + '</sup></a>'
-		    md += '<button href="#" class="btn dropdown-toggle" data-toggle="dropdown">'
-		    md += '  <span class="caret"></span>&nbsp;'
-		    md += '</button>'
-		    md += '<ul class="dropdown-menu" style="max-height: 500px;overflow: auto;">'
+				md += "<a href=\"#Constants\" class=\"btn btn-outline-secondary\">Constants<span class=\"badge badge-secondary ml-3\">#{constantlinks["count"]}</span></a>"
+		  	#md += '<a href="#Constants" class="btn"><i class="icon-warning-sign"></i>Constants<sup>&nbsp;' + constantlinks["count"].to_s + '</sup></a>'
+				md += '<button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent"></button>'
+		    #md += '<button href="#" class="btn dropdown-toggle" data-toggle="dropdown">'
+		    #md += '  <span class="caret"></span>&nbsp;'
+		    #md += '</button>'
+				md += '<div class="dropdown-menu" style="max-height: 500px;overflow: auto;">'
 		    md += constantlinks["md"]
-		    md += '</ul>'
+		    md += '</div>'
 		  	md += '</div>'
 	  	end
 	  	if examplelinks["count"]>0
 		  	md += '<div class="btn-group">'
-		  	md += ''
-		  	md += '<a href="#Examples" class="btn"><i class="icon-edit"></i> Examples<sup>&nbsp;' + examplelinks["count"].to_s + '</sup></a>'
-		    md += '<button href="#" class="btn dropdown-toggle" data-toggle="dropdown">'
-		    md += '  <span class="caret"></span>&nbsp;'
-		    md += '</button>'
-		    md += '<ul class="dropdown-menu" style="max-height: 500px;overflow: auto;">'
+				md += "<a href=\"#Examples\" class=\"btn btn-outline-secondary\">Examples<span class=\"badge badge-secondary ml-3\">#{examplelinks["count"]}</span></a>"
+		  	#md += '<a href="#Examples" class="btn"><i class="icon-edit"></i> Examples<sup>&nbsp;' + examplelinks["count"].to_s + '</sup></a>'
+				md += '<button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent"></button>'
+		    #md += '<button href="#" class="btn dropdown-toggle" data-toggle="dropdown">'
+		    #md += '  <span class="caret"></span>&nbsp;'
+		    #md += '</button>'
+		    md += '<div class="dropdown-menu" style="max-height: 500px;overflow: auto;">'
 		    md += examplelinks["md"]
-		    md += '</ul>'
+		    md += '</div>'
 		  	md += '</div>'
 	  	end
 	  	if remarklinks["count"]>0
 		  	md += '<div class="btn-group">'
-		  	md += ''
-		  	md += '<a href="#Remarks" class="btn"><i class="icon-warning-sign"></i> Remarks<sup>&nbsp;' + remarklinks["count"].to_s + '</sup></a>'
-		    md += '<button href="#" class="btn dropdown-toggle" data-toggle="dropdown">'
-		    md += '  <span class="caret"></span>&nbsp;'
-		    md += '</button>'
-		    md += '<ul class="dropdown-menu" style="max-height: 500px;overflow: auto;">'
+				md += "<a href=\"#Remarks\" class=\"btn btn-outline-secondary\">Remarks<span class=\"badge badge-secondary ml-3\">#{remarklinks["count"]}</span></a>"
+		  	#md += '<a href="#Remarks" class="btn"><i class="icon-warning-sign"></i> Remarks<sup>&nbsp;' + remarklinks["count"].to_s + '</sup></a>'
+				md += '<button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent"></button>'
+				#md += '<button href="#" class="btn dropdown-toggle" data-toggle="dropdown">'
+		    #md += '  <span class="caret"></span>&nbsp;'
+		    #md += '</button>'
+		    md += '<div class="dropdown-menu" style="max-height: 500px;overflow: auto;">'
 		    md += remarklinks["md"]
-		    md += '</ul>'
+		    md += '</div>'
 		  	md += '</div>'
 	  	end
 		if !doc["MODULE"][0]["license"].nil? && doc["MODULE"][0]["license"]="Required"
@@ -1840,11 +1839,11 @@ end
 
 		  	# md += '<button class="btn" id="expandAll" data-toggle="tooltip" title="Expand/Collapse all"><i class="icon-th-list "></i>&nbsp;</button>'
 		  	md += '</div>'
-	  	md += '<div  id="apibody" style="overflow:auto;padding-right: 5px;">'
+	  	md += '<div id="apibody" class="mt-3">'
 
 	  	md += "\n" + getApiDesc(doc) + "\n"
 	  	if methlinks["count"]>0
-		  	md += "\n<a name='Methods'></a>\n" + "<h2><i class='icon-cog'></i>Methods</h2>" + "\n\n"
+		  	md += "\n<a name='Methods'></a>\n" + "<h2>Methods</h2>" + "\n\n"
 
 		  	md += '<div class="accordion" id="accordion">'
 
@@ -1852,22 +1851,22 @@ end
 		    md += "</div>"
 		end
 			if docproperties !=""
-				 md += "\n<a name='Properties'></a>\n<h2><i class='icon-list'></i>Properties</h2>" + "\n\n"
+				 md += "\n<a name='Properties'></a>\n<h2>Properties</h2>" + "\n\n"
 				if !doc["MODULE"][0]["PROPERTIES"].nil? && !doc["MODULE"][0]["PROPERTIES"][0]["generateAccessors"].nil? && doc["MODULE"][0]["PROPERTIES"][0]["generateAccessors"] == "false"
 						md += "\n\nNOTE: The properties of this API Class cannot be accessed via setter or getter methods (unless otherwise noted). However they can be used in methods that allow a HASH or Array of properties to be passed in.\n\n"
 				end
 		  	 md += "" + docproperties + ""
 	  	end
   	    if docconstants !=""
-		  	 md += "\n<a name='Constants'></a>\n<h2><i class='icon-tag'></i>Constants</h2>" + "\n\n"
+		  	 md += "\n<a name='Constants'></a>\n<h2>Constants</h2>" + "\n\n"
 		  	 md += "" + docconstants + ""
 	  	end
 		if docexamples !=""
-		  	 md += "\n<a name='Examples'></a>\n<h2><i class='icon-edit'></i>Examples</h2>" + "\n\n"
+		  	 md += "\n<a name='Examples'></a>\n<h2>Examples</h2>" + "\n\n"
 		  	 md += "" + docexamples + ""
 	  	end
 	  	    if docremarks !=""
-			  	 md += "\n<a name='Remarks'></a>\n<h2><i class='icon-warning-sign'></i>Remarks</h2>" + "\n\n"
+			  	 md += "\n<a name='Remarks'></a>\n<h2>Remarks</h2>" + "\n\n"
 			  	 md += "" + docremarks + ""
 		  	end
 
@@ -1889,8 +1888,7 @@ end
   return md
   end
 
-
-def self.analyze(topic)
+	def self.analyze(topic)
     md = ''
 
   	# xml = File.read(topic)

@@ -22,6 +22,7 @@
   <!--  <link type="text/css" rel="stylesheet" href="/stylesheets/bootstrap-responsive.css" media="screen,print" />-->
   <link type="text/css" rel="stylesheet" href="/stylesheets/coderay.css" media="screen,print"/>
   <!--  <link type="text/css" rel="stylesheet" href="/stylesheets/application.css" media="screen,print"/>-->
+  <link type="text/css" rel="stylesheet" href="/stylesheets/application_new.css" media="screen,print"/>
   <link type="text/css" rel="stylesheet" href="/stylesheets/font-awesome.min.css" media="screen,print"/>
   <link href="/stylesheets/jquery.bxslider.css" rel="stylesheet"/>
   <link href='/stylesheets/jquery-ui.css' rel='stylesheet'>
@@ -134,7 +135,7 @@
   <div class="container-fluid mt-3">
 
     <div id="doc_container" class="row">
-      <div class="col-2 mt-1"
+      <div id="doc-navigation" class="col-xl-2 col-lg-3 col-md-4 col-sm-5 mt-1"
            <% if @print != 0 %> style="display:none"
            <% end %>>
         <% collapsed = true
@@ -173,27 +174,29 @@
                 <% collapsed = false if TOC.find(request.path_info) == slug %>
                 <% header_icon = collapsed ? "icon-chevron-right" : "icon-chevron-down" %>
 
-                <ul class="list-group section">
+                <ul class="list-group section m-1">
                   <li class="d-flex align-items-center pb-1" data-target="#<%= slug %>" data-toggle="collapse">
-                    <i class="<%= header_icon %> mr-1 fa-fw"></i><span><%= title %></span></li>
+                    <i class="<%= header_icon %> mr-1 fa-fw text-muted"></i><%= title %></li>
                 </ul>
 
-                <div id="<%= slug %>" class="ml-2 <%= collapsed ? '' : 'show' %>">
-                  <ul class="nav nav-pills flex-column ">
+                <div id="<%= slug %>" class="pl-3 <%= collapsed ? 'collapse' : 'show' %>">
+                  <ul class="nav nav-pills flex-column topics">
 
                     <% topics.each do |slug, title, _|
                     %>
                       <% if topic_path == slug %>
                         <li class="nav-item">
-                          <a class="nav-link active pt-0 pb-1" onclick="return false" href="/<%= slug %>"><%= h title %></a>
+                          <a class="nav-link active" onclick="return false" href="/<%= slug %>"><%= h title %></a>
                         </li>
                       <% else %>
                         <% if slug != 'rhoelements/apicompatibility' %>
                           <li class="nav-item">
-                            <a class='nav-link pt-0 pb-1 js-pjax' href="/<%= slug %>"><%= h title %></a></li>
+                            <a class='nav-link js-pjax' href="/<%= slug %>"><%= h title %></a>
+                          </li>
                         <% else %>
                           <li class="nav-item">
-                            <a class="nav-link pt-0 pb-1" href="/<%= slug %>">topic-3<%= h title %></a></li>
+                            <a class="nav-link" href="/<%= slug %>">topic-3<%= h title %></a>
+                          </li>
                         <% end %>
                       <% end %>
                     <% end %>
@@ -217,7 +220,7 @@
       </div>
 
       <!-- Warning if user views previous or upcoming docs version -->
-      <div class="col-10 pl-5">
+      <div class="col-xl-10 col-lg-9 col-md-8 col-sm-7">
 
         <% if !@docversion.nil? && @docversion != Version::CURR_VERSION && @docversion != 'hosted' %>
 

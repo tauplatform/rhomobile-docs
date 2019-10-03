@@ -49,11 +49,8 @@ $(document).ready(function() {
 */
 </style>
 	<div class="" data-title="Rhomobile | <%=h @title %>">
-		<div class="span12">
 		<h1><%= @title %></h1>
 		<%= @intro %>
-
-
 		<%= @body %>
 
 		<% if ns = next_section(topic_path) %>
@@ -63,7 +60,8 @@ $(document).ready(function() {
 		      <a href="/<%= topic_path%>.pdf"><img src="/images/pdf.png"> View as a PDF</a>
 		    <% end %>
 		<% end %>
-		</div>
+
+
 		<% if (@toc.size > 0 || !@topicmodel.nil?) && @print == 0 %>
 <!--
 		<div id="sidebar" class="span3 well">
