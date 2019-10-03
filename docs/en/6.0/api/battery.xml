@@ -24,45 +24,12 @@ Be sure to review the [Ruby API Usage](/guide/api_ruby) guide for important info
 With the old PocketBrowser / RhoElements 1 APIs, any events, such as `batteryEvent` were canceled when a full navigate was performed. The original reason for this was a limitation of the IE engine on WM5 devices. When moving to the common API this was changed so that callbacks are not canceled.
         </MORE_HELP>
 
-        <MORE_HELP_EB>
-## Enabling the API
-There are two methods of enabling the Battery API:
-
-* Include all ebapi modules or
-* Include only the API modules you need
-
-For either of these methods, you'll need to include files from the `/Enterprise Browser/JavaScript Files/Enterprise Browser` directory on the computer that you installed the Enterprise Browser.
-
-### Include all JS API modules
-To include all JS APIs, you must copy the ebapi-modules.js file to a location accessible by your app's files and include the JavaScript file in your app. For instance, to include the modules file in your index.html, with the file in the same directory as your index.html, you would add the following line to the &lt;head&gt; section of your index.html:
-
-    :::html
-    &lt;script type="text/javascript" charset="utf-8" src="ebapi-modules.js"&gt;&lt;/script&gt;
-
-> Note: that the pathing for this file is relative to the current page.
-
-This will define the EB class within the page. Any page you need to use the modules will need to have the .js file included in this fashion.
-
-### Include only the modules you need
-To include single APIs, you must first include the `ebapi.js` in your HTML as well as the API file you want to use. For instance, to use the Battery API, I would add the following code to my HTML file(s), assuming the API files have been copied to the same directory as the HTML.
-
-    :::html
-    &lt;script type="text/javascript" charset="utf-8" src="ebapi.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8" src="eb.battery.js"&gt;&lt;/script&gt;
-
-The ebapi.js file is necessary for all single API inclusions.
-
-## Persistence
-With the old PocketBrowser APIs, any events, such as `batteryEvent` were canceled when a full navigate was performed. The original reason for this was a limitation of the IE engine on WM5 devices. When moving to the common API this was changed so that callbacks are not canceled.
-        </MORE_HELP_EB>
-
         <TEMPLATES>
         </TEMPLATES>
 
         <PROPERTIES access="STATIC">
             <PROPERTY name="refreshInterval" type="INTEGER" default="5000" generateAccessors="true">
                 <PLATFORM>WM, CE, iOS</PLATFORM>
-                <PLATFORM_EB>WM, CE</PLATFORM_EB>
                 <DESC>A callback to retrieve the battery strength can be specified to occur periodically with the batteryStatus method. This value specifies the periodicity of the callback as well as the update frequency of the battery icon, if shown. Setting this value to zero will disable the batteryStatus callback. Note that most platforms will not support periodic updates to the battery level, this is only supported on Windows Mobile / CE / Embedded.</DESC>
             </PROPERTY>
             <PROPERTY name="tripDuration" type="INTEGER" generateAccessors="true">
@@ -79,14 +46,12 @@ With the old PocketBrowser APIs, any events, such as `batteryEvent` were cancele
             <METHOD name="batteryStatus" hasCallback="optional">
                 <DESC>Retrieve the current battery level. If a callback is provided to retrieve the battery then it will be called periodically at a frequency determined by the trigger property.</DESC>
                 <PLATFORM>WM, CE, Android, iOS</PLATFORM>
-                <PLATFORM_EB>WM, CE, Android</PLATFORM_EB>
                 <PARAMS>
                     <PARAM name="propertyMap" type="HASH" propertyHash="true">
                     <DESC>The properties associated with accessing the battery status.</DESC>
                         <PARAMS>
                             <PARAM name="trigger" type="STRING" default="Platform Dependant">
                             <DESC>What will cause the batteryStatus callback to fire. It is recommended to use system events to conserve battery life. Please note, that iOS devices have no system triggers and will provide updates only with a specified period (Trigger value will be ignored)</DESC>
-                            <DESC_EB>What will cause the batteryStatus callback to fire. It is recommended to use system events to conserve battery life.</DESC_EB>
                             <VALUES>
                                 <VALUE constName="BATTERY_TRIGGER_PERIODIC" value ="periodic">
                                     <DESC>The batteryStatus callback will fire periodically at the specified refresh interval. This is the default setting on Windows Mobile / CE / Embedded but those platforms do also support the system trigger. Not supported on Android.</DESC>
@@ -134,7 +99,6 @@ With the old PocketBrowser APIs, any events, such as `batteryEvent` were cancele
             <METHOD name="stopBatteryStatus" hasCallback="none">
                 <DESC>If the battery status is being retrieved via callback by a previously invoked call to batteryStatus, this method will stop the callback from firing.</DESC>
                 <PLATFORM>WM, CE, Android, iOS</PLATFORM>
-                <PLATFORM_EB>WM, CE, Android</PLATFORM_EB>
             </METHOD>
 
             <METHOD name="smartBatteryStatus" hasCallback="optional">
@@ -258,7 +222,6 @@ With the old PocketBrowser APIs, any events, such as `batteryEvent` were cancele
 
         <VER_INTRODUCED>1.0.0</VER_INTRODUCED>
         <PLATFORM>WM, CE, Android, iOS</PLATFORM>
-        <PLATFORM_EB>WM, CE, Android</PLATFORM_EB>
         <EXAMPLES>
             <EXAMPLE title="Retrieve the Battery status">
                 <SECTIONS>
@@ -358,76 +321,6 @@ With the old PocketBrowser APIs, any events, such as `batteryEvent` were cancele
                 </SECTIONS>
             </EXAMPLE>
         </EXAMPLES>
-        <EXAMPLES_EB>
-            <EXAMPLE title="Show battery icon">
-                <SECTIONS>
-                    <SECTION>
-                        <DESC>This example shows how to show/hide the Battery icon as well as a way to adjust for a change in screen orientation. This example assumes that the ebapi-modules.js file is in the same folder as the html file invoking it.</DESC>
-                        <CODE>
-                            <JAVASCRIPT><![CDATA[
-<head>
-    <script type="text/javascript" charset="utf-8" src="ebapi-modules.js"></script>
-
-    <title>Battery API Test</title>
-
-    <script>
-        function showBatteryIcon(){
-            EB.Battery.showIcon(defineIconProperties(), batteryCallback);
-            EB.Battery.batteryStatus({trigger:EB.Battery.BATTERY_TRIGGER_SYSTEM}, batteryCallback);
-            // The batteryStatus() is used to tell the icon when to refresh.
-            // We are leaving this up to the system events by using the BATTERY_TRIGGER_SYSTEM constant.
-        }
-
-        function hideBatteryIcon(){
-            EB.Battery.hideIcon();
-            EB.Battery.stopBatteryStatus();
-        }
-
-        function batteryCallback(params){
-            if(params){     // Most of these methods have callbacks but null 'params' sent.
-                console.log(params);
-            }
-            else
-                console.log("No Params");
-        }
-
-        function defineIconProperties(){
-            var props = {
-                color:  "#66CD00",
-                layout: EB.Battery.BATTERY_LAYOUT_UP,
-                top:        0,                                                      // Top of screen
-                left:   EB.System.screenWidth - 25      // Far right of screen, accounting for actual viewable area.
-            }
-            return props;
-        }
-
-        function adjustIcon(){
-            EB.Battery.hideIcon();
-            EB.Battery.showIcon(defineIconProperties(), batteryCallback);
-        }
-
-        // If the screen orientation changes, adjust the battery Icon.
-        EB.ScreenOrientation.setScreenOrientationEvent(adjustIcon);
-    </script>
-</head>
-
-<body>
-    <h1>Battery API Test</h1>
-    <div id="display">
-    </div>
-    <br/>
-    <br/>
-    <button onclick="showBatteryIcon()">Show Battery Status Icon</button><br/>
-    <button onclick="hideBatteryIcon()">Hide Battery Status Icon</button>
-</body>
-                                ]]>
-                            </JAVASCRIPT>
-                        </CODE>
-                    </SECTION>
-                </SECTIONS>
-            </EXAMPLE>
-        </EXAMPLES_EB>
-
         <REMARKS>
             <REMARK title="Icon Layout">
                 <DESC>Windows Mobile / CE and Handheld devices support the display of a small battery icon. This section explains the layout parameter, which can be provided to showIcon(...).

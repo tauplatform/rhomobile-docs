@@ -16,40 +16,7 @@ Be sure to review the [JavaScript API Usage](/guide/api_js) guide for important 
 Be sure to review the [Ruby API Usage](/guide/api_ruby) guide for important information about using this API in Ruby
 
         </MORE_HELP>
-        <MORE_HELP_EB>
-## Enabling the API
-
-There are two methods of enabling the Camera API:
-
-* Include all 'ebapi' modules
-* Include only the API modules you need
-
-Both methods are explained below. 
-
-Either way, the included files will be found in: 
-`/Enterprise Browser/JavaScript Files/Enterprise Browser`,
-a directory on the computer that contains the Enterprise Browser installation.
-
-### Include all JS API modules
-To include all JavaScript APIs, copy the `ebapi-modules.js` file to a location accessible by your app's files and include the JavaScript modules file in your app. For instance, to include the modules file in your `index.html`, copy the file to the same directory as your index.html and add the following line to the HEAD section of your index.html file:
-
-    :::html
-    &lt;script type="text/javascript" charset="utf-8" src="ebapi-modules.js"&gt;&lt;/script&gt;
-
-&gt; This will define the EB class within the page. **Note that the path for this file is relative to the current page** (index.html). Any page on which the modules are required will need to have the required .js file(s) included in this fashion.
-
-### Include only the modules you need
-To include individual APIs, you must first include the `ebapi.js` in your HTML, and then the additional required API file(s). For instance, to use the Camera API, add the following code to the HTML file(s). Again, this assumes that relevant API files have been copied to the same directory as the HTML.
-
-    :::html
-    &lt;script type="text/javascript" charset="utf-8" src="ebapi.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8" src="eb.camera.js"&gt;&lt;/script&gt;
-
-&gt; In the code lines above, notice that `ebapi.js` is included first, followed by `eb.camera.js`, which is the Camera API for Enterprise Browser. **This coding is required on each HTML page whenever an individual API will be called from that page**.
-
-        </MORE_HELP_EB>
-        <PLATFORM>Android, iOS, WM, CE, WP8</PLATFORM>
-        <PLATFORM_EB>WM, Android</PLATFORM_EB>
+        <PLATFORM>Android, iOS, WM, CE, UWP</PLATFORM>
 
         <ALIASES>
             <ALIAS new="Camera" deprecated="true"/>
@@ -60,9 +27,17 @@ To include individual APIs, you must first include the `ebapi.js` in your HTML, 
             <PROPERTY_BAG/> <!-- object has properties, produce getProps(), setProps() methods -->
         </TEMPLATES>
 		<CONSTANTS>
-		
+
 		  <!-- Camera Types -->
-    
+            <CONSTANT name="STATUS_OK" value="ok" type="STRING">
+                <DESC>Status constant.</DESC>
+            </CONSTANT>
+            <CONSTANT name="STATUS_ERROR" value="error" type="STRING">
+                <DESC>Status constant.</DESC>
+            </CONSTANT>
+            <CONSTANT name="STATUS_CANCELLED" value="cancel" type="STRING">
+                <DESC>Status constant.</DESC>
+            </CONSTANT>
 			<CONSTANT name="CAMERA_TYPE_BACK" value="back" type="STRING">
 				<DESC>Back camera. This is not supported in WM/CE devices.</DESC>
 			</CONSTANT>
@@ -90,7 +65,7 @@ To include individual APIs, you must first include the `ebapi.js` in your HTML, 
 				<DESC>This is a base 64 encoding of the image and can be used to easily embed the image on the page or store the image in a database. On some consumer devices, captured image will be rotated 90 degrees while displaying.</DESC>
 			</CONSTANT>
 			<CONSTANT name="OUTPUT_FORMAT_IMAGE_PATH" value="imagePath" type="STRING">
-				<DESC>If this value used for setting the outputFormat property, the takePicture or capture API will return imageUri as the path to the saved image in the device. User can use this image path to transfer the file to an http server if required. An example is given to demonstrate, transferring a file to http server.This property is not applicable for Android and windows phone 8.</DESC>
+				<DESC>If this value used for setting the outputFormat property, the takePicture or capture API will return imageUri as the path to the saved image in the device. User can use this image path to transfer the file to an http server if required. An example is given to demonstrate, transferring a file to http server.This property is not applicable for Android and windows phone 10.</DESC>
 			</CONSTANT>
 			<!-- Camera Color Model -->
 			<CONSTANT name="COLOR_MODEL_RGB" value="rgb" type="STRING">
@@ -99,7 +74,7 @@ To include individual APIs, you must first include the `ebapi.js` in your HTML, 
 			<CONSTANT name="COLOR_MODEL_GRAYSCALE" value="grayscale" type="STRING">
 				<DESC>A grayscale image is captured.</DESC>
 			</CONSTANT>
-			
+
 			<CONSTANT name="FLASH_ON" value="on" type="STRING">
 				<DESC>Flash will be used.</DESC>
 			</CONSTANT>
@@ -139,23 +114,18 @@ To include individual APIs, you must first include the `ebapi.js` in your HTML, 
             </ALIASES>
 
             <PROPERTY name="cameraType" type="STRING" readOnly="true">
-			    <PLATFORM>Android, iOS, WP8, WM, CE</PLATFORM>
-                <PLATFORM_EB>WM, CE, Android</PLATFORM_EB>
+			    <PLATFORM>Android, iOS, UWP, WM, CE</PLATFORM>
                 <DESC>This property is device specific. The value for this property can be either 'back' or 'front' in the case of Android/iOS/WP8 devices.In the case of WM/CE it could be either 'imager' or 'color'. WM/CE devices will use 'color'as default and if color camera not available the default value will be 'imager'. Android/iOS/WP8 devices will use 'back'as default and if back camera not available the default value will be 'front',
 				This Property shall return one among the values mentioned in constant section which starts with CAMERA_TYPE_...
 				</DESC>
-                <DESC_EB>This property is device specific. The value for this property can be either 'back' or 'front' in the case of Android devices.In the case of windows it could be either 'imager' or 'color'. WM/CE devices will use 'color'as default and if color camera not available the default value will be 'imager'. Android devices will use 'back'as default and if back camera not available the default value will be 'front'.
-				This Property shall return one among the values mentioned in constant section which starts with CAMERA_TYPE_...</DESC_EB>
-               
+
             </PROPERTY>
             <PROPERTY name="maxWidth" type="INTEGER" generateAccessors="true" readOnly="true">
-                <PLATFORM>Android, iOS, WP8, WM, CE</PLATFORM>
-                <PLATFORM_EB>WM, CE, Android</PLATFORM_EB>
+                <PLATFORM>Android, iOS, UWP, WM, CE</PLATFORM>
                 <DESC>The maximum width of images which can be captured. This is measured in pixels. On WM/CE devices this is applicable only for color camera. Imager does not support this property.</DESC>
             </PROPERTY>
             <PROPERTY name="maxHeight" type="INTEGER" generateAccessors="true" readOnly="true">
-                <PLATFORM>Android, iOS, WP8, WM, CE</PLATFORM>
-                <PLATFORM_EB>WM, CE, Android</PLATFORM_EB>
+                <PLATFORM>Android, iOS, UWP, WM, CE</PLATFORM>
                 <DESC>The maximum height of images which can be captured. This is measured in pixels. On WM/CE devices this is applicable only for color camera. Imager does not support this property.</DESC>
             </PROPERTY>
             <PROPERTY name="supportedSizeList" type="ARRAY" readOnly="true" usePropertyBag="none" >
@@ -165,63 +135,47 @@ To include individual APIs, you must first include the `ebapi.js` in your HTML, 
                         <PARAM name="height" type="INTEGER"/>
                     </PARAMS>
                 </PARAM>
-                <PLATFORM>Android, WP8, WM, CE, iOS</PLATFORM>
-                <PLATFORM_EB>WM, CE, Android</PLATFORM_EB>
+                <PLATFORM>Android, UWP, WM, CE, iOS</PLATFORM>
                 <DESC>List of resolutions (width and height in pixels) supported by the camera. On WM/CE devices this feature is supported only by color camera and it is not supported by imager. Refer example section for more details.</DESC>
             </PROPERTY>
             <PROPERTY name="desiredWidth" type="INTEGER">
                 <VER_INTRODUCED>2.0.0</VER_INTRODUCED>
-				<PLATFORM>Android, iOS, WM, CE, WP8</PLATFORM>
-                <PLATFORM_EB>WM, CE, Android</PLATFORM_EB>
+				<PLATFORM>Android, iOS, WM, CE, UWP</PLATFORM>
                 <DESC>Camera hardware is limited to taking photos in a finite number of resolutions, eg 2048x1536, 640x480 etc. Specifying a desiredWidth will request to take the photo with the specified width but if it is not supported by the hardware then the closest match will be selected. The callback received when a photo is taken contains the actual resolution of the captured photo.</DESC>
             </PROPERTY>
             <PROPERTY name="desiredHeight" type="INTEGER">
                 <VER_INTRODUCED>2.0.0</VER_INTRODUCED>
-				<PLATFORM>Android, iOS, WM, CE, WP8</PLATFORM>
-                <PLATFORM_EB>WM, CE, Android</PLATFORM_EB>
+				<PLATFORM>Android, iOS, WM, CE, UWP</PLATFORM>
                 <DESC>Camera hardware is limited to taking photos in a finite number of resolutions, eg 2048x1536, 640x480 etc. Specifying a desiredHeight will request to take the photo with the specified height but if it is not supported by the hardware then the closest match will be selected. The callback received when a photo is taken contains the actual resolution of the captured photo.</DESC>
             </PROPERTY>
             <PROPERTY name="fileName" type="STRING">
                 <VER_INTRODUCED>4.0.0</VER_INTRODUCED>
-				<PLATFORM>Android, iOS, WM, CE, WP8</PLATFORM>
-                <PLATFORM_EB>WM, CE, Android</PLATFORM_EB>
+				<PLATFORM>Android, iOS, WM, CE, UWP</PLATFORM>
                 <DESC>The image file path without file extension to store captured image in subsequent calls to takePicture() or capture(). Default filename will be IMG_timestamp and will be saved under root directory. The filename extension will be added automatically according to compressionFormat property value.
-				In Wp8, only filename can be changed, by default the path shall be under picture=>CameraRoll</DESC>
+				In UWP, only filename can be changed, by default the path shall be under picture=>CameraRoll</DESC>
             </PROPERTY>
             <PROPERTY name="compressionFormat" type="STRING" default="jpg">
                 <VER_INTRODUCED>4.0.0</VER_INTRODUCED>
-                <APPLIES>JPG is supported on all devices, Android, WP8 and Windows Mobile does not support PNG images</APPLIES>
-                <PLATFORM>Android, iOS, WM, CE, WP8</PLATFORM>
-                <PLATFORM_EB>WM, CE, Android</PLATFORM_EB>
+                <APPLIES>JPG is supported on all devices, Android, UWP and Windows Mobile does not support PNG images</APPLIES>
+                <PLATFORM>Android, iOS, WM, CE, UWP</PLATFORM>
                 <DESC>The format of the captured image in subsequent calls to takePicture(). If you do not define this property when you use choose_picture with iOS, the type of image in Gallery will be recognized, and the same format will be used for saving the image to applications data. In windows and WP8 devices the format will be always jpg type.
 				This Property shall accept/return one among the values mentioned in constant section which starts with COMPRESSION_FORMAT_...
 				</DESC>
-                <DESC_EB>The format of the captured image in subsequent calls to takePicture(). On windows devices the format will be always .jpg type.
-				This Property shall accept/return one among the values mentioned in constant section which starts with COMPRESSION_FORMAT_...
-				</DESC_EB>
-                
+
             </PROPERTY>
-            <PROPERTY name="outputFormat" type="STRING" default="imagePath">
+            <PROPERTY name="outputFormat" type="STRING" default="image">
                 <VER_INTRODUCED>4.0.0</VER_INTRODUCED>
-				<PLATFORM>Android, iOS, WM, CE, WP8</PLATFORM>
-                <PLATFORM_EB>WM, CE, Android</PLATFORM_EB>
+				<PLATFORM>Android, iOS, WM, CE, UWP</PLATFORM>
                 <DESC>Specifies the way to return the captured image to the application.
 				This Property shall accept/return one among the values mentioned in constant section which starts with OUTPUT_FORMAT_...</DESC>
-				<DESC_EB>Specifies the way to return the captured image to the application.
-				This Property shall accept/return one among the values mentioned in constant section which starts with OUTPUT_FORMAT_...
-				</DESC_EB>
-                
+
             </PROPERTY>
             <PROPERTY name="colorModel" type="STRING" default="rgb">
                 <VER_INTRODUCED>2.0.0</VER_INTRODUCED>
                 <PLATFORM>Android, iOS</PLATFORM>
-                <PLATFORM_EB>Android</PLATFORM_EB>
                 <DESC>Where supported by the hardware this property can be used to select whether to capture a color or a grayscale image.
 				This Property shall accept/return one among the values mentioned in constant section which starts with COLOR_MODEL_...</DESC>
-				<DESC_EB>Where supported by the hardware this property can be used to select whether to capture a color or a grayscale image.
-				This Property shall accept/return one among the values mentioned in constant section which starts with COLOR_MODEL_...
-				</DESC_EB>
-                
+
             </PROPERTY>
             <PROPERTY name="enableEditing" type="BOOLEAN" default="true" productException="eb">
                 <VER_INTRODUCED>2.0.0</VER_INTRODUCED>
@@ -230,24 +184,19 @@ To include individual APIs, you must first include the `ebapi.js` in your HTML, 
             </PROPERTY>
             <PROPERTY name="flashMode" type="STRING">
                 <VER_INTRODUCED>2.0.0</VER_INTRODUCED>
-                <PLATFORM>Android, WM, CE, iOS, WP8</PLATFORM>
-                <PLATFORM_EB>Android, WM, CE</PLATFORM_EB>
+                <PLATFORM>Android, WM, CE, iOS, UWP</PLATFORM>
                 <DESC>Specifies the flash behavior when taking a picture.
 				This Property shall accept/return one among the values mentioned in constant section which starts with FLASH_...</DESC>
-				<DESC_EB>Specifies the flash behavior when taking a picture.
-				This Property shall accept/return one among the values mentioned in constant section which starts with FLASH_...</DESC_EB>
-               
+
             </PROPERTY>
             <PROPERTY name="saveToDeviceGallery" type="BOOLEAN" default="false">
                 <VER_INTRODUCED>2.0.0</VER_INTRODUCED>
                 <PLATFORM>iOS,Android</PLATFORM>
-                <PLATFORM_EB>Android</PLATFORM_EB>
                 <DESC>If true, the picture you take will be added to the device photo gallery.</DESC>
             </PROPERTY>
             <PROPERTY name="captureSound" type="STRING">
                 <VER_INTRODUCED>4.0.0</VER_INTRODUCED>
                 <PLATFORM>Android, WM, CE</PLATFORM>
-                <PLATFORM_EB>Android, WM, CE</PLATFORM_EB>
                 <DESC>Path to a sound file resident on the device which will be played when the image is captured.</DESC>
             </PROPERTY>
             <PROPERTY name="previewLeft" type="INTEGER">
@@ -270,18 +219,26 @@ To include individual APIs, you must first include the `ebapi.js` in your HTML, 
                 <PLATFORM>WM, CE</PLATFORM>
                 <DESC>In cases where the resident camera application on the device is not used this API is used to control the position of the viewfinder preview window when taking a photo.</DESC>
             </PROPERTY>
-            <PROPERTY name="useSystemViewfinder" type="BOOLEAN" default="false">
+            <PROPERTY name="useSystemViewfinder" type="BOOLEAN" default="true">
                 <VER_INTRODUCED>4.0.0</VER_INTRODUCED>
                 <PLATFORM>Android</PLATFORM>
-                <DESC>Setting the value of this property to "true", shall open the System ViewFinder with its properties. None of the Rho camera properties shall be applicable.</DESC>
+                <DESC>Setting the value of this property to "true", shall open the System ViewFinder with its properties. Applicable to takePicture() and choosePicture() both. None of the Rho camera properties shall be applicable except desiredWidth and desiredHeight (desired size aplly if useRealBitmapResize enabled).</DESC>
             </PROPERTY>
-			<PROPERTY name="aimMode" type="STRING">
+            <PROPERTY name="useRealBitmapResize" type="BOOLEAN" default="true">
+                <VER_INTRODUCED>4.0.0</VER_INTRODUCED>
+                <PLATFORM>Android</PLATFORM>
+                <DESC>Setting the value of this property to "true", shall use real resize captured or selected Image and scale image exactly to desired size (with keep aspect ratio). For example 3000x2000 with desired 1500x1500 will be resized to 1500x1000.</DESC>
+            </PROPERTY>
+            <PROPERTY name="useRotationBitmapByEXIF" type="BOOLEAN" default="true">
+                <VER_INTRODUCED>4.0.0</VER_INTRODUCED>
+                <PLATFORM>Android</PLATFORM>
+                <DESC>Setting the value of this property to "true", shall use rotation captured Bitmap by EXIF Info. It is actual for Samsung devices - they do not rotate captured images but just add EXIF info about rotation. Default loader do not apply this info. If this property is true then Rhodes rotate image and save rotated  without EXIF rotate info.</DESC>
+            </PROPERTY>
+            <PROPERTY name="aimMode" type="STRING">
                 <PLATFORM>WM, CE</PLATFORM>
                 <DESC>Specifies the aim behaviour when taking a picture. Applicable only for imager module.
 				This Property shall accept/return one among the values mentioned in constant section which starts with AIM_...</DESC>
-				<DESC_EB>Specifies the aim behaviour when taking a picture. Applicable only for imager module.
-				This Property shall accept/return one among the values mentioned in constant section which starts with AIM_...</DESC_EB>
-                
+
             </PROPERTY>
         </PROPERTIES>
 
@@ -291,8 +248,7 @@ To include individual APIs, you must first include the `ebapi.js` in your HTML, 
             </ALIASES>
 
             <METHOD name="enumerate" access="STATIC" hasCallback="optional">
-			    <PLATFORM>Android, WM, CE, iOS, WP8</PLATFORM>
-                <PLATFORM_EB>Android, WM, CE</PLATFORM_EB>
+			    <PLATFORM>Android, WM, CE, iOS, UWP</PLATFORM>
                 <DESC>Returns the cameras present on your device, allowing you to access your device's front or back camera.</DESC>
                 <RETURN type="ARRAY">
                     <DESC>Array of objects.</DESC>
@@ -300,13 +256,11 @@ To include individual APIs, you must first include the `ebapi.js` in your HTML, 
                 </RETURN>
             </METHOD>
             <METHOD name="getCameraByType" access="STATIC" hasCallback="optional">
-			    <PLATFORM>Android, iOS, WP8, WM, CE</PLATFORM>
-                <PLATFORM_EB>Android, WM, CE</PLATFORM_EB>
+			    <PLATFORM>Android, iOS, UWP, WM, CE</PLATFORM>
                 <DESC>Returns the camera of requested type if that camera exist - else return nil.</DESC>
                 <PARAMS>
                     <PARAM name="cameraType" type="STRING">
-                        <DESC>CameraType: 'back' or 'front' in the case of Android, iOS and WP8 and 'color' or 'imager' in the case of WM, CE devices</DESC>
-                        <DESC_EB>CameraType: 'back' or 'front' in the case of Android and 'color' or 'imager' in the case of WM, CE devices</DESC_EB>
+                        <DESC>CameraType: 'back' or 'front' in the case of Android, iOS and UWP and 'color' or 'imager' in the case of WM, CE devices</DESC>
                     </PARAM>
                 </PARAMS>
                 <RETURN type="SELF_INSTANCE">
@@ -314,19 +268,20 @@ To include individual APIs, you must first include the `ebapi.js` in your HTML, 
                 </RETURN>
             </METHOD>
             <METHOD name="takePicture" hasCallback="mandatory" runInThread="ui">
-			    <PLATFORM>Android, WM, CE, iOS, WP8</PLATFORM>
-                <PLATFORM_EB>Android, WM, CE</PLATFORM_EB>
-                <DESC>Start the camera application to take a picture. The user can capture the displayed image by interacting with the resident camera app. In Windows, this method always shows the preview in full screen and user can use the native button to capture the image.
-				On wp8,wm when 'outputFormat' is 'image' then imageUri/image_uri shall have only Image name with \ sign, on WP8 ImageName shall be suffixed by DTF when 'outputFormat' is 'image'
-> Note: To display an image, it is recommended that you use the full path to the image instead of a relative path. To do this, you can use the [`expandDatabaseBlobFilePath`](Application#mexpandDatabaseBlobFilePath) method of the [Application module](Application) as such:
+			    <PLATFORM>Android, WM, CE, iOS, UWP</PLATFORM>
+                <DESC>
+                  Start the camera application to take a picture. The user can capture the displayed image by interacting with the resident camera app. In Windows, this method always shows the preview in full screen and user can use the native button to capture the image.
+                  When you use 'outputFormat' is 'image' captured image will be saved into file and you should control this file by self - remove it if you do not use it anymore etc.
+                  On UWP,wm when 'outputFormat' is 'image' then imageUri/image_uri shall have only Image name with \ sign, on UWP ImageName shall be suffixed by DTF when 'outputFormat' is 'image'
+                  > Note: To display an image, it is recommended that you use the full path to the image instead of a relative path. To do this, you can use the [`expandDatabaseBlobFilePath`](Application#mexpandDatabaseBlobFilePath) method of the [Application module](Application) as such:
 
-##### Ruby
-    :::ruby
-    Rho::RhoApplication.expandDatabaseBlobFilePath(x.image_uri)
+                  ##### Ruby
+                  :::ruby
+                  Rho::RhoApplication.expandDatabaseBlobFilePath(x.image_uri)
 
-##### JavaScript
-    :::js
-    Rho.RhoApplication.expandDatabaseBlobFilePath(x.image_uri)
+                  ##### JavaScript
+                  :::js
+                  Rho.RhoApplication.expandDatabaseBlobFilePath(x.image_uri)
                 </DESC>
                 <PARAMS>
                     <PARAM name="propertyMap" type="HASH" propertyHash="true">
@@ -339,55 +294,43 @@ To include individual APIs, you must first include the `ebapi.js` in your HTML, 
                 <CALLBACK type="HASH">
                     <PARAMS>
                         <PARAM name="status" type="STRING">
-						     <PLATFORM>Android, WM, CE, iOS, WP8</PLATFORM>
-                             <PLATFORM_EB>Android, WM, CE</PLATFORM_EB>
+						     <PLATFORM>Android, WM, CE, iOS, UWP</PLATFORM>
                             <DESC>Whether or not the image was successfully captured. The returned string will be one of 'ok', 'cancel' or 'error'.</DESC>
                         </PARAM>
                         <PARAM name="imageUri" type="STRING">
-						    <PLATFORM>Android, WM, CE, iOS, WP8</PLATFORM>
-                            <PLATFORM_EB>Android, WM, CE</PLATFORM_EB>
+						    <PLATFORM>Android, WM, CE, iOS, UWP</PLATFORM>
                             <DESC>If the specified 'outputFormat' was 'image' then this field is the URI to the taken image stored on the device.On wp8,wm when 'outputFormat' is 'image' then imageUri shall have only Image name with \ sign, on WP8 ImageName shall be suffixed by DTF when 'outputFormat' is 'image', this image will have an auto-generated name. If the specified 'outputFormat' was 'dataUri' then this field will be the image encoded as a Data URI, In Wp8 dataUri shall provide the thumbnail for the picture taken, It is recommended to use Image over dataUri. If the specified 'outputFormat' was 'imagePath' then this field will have the image path on the device. User can use image path to transfer image over http. </DESC>
-							<DESC_EB>If the specified 'outputFormat' was 'image' then this field is the URI to the taken image stored on the device. If the specified 'outputFormat' was 'dataUri' then this field will be the image encoded as a Data URI, If the specified 'outputFormat' was 'imagePath' then this field will have the image path on the device. User can use image path to transfer image over http.</DESC_EB>
                         </PARAM>
                         <PARAM name="imageHeight" type="INTEGER">
-						    <PLATFORM>Android, WM, CE, iOS, WP8</PLATFORM>
-                            <PLATFORM_EB>Android, WM, CE</PLATFORM_EB>
+						    <PLATFORM>Android, WM, CE, iOS, UWP</PLATFORM>
                             <DESC>The actual height of the image that was captured, this may differ from the requested height as the Camera will only support a finite resolutions.</DESC>
                         </PARAM>
                         <PARAM name="imageWidth" type="INTEGER">
-						     <PLATFORM>Android, WM, CE, iOS, WP8</PLATFORM>
-                             <PLATFORM_EB>Android, WM, CE</PLATFORM_EB>
+						     <PLATFORM>Android, WM, CE, iOS, UWP</PLATFORM>
                             <DESC>The actual width of the image that was captured, this may differ from the requested width as the Camera will only support a finite resolutions.</DESC>
                         </PARAM>
                         <PARAM name="imageFormat" type="STRING">
 						    <PLATFORM>Android, WM, CE, iOS</PLATFORM>
-                            <PLATFORM_EB>Android, WM, CE</PLATFORM_EB>
                             <DESC>The format in which the image was captured, either 'png' or 'jpg'.</DESC>
                         </PARAM>
                         <PARAM name="message" type="STRING">
-						    <PLATFORM>Android, WM, CE, iOS, WP8</PLATFORM>
-                            <PLATFORM_EB>Android, WM, CE</PLATFORM_EB>
+						    <PLATFORM>Android, WM, CE, iOS, UWP</PLATFORM>
                             <DESC>If the returned status is 'error' then this field will contain more information on the error. To maintain backward compatibility WM and Android platforms provides message for cancel status as well.</DESC>
                         </PARAM>
                         <PARAM name="image_uri" type="STRING" deprecated="true">
-						    <PLATFORM>Android, WM, CE, iOS, WP8</PLATFORM>
-                            <PLATFORM_EB>Android, WM, CE</PLATFORM_EB>
+						    <PLATFORM>Android, WM, CE, iOS, UWP</PLATFORM>
                             <DESC>If the specified 'outputFormat' was 'image' then this field is the URI to the taken image stored on the device.On wp8,wm when 'outputFormat' is 'image' then imageUri shall have only Image name with \ sign, on WP8 ImageName shall be suffixed by DTF when 'outputFormat' is 'image', this image will have an auto-generated name. If the specified 'outputFormat' was 'dataUri' then this field will be the image encoded as a Data URI, In Wp8 dataUri shall provide the thumbnail for the picture taken, It is recommended to use Image over dataUri. If the specified 'outputFormat' was 'imagePath' then this field will have the image path on the device. User can use image path to transfer image over http. </DESC>
-							<DESC_EB>If the specified 'outputFormat' was 'image' then this field is the URI to the taken image stored on the device. If the specified 'outputFormat' was 'dataUri' then this field will be the image encoded as a Data URI, If the specified 'outputFormat' was 'imagePath' then this field will have the image path on the device. User can use image path to transfer image over http.</DESC_EB>
-                        </PARAM>
+							          </PARAM>
                         <PARAM name="image_height" type="INTEGER" deprecated="true">
 						    <PLATFORM>Android, WM, CE, iOS, WP8</PLATFORM>
-                            <PLATFORM_EB>Android, WM, CE</PLATFORM_EB>
                             <DESC>It is recommended to use imageHeight in preference to this parameter.</DESC>
                         </PARAM>
                         <PARAM name="image_width" type="INTEGER" deprecated="true">
-						    <PLATFORM>Android, WM, CE, iOS, WP8</PLATFORM>
-                            <PLATFORM_EB>Android, WM, CE</PLATFORM_EB>
+						    <PLATFORM>Android, WM, CE, iOS, UWP</PLATFORM>
                             <DESC>It is recommended to use imageWidth in preference to this parameter.</DESC>
                         </PARAM>
                         <PARAM name="image_format" type="STRING" deprecated="true">
 						    <PLATFORM>Android, WM, CE, iOS</PLATFORM>
-                            <PLATFORM_EB>Android, WM, CE</PLATFORM_EB>
                             <DESC>It is recommended to use imageFormat in preference to this parameter.</DESC>
                         </PARAM>
                     </PARAMS>
@@ -396,7 +339,6 @@ To include individual APIs, you must first include the `ebapi.js` in your HTML, 
 			<METHOD name="showPreview" runInThread="ui">
 				<DESC>Shows the preview in user configurable viewer window.</DESC>
 				<PLATFORM>WM, CE</PLATFORM>
-				<PLATFORM_EB>WM, CE</PLATFORM_EB>
         <PARAMS>
 				<PARAM name="propertyMap" type="HASH" propertyHash="true">
                         <DESC>Provide a set of properties to configure the camera.</DESC>
@@ -409,12 +351,10 @@ To include individual APIs, you must first include the `ebapi.js` in your HTML, 
 			<METHOD name="hidePreview">
 				<DESC>Hides the preview opened by using showPreview.</DESC>
 				<PLATFORM>WM, CE</PLATFORM>
-				<PLATFORM_EB>WM, CE</PLATFORM_EB>
 			</METHOD>
 			<METHOD name="capture" hasCallback="mandatory">
 				<DESC>Capture the image and save it to a file.</DESC>
 				<PLATFORM>WM, CE</PLATFORM>
-				<PLATFORM_EB>WM, CE</PLATFORM_EB>
 				<CALLBACK type="HASH">
                     <PARAMS>
                         <PARAM name="status" type="STRING">
@@ -422,8 +362,7 @@ To include individual APIs, you must first include the `ebapi.js` in your HTML, 
                         </PARAM>
                         <PARAM name="imageUri" type="STRING">
                             <DESC>If the specified 'outputFormat' was 'image' then this field is the URI to the taken image stored on the device. If the specified 'outputFormat' was 'dataUri' then this field will be the image encoded as a Data URI, In Wp8 dataUri shall provide the thumbnail for the picture taken, It is recommended to use Image over dataUri. If the specified 'outputFormat' was 'imagePath' then this field will have the image path on the device. User can use image path to transfer image over http. </DESC>
-							<DESC_EB>If the specified 'outputFormat' was 'image' then this field is the URI to the taken image stored on the device. If the specified 'outputFormat' was 'dataUri' then this field will be the image encoded as a Data URI, If the specified 'outputFormat' was 'imagePath' then this field will have the image path on the device. User can use image path to transfer image over http.</DESC_EB>
-                        </PARAM>
+							          </PARAM>
                         <PARAM name="imageHeight" type="INTEGER">
                             <DESC>The actual height of the image that was captured, this may differ from the requested height as the Camera will only support a finite resolutions.</DESC>
                         </PARAM>
@@ -443,11 +382,10 @@ To include individual APIs, you must first include the `ebapi.js` in your HTML, 
                 <DESC>Choose a picture from the album.</DESC>
                 <PARAMS>
                     <PARAM name="propertyMap" type="HASH" propertyHash="true">
-					     <PLATFORM>Android, WM, CE, WP8, iOS</PLATFORM>
-                         <PLATFORM_EB>Android, WM, CE</PLATFORM_EB>
-                        <DESC>Provide a set of properties to configure an image, for example to specify the image size or color mode. In WM/CE,Android and WP8 devices user can only specify the outputFormat in the property bag. In iOS devices user can specify next options: compressionFormat, desiredWidth, desiredHeight, outputFormat, colorModel,  enableEditing.
-							In Wp8 dataUri shall provide the thumbnail for the picture taken, It is recommended to use Image over dataUri.On wp8, wm when 'outputFormat' is 'image' then imageUri or image_uri shall have Image name with \ sign, on WP8 ImageName shall be suffixed by DTF when 'outputFormat' is 'image'</DESC>
-                        <DESC_EB>Provide a set of properties to configure an image, for example to specify the image size or color mode. In WM/CE,Android devices user can only specify the outputFormat in the property bag.</DESC_EB>
+					     <PLATFORM>Android, WM, CE, UWP, iOS</PLATFORM>
+                        <DESC>
+                          Provide a set of properties to configure an image, for example to specify the image size or color mode. In WM/CE,Android and WP8 devices user can only specify the outputFormat in the property bag. In iOS devices user can specify next options: compressionFormat, desiredWidth, desiredHeight, outputFormat, colorModel,  enableEditing.
+                          In UWP dataUri shall provide the thumbnail for the picture taken, It is recommended to use Image over dataUri.On wp8, wm when 'outputFormat' is 'image' then imageUri or image_uri shall have Image name with \ sign, on WP8 ImageName shall be suffixed by DTF when 'outputFormat' is 'image'</DESC>
                         <CAN_BE_NIL>
                             <DESC>Not providing properties to this function will use the Camera's default properties, or those previously set on the Camera instance.</DESC>
                         </CAN_BE_NIL>
@@ -459,11 +397,9 @@ To include individual APIs, you must first include the `ebapi.js` in your HTML, 
                             <DESC>Whether or not the image was successfully chosen from the gallery. The returned string will be one of 'ok', 'cancel' or 'error'.</DESC>
                         </PARAM>
                         <PARAM name="imageUri" type="STRING">
-						<PLATFORM>Android, WM, CE, iOS, WP8</PLATFORM>
-                        <PLATFORM_EB>Android, WM, CE</PLATFORM_EB>
+						<PLATFORM>Android, WM, CE, iOS, UWP</PLATFORM>
                             <DESC>If the specified 'outputFormat' was 'image' then this field is the URI to the taken image stored on the device.On wp8,wm when 'outputFormat' is 'image' then imageUri shall have only Image name with \ sign, on WP8 ImageName shall be suffixed by DTF when 'outputFormat' is 'image', this image will have an auto-generated name. If the specified 'outputFormat' was 'dataUri' then this field will be the image encoded as a Data URI, In Wp8 dataUri shall provide the thumbnail for the picture taken, It is recommended to use Image over dataUri. If the specified 'outputFormat' was 'imagePath' then this field will have the image path on the device. User can use image path to transfer image over http. </DESC>
-							<DESC_EB>If the specified 'outputFormat' was 'image' then this field is the URI to the taken image stored on the device. If the specified 'outputFormat' was 'dataUri' then this field will be the image encoded as a Data URI, If the specified 'outputFormat' was 'imagePath' then this field will have the image path on the device. User can use image path to transfer image over http.</DESC_EB>
-                        </PARAM>
+							          </PARAM>
                         <PARAM name="imageHeight" type="INTEGER">
                             <DESC>The height of the image.</DESC>
                         </PARAM>
@@ -477,10 +413,8 @@ To include individual APIs, you must first include the `ebapi.js` in your HTML, 
                             <DESC>If the returned status is 'error' then this field will contain more information on the error. To maintain backward compatibility WM and Android platforms provides message for cancel status as well.</DESC>
                         </PARAM>
                         <PARAM name="image_uri" type="STRING" deprecated="true">
-						<PLATFORM>Android, WM, CE, iOS, WP8</PLATFORM>
-                        <PLATFORM_EB>Android, WM, CE</PLATFORM_EB>
+						<PLATFORM>Android, WM, CE, iOS, UWP</PLATFORM>
                            <DESC>If the specified 'outputFormat' was 'image' then this field is the URI to the taken image stored on the device.On wp8,wm when 'outputFormat' is 'image' then imageUri shall have only Image name with \ sign, on WP8 ImageName shall be suffixed by DTF when 'outputFormat' is 'image', this image will have an auto-generated name. If the specified 'outputFormat' was 'dataUri' then this field will be the image encoded as a Data URI, In Wp8 dataUri shall provide the thumbnail for the picture taken, It is recommended to use Image over dataUri. If the specified 'outputFormat' was 'imagePath' then this field will have the image path on the device. User can use image path to transfer image over http. </DESC>
-						   <DESC_EB>If the specified 'outputFormat' was 'image' then this field is the URI to the taken image stored on the device. If the specified 'outputFormat' was 'dataUri' then this field will be the image encoded as a Data URI, If the specified 'outputFormat' was 'imagePath' then this field will have the image path on the device. User can use image path to transfer image over http.</DESC_EB>
                         </PARAM>
                         <PARAM name="image_height" type="INTEGER" deprecated="true">
                             <DESC>It is recommended to use imageHeight in preference to this parameter.</DESC>
@@ -496,7 +430,6 @@ To include individual APIs, you must first include the `ebapi.js` in your HTML, 
             </METHOD>
             <METHOD name="copyImageToDeviceGallery" access="static">
                 <PLATFORM>iOS, Android</PLATFORM>
-                <PLATFORM_EB>Android</PLATFORM_EB>
                 <DESC>Save an image to the device gallery.</DESC>
                 <PARAMS>
                     <PARAM name="pathToImage" type="STRING">
@@ -972,8 +905,8 @@ function Test_image_uri()
 			<REMARK title="ImageUri">
                 <DESC>Image Uri display is dependent on browser capability.</DESC>
             </REMARK>
-			<REMARK title="GetSupportedProperties in WP8">
-                <DESC>WP8 does not support getSupportedProperties or SetSupportedProperties.</DESC>
+			<REMARK title="GetSupportedProperties in UWP">
+                <DESC>UWP does not support getSupportedProperties or SetSupportedProperties.</DESC>
             </REMARK>
 		    <REMARK title="colorModel as Grayscale in Android">
                 <DESC>Grayscale is supported only in the front camera of Android consumer devices.</DESC>

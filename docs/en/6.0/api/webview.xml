@@ -20,34 +20,6 @@ Be sure to review the [JavaScript API Usage](/guide/api_js) guide for important 
 ## Ruby Usage
 Be sure to review the [Ruby API Usage](/guide/api_ruby) guide for important information about using this API in Ruby.
         </MORE_HELP>
-        <MORE_HELP_EB>
-## Enabling the API
-There are two methods of enabling the Webview API:
-
-* Include all ebapi modules or
-* Include only the API modules you need
-
-For either of these methods, you'll need to include files from the `/Enterprise Browser/JavaScript Files/Enterprise Browser` directory on the computer that you installed the Enterprise Browser.
-
-### Include all JS API modules
-To include all JS APIs, you must copy the ebapi-modules.js file to a location accessible by your app's files and include the JavaScript file in your app. For instance, to include the modules file in your index.html, with the file in the same directory as your index.html, you would add the following line to the &lt;head&gt; section of your index.html:
-
-    :::html
-    &lt;script type="text/javascript" charset="utf-8" src="ebapi-modules.js"&gt;&lt;/script&gt;
-
-> Note: that the pathing for this file is relative to the current page.
-
-This will define the EB class within the page. Any page you need to use the modules will need to have the .js file included in this fashion.
-
-### Include only the modules you need
-To include single APIs, you must first include the `ebapi.js` in your HTML as well as the API file you want to use. For instance, to use the Webview API, I would add the following code to my HTML file(s), assuming the API files have been copied to the same directory as the HTML.
-
-    :::html
-    &lt;script type="text/javascript" charset="utf-8" src="ebapi.js"&gt;&lt;/script&gt;
-    &lt;script type="text/javascript" charset="utf-8" src="eb.webview.js"&gt;&lt;/script&gt;
-
-The ebapi.js file is necessary for all single API inclusions.
-        </MORE_HELP_EB>
 
         <ALIASES>
             <ALIAS new="WebView" deprecated="true"/>
@@ -69,19 +41,24 @@ The ebapi.js file is necessary for all single API inclusions.
             </PROPERTY>
             <PROPERTY name="enableZoom" type="BOOLEAN" default="true" readOnly="true">
                 <DESC>Enable WebView zoom. Use 'enable_screen_zoom' parameter in rhoconfig.txt to configure this value.</DESC>
-                <DESC_EB>Enable WebView zoom. Use 'EnableZoom' parameter in Config.xml to configure this value.</DESC_EB>
+                <PLATFORM>Android</PLATFORM>
+            </PROPERTY>
+            <PROPERTY name="enableMediaPlaybackWithoutGesture" type="BOOLEAN" default="false" readOnly="true">
+                <DESC>Enable Media playback without gesture. If set to true, the application can play some medias (video, sound) without requiring a user gesture.</DESC>
                 <PLATFORM>Android</PLATFORM>
             </PROPERTY>
             <PROPERTY name="enablePageLoadingIndication" type="BOOLEAN" default="true" readOnly="true" productException="eb">
                 <DESC>Show page loading indication. On Windows Mobile/CE this property can be set only in config.xml: GUI\\HourglassEnabled. At Android  use 'disable_loading_indication' parameter in rhoconfig.txt to configure this value.</DESC>
-                <DESC_EB>Show page loading indication. On Windows Mobile/CE this property can be set only in config.xml: GUI\\HourglassEnabled. At Android  use 'disable_loading_indication' parameter in Config.xml to configure this value.</DESC_EB>
                 <PLATFORM>WM, CE, Android</PLATFORM>
                 <APPLIES>WebKit on Windows Mobile/CE</APPLIES>
             </PROPERTY>
             <PROPERTY name="enableWebPlugins" type="BOOLEAN" default="true" readOnly="true" productException="eb">
                 <DESC>Enable / disable web plug-ins. Use 'enable_web_plugins' parameter in rhoconfig.txt to configure this value. This option only has effect on Android versions before 4.0 (ICS). It mainly affects if Flash content is displayed.</DESC>
-                <DESC_EB>Enable / disable web plug-ins. Use 'enable_web_plugins' parameter in Config.xml to configure this value. This option only has effect on Android versions before 4.0 (ICS). It mainly affects if Flash content is displayed.</DESC_EB>
                 <PLATFORM>Android</PLATFORM>
+            </PROPERTY>
+            <PROPERTY name="keyboardDisplayRequiresUserAction" type="BOOLEAN" default="true">
+                <DESC>Attention: not worked with WKWebView!  Can be defined in rhoconfig.txt as "WebView.keyboardDisplayRequiresUserAction" to 1 or 0. When this property is set to true, the user must explicitly tap the elements in the web view to display the keyboard (or other relevant input view) for that element. When set to false, a focus event on an element causes the input view to be displayed and associated with that element automatically.</DESC>
+                <PLATFORM>iOS</PLATFORM>
             </PROPERTY>
             <PROPERTY name="navigationTimeout" type="INTEGER" default="45000">
                 <DESC>Can be defined in config.xml: Navigation\\NavTimeout. Number of milliseconds(maximum is 45000) before the browser times out and navigates to the page specified in the badlink setting. If it is determined that the destination is unreachable regardless of wait time, the badlink may be loaded before NAVTIMEOUT. This is the time taken to establish communication with the server, not the time taken to fully load the page.Note that the navigation timeout will not be invoked when navigating to the start page, best practice is to store your first page locally to avoid connectivity issues at start up, you can then redirect to an online page if desired.</DESC>
@@ -161,6 +138,10 @@ From RhoElements 2.1 onwards the default value was changed to work out of the bo
             <PROPERTY name="activeTab" type="INTEGER" readOnly="true">
                 <DESC>Return an active tab index. For change active tab use Use Rho.NativeTabbar.currentTab property.</DESC>
             </PROPERTY>
+            <PROPERTY name="enableDragAndDrop" type="BOOLEAN" default="true">
+                <PLATFORM>iOS</PLATFORM>
+                <DESC>enable drag and drop operations for iOS >= 11.0</DESC>
+            </PROPERTY>
         </PROPERTIES>
 
         <METHODS access="STATIC">
@@ -231,7 +212,6 @@ If you open your page in WebView, and after it makes a few jumps by linking (for
             <METHOD name="currentURL">
                 <DESC>Returns the actual URL in WebView. This works the same as the JavaScript window.location.href.</DESC>
                 <PLATFORM>iOS, Android</PLATFORM>
-                <PLATFORM_EB>Android</PLATFORM_EB>
                 <APPLIES rubyOnly="true"/>
                 <PARAMS>
                     <PARAM name="tabIndex" type="INTEGER" default="-1">
@@ -249,8 +229,6 @@ If you open your page in WebView, and after it makes a few jumps by linking (for
                 <DESC>Execute JavaScript on the current page from your controller.
 
 For most mobile platforms, WebView.execute_js has been implemented via redirection to URL with 'javascript:' schema. If WebView.execute_js used in an AJAX call handler method in the controller, it may lead to the situation where the success javascript handler will never be executed. This may happen because, at the moment of success handler should be executed, a URL of the page already has been changed. This means no handlers from the previous page are valid.</DESC>
-                <APPLIES rubyOnly="true"/>
-
                 <PARAMS>
                     <PARAM name="javascriptText" type="STRING">
                         <DESC>The call to the JavaScript method on the current page, such as "test();".</DESC>
@@ -282,20 +260,61 @@ For most mobile platforms, WebView.execute_js has been implemented via redirecti
                 <DESC>When WebView loads the specified url (either by selecting link or from calling WebView.navigate), it will add this cookie to the HTTP request.Not implemented for WebKit.</DESC>
                 <APPLIES rubyOnly="true"/>
                 <PLATFORM>Android, Win32, iOS</PLATFORM>
-                <PLATFORM_EB>Win32, Android</PLATFORM_EB>
                 <PARAMS>
                     <PARAM name="url" type="STRING">
                         <DESC>Set a cookie to be used by WebView for this url.</DESC>
                     </PARAM>
                     <PARAM name="cookie" type="STRING">
-                        <DESC>One or more name-value pairs of the format "NAME=VALUE". Separate multiple name-value pairs with a semicolon, such as "NAME1=VALUE1; NAME2=VALUE2".</DESC>
+                        <DESC>Cookie value in RFC format, for instance 'session=123;expires=Fri, 31 Dec 2010 23:59:59 GMT; path=/;</DESC>
                     </PARAM>
                 </PARAMS>
             </METHOD>
 
+            <METHOD name="getCookies" hasCallback="mandatory">
+                <DESC>Returns cookies map for specified URL. Crosswalk is not supported.</DESC>
+                <PLATFORM>Android, iOS</PLATFORM>
+                <PARAMS>
+                    <PARAM name="url" type="STRING">
+                        <DESC>An URL to retrieve cookies for.</DESC>
+                    </PARAM>
+                </PARAMS>
+
+                <CALLBACK type="HASH">
+                </CALLBACK>
+            </METHOD>
+
+            <METHOD name="removeCookie" hasCallback="mandatory">
+                <DESC>Removes cookie by its name for specified URL. Crosswalk is not supported.</DESC>
+                <PLATFORM>Android, iOS</PLATFORM>
+                <PARAMS>
+                    <PARAM name="url" type="STRING">
+                        <DESC>An URL to remove cookie from.</DESC>
+                    </PARAM>
+                    <PARAM name="name" type="STRING">
+                        <DESC>A cookie name to be removed.</DESC>
+                    </PARAM>
+                </PARAMS>
+
+                <CALLBACK type="HASH">
+                  <PARAMS>
+                    <PARAM name="removed_cookie" type="STRING">
+                      <DESC>A name of removed cookie if it was removed successfully</DESC>
+                    </PARAM>
+                  </PARAMS>
+                </CALLBACK>
+            </METHOD>
+
+            <METHOD name="removeAllCookies" hasCallback="mandatory">
+                <DESC>Removes all cookies for application's webview. Crosswalk is not supported.</DESC>
+                <PLATFORM>Android, iOS</PLATFORM>
+
+                <CALLBACK type="HASH">
+                </CALLBACK>
+            </METHOD>
+
             <METHOD name="save">
                 <DESC>Save current page to file system.</DESC>
-                <PLATFORM>Android</PLATFORM>
+                <PLATFORM>iOS, Android</PLATFORM>
                 <PARAMS>
                     <PARAM name="format" type="STRING">
                         <DESC>Format of the saved page.</DESC>
@@ -336,7 +355,6 @@ For most mobile platforms, WebView.execute_js has been implemented via redirecti
 
         <VER_INTRODUCED>1.0.0</VER_INTRODUCED>
         <PLATFORM>WM, CE, Win32, Android, iOS, WP8</PLATFORM>
-        <PLATFORM_EB>WM, CE, Win32, Android</PLATFORM_EB>
         <EXAMPLES>
             <EXAMPLE title="Execute javascript">
                 <SECTIONS>
