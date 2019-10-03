@@ -134,7 +134,7 @@ $(document).ready(function () {
         window.location = window.location.protocol + '//' + window.location.host + window.location.pathname + '?q=' + $('#facets').attr('data-query') + '&v=' + sVers.join(",");
     });
 
-    $("#searchForm").indextank_Ize('http://rd4f.api.searchify.com', 'rhodocs');
+    $("#searchForm").indextank_Ize('http://u9pf.api.searchify.com', 'rhodocs');
     // let the query box have autocomplete
     $("#query").indextank_Autocomplete();
 
