@@ -284,10 +284,9 @@ def update_xml
   apiSources = AppConfig['api_sources'] || []
   apiSources.each do |s|
     apiSourceFolder = File.join(s, "**", "*.{xml,_xml}")
-    puts apiSourceFolder
+
     Dir.glob(apiSourceFolder).each do |f|
       filename = File.basename(f)
-      puts filename
       doc = XmlSimple.xml_in(f)
       if !doc["MODULE"].nil?
         gendoc = "true"

@@ -36,9 +36,9 @@ For RhoConnect Push Service:
 
 **GCM is no longer supported as a standalone jar file** since being moved to Google Play services. If you have trouble building an Android app with RhoElements 4.0.0 and Push capability, try these steps:
 
-  1. [Download the GCM r03 sip file](http://dl-ssl.google.com/android/repository/gcm_r03.zip) from Google's repository.
-  2. Copy it to sdk/extras and extract it.
-  3. Rename the folder to 'gcm'
+1. [Download the GCM r03 sip file](http://dl-ssl.google.com/android/repository/gcm_r03.zip) from Google's repository.
+2. Copy it to sdk/extras and extract it.
+3. Rename the folder to 'gcm'
 
 ## JavaScript Usage
 Be sure to review the [JavaScript API Usage](/guide/api_js) guide for important information about using this API in JavaScript.

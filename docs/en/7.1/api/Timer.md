@@ -3,12 +3,18 @@
 <a href="#mcreateSTATIC" data-target="cMethodcreate" class="dropdown-item">create</a><h6 class="dropdown-header">Methods - Instance</h6>
 <a href="#misAliveINSTANCE" data-target="cMethodisAlive" class="dropdown-item">isAlive</a><a href="#mstartINSTANCE" data-target="cMethodstart" class="dropdown-item">start</a><a href="#mstopINSTANCE" data-target="cMethodstop" class="dropdown-item">stop</a></div></div><div class="btn-group"><a href="#Examples" class="btn btn-outline-secondary">Examples<span class="badge badge-secondary ml-3">1</span></a><button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent"></button><div class="dropdown-menu" style="max-height: 500px;overflow: auto;"><a href="#e0" data-target="eExample0" class="dropdown-item">Examples</a></div></div><div id="apibody" class="mt-3">
 <p>The Timer API is used to create, start, stop and check the existence of timers.</p>
-<h2>Enabling the API</h2>
+<pre><code>    ## Enabling the API
+    This API is part of the `coreapi` extension that is included automatically.
 
-<p>This API is part of the <code>coreapi</code> extension that is included automatically.</p>
+    :::ruby
+    extensions: ["coreapi"]
 
-<pre><code>:::ruby
-extensions: ["coreapi"]
+
+    ## JavaScript Usage
+    Be sure to review the [JavaScript API Usage](/guide/api_js) guide for important information about using this API in JavaScript.
+
+    ## Ruby Usage
+    Be sure to review the [Ruby API Usage](/guide/api_ruby) guide for important information about using this API in Ruby.
 </code></pre>
 
 
@@ -27,20 +33,20 @@ extensions: ["coreapi"]
 <a name='e0'></a><div class=' example' id='e0'><div class="accordion-group"><div class="accordion-heading"><span class="accordion-toggle"   href="#cExample0"><strong>Examples</strong></div><div id="cExample0" class="accordion-body">  <div class="accordion-inner">
 <p>Implementation of the timer API.</p>
 <ul class='nav nav-tabs' id='exI0-S0Tab'><li class="nav-item"><a class="nav-link active" href='#exI0-S0JS' data-toggle='tab'>JavaScript</a></li></ul><div class='tab-content border border-top-0 mb-3 p-3'><div class='tab-pane active show' id='exI0-S0JS'><pre class='CodeRay'><code>:::javascript
- 
+
            // Create a timer and catch callback after the specified interval:
-           
+
             var timerCallback = function() {
                 alert("callback called");
-            }                                              
+            }
 
             var timer = Rho.Timer.create();
             timer.start(5000, timerCallback);
-            
+
             Create a timer, start and stop:
             var timerCallback = function() {
                 alert("callback called");
-            }                                              
+            }
 
             var timer = Rho.Timer.create();
             timer.start(5000, timerCallback);
