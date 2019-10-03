@@ -1,0 +1,31 @@
+#doc-navigation {
+    font-size: smaller;
+}
+
+.topics > li > a.nav-link {
+    padding: 2px 5px 2px 5px;
+}
+
+#apibody h1 {
+    font-size: 2rem !important;
+}
+
+#apibody h2 {
+    font-size: 1.5rem;
+}
+
+#apibody .signature {
+    margin-bottom: 0.5rem;
+}
+
+#apibody .signature .name {
+    font-weight: bold;
+}
+
+#apibody .signature .parameters {
+    /*font-weight: 200;*/
+}
+
+#apibody .signature .return-values {
+    /*font-weight: 200;*/
+}
