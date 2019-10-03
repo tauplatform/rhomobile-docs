@@ -41,7 +41,7 @@
 
             // make sure autocomplete closes when IndextankIzed form submits
             ize.$el.submit(function(e){
-                base.$el.data("autocomplete").close();
+                base.$el.autocomplete("close");
             });
 
             // and also disable it when Indextank.AjaxSearch is searching .. 
