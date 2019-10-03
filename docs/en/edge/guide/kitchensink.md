@@ -5,6 +5,7 @@ KitchenSink Ruby and KitchenSink JS are sample applications full of code snippet
 ## Download the Project
 
 The KitchenSink source code can be found at:
+
 * [Ruby KitchenSink](https://github.com/tauplatform/kitchensinkRuby)
 * [JavaScript KitchenSink](https://github.com/tauplatform/kitchensinkJS)
 
