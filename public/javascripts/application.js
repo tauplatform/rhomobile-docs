@@ -49,11 +49,6 @@ $(document).ready(function () {
         });
     });
 
-    $('.bxslider').bxSlider({
-        video: true,
-        useCSS: false
-    });
-
     sizeContent();
     $(".apiCheckbox").bind('change', function () {
         $('.property').hide();
