@@ -147,6 +147,7 @@ section 'rhomob-dev', 'Device Capabilities', 'Mobile Guides' do
   topic 'en/edge/guide/screen_orientation', 'Orientation and Responsive Design'
   topic 'en/edge/guide/printing', 'Printing'
   topic 'en/edge/guide/push_notifications', 'Push Notifications'
+  topic 'en/edge/guide/firebase_cloud_messaging', 'Firebase Cloud Messaging'
   topic 'en/edge/guide/device_sensors', 'Sensors'
   topic 'en/edge/guide/signature', 'Signature'
   topic 'en/edge/guide/urlschemes', 'URL Schemes'

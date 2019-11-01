@@ -146,6 +146,7 @@ section 'rhomob-dev', 'Device Capabilities', 'Mobile Guides' do
   topic 'en/7.1/guide/screen_orientation', 'Orientation and Responsive Design'
   topic 'en/7.1/guide/printing', 'Printing'
   topic 'en/7.1/guide/push_notifications', 'Push Notifications'
+  topic 'en/7.1/guide/firebase_cloud_messaging', 'Firebase Cloud Messaging'
   topic 'en/7.1/guide/device_sensors', 'Sensors'
   topic 'en/7.1/guide/signature', 'Signature'
   topic 'en/7.1/guide/urlschemes', 'URL Schemes'
