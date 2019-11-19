@@ -1,10 +1,8 @@
 # Setting Up for RhoConnect Push Service on Client Application
 The RhoConnect Push Service is a stand-alone process that brokers push messages between a RhoConnect server and Android or Windows Mobile/CE devices that have registered with the service. This guide covers setting up the RhoConnect server for the RhoConnect Push Service and the registered client. Once these steps are completed, you must then perform the [push client setup](push-client-setup) process that's required for all platforms.
 
-> **IMPORTANT: Do not continue** if you plan to set up RhoConnect Push for Android devices using Google Cloud Messaging. For those instructions, please refer to [RhoConnect Push for Android setup](push-client-setup-android).
-
 ## Setting up RhoConnect Push Service on the Server
-RhoConnect v3.3 introduces the RhoConnect Push Service (RPS), which supports efficient messaging for both Android and Windows Mobile/CE. On Android, this service can be used instead of Google Cloud Messaging.
+RhoConnect v3.3 introduces the RhoConnect Push Service (RPS), which supports efficient messaging for both Android and Windows Mobile/CE. On Android, this service can be used instead of Firebase Cloud Messaging.
 
 The typical flow of a message using RPS:
 

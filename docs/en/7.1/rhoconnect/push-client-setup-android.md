@@ -1,6 +1,10 @@
 Setting Up RhoConnect Push-Based Synchronization with Google Cloud Messaging
 ===
 
+<div class="alert alert-danger">
+  <h5 class="alert-heading">Google Cloud Messaging is obsoleted since 2019</h5>
+  Use <a href="push-client-setup-fcm">FCM</a> instead</div>
+
 This chapter contains the steps you need to set up your Android Rhodes client and RhoConnect server for push messaging. After you perform the steps in this chapter, you will finish by performing the [client setup that is needed for all platforms](push-client-setup).
 
 **NOTE: If you are setting up RhoConnect Push Service on an Android client, you do not perform the steps in this chapter. Perform the steps in [RhoConnect Push Service setup](push-client-setup-rps) instead.**

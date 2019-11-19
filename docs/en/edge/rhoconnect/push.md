@@ -11,8 +11,10 @@ The following sections show how to use the RhoConnect application to deliver pus
 
 You will need to perform one of the following set of instructions on the RhoConnect server and your mobile device for your specific platform.
 
+
 * [Set up RhoConnect Push Service on client and server for Rhodes Android and Windows Mobile/CE Devices](push-client-setup-rps).
-* [Set up Google Cloud Messaging on client and server for Rhodes Android Device](push-client-setup-android).
+* [<del>Set up Google Cloud Messaging on client and server for Rhodes Android Device</del>](push-client-setup-android) <span class="text-danger"><strong>Obsoleted</strong></span> - Use Firebase Cloud Messaging instead.
+* [Set up Firebase Cloud Messaging on client and server for Rhodes Application on Android and Apple Devices](push-client-setup-fcm).
 * [Set up Apple Push Notification Service on client and server for Rhodes iOS Device](push-client-setup-ios).
 Then you will need to [perform the final set up on your client](push-client-setup).
 

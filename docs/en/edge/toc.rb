@@ -224,8 +224,9 @@ end
 section 'rhoconnect-push-reference', 'Push Sync', 'RhoConnect Guides' do
   topic 'en/edge/rhoconnect/push', 'Introduction to Push'
   topic 'en/edge/rhoconnect/push-client-setup-rps', 'Setup for RhoConnect Push Service'
-  topic 'en/edge/rhoconnect/push-client-setup-android', 'Setup for Android'
-  topic 'en/edge/rhoconnect/push-client-setup-ios', 'Setup for iOS'
+  topic 'en/7.1/rhoconnect/push-client-setup-android', 'Setup GCM for Android'
+  topic 'en/7.1/rhoconnect/push-client-setup-fcm', 'Setup FCM for Android'
+  topic 'en/7.1/rhoconnect/push-client-setup-ios', 'Setup APNS for iOS'
   topic 'en/edge/rhoconnect/push-client-setup', 'Finishing Setup for all Clients'
   topic 'en/edge/rhoconnect/push-backend-setup', 'Setup on Backend'
   topic 'en/edge/rhoconnect/push-testing', 'Testing Push'
