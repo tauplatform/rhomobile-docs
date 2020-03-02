@@ -217,6 +217,13 @@ Sample yaml code:
     ios_direct_local_requests=1
     #If true, request to local server will be applied directly, bypassing socket intercommunication, no network requests are involved. If false, a legacy client-server intercommunication will be made for local requests. Default is FALSE, but to support per-app VPN (i.e. MobileIron) this option should be set to TRUE.
 
+    ios_use_WKWebView = 1
+    # default value is TRUE
+    # If TRUE WKWebView new iOS high performance(Javascript performance up to 10 times faster than default UIWebView) WebView used instead of default UIWebView.
+    # Now UIWebView was deprecated by Apple and you can not submit application with UIWebView to AppStore !
+    # If you want to use UIWebView(set ios_use_WKWebView = 0) - you must add "ios_uiwebview" capability to your build.yml !
+
+
     WebView.replaceContentBySplashWhenSnapshotBySystem = 1
     #Related to iOS applications's multitasking switcher. If you can have any private info on screen you can prevent system to use snapshot in task list UI.
     # by enable this option screenshot will be replaced by splash loading screen.
