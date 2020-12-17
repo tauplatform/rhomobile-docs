@@ -7,3 +7,5 @@ bin
 archive
 /eb/en/edge/export/offline/offlineDocs/docs/docs.js
 .credentials
+run_index.sh
+run_server.sh

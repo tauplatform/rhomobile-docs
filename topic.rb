@@ -18,7 +18,7 @@ class Topic
     dirs = AppConfig['dirs'] || {}
     paths = dirs.values.map! { |path| path += "*.md" }
     # puts paths
-    paths << ['docs/en/7.1/**/*.md', 'docs/en/7.2/**/*.md', 'docs/en/edge/**/*.md']
+    paths << ['docs/en/7.2/**/*.md', 'docs/en/7.3/**/*.md', 'docs/en/edge/**/*.md']
     FileList[paths].exclude(/\/rhoconnectjs\//)
   end
 
