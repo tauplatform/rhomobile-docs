@@ -1,0 +1,11 @@
+#Btdiscover
+<div class="btn-group"><a href="#Methods" class="btn btn-outline-secondary">Methods<span class="badge badge-secondary ml-3">1</span></a><button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent"></button><div class="dropdown-menu" style="max-height: 500px;overflow: auto;"><h6 class="dropdown-header">Methods - Class</h6>
+<a href="#menumerateSTATIC" data-target="cMethodenumerate" class="dropdown-item">enumerate</a></div></div><div id="apibody" class="mt-3">
+<p>Example extension api</p>
+<p>This is example of API. Implementation contain in extension.</p>
+
+
+<a name='Methods'></a>
+<h2>Methods</h2>
+
+<div class="accordion" id="accordion"><a name ='menumerateSTATIC'/><div class=' method  js ruby' id='menumerateSTATIC'><div class="signature d-flex"><div class="name">enumerate</div><div class='parameters'>()</div></div><ul class="nav nav-tabs"><li class='nav-item'><a class="nav-link active" href="#menumerateSTATIC1" data-toggle="tab">Description</a></li><li  class='nav-item'><a class="nav-link" href="#menumerateSTATIC4" data-toggle="tab">Return</a></li><li  class='nav-item'><a class="nav-link" href="#menumerateSTATIC6" data-toggle="tab">Access</a></li></ul><div class='tab-content border border-top-0 mb-3 p-3' id='tc-enumerateSTATIC'><div class="tab-pane fade active show" id="menumerateSTATIC1"><p><div><p><img src="/img/js.png" style="width: 20px;padding-top: 8px" rel="tooltip" title="JavaScript"><img src="/img/ruby.png" style="width: 20px;padding-top: 8px" rel="tooltip" title="Ruby"></p></div></p></div><div class="tab-pane fade" id="menumerateSTATIC2"></div><div class="tab-pane fade" id="menumerateSTATIC3"></div><div class="tab-pane fade" id="menumerateSTATIC4"><div><p><strong>Synchronous Return:</strong></p><ul><li>HASH</li></ul></div></div><div class="tab-pane fade" id="menumerateSTATIC6"><div><p><strong>Method Access:</strong></p><ul><li><i class="icon-book"></i>Class Method: This method can only be accessed via the API class object. <ul><li>JavaScript: <code>Rho.Btdiscover.enumerate()</code> </li><li>Ruby: <code>Rho::Btdiscover.enumerate()</code></li></ul></li></ul></div></div></div>  </div></div></div>
