@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="rhoelements-tutorial">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/docs/en/2.2.0/rhoelements/rhoelements-tutorial.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
