@@ -25,34 +25,34 @@
         <li><a href="/en/<%= @docversion %>/guide/remote-debug">JS Debugging on Devices </a></li>
       </ul>
     </div>
-    <div class="col-4">
+   <!-- <div class="col-4">
       <h4 class="border-bottom pb-1">Updated Guides</h4>
       <ul>
-        <% @recent_guides['results'].each do |result| %>
-          <% if !result['docexternal'].nil? && result['docexternal'] == 'True' %>
+        <%# @recent_guides['results'].each do |result| %>
+          <%# if !result['docexternal'].nil? && result['docexternal'] == 'True' %>
             <li>
-              <a href="<%= result['dockey'] %>" target="_blank"><%= h Nokogiri::HTML.parse(result['title']).text %></a>
+              <a href="<%#= result['dockey'] %>" target="_blank"><%#= h Nokogiri::HTML.parse(result['title']).text %></a>
             </li>
-          <% else %>
-            <li><a href="/<%= result['dockey'] %>"><%= h Nokogiri::HTML.parse(result['title']).text %></a></li>
-          <% end %>
-        <% end %>
+          <%# else %>
+            <li><a href="/<%#= result['dockey'] %>"><%#= h Nokogiri::HTML.parse(result['title']).text %></a></li>
+          <%# end %>
+        <%# end %>
       </ul>
-    </div>
-    <div class="col-4">
+    </div>-->
+<!--    <div class="col-4">
       <h4 class="border-bottom pb-1">API Updates</h4>
       <ul>
-        <% @recent_api["results"].each do |result| %>
-          <% if !result['docexternal'].nil? && result['docexternal'] == 'True' %>
+        <%# @recent_api["results"].each do |result| %>
+          <%# if !result['docexternal'].nil? && result['docexternal'] == 'True' %>
             <li>
-              <a href="<%= result['dockey'] %>" target="_blank"><%= h Nokogiri::HTML.parse(result['title']).text %></a>
+              <a href="<%#= result['dockey'] %>" target="_blank"><%#= h Nokogiri::HTML.parse(result['title']).text %></a>
             </li>
-          <% else %>
-            <li><a href="/<%= result['dockey'] %>"><%= h Nokogiri::HTML.parse(result['title']).text %></a></li>
-          <% end %>
-        <% end %>
+          <%# else %>
+            <li><a href="/<%#= result['dockey'] %>"><%#= h Nokogiri::HTML.parse(result['title']).text %></a></li>
+          <%# end %>
+        <%# end %>
       </ul>
-    </div>
+    </div>-->
   </div>
 
 

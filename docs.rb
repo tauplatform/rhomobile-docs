@@ -117,9 +117,9 @@ class Docs < Sinatra::Base
         @docversion = AppConfig['current_version']
       end
       cache_long
-      @recent_guides = recent_updates(5,'guide OR rhoconnect',@docversion)
-      @recent_api = recent_updates(5,'api',@docversion)
-      @recent_blogs = recent_updates(8,'blog','')
+      # @recent_guides = recent_updates(5,'guide OR rhoconnect',@docversion)
+      # @recent_api = recent_updates(5,'api',@docversion)
+      # @recent_blogs = recent_updates(8,'blog','')
 
       erb :index
     end
