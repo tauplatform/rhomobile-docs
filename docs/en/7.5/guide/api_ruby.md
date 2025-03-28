@@ -1,6 +1,6 @@
 # Using RhoMobile Ruby APIs
 
-RhoMobile applications support access to device, system and framework capabilities through a common API set whether you are building Rhodes, RhoElements or RhoMobile enabled web apps.
+RhoMobile applications support access to device, system and framework capabilities through a common API set whether you are building Rhodes or RhoMobile enabled web apps.
 
 
 ## Using your own objects

@@ -8,12 +8,6 @@
     :::ruby
     extensions: [&ldquo;symboldevice&rdquo;]</p>
 
-<p>The <code>symboldevice</code> extension is also included automatically if you specify the following in your <code>build.yml</code>
-    :::ruby
-    app_type: &ldquo;rhoelements&rdquo;</p>
-
-<p>NOTE: If you are building a Windows Mobile or Windows CE app with this API, you must set your app_type as &ldquo;rhoelements&rdquo; in your build.yml as shown <a href="../guide/build_config#other-build-time-settings">here</a>.</p>
-
 <h2>JavaScript Usage</h2>
 
 <p>Be sure to review the <a href="/guide/api_js">JavaScript API Usage</a> guide for important information about using this API in JavaScript.</p>

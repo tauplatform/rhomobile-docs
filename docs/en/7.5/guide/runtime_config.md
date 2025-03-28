@@ -1,5 +1,5 @@
 # Application Runtime Configuration
-Runtime configuration settings of RhoElements apps are managed through `Config.xml` and `rhoconfig.txt` files. **`Config.xml` is *required* for RhoElements execution, and your app will not start without it**. The `Config.xml` file determines features of the RhoElements runtime itself, such as the keys that can be intercepted by the application and whether to pre-load modules on startup. An example configuration file is provided as part of the installation and many (though not all) settings contain sensible defaults. The example `Config.xml` file is bundled with the `rhoelements` gem. Location of the file on various device installations is detailed below. 
+Runtime configuration settings of apps are managed through `Config.xml` and `rhoconfig.txt` files. **`Config.xml` is *required* for application execution, and your app will not start without it**. The `Config.xml` file determines features of the application runtime itself, such as the keys that can be intercepted by the application and whether to pre-load modules on startup. An example configuration file is provided as part of the installation and many (though not all) settings contain sensible defaults. The example `Config.xml` file is bundled with Rhodes gem. Location of the file on various device installations is detailed below. 
 
 The `rhoconfig.txt` file controls the app's startup page, the address of the `RhoConnect` synchronization server, if applicable, and some other settings. 
 
@@ -189,8 +189,7 @@ Sample yaml code:
     # keycode values for all keys in place of normal Android keycodes. This can be 
     # useful for supporting both Android and Windows device platforms with a single 
     # codebase. When tag value is '0' (default) or is left unspecified, the standard 
-    # keycodes of the platform will be used. Works with the KeyCapture API of RhoElements 
-    # 4.x or 2.x. 
+    # keycodes of the platform will be used.
 
     http_proxy_host = 'server'
     http_proxy_port = port
@@ -472,18 +471,18 @@ Path to an existing directory to store Application Cache data.<br>
 
 ##Authentication
 ###Password
-Specifies the password to be provided automatically when RhoElements is instructed to navigate to any page which requires basic or digest HTTP authentication. If this setting is absent, a login prompt will be displayed with a password of "". 
+Specifies the password to be provided automatically when the application is instructed to navigate to any page which requires basic or digest HTTP authentication. If this setting is absent, a login prompt will be displayed with a password of "". 
 
-NOTE: RhoElements permits the user to enter incorrect credentials twice before presenting the HTTP 401 Unauthorized page. Your application should be designed to handle this scenario.<br>
+NOTE: Rhodes permits the user to enter incorrect credentials twice before presenting the HTTP 401 Unauthorized page. Your application should be designed to handle this scenario.<br>
 
 **Configuration Identifier**: AUTHPASS_GLOBAL<br>
 **Possible Values**: ASCII text<br>
 **Platforms**: Android, iOS, WM/CE<br>
 
 ###Username
-Specifies the username to be provided automatically when RhoElements is instructed to navigate to a page that requires basic or digest HTTP authentication. If this setting is absent, a login prompt will be displayed with a username of "". 
+Specifies the username to be provided automatically when the application is instructed to navigate to a page that requires basic or digest HTTP authentication. If this setting is absent, a login prompt will be displayed with a username of "". 
 
-NOTE: RhoElements permits the user to enter incorrect credentials twice before presenting the HTTP 401 Unauthorized page. Your application should be designed to handle this scenario.<br>
+NOTE: the application permits the user to enter incorrect credentials twice before presenting the HTTP 401 Unauthorized page. Your application should be designed to handle this scenario.<br>
 
 **Configuration Identifier**: AUTHUSER_GLOBAL<br>
 **Possible Values**: ASCII text<br>
@@ -618,7 +617,7 @@ Determines behavior of Function keys on Windows Mobile and Windows CE devices. W
 **Platforms**: Windows Mobile/CE<br>
 
 ###PluginFile
-Specifies location of the plug-in file (a .DLL on the device), which facilitates mapping between RhoElements modules. **Not applicable to the Enterprise Tablet**.<br>
+Specifies location of the plug-in file (a .DLL on the device), which facilitates mapping between the application modules. **Not applicable to the Enterprise Tablet**.<br>
 
 **Configuration Identifier**: 
 PLUGINFILE<br>
@@ -636,7 +635,7 @@ Stores the name of the application.<br>
 **Platforms**: Android, iOS, WM/CE<br>
 
 ###StartPage
-Defines the start page of a RhoElements application, displayed at launch. This should be a local file to avoid connectivity issues on startup.<br>
+Defines the start page of the application, displayed at launch. This should be a local file to avoid connectivity issues on startup.<br>
 
 **Configuration Identifier**: STARTPAGE<br>
 **Possible Values**: Fully qualified path to start page (case sensitive)<br>
@@ -785,14 +784,14 @@ Used to specify sites to be accessed directly rather than through a proxy. Accep
 
 ##Logger
 ###LogError
-Controls logging of error messages generated by RhoElements. If set to 1, it enables error-level logging only (can be overridden by LogWarning).<br>
+Controls logging of error messages generated by the application. If set to 1, it enables error-level logging only (can be overridden by LogWarning).<br>
 
 **Configuration Identifier**: LOGERROR<br>
 **Possible Values**: 0 - Disabled, 1 - Enabled<br>
 **Platforms**: Android, iOS, WM/CE<br>
 
 ###LogInfo
-Controls the logging of all information messages generated by RhoElements. If set to 1, **enables Info, Warning and Error** logging (Overrides LogWarning and/or LogError settings; can be overridden by LogUser). <br>
+Controls the logging of all information messages generated by the application. If set to 1, **enables Info, Warning and Error** logging (Overrides LogWarning and/or LogError settings; can be overridden by LogUser). <br>
 
 **Configuration Identifier**: LOGINFO<br>
 **Possible Values**: 0 - Disabled, 1 - Enabled<br>
@@ -867,7 +866,7 @@ LOGUSER<br>
 Android, iOS, WM/CE<br>
 
 ###LogWarning
-Controls logging of warning messages generated by RhoElements. If set to 1, **enables warning *and* error messages** (overrides LogError setting; can be overridden by LogInfo).<br>
+Controls logging of warning messages generated by the application. If set to 1, **enables warning *and* error messages** (overrides LogError setting; can be overridden by LogInfo).<br>
 
 **Configuration Identifier**: LOGWARNING<br>
 **Possible Values**: 0 - Disabled, 1 - Enabled<br>
@@ -953,7 +952,7 @@ Defines the amount of time (in milliseconds) the application should wait *to est
 **Platforms**: Android, iOS, WM/CE<br>
 
 ###NetworkCookieDatabase
-Specifies the location of the database to hold persistent cookies, if desired. If the specified file does not exist, one will be created. Persistent cookies will be loaded from this file and saved back to it when RhoElements exits. If the file is read-only, it will not be overwritten. If not specified, cookies will not persist.<br>
+Specifies the location of the database to hold persistent cookies, if desired. If the specified file does not exist, one will be created. Persistent cookies will be loaded from this file and saved back to it when the application exits. If the file is read-only, it will not be overwritten. If not specified, cookies will not persist.<br>
 
 **Configuration Identifier**: NETWORKCOOKIEDATABASE<br>
 **Possible Values**: Fully qualified local path (case sensitive)<br>
@@ -988,8 +987,6 @@ Stores information about the device's operating environment. Can be used to spoo
 * %p - Platform name ("Windows CE " + version number)
 * %w - WebKit version number
 * %e - Zebra WebKit version number
-
-In RhoElements 2.1 and higher, the default value was changed to work out of the box with a greater number of server configurations. Prior to RhoElements 2.1 the default user agent was "Mozilla/5.0, AppleWebKit (KHTML, i.e. Gecko), MotorolaWebKit, Safari."<br>
 
 **Configuration Identifier**: USERAGENT<br>
 **Possible Values**: String<br>
@@ -1059,13 +1056,13 @@ Determines whether to preload the NPAPI plugin to provide native JavaScript obje
 
 ##Preloads
 ###Preload
-Defines plug-ins to be pre-loaded with RhoElements rather than loading as needed by a program function. Pre-loading prevents application lag when a program function is called for the first time. For example, when `Barcode.enable` is called by an app, a slight lag will be seen as the `Barcode` DLL loads into memory. Specify a Preload tag for each module to be loaded when RhoElements starts up. 
+Defines plug-ins to be pre-loaded with the application rather than loading as needed by a program function. Pre-loading prevents application lag when a program function is called for the first time. For example, when `Barcode.enable` is called by an app, a slight lag will be seen as the `Barcode` DLL loads into memory. Specify a Preload tag for each module to be loaded when RhoElements starts up. 
 
 * While multiple modules may be defined in the same DLL, **list all pre-loaded modules for maximum benefit**.
 
 * For memory-constrained devices, **pre-load all required modules to prevent an out-of-memory condition during execution**. 
 
-* **Plug-ins are integral to RhoElements on the Enterprise Tablet**, and therefore do not apply.
+* **Plug-ins are integral to the application on the Enterprise Tablet**, and therefore do not apply.
 
 **Configuration Identifier**: PRELOAD<br>
 **Possible Values**: 0 - Do Not Preload, 1 - Preload<br>
@@ -1083,7 +1080,7 @@ Controls whether scanner will be automatically disabled when navigating away fro
 
 ##Screen
 ###FullScreen
-Forces RhoElements to display in full screen mode, hiding the OS from the user unless specifically minimized using the [Application API](../api/Application#minimize). For Windows Mobile devices that include a custom Zebra user interface, access is provided to the status bar at the top of the screen.<br>
+Forces the application to display in full screen mode, hiding the OS from the user unless specifically minimized using the [Application API](../api/Application#minimize). For Windows Mobile devices that include a custom Zebra user interface, access is provided to the status bar at the top of the screen.<br>
 
 **Configuration Identifier**:
 FULLSCREEN<br>
@@ -1365,7 +1362,7 @@ On Windows Mobile and Windows CE devices full control is given to the developer 
 
 <b><i>Unblocking function keys may expose the underlying operating system, particularly the red and green phone keys will give access to the start menu and programs.</i></b>
 
-The table below shows the behavior of RhoElements when Function Keys are pressed given the possible configuration settings:
+The table below shows the behavior of the application when Function Keys are pressed given the possible configuration settings:
 
 <table border=1 width="100%" class="re-table">
  <tr>

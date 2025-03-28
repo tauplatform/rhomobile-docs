@@ -21,7 +21,7 @@ Be sure to review the [Ruby API Usage](/guide/api_ruby) guide for important info
         <METHODS access="STATIC">
 
             <METHOD name="showPopup" access="STATIC" hasCallback="optional">
-			
+
 
                 <DESC>Bring the application up front and show a message in a popup window. The message can be passed as a string or a hash. The popup window closes after you click on one of the buttons in the 'button' array. All custom icons' paths must be absolute paths to the icon file. Icon is not supported on iOS devices.</DESC>
                 <PLATFORM>WM, CE, Android, iOS, Win32</PLATFORM>
@@ -99,10 +99,10 @@ Example:
                     </PARAMS>
                 </CALLBACK>
             </METHOD>
-			
-			
+
+
 			<METHOD name="setScheduler" access="STATIC" hasCallback="none">
-			
+
                 <DESC></DESC>
                 <PLATFORM>Android, iOS</PLATFORM>
                 <PARAMS>
@@ -118,14 +118,14 @@ Example:
 							<PARAM name="start" type="HASH" >
 							    <DESC>Time to start h:m:s.</DESC>
 								<PARAMS>
-								    <PARAM name="hour" type="Integer">                            
-									    <DESC>Hour in hours</DESC>                        
-									</PARAM>                        
-									<PARAM name="minute" type="Integer">                            
-									    <DESC>Minute in minutes</DESC>                        
-									</PARAM>                        
-									<PARAM name="seconds" type="Integer">                            
-									    <DESC>Seconds in seconds</DESC>                        
+								    <PARAM name="hour" type="Integer">
+									    <DESC>Hour in hours</DESC>
+									</PARAM>
+									<PARAM name="minute" type="Integer">
+									    <DESC>Minute in minutes</DESC>
+									</PARAM>
+									<PARAM name="seconds" type="Integer">
+									    <DESC>Seconds in seconds</DESC>
 									</PARAM>
 								</PARAMS>
                             </PARAM>
@@ -139,7 +139,7 @@ Example:
                     </PARAM>
                 </PARAMS>
             </METHOD>
-			
+
 			<METHOD name="removeScheduler" access="STATIC" hasCallback="none">
                 <DESC></DESC>
                 <PLATFORM>Android, iOS</PLATFORM>
@@ -219,9 +219,9 @@ Example:
         <USER_OVERVIEW>
             <!--  More conversational style with INLINE SAMPLES, written in MarkDown -->
             <![CDATA[
-Exiting RhoElements
+Exiting the application
 =====================
-If RhoElements is exited after applying notifications, the settings to LEDs will not revert.
+If the application is exited after applying notifications, the settings to LEDs will not revert.
         ]]>
         </USER_OVERVIEW>
         <VER_INTRODUCED>1.0.0</VER_INTRODUCED>

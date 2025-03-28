@@ -95,7 +95,6 @@ Be sure to review the [Ruby API Usage](/guide/api_ruby) guide for important info
 * %e - WebKit version number.
 
 Use the UserAgent setting to spoof your device to the server, e.g. to view content designed for the desktop on your mobile screen.
-From RhoElements 2.1 onwards the default value was changed to work out of the box with a greater number of server configurations, prior to RhoElements 2.1 the default user agent was: "Mozilla/5.0 (%p) AppleWebKit/%w (KHTML, like Gecko) WebKit/%e Safari/%w"
                 </DESC>
                 <PLATFORM>WM</PLATFORM>
                 <APPLIES>WebKit</APPLIES>

@@ -240,10 +240,6 @@ In order to use this API you must include the following extension in your `build
     :::ruby
     extensions: ["barcode"]
 
-The `barcode` extension is also included automatically if you specify the following in your `build.yml`
-    :::ruby
-    app_type: "rhoelements"
-
 Then you can use the [Barcode API](../api/barcode) `enumerate` method to get a list of barcode scanners on the device
 
 Ruby syntax:

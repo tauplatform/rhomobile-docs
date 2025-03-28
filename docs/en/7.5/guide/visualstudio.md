@@ -30,7 +30,7 @@ NOTE: During installion (and removal) of the extension, a User Account Control p
 1. In Visual Studio 2012, **select File > New Project**
 2. **Select RhoMobile** then **RhoMobile Windows Phone 8 Project**
 3. **Name the project, click OK**
-4. When prompted, **select a Rhodes or RhoElements framework** (If you're not sure which to select, read about [the differences between Rhodes and RhoElements](welcome#rhomobile))
+4. When prompted, **select a Rhodes framework** (If you're not sure which to select, read about [the differences between Rhodes and RhoElements](welcome#rhomobile))
 5. **Click Finish**
 
 Once the app is generated, a folder structure like the one below will appear in your workspace in a folder with the name you gave your app. 

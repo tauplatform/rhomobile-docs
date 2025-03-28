@@ -9,7 +9,7 @@ This chapter contains the final steps for setting up your Rhodes application for
 
 ## Configuring a Rhodes Application for RhoConnect Push
 
-If you want your device to vibrate when it receives a push message, enable vibration in your Rhodes/RhoElements application in build.yml.
+If you want your device to vibrate when it receives a push message, enable vibration in your Rhodes application in build.yml.
 
 	:::yaml
 	capabilities:

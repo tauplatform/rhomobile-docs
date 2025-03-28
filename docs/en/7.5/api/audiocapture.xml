@@ -14,7 +14,7 @@ Be sure to review the [JavaScript API Usage](/guide/api_js) guide for important 
 
 ### Ruby Usage
 Be sure to review the [Ruby API Usage](/guide/api_ruby) guide for important information about using this API in Ruby.
-        </MORE_HELP> 
+        </MORE_HELP>
         <VER_INTRODUCED>4.2.0</VER_INTRODUCED>
         <PLATFORM>WM, CE, Android, iOS</PLATFORM>
 
@@ -153,7 +153,7 @@ On Quitting of the Application, Android will save the data in the file and grace
                 </DESC>
 			</REMARK>
             <REMARK title="SDCard Access">
-                <DESC>Extensions which came from RhoElements (i.e. AudioCapture) that could possibly write files to external storage will require "write SD card" permissions as part of the extension's AndroidManifest. You cannot remove the ability to write to the SD card as it would cause the extension to malfunction. Therefore, the capability has already been granted on build, and any capability added by you will be ignored. This being the case, the following extensions will always be able to write to the SD card by default.</DESC>
+                <DESC>Some extensions (i.e. AudioCapture) that could possibly write files to external storage will require "write SD card" permissions as part of the extension's AndroidManifest. You cannot remove the ability to write to the SD card as it would cause the extension to malfunction. Therefore, the capability has already been granted on build, and any capability added by you will be ignored. This being the case, the following extensions will always be able to write to the SD card by default.</DESC>
             </REMARK>
 		</REMARKS>
         <USER_OVERVIEW></USER_OVERVIEW>

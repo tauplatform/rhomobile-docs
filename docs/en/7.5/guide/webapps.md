@@ -23,7 +23,7 @@ The RhoMobile JavaScript API library `rhoapi-modules.js` is needed in order to a
 
 Copy this file to your web server and make sure it is referenced in all pages that wish to use the RhoMobile JavaScript APIs.
 
-NOTE: This file is universal for all platforms and includes all of the Rhodes and RhoElements extensions and APIs by default. If you wish to customize the contents of include any additional extensions, then you will need to generate the `rhoapi-modules.js` file by creating a RhoMobile application project.
+NOTE: This file is universal for all platforms and includes all of the Rhodes extensions and APIs by default. If you wish to customize the contents of include any additional extensions, then you will need to generate the `rhoapi-modules.js` file by creating a RhoMobile application project.
 
 ### Generating rhoapi-modules.js
 To generate a universal 'rhoapi-modules.js' you can run a rake command. In order to do this, you will need to have RhoStudio installed. Create a RhoMobile project and then in a command prompt from the project folder, execute the following command:

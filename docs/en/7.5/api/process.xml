@@ -94,7 +94,7 @@ Be sure to review the [Ruby API Usage](/guide/api_ruby) guide for important info
     </body>
     </html>
 
-    You must have the appropriate drivers installed on your device to use the CardReader. You will see which drivers are installed in the RhoElements log file after you attempt to use any of the card reader functions in RhoElements. All necessary drivers should be included as part of the platform for supported devices.
+    You must have the appropriate drivers installed on your device to use the CardReader. You will see which drivers are installed in the application log file after you attempt to use any of the card reader functions in RhoElements. All necessary drivers should be included as part of the platform for supported devices.
     ]]>
         </USER_OVERVIEW>
         <VER_INTRODUCED>1.0.0</VER_INTRODUCED>

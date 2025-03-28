@@ -357,7 +357,6 @@ end
 </ul>
 
   </div></div></div></div><a name='r2'></a><div class=' remarks' id='r2'><div class="accordion-group"><div class="accordion-heading"><span class="accordion-toggle"  href="#cRemark2"><strong>Windows Mobile/CE Notes</strong></div><div id="cRemark2" class="accordion-body">  <div class="accordion-inner"><ul>
-<li><p>You must set your app_type as &ldquo;rhoelements&rdquo; in your <code>build.yml</code> as shown the <a href="../guide/build_config#other-build-time-settings">build-time settings guide</a>.</p></li>
 <li><p>Requires a Printing Service application to be running. This is described in the <a href="../guide/printing#platform-notes">Printing Guide</a></p></li>
 <li><p>You should avoid navigating from the current page using the printer without disconnecting from the printer first. You can use the window.onunload event:</p>
 

@@ -19,9 +19,6 @@
 
 <h2>Persistence</h2>
 
-<p>With the old PocketBrowser / RhoElements 1 APIs, any events, such as <code>screenOrientationEvent</code> were canceled when a full navigate was performed. The original reason for this was a limitation of the IE engine on WM5 devices. When moving to the common API this was changed so that callbacks are not canceled.</p>
-
-
 <a name='Methods'></a>
 <h2>Methods</h2>
 

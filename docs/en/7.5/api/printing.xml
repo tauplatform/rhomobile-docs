@@ -22,8 +22,6 @@ To use this API you must include the following extension in your `build.yml`:
     :::ruby
     extensions: ["printing"]
 
-&gt; Note: If you are building a Windows Mobile or Windows CE app with this API, you must set your app_type as "rhoelements" in your build.yml as shown in the [build-time settings guide](../guide/build_config#other-build-time-settings).
-
 ## JavaScript Usage
 Be sure to review the [JavaScript API Usage](/guide/api_js) guide for important information about using this API in JavaScript.
 
@@ -160,9 +158,9 @@ Be sure to review the [Ruby API Usage](/guide/api_ruby) guide for important info
             <METHOD name="searchPrinters" access="STATIC" hasCallback="mandatory">
                 <VER_INTRODUCED>4.1.0</VER_INTRODUCED>
                 <PLATFORM>WM, CE, Android, iOS</PLATFORM>
-                <DESC>**Searches for printers connected to the device via Bluetooth(R), Wi-Fi or USB**. To reduce search times, it is highly recommended that searches for wireless connections be done by specific MAC address (Bluetooth) or IP address (Wi-Fi). This method also can be used to retrieve the printerID for a known Bluetooth or network printer specifying the `deviceAddress` options parameter. Result is returned asynchronously using a callback called for each discovered printer. Search is finished if printerID is not set in callback hash. Note that discovery is not guaranteed to return all the available devices. It is therefore recommended that this method run 2-3 times for maximum accuracy. 
+                <DESC>**Searches for printers connected to the device via Bluetooth(R), Wi-Fi or USB**. To reduce search times, it is highly recommended that searches for wireless connections be done by specific MAC address (Bluetooth) or IP address (Wi-Fi). This method also can be used to retrieve the printerID for a known Bluetooth or network printer specifying the `deviceAddress` options parameter. Result is returned asynchronously using a callback called for each discovered printer. Search is finished if printerID is not set in callback hash. Note that discovery is not guaranteed to return all the available devices. It is therefore recommended that this method run 2-3 times for maximum accuracy.
 
-                    **NOTE**: On certain Android devices, calling searchPrinters() over Bluetooth or TCP can cause the application to freeze momentarily or to display an alert that "The application has stopped responding." In such cases, it is recommended that the user tap the "Continue waiting" button. 
+                    **NOTE**: On certain Android devices, calling searchPrinters() over Bluetooth or TCP can cause the application to freeze momentarily or to display an alert that "The application has stopped responding." In such cases, it is recommended that the user tap the "Continue waiting" button.
                 </DESC>
                 <PARAMS>
                     <PARAM name="options" type="HASH">
@@ -443,7 +441,7 @@ Be sure to review the [Ruby API Usage](/guide/api_ruby) guide for important info
                 <DESC>
 To use a Bluetooth connection on iOS devices, take into account the following preconditions:
 
-* Zebra printer must have 'Made For iPod/iPhone' certification.  
+* Zebra printer must have 'Made For iPod/iPhone' certification.
 * Before using Bluetooth printer, pair it using the iOS system's Bluetooth settings.
 * Your project must include the External Accessory framework (automatically added when iPhone projects are generated).
 * Project must include the Zebra printer protocol string "com.zebra.rawport" in the info.plist file ([project root]/project/iphone/Info.plist) under "Supported external accessory protocols":
@@ -468,7 +466,7 @@ To use a Bluetooth connection on iOS devices, take into account the following pr
 
             <REMARK title="Windows Mobile/CE Notes">
                 <DESC>
-* Requires a Printing Service application to be running. This is described in the [Printing Guide](../guide/printing#platform-notes). 
+* Requires a Printing Service application to be running. This is described in the [Printing Guide](../guide/printing#platform-notes).
 
 * You should avoid navigating from the current page using the printer without disconnecting from the printer first. You can use the window.onunload event:
 
@@ -479,7 +477,7 @@ To use a Bluetooth connection on iOS devices, take into account the following pr
 
 * When calling searchPrinters() with Bluetooth search (CONNECTION_TYPE_ANY or CONNECTION_TYPE_BLUETOOTH), all local Bluetooth devices--including non-printers--will be discovered and send pairing requests. Just cancel or ignore them. This happens because the software cannot detect non-printers until after the device is paired. It is recommended that the BT or Wi-Fi MAC address also be used when searching for printers.
 
-* Before calling searchPrinters() with USB search (CONNECTION_TYPE_ANY or CONNECTION_TYPE_USB), you should configure the device's USB controller for "USB Host mode" and reboot. 
+* Before calling searchPrinters() with USB search (CONNECTION_TYPE_ANY or CONNECTION_TYPE_USB), you should configure the device's USB controller for "USB Host mode" and reboot.
 
 * When calling searchPrinters() with USB search (with CONNECTION_TYPE_ANY or CONNECTION_TYPE_USB), all USB Printers connected to the device will be discovered. If USB printers are not supported by SDK or device, searchPrinters function should return PRINTER_STATUS_ERR_UNSUPPORTED.
 

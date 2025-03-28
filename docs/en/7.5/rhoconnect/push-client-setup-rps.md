@@ -49,7 +49,7 @@ Where you edit `someappname` to be a shared secret name between your RhoConnect 
 
 > Note: This shared secret name ensures that only your RhoConnect application can send push messages to the RPS instance you started up in the previous step.  Use this shared secret name in your [mobile app's 'rhoconnect_push_appname' setting](push-client-setup-rps#configuring-rhoconfigtxt).
 
-Now set up [push notifications](push-client-setup#configuring-a-rhodes-application-to-receive-push-with-rhoconnect-push-service) in your Android or Windows Mobile RhoElements application, then start up your RhoConnect application.
+Now set up [push notifications](push-client-setup#configuring-a-rhodes-application-to-receive-push-with-rhoconnect-push-service) in your Android or Windows Mobile application, then start up your RhoConnect application.
 
 ### Configuring RhoConnect Push
 You can control basic settings for RhoConnect push using command line arguments.

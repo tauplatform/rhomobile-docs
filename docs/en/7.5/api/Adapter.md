@@ -10,10 +10,6 @@
         :::ruby
         extensions: [&ldquo;nfc&rdquo;]</p>
 
-<pre><code>NOTE: If you are building a Windows Mobile or Windows CE app with this API, you must set your app_type as "rhoelements" in your build.yml as shown [here](../guide/build_config#other-build-time-settings).
-</code></pre>
-
-
 <a name='Methods'></a>
 <h2>Methods</h2>
 

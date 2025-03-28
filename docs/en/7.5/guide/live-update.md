@@ -24,7 +24,6 @@ Live Update has four modes of operation:
 
 
 ##Requirements
-**Live Update works only on 'RhoElements' apps built with [RhoMobile Suite 5.1](http://rhomobile.com)** or higher. 
 
 ###Live Update is supported on:
 
@@ -34,7 +33,6 @@ Live Update has four modes of operation:
 * iOS<br>
 * Apple iOS simulator<br>
 * Windows Mobile/CE<br>
-* **Apps created with the RhoElements option box checked**
 
 ###Live Update is *not* supported on:
 
@@ -43,7 +41,6 @@ Live Update has four modes of operation:
 * Apps built on RhoMobile.com (formerly Rhohub)<br>
 * Deployed apps lacking the “development” extension<br>
 * Apps with [build: "release"] in their `build.yml` file<br>
-* Apps built without the RhoElements option box checked
 
 ###Live Update acts on changes to:
 
@@ -57,7 +54,7 @@ Live Update has four modes of operation:
 
 ## Enable Live Update
 ###Quick Setup:
-Here's a quick overview of the steps required to enable Live Update on a new or existing RhoElements app. When setting it up for the first time, we recommend using the detailed instructions that follow. Once it's familiar, this process should require just a few minutes to complete using these quick-setup steps. 
+Here's a quick overview of the steps required to enable Live Update on a new or existing app. When setting it up for the first time, we recommend using the detailed instructions that follow. Once it's familiar, this process should require just a few minutes to complete using these quick-setup steps. 
 
 1. Confirm that `build.yml` contains the line **'build: debug'**<br> 
 2. **Add '- development' to extensions:** line in `build.yml`<br> 
@@ -78,9 +75,6 @@ NOTE: The first Live Update in a session could take several minutes to appear; s
 ##1- Modify the build.yml
 This section contains detailed instructions for configuring Live Update on a development host. It follows the same general sequence as the Quick Setup above. 
 
-Live Update works only on apps built with the RhoElements option box checked (as below). To confirm that your app is compatible, check for the line **app_type: "rhoelements"** in its `build.yml` file (as in the image that follows, below). 
-
-![RhoElements Checkbox](https://s3.amazonaws.com/docs.tau-technologies.com/images/guide/LiveUpdate/01_RhoElements_checkbox.png)
 <br>
 
 ###How to modify the Build.yml:
@@ -198,7 +192,7 @@ Here are some common problems and known issues of Live Update. If Live Update is
 
 * Changing "debug" to "release" declares a production build and removes the Live Update capability.
 
-* Before (and after) your first build, your 'extensions' line should look like the **correct** one below. If it doesn't, you might have forgotton to check "Use RhoElements" box when creating your project.<br>
+* Before (and after) your first build, your 'extensions' line should look like the **correct** one below.<br>
 
 **CORRECT**:
     :::xml

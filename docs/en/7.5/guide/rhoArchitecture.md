@@ -226,7 +226,6 @@ RMS 7.5 has been approved for building apps that target the following Zebra Ente
  </tr>
 </table>
 
-<!--<b>* </b>The MC2100 family of devices is supported only by RhoElements 2.1.<br>-->
 </p>
 
 <H4>Vehicle Computers</H4>
@@ -285,7 +284,7 @@ RMS 7.5 has been approved for building apps that target the following Zebra Ente
 </table>
 
 ## Device Memory and Other Considerations
-Memory constraints are important to consider, particularly when targeting the older devices supported by RhoElements. The following points might be helpful to keep in mind: 
+Memory constraints are important to consider. The following points might be helpful to keep in mind: 
 
 * Rhodes apps require a *minimum* of 128MB physical device RAM<br>
 

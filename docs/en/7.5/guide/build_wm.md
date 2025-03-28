@@ -2,8 +2,6 @@
 ## Setup
 Follow the instructions for [setting up the development environment](nativesdksetup#setup-for-windows-mobile) for building Windows Mobile applications.
 
-> Note: When Building for Windows Mobile or Windows CE, it is necessary that you set `app_type: "rhoelements"` in your app's build.yml file as shown [here](build_config#buildyml-file).
-
 ## Add Paths to Cab Wizard and Visual Studio
 In RhoStudio Windows -> Preferences, right-click on Rhomobile->Windows Mobile to show the rhobuild.yml preferences. Check that the Cab wizard path (which is contained in your Windows Mobile 6 SDK program installation) is correct.
 
@@ -83,7 +81,7 @@ Navigate to your RhoMobile application directory. To build and run application o
     :::term
     $ rake run:wm:device
 
-> Note: Starting in version 4.1 of RhoElements, no .cab file is generated within the project when running rake run:wm:device
+> Note: Starting in version 4.1, no .cab file is generated within the project when running rake run:wm:device
 
 To build cab-file, install it, and run application on device, run:
 

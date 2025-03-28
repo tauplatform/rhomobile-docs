@@ -396,7 +396,7 @@ Once your application is submitted successfully you can view its review status b
 <div class="row-fluid">
   <div class="span6">
     <h4>Colored Icon Flag</h4>
-    The colored icon flag is still working as it did in earlier versions RhoElements.
+    The colored icon flag is still working as it did in earlier versions.
     <div>Example for Ruby hash:`toolbar = {:action => :home, :icon => '/public/images/bar/colored_btn.png', :colored_icon => true}`</div>
   </div>
   <div class="span3" style="text-align:center">

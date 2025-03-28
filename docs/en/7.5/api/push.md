@@ -34,7 +34,7 @@
 
 <p><strong>For Win32(XPE)</strong>, Microsoft Message Queue (MSMQ) and .Net Framework 3.5 also must be installed on the device.</p>
 
-<p><strong>GCM is no longer supported as a standalone jar file</strong> since being moved to Google Play services. If you have trouble building an Android app with RhoElements 4.0.0 and Push capability, try these steps:</p>
+<p><strong>GCM is no longer supported as a standalone jar file</strong> since being moved to Google Play services. If you have trouble building an Android app with Push capability, try these steps:</p>
 
 <ol>
 <li><a href="http://dl-ssl.google.com/android/repository/gcm_r03.zip">Download the GCM r03 sip file</a> from Google&rsquo;s repository.</li>

@@ -18,8 +18,6 @@ In order to use this API you must include the following extension in your `build
     :::ruby
     extensions: ["barcode"]
 
-NOTE: If you are building a Windows Mobile or Windows CE app with this API, you must set your app_type as "rhoelements" in your build.yml as shown [here](../guide/build_config#other-build-time-settings).
-
 ## JavaScript Usage
 Be sure to review the [JavaScript API Usage](/guide/api_js) guide for important information about using this API in JavaScript
 
@@ -1850,29 +1848,6 @@ On Symbol Technologies' scanners the scanner viewfinder window is not infinitely
                 <DESC>As google barcode scanning library(Zxing library) supported only in Landscape mode. Barcode scanning window only appears at centre of screen in Landscape mode.</DESC>
             </REMARK>
 
-            <REMARK title="DataWedge Interaction With Native Apps" productException="eb">
-                <DESC>In order to use the scanner with RhoElements Native Apps you will need to either disable DataWedge or create a DataWedge profile for your app.
-**Disabling Datawedge**
-
-1. Start the DataWedge app
-2. Click the menu button > "Settings" and untick "DataWedge enabled".
-
-**RhoElements Datawedge Profile**
-
-1. Install your RhoElements native app,
-2. Start the DataWedge app
-3. Click the menu button > "New Profile" and enter a name,
-4. Click on the link to the new profile in the profile list,
-5. Click on "Associated apps" in the "Applications" section,
-6. Click the menu button > "New app/activity",
-7. Select the package name for your app,
-8. Select "*",
-9. Click the "Back" capacitive button,
-10. Make sure the "Profile enabled" checkbox is ticked.
-11. Uncheck all three "Enabled" checkboxes under the sections of:
-    "Barcode input", "Keystroke output" and "Intent output".
-                </DESC>
-            </REMARK>
         </REMARKS>
 
         <EXAMPLES>

@@ -18,8 +18,6 @@ While the Zebra browser is also available for Android, its use is discouraged in
 
 > Note: Although this alternative implementation is capable of supporting modern features, performance will be limited by the underlying hardware.
 
-> Note: In RhoMobile 2.0 and prior, using the Zebra browser was the only way to access RhoElements (licensed) APIs from your application but, this is no longer the case. Except on Windows Mobile, all APIs, licensed or not are available in the default browser.
-
 ## Communication between WebView and Ruby code
 
 A Rhodes application works very similarly to a traditional web browser + web server scenario, only with both components running on the same device. There are times, however, when it is convenient for code in one language to interact with the other; `WebView` provides ways to enable two-way communication between Ruby and JavaScript code.

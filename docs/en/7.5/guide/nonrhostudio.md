@@ -2,7 +2,7 @@
 Although installing RhoMobile Suite provides everything you need to build RhoMobile applications through the included RhoStudio IDE, you may wish to use your own IDE to build your RhoMobile applications. This guide describes how to setup your environment as well as how to use the Rhomobile command line options.
 
 ## What are Gems?
-A RubyGem is a software package, commonly called a “gem”. Gems contain a packaged Ruby application or library. The RubyGems software itself allows you to easily download, install, and manipulate gems on your system. There are three gems included with RhoMobile Suite: `rhodes`, `rhoelements` and `rhoconnect-client`.
+A RubyGem is a software package, commonly called a “gem”. Gems contain a packaged Ruby application or library. The RubyGems software itself allows you to easily download, install, and manipulate gems on your system. There are three gems included with RhoMobile Suite: `rhodes` and `rhoconnect-client`.
 
 For more information on Ruby Gems, visit [Rubygems.org](http://guides.rubygems.org/what-is-a-gem/)
 
@@ -21,8 +21,6 @@ Then, run this command to install the Rho Gems.
 > Note: Installing RhoMobile Suite will install these gems automatically. You can have multiple versions of these gems installed on your system. By default when building your application the most recent version # is used. Please consult the guide on building for a specific version of RhoMobile.
 
 * The `rhodes` gem is distrubuted to publically availableRuby repositories. The command above will install the latest version available. If you are testing a beta release, you can also use the local syntax for installing a local copy of the gem file
-
-* The `rhoelements` gem is only needed if your application will be taking advantage of mobile APIs and features that are targeted towards enterprise devices. You will also need this gem if you wish to have a Webkit-enabled application running on Windows Mobile/CE.
 
 * The `rhoconnect-client` was previosly included in the `rhodes` gem prior to version 4.0. If your application plans on using the RhoConnect client for data synchronization, you will need to install this gem.
 
@@ -111,8 +109,6 @@ Running on WM device
 
 	:::term
 	rake run:wm:device
-
-> Note: Starting in version 4.1 of RhoElements, no .cab file will be generated within the project when running rake run:wm:device
 
 ## Command Line Options
 If your IDE or Text-Editor provides a means to launch an external executable, you can integrate RhoMobile development tasks by using command line options. You execute these by the appropriate rake tasks, such as "rake run:android" to run it on the Android emulator. To see all possible rake tasks do the following from your `application project folder`:

@@ -10,8 +10,6 @@
     :::ruby
     extensions: [&ldquo;barcode&rdquo;]</p>
 
-<p>NOTE: If you are building a Windows Mobile or Windows CE app with this API, you must set your app_type as &ldquo;rhoelements&rdquo; in your build.yml as shown <a href="../guide/build_config#other-build-time-settings">here</a>.</p>
-
 <h2>JavaScript Usage</h2>
 
 <p>Be sure to review the <a href="/guide/api_js">JavaScript API Usage</a> guide for important information about using this API in JavaScript</p>
@@ -643,30 +641,4 @@ it is necessary to disable the scanner and then re-enable it before another scan
   </div></div></div></div><a name='r3'></a><div class=' remarks' id='r3'><div class="accordion-group"><div class="accordion-heading"><span class="accordion-toggle"  href="#cRemark3"><strong>Get Scanner Properties</strong></div><div id="cRemark3" class="accordion-body">  <div class="accordion-inner"><p>On WM/CE, it is first necessary to enable the scanner before most of the properties can be retrieved. The case of scanner properties will differ across platforms. On WM/CE, some of the scanner properties are not exposed to set but can be retrieved. On Android, only supported scanner properties can be retrieved in &ldquo;getAllProperties&rdquo; method.</p>
   </div></div></div></div><a name='r4'></a><div class=' remarks' id='r4'><div class="accordion-group"><div class="accordion-heading"><span class="accordion-toggle"  href="#cRemark4"><strong>Set Scanner Properties</strong></div><div id="cRemark4" class="accordion-body">  <div class="accordion-inner"><p>On WM/CE, for some properties, it is first necessary to apply those properties before enabling the scanner.</p>
   </div></div></div></div><a name='r5'></a><div class=' remarks' id='r5'><div class="accordion-group"><div class="accordion-heading"><span class="accordion-toggle"  href="#cRemark5"><strong>Android Camera Barcode limitation</strong></div><div id="cRemark5" class="accordion-body">  <div class="accordion-inner"><p>As google barcode scanning library(Zxing library) supported only in Landscape mode. Barcode scanning window only appears at centre of screen in Landscape mode.</p>
-  </div></div></div></div><a name='r6'></a><div class=' remarks' id='r6'><div class="accordion-group"><div class="accordion-heading"><span class="accordion-toggle"  href="#cRemark6"><strong>DataWedge Interaction With Native Apps</strong></div><div id="cRemark6" class="accordion-body">  <div class="accordion-inner"><p>In order to use the scanner with RhoElements Native Apps you will need to either disable DataWedge or create a DataWedge profile for your app.
-<strong>Disabling Datawedge</strong></p>
-
-<ol>
-<li>Start the DataWedge app</li>
-<li>Click the menu button > &ldquo;Settings&rdquo; and untick &ldquo;DataWedge enabled&rdquo;.</li>
-</ol>
-
-
-<p><strong>RhoElements Datawedge Profile</strong></p>
-
-<ol>
-<li>Install your RhoElements native app,</li>
-<li>Start the DataWedge app</li>
-<li>Click the menu button > &ldquo;New Profile&rdquo; and enter a name,</li>
-<li>Click on the link to the new profile in the profile list,</li>
-<li>Click on &ldquo;Associated apps&rdquo; in the &ldquo;Applications&rdquo; section,</li>
-<li>Click the menu button > &ldquo;New app/activity&rdquo;,</li>
-<li>Select the package name for your app,</li>
-<li>Select &ldquo;*&rdquo;,</li>
-<li>Click the &ldquo;Back&rdquo; capacitive button,</li>
-<li>Make sure the &ldquo;Profile enabled&rdquo; checkbox is ticked.</li>
-<li>Uncheck all three &ldquo;Enabled&rdquo; checkboxes under the sections of:
-&ldquo;Barcode input&rdquo;, &ldquo;Keystroke output&rdquo; and &ldquo;Intent output&rdquo;.</li>
-</ol>
-
   </div></div></div></div></div>

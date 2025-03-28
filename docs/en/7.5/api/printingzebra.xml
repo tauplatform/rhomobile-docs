@@ -10,7 +10,7 @@
 2. USB printing is supported for Android and Windows Mobile/CE.
 
 ## Enabling the API
-To use this API you must include the following extensions in your `build.yml`: 
+To use this API you must include the following extensions in your `build.yml`:
 
     :::ruby
     extensions: ["printing","printing_zebra"]
@@ -311,8 +311,6 @@ To use a Bluetooth connection on iOS devices you should take into account the fo
             </REMARK>
             <REMARK title="Windows Mobile/CE Notes">
                 <DESC>
-
-* You must set your app_type as "rhoelements" in your `build.yml` as shown the [build-time settings guide](../guide/build_config#other-build-time-settings).
 
 * Requires a Printing Service application to be running. This is described in the [Printing Guide](../guide/printing#platform-notes)
 

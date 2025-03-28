@@ -18,8 +18,7 @@ In order to choose one or the other, you need to think about:
 * The devices your application will be deployed to, whether they can support platform-specific notifications or not (whether they include the Google Play Store). Be aware that RhoConnect Push Service is not available on iOS.
 * Data protection / compliance with regulatory limitations in specific industries. For example, a law firm could be legally required to never send any of its data to a third party like Google or Apple. In cases like this, RhoConnect Push Service offers a way to keep all parts of the infrastructure under your control, with everything running on your own servers.
 
->**Having trouble building an Android app with RhoElements 4.0.0 and Push capability?**<br>
->Since being moved to Google Play services, GCM is no longer supported as a standalone jar file. If you're having trouble building an Android app with RhoElements 4.0.0 and Push capability, try these steps:<br><br>
+>Since being moved to Google Play services, GCM is no longer supported as a standalone jar file. If you're having trouble building an Android app and Push capability, try these steps:<br><br>
 >1. [Download the GCM r03 sip file](http://dl-ssl.google.com/android/repository/gcm_r03.zip) from Google's repository.<br> 
 >2. Copy it to sdk/extras and extract it.<br>
 >3. Rename the folder to 'gcm'<br>
