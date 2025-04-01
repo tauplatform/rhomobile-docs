@@ -1,4 +1,4 @@
-# RMS 7.0 Supported Platforms
+# RMS 7.5 Supported Platforms
 
 The RhoMobile Suite (RMS) is an integrated development environment for Mac OS X and Windows development hosts that can target multiple mobile-device platforms from a single code base. RhoMobile apps employ an HTML front-end that presents the UI component and passes device calls through to the underlying hardware. RhoStudio also supports native app development. 
 
@@ -52,7 +52,7 @@ For more information about this and prior releases, including bug fixes and issu
  </tr></table>
 
 ##Supported Zebra Devices
-RMS 7.0 has been approved for building apps that target the following Zebra Enterprise Mobility devices:
+RMS 7.5 has been approved for building apps that target the following Zebra Enterprise Mobility devices:
 
 <H4>Mobile Computers</H4>
 <table class="table table-striped table-bordered">
@@ -226,7 +226,6 @@ RMS 7.0 has been approved for building apps that target the following Zebra Ente
  </tr>
 </table>
 
-<!--<b>* </b>The MC2100 family of devices is supported only by RhoElements 2.1.<br>-->
 </p>
 
 <H4>Vehicle Computers</H4>
@@ -285,7 +284,7 @@ RMS 7.0 has been approved for building apps that target the following Zebra Ente
 </table>
 
 ## Device Memory and Other Considerations
-Memory constraints are important to consider, particularly when targeting the older devices supported by RhoElements. The following points might be helpful to keep in mind: 
+Memory constraints are important to consider. The following points might be helpful to keep in mind: 
 
 * Rhodes apps require a *minimum* of 128MB physical device RAM<br>
 
@@ -304,7 +303,7 @@ Memory constraints are important to consider, particularly when targeting the ol
 
 ##Compatibility Alerts
 
-* **RMS 7.0 supports printing via USB from Android apps** to a subset of [Zebra printers that support USB printing](printing#zebra-printers-with-usb-printing). 
+* **RMS 7.5 supports printing via USB from Android apps** to a subset of [Zebra printers that support USB printing](printing#zebra-printers-with-usb-printing). 
 
 * **The TC55 supports [4.0 APIs](apiusage#api-migration-table) and only a subset of [2.2 APIs](apiusage#using-22-apirsquos)**. Applications developed using certain 2.2 APIs might need to be rebuilt using a newer version of the API. For example, apps built with the [2.2 Scanner API](../../2.2.0/rhoelements/scanner) must now use the [6.x Barcode API](../api/barcode). Please consult the [migration table](apiusage#api-migration-table) for more information.
 

@@ -1,7 +1,7 @@
 # RhoMobile API Summary
-Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recommended for all new projects. If you're moving a app built with previous version of Rhodes to 7.x, please consult the [7.x migration guide](apiusage). 
+Below is a list of the new common APIs for RhoMobile Suite 7.5, which are recommended for all new projects. If you're moving a app built with previous version of Rhodes to 7.x, please consult the [7.x migration guide](apiusage). 
 
-## 7.1 APIs
+## 7.5 APIs
 <div class="alert alert-warning">
   <p>
     <span class="icon-check icon-primary icon-inverse"  rel="tooltip" title="Supported"></span>
@@ -780,7 +780,7 @@ Below is a list of the new common APIs for RhoMobile Suite 7.1, which are recomm
   </tbody>
 </table>
 
-**These API classes are implemented in RhoMobile Suite 2.2 but are not yet included in the new Common API class set for RhoMobile Suite 7.1. They use the older 2.2 format and support Ruby only except as noted.*
+**These API classes are implemented in RhoMobile Suite 2.2 but are not yet included in the new Common API class set for RhoMobile Suite 7.5. They use the older 2.2 format and support Ruby only except as noted.*
 
 
 ### JavaScript ORM
